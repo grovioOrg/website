@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GORVIO landing page
 
-## Getting Started
+Marketing site for GORVIO, an AI workforce for sales and marketing. Next.js 16 (App Router), Tailwind CSS v4 and framer-motion.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
+yarn
+cp .env.example .env.local
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | What it does |
+| --- | --- |
+| `yarn dev` | Development server |
+| `yarn build` | Production build |
+| `yarn lint` | ESLint |
+| `yarn typecheck` | TypeScript, no emit |
 
-## Learn More
+## Beta registration backend
 
-To learn more about Next.js, take a look at the following resources:
+The "Join the Beta" modal submits through a server action (`components/Forms/Beta/action.ts` → `lib/api/beta.ts`). There is no backend in this repo; point it at one with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable | Required | Purpose |
+| --- | --- | --- |
+| `NEXT_PUBLIC_API_CORE_BASE_URL` | Yes | Base URL of the core API |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | No | Shows a contact link in the footer |
+| `NEXT_PUBLIC_PRIVACY_URL` | No | Links the privacy policy from the beta consent checkbox and the footer. Without it, no privacy link is rendered. |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If the base URL is missing, the form shows an error and logs a warning on the server. It never reports a fake success.
 
-## Deploy on Vercel
+### Endpoint contract
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`POST {NEXT_PUBLIC_API_CORE_BASE_URL}/api/v1/beta_registration`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```json
+{
+    "full_name": "Maya Patel",
+    "work_email": "maya@northwind.co",
+    "company_name": "Northwind",
+    "website": "https://northwind.co",
+    "company_size": "11-50",
+    "primary_interest": "sales",
+    "consent": true,
+    "source": "landing"
+}
+```
+
+- `company_size`: one of `1-10`, `11-50`, `51-200`, `201-1000`, `1000+`
+- `primary_interest`: one of `sales`, `marketing`, `both`, `exploring`
+- `consent`: always `true`. The applicant must tick "I agree that GORVIO may store these details to contact me about the beta. You can ask us to delete them at any time." The checkbox is validated on the client and again in the server action, so nothing is sent without it.
+- `2xx` means registered.
+- `409` means the email is already registered. The modal shows a friendly "you're already on the list" state.
+- Any other status shows the error state, using the response's `error`, `message` or `detail` field when one is present.
+
+## Notes
+
+- The Slack collaboration section is a visual preview. The plugin is labelled as rolling out with the beta and is not wired to Slack.
+- The hero board recreates the product video as a live, animated component instead of embedding the video file.
+- Animations respect `prefers-reduced-motion`.

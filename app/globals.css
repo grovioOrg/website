@@ -1,26 +1,164 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme static {
+    /* Brand */
+    --color-yellow-200: #F2BF00;
+    --color-yellow-100: #FFCC00;
+    --color-yellow-50: #FFF5CC;
+    --color-ink: #0A0A0A;
+    --color-charcoal-100: #1C1C1A;
+    --color-grey-300: #5F5E59;
+    --color-grey-200: #8A8880;
+    --color-grey-150: #C8C6BE;
+    --color-grey-100: #E9E7E0;
+    --color-grey-50: #F1F0EA;
+    --color-paper: #F8F7F2;
+    --color-white: #FFFFFF;
+    --color-error: #D6402F;
+    --color-success: #1F9D6B;
+
+    /* Agents */
+    --color-agent-sales: #FFCC00;
+    --color-agent-researcher: #7B98FF;
+    --color-agent-signal: #4FDCB4;
+    --color-agent-seo: #1FD6D0;
+    --color-agent-writer: #B3E04A;
+    --color-agent-graphic: #B78BF2;
+    --color-agent-video: #FF6E9B;
+
+    /* Screens */
+    --breakpoint-mobile: 640px;
+    --breakpoint-tablet: 1030px;
+    --breakpoint-desktop: 1600px;
+
+    /* Shadows */
+    --shadow-card: 0 1px 2px rgb(10 10 10 / 0.04), 0 4px 14px rgb(10 10 10 / 0.05);
+    --shadow-lift: 0 2px 4px rgb(10 10 10 / 0.06), 0 18px 40px -12px rgb(10 10 10 / 0.22);
+    --shadow-window: 0 0 0 1px rgb(10 10 10 / 0.06), 0 30px 80px -30px rgb(10 10 10 / 0.35);
+
+    /* Animation */
+    --animate-modal: modalAnimation 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+    --animate-fade-in-fast: fadeIn 0.3s ease-in-out;
+    --animate-marquee: marquee 38s linear infinite;
+    --animate-spin-slow: spin 6s linear infinite;
+    --animate-caret: caret 1s steps(1) infinite;
+
+    @keyframes modalAnimation {
+        0% {
+            opacity: 0;
+            transform: translateY(12px) scale(0.97);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes caret {
+        50% {
+            opacity: 0;
+        }
+    }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --font-main: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    --font-display: var(--font-bricolage), var(--font-inter), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+    html {
+        scroll-padding-top: 5rem;
+    }
+
+    body {
+        background: var(--color-white);
+        color: var(--color-ink);
+        font-family: var(--font-main);
+    }
+
+    ::selection {
+        background: var(--color-yellow-100);
+        color: var(--color-ink);
+    }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+@layer utilities {
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .dot-grid {
+        background-image: radial-gradient(
+            rgb(10 10 10 / 0.09) 1px,
+            transparent 1px
+        );
+        background-size: 22px 22px;
+    }
+    .dot-grid-dark {
+        background-image: radial-gradient(
+            rgb(255 255 255 / 0.08) 1px,
+            transparent 1px
+        );
+        background-size: 22px 22px;
+    }
+    .marker {
+        background: linear-gradient(
+            transparent 58%,
+            var(--color-yellow-100) 58%,
+            var(--color-yellow-100) 90%,
+            transparent 90%
+        );
+    }
+}
+
+svg {
+    overflow: visible;
+}
+
+.smooth {
+    transition: all ease-in-out;
+    transition-duration: 200ms;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
 }
