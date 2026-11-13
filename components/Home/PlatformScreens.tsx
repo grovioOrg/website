@@ -6,25 +6,34 @@ import { ReactNode } from "react"
 import { Check, Plus } from "@/icons"
 import { IAgentId } from "@/lib/types"
 import { cn } from "@/utils"
+import { formatText, type IDictionary } from "@/dictionaries"
 
 import { AgentAvatar } from "@/components/Mascots"
 
 import {
     Glyph,
+    IAppCopy,
     IAppScreen,
     IPillTone,
     Pill
 } from "@/components/Mockups"
 // #endregion
 
+type IScreenProps = {
+    t: IDictionary["home"]["platform"]["mockup"]
+    app: IAppCopy
+}
+
 const ScreenHeader = ({
     title,
     subtitle,
     action,
+    newLabel,
 }: {
     title: string
     subtitle: string
     action?: ReactNode
+    newLabel?: string
 }) => (
     <div className="flex items-end justify-between px-8 pt-7 pb-5 border-b border-grey-100">
         <div>
@@ -35,7 +44,7 @@ const ScreenHeader = ({
         </div>
         {action ?? (
             <span className="inline-flex items-center gap-1 rounded-lg bg-ink text-white text-[12px] font-medium px-3 py-1.5">
-                <Plus size={13} /> New
+                <Plus size={13} /> {newLabel}
             </span>
         )}
     </div>
@@ -47,22 +56,22 @@ const Avatars = ({ ids, size = 22 }: { ids: IAgentId[], size?: number }) => (
     </span>
 )
 
-const Playbooks = () => (
+const Playbooks = ({ t, app }: IScreenProps) => (
     <>
-        <ScreenHeader title="Playbooks" subtitle="Repeatable plays your workforce can run on demand" />
+        <ScreenHeader title={app.nav.playbooks} subtitle={t.playbooks.subtitle} newLabel={t.new} />
         <div className="grid grid-cols-2 gap-4 p-6">
             {([
-                { name: "Outbound to seed-stage fintech", steps: 6, agents: ["sales", "researcher", "signal"], tone: "yellow", tag: "Sales" },
-                { name: "Weekly content engine", steps: 5, agents: ["seo", "writer", "graphic"], tone: "green", tag: "Marketing" },
-                { name: "Webinar follow-up", steps: 4, agents: ["researcher", "sales"], tone: "yellow", tag: "Sales" },
-                { name: "Launch teaser kit", steps: 4, agents: ["writer", "video", "graphic"], tone: "pink", tag: "Marketing" },
-            ] as { name: string, steps: number, agents: IAgentId[], tone: IPillTone, tag: string }[]).map(play => (
-                <div key={play.name} className="rounded-2xl ring-1 ring-grey-100 p-5 flex flex-col gap-4">
+                { steps: 6, agents: ["sales", "researcher", "signal"], tone: "yellow", tag: "sales" },
+                { steps: 5, agents: ["seo", "writer", "graphic"], tone: "green", tag: "marketing" },
+                { steps: 4, agents: ["researcher", "sales"], tone: "yellow", tag: "sales" },
+                { steps: 4, agents: ["writer", "video", "graphic"], tone: "pink", tag: "marketing" },
+            ] as { steps: number, agents: IAgentId[], tone: IPillTone, tag: "sales" | "marketing" }[]).map((play, index) => (
+                <div key={index} className="rounded-2xl ring-1 ring-grey-100 p-5 flex flex-col gap-4">
                     <div className="flex items-center justify-between">
-                        <Pill tone={play.tone}>{play.tag}</Pill>
-                        <span className="text-[11px] text-grey-200">{play.steps} steps</span>
+                        <Pill tone={play.tone}>{t.playbooks.tags[play.tag]}</Pill>
+                        <span className="text-[11px] text-grey-200">{formatText(t.playbooks.steps, { n: play.steps })}</span>
                     </div>
-                    <p className="font-semibold text-[15px] leading-snug">{play.name}</p>
+                    <p className="font-semibold text-[15px] leading-snug">{t.playbooks.plays[index]}</p>
                     <div className="flex gap-1">
                         {Array.from({ length: play.steps }).map((_, index) => (
                             <span key={index} className={cn("h-1.5 flex-1 rounded-full", index < 2 ? "bg-ink" : "bg-grey-100")} />
@@ -70,7 +79,7 @@ const Playbooks = () => (
                     </div>
                     <div className="flex items-center justify-between">
                         <Avatars ids={play.agents} />
-                        <span className="text-[12px] font-medium">Run play →</span>
+                        <span className="text-[12px] font-medium">{t.playbooks.run}</span>
                     </div>
                 </div>
             ))}
@@ -78,24 +87,26 @@ const Playbooks = () => (
     </>
 )
 
-const Campaigns = () => (
+type ICampaignStatus = keyof IScreenProps["t"]["campaigns"]["status"]
+
+const Campaigns = ({ t, app }: IScreenProps) => (
     <>
-        <ScreenHeader title="Campaigns" subtitle="Every campaign, its workforce and how it's doing" />
+        <ScreenHeader title={app.nav.campaigns} subtitle={t.campaigns.subtitle} newLabel={t.new} />
         <div className="p-6">
             <div className="grid grid-cols-[2fr_1.2fr_1fr_0.8fr_0.8fr] text-[11px] font-medium text-grey-200 px-4 pb-2">
-                <span>Campaign</span><span>Workforce</span><span>Status</span><span>Leads</span><span>Replies</span>
+                {t.campaigns.columns.map(column => <span key={column}>{column}</span>)}
             </div>
             {([
-                ["London fintech founders", ["sales", "researcher", "signal"], "Running", "green", "51", "7"],
-                ["Q4 content push", ["seo", "writer", "graphic"], "Running", "green", "—", "—"],
-                ["Webinar sign-ups", ["researcher", "sales"], "Needs approval", "yellow", "38", "4"],
-                ["Product launch teaser", ["video", "writer"], "Drafting", "blue", "—", "—"],
-                ["Re-engage cold leads", ["signal", "sales"], "Paused", "grey", "120", "11"],
-            ] as [string, IAgentId[], string, IPillTone, string, string][]).map(([name, ids, status, tone, leads, replies]) => (
-                <div key={name} className="grid grid-cols-[2fr_1.2fr_1fr_0.8fr_0.8fr] items-center text-[13px] px-4 py-3.5 border-t border-grey-100">
-                    <span className="font-medium">{name}</span>
+                [["sales", "researcher", "signal"], "running", "green", "51", "7"],
+                [["seo", "writer", "graphic"], "running", "green", "—", "—"],
+                [["researcher", "sales"], "approval", "yellow", "38", "4"],
+                [["video", "writer"], "drafting", "blue", "—", "—"],
+                [["signal", "sales"], "paused", "grey", "120", "11"],
+            ] as [IAgentId[], ICampaignStatus, IPillTone, string, string][]).map(([ids, status, tone, leads, replies], index) => (
+                <div key={index} className="grid grid-cols-[2fr_1.2fr_1fr_0.8fr_0.8fr] items-center text-[13px] px-4 py-3.5 border-t border-grey-100">
+                    <span className="font-medium">{t.campaigns.names[index]}</span>
                     <Avatars ids={ids} />
-                    <span><Pill tone={tone} dot>{status}</Pill></span>
+                    <span><Pill tone={tone} dot>{t.campaigns.status[status]}</Pill></span>
                     <span className="tabular-nums">{leads}</span>
                     <span className="tabular-nums">{replies}</span>
                 </div>
@@ -104,23 +115,23 @@ const Campaigns = () => (
     </>
 )
 
-const Epic = () => (
+const Epic = ({ t, app }: IScreenProps) => (
     <>
-        <ScreenHeader title="Q4 Growth Sprint" subtitle="Timeline view · who is doing what, and when" />
+        <ScreenHeader title={t.epic.title} subtitle={t.epic.subtitle} newLabel={t.new} />
         <div className="p-6">
             <div className="grid grid-cols-[150px_repeat(5,1fr)] text-[11px] text-grey-200 pb-2">
                 <span />
-                {["Mon", "Tue", "Wed", "Thu", "Fri"].map(day => <span key={day}>{day}</span>)}
+                {app.days.map(day => <span key={day}>{day}</span>)}
             </div>
             {([
-                ["sales", "Sales Agent", 0, 2, "Source fintech founders"],
-                ["researcher", "Lead Researcher", 1, 2, "Qualify 60 leads"],
-                ["signal", "Signal Analyst", 3, 2, "Read replies"],
-                ["seo", "SEO Agent", 0, 1, "Keyword audit"],
-                ["writer", "Writer Agent", 1, 3, "Bookkeeping guide"],
-                ["graphic", "Graphic Designer", 2, 2, "Carousel"],
-                ["video", "Video Agent", 3, 2, "Launch teaser"],
-            ] as [IAgentId, string, number, number, string][]).map(([id, name, start, span, task]) => (
+                ["sales", "Sunny · Sales", 0, 2],
+                ["researcher", "Bolt · Sales", 1, 2],
+                ["signal", "Echo · Sales", 3, 2],
+                ["seo", "SEO Agent", 0, 1],
+                ["writer", "Writer Agent", 1, 3],
+                ["graphic", "Graphic Designer", 2, 2],
+                ["video", "Video Agent", 3, 2],
+            ] as [IAgentId, string, number, number][]).map(([id, name, start, span], index) => (
                 <div key={id} className="grid grid-cols-[150px_repeat(5,1fr)] items-center py-2 border-t border-grey-100">
                     <span className="flex items-center gap-2 text-[12px]">
                         <AgentAvatar agent={id} size={20} ring={false} /> {name}
@@ -132,7 +143,7 @@ const Epic = () => (
                             background: `color-mix(in srgb, var(--color-agent-${id}) 35%, white)`,
                         }}
                     >
-                        {task}
+                        {t.epic.tasks[index]}
                     </span>
                 </div>
             ))}
@@ -140,9 +151,9 @@ const Epic = () => (
     </>
 )
 
-const Seo = () => (
+const Seo = ({ t, app }: IScreenProps) => (
     <>
-        <ScreenHeader title="SEO Intelligence" subtitle="northwind.co · updated by Scout this morning" action={<Pill tone="blue">148 pages tracked</Pill>} />
+        <ScreenHeader title={app.nav.seo} subtitle={t.seo.subtitle} action={<Pill tone="blue">{t.seo.tracked}</Pill>} />
         <div className="grid grid-cols-[220px_1fr] gap-5 p-6">
             <div className="rounded-2xl bg-paper p-5 flex flex-col items-center gap-3">
                 <div className="relative grid place-items-center size-32">
@@ -152,37 +163,33 @@ const Seo = () => (
                     </svg>
                     <p className="font-display text-3xl font-semibold">72</p>
                 </div>
-                <p className="text-[12px] text-grey-300 text-center">Site health score</p>
+                <p className="text-[12px] text-grey-300 text-center">{t.seo.health}</p>
             </div>
             <div className="rounded-2xl ring-1 ring-grey-100">
                 <div className="grid grid-cols-[2fr_1fr_1fr_1.2fr] text-[11px] font-medium text-grey-200 px-4 py-2.5">
-                    <span>Keyword</span><span>Volume</span><span>Position</span><span>Action</span>
+                    {t.seo.columns.map(column => <span key={column}>{column}</span>)}
                 </div>
                 {([
-                    ["bookkeeping for startups", "2.4k", "18", "Write guide"],
-                    ["seed round accounting", "1.9k", "24", "Refresh page"],
-                    ["r&d tax credits uk", "1.2k", "—", "New article"],
-                    ["startup cfo services", "880", "9", "Improve CTA"],
-                    ["month end close checklist", "720", "31", "Add template"],
-                ]).map(([term, volume, position, action]) => (
-                    <div key={term} className="grid grid-cols-[2fr_1fr_1fr_1.2fr] items-center text-[13px] px-4 py-3 border-t border-grey-100">
-                        <span className="font-medium">{term}</span>
+                    ["2.4k", "18"],
+                    ["1.9k", "24"],
+                    ["1.2k", "—"],
+                    ["880", "9"],
+                    ["720", "31"],
+                ]).map(([volume, position], index) => (
+                    <div key={index} className="grid grid-cols-[2fr_1fr_1fr_1.2fr] items-center text-[13px] px-4 py-3 border-t border-grey-100">
+                        <span className="font-medium">{t.seo.keywords[index]}</span>
                         <span className="tabular-nums text-grey-300">{volume}</span>
                         <span className="tabular-nums text-grey-300">{position}</span>
-                        <span><Pill tone="blue">{action}</Pill></span>
+                        <span><Pill tone="blue">{t.seo.actions[index]}</Pill></span>
                     </div>
                 ))}
             </div>
         </div>
         <div className="grid grid-cols-3 gap-4 px-6">
-            {([
-                ["Content gaps", "14", "Topics competitors rank for and you don't"],
-                ["Pages to improve", "6", "Thin copy, slow load or missing headings"],
-                ["CTA ideas", "9", "Clearer next steps on high-traffic pages"],
-            ]).map(([label, value, hint]) => (
+            {t.seo.cards.map(({ label, hint }, index) => (
                 <div key={label} className="rounded-2xl ring-1 ring-grey-100 p-4">
                     <p className="text-[11px] text-grey-200">{label}</p>
-                    <p className="font-display text-3xl font-semibold mt-1">{value}</p>
+                    <p className="font-display text-3xl font-semibold mt-1">{[14, 6, 9][index]}</p>
                     <p className="text-[12px] text-grey-300 mt-1 leading-snug">{hint}</p>
                 </div>
             ))}
@@ -190,23 +197,26 @@ const Seo = () => (
     </>
 )
 
-const Marketing = () => {
-    const items: Record<number, [IAgentId, string]> = {
-        1: ["writer", "Guide"],
-        3: ["graphic", "Carousel"],
-        4: ["video", "Teaser"],
-        8: ["writer", "Newsletter"],
-        10: ["graphic", "Quote card"],
-        12: ["video", "Reel"],
-        15: ["writer", "Case study"],
-        17: ["graphic", "Infographic"],
-    }
+const Marketing = ({ t, app }: IScreenProps) => {
+    const slots: [number, IAgentId][] = [
+        [1, "writer"],
+        [3, "graphic"],
+        [4, "video"],
+        [8, "writer"],
+        [10, "graphic"],
+        [12, "video"],
+        [15, "writer"],
+        [17, "graphic"],
+    ]
+    const items: Record<number, [IAgentId, string]> = Object.fromEntries(
+        slots.map(([day, agent], index) => [day, [agent, t.marketing.items[index]]])
+    )
 
     return (
         <>
-            <ScreenHeader title="Marketing Board" subtitle="November · 8 pieces scheduled, 3 awaiting review" />
+            <ScreenHeader title={app.nav.marketing} subtitle={t.marketing.subtitle} newLabel={t.new} />
             <div className="grid grid-cols-5 gap-2 p-6">
-                {["Mon", "Tue", "Wed", "Thu", "Fri"].map(day => (
+                {app.days.map(day => (
                     <span key={day} className="text-[11px] text-grey-200 px-1">{day}</span>
                 ))}
                 {Array.from({ length: 20 }).map((_, index) => {
@@ -232,49 +242,49 @@ const Marketing = () => {
     )
 }
 
-const Playground = () => (
+const Playground = ({ t, app }: IScreenProps) => (
     <>
         <ScreenHeader
-            title="AI Playground"
-            subtitle="Try ideas with any agent before you brief them"
+            title={app.nav.playground}
+            subtitle={t.playground.subtitle}
             action={<span className="flex items-center gap-2"><Avatars ids={["writer", "sales", "seo"]} /></span>}
         />
         <div className="p-6 flex flex-col gap-4 max-w-[640px]">
             <div className="self-end rounded-2xl rounded-br-md bg-ink text-white px-4 py-3 text-[13px] max-w-[420px]">
-                Give me three subject lines for the London fintech campaign. Friendly, not salesy.
+                {t.playground.prompt}
             </div>
             <div className="flex gap-3">
                 <AgentAvatar agent="writer" size={30} />
                 <div className="rounded-2xl rounded-tl-md bg-paper px-4 py-3 text-[13px] flex flex-col gap-2">
-                    <p className="text-grey-300">Here are three, ranked by how well they fit your tone guide:</p>
-                    {["Month-end in an afternoon?", "A quick idea for Lumen's finance stack", "What seed founders ask us most"].map((line, index) => (
+                    <p className="text-grey-300">{t.playground.reply}</p>
+                    {t.playground.lines.map((line, index) => (
                         <span key={line} className="flex items-center gap-2 rounded-lg bg-white ring-1 ring-grey-100 px-3 py-2">
                             <span className="text-grey-200 tabular-nums">{index + 1}</span> {line}
                         </span>
                     ))}
                     <span className="flex gap-2 mt-1">
-                        <Pill tone="ink">Send to Sales Agent</Pill>
-                        <Pill>Try again</Pill>
+                        <Pill tone="ink">{t.playground.send}</Pill>
+                        <Pill>{t.playground.retry}</Pill>
                     </span>
                 </div>
             </div>
             <div className="mt-2 flex items-center gap-2 rounded-full ring-1 ring-grey-150 px-4 py-2.5 text-[13px] text-grey-200">
-                <Glyph name="chat" size={15} /> Ask Quill anything…
+                <Glyph name="chat" size={15} /> {t.playground.ask}
             </div>
         </div>
     </>
 )
 
-const Account = () => (
+const Account = ({ t, app }: IScreenProps) => (
     <>
-        <ScreenHeader title="Account" subtitle="Your workforce, contracts and team" action={<Pill tone="yellow">Private beta</Pill>} />
+        <ScreenHeader title={app.nav.account} subtitle={t.account.subtitle} action={<Pill tone="yellow">{t.account.beta}</Pill>} />
         <div className="grid grid-cols-[1.4fr_1fr] gap-5 p-6">
             <div className="rounded-2xl ring-1 ring-grey-100">
-                <p className="px-4 py-3 text-[12px] font-semibold">Monthly contracts</p>
+                <p className="px-4 py-3 text-[12px] font-semibold">{t.account.contracts}</p>
                 {([
-                    ["sales", "Sales Agent", true],
-                    ["researcher", "Lead Researcher", true],
-                    ["signal", "Signal Analyst", true],
+                    ["sales", "Sunny · Sales Agent", true],
+                    ["researcher", "Bolt · Sales Agent", true],
+                    ["signal", "Echo · Sales Agent", true],
                     ["seo", "SEO Agent", true],
                     ["writer", "Writer Agent", false],
                     ["video", "Video Agent", false],
@@ -282,7 +292,7 @@ const Account = () => (
                     <div key={id} className="flex items-center gap-3 px-4 py-2.5 border-t border-grey-100 text-[13px]">
                         <AgentAvatar agent={id} size={22} ring={false} />
                         {name}
-                        <span className="ml-auto text-[11px] text-grey-200">{on ? "Active" : "Paused"}</span>
+                        <span className="ml-auto text-[11px] text-grey-200">{on ? t.account.active : t.account.paused}</span>
                         <span className={cn("relative w-8 h-[18px] rounded-full", on ? "bg-ink" : "bg-grey-150")}>
                             <span className={cn("absolute top-0.5 size-3.5 rounded-full bg-white", on ? "left-4" : "left-0.5")} />
                         </span>
@@ -291,9 +301,9 @@ const Account = () => (
             </div>
             <div className="flex flex-col gap-4">
                 <div className="rounded-2xl bg-paper p-4">
-                    <p className="text-[12px] font-semibold">Team</p>
+                    <p className="text-[12px] font-semibold">{t.account.team}</p>
                     <div className="mt-3 flex flex-col gap-2 text-[13px]">
-                        {["Maya · Owner", "Theo · Approver", "Ines · Viewer"].map(person => (
+                        {t.account.people.map(person => (
                             <span key={person} className="flex items-center gap-2">
                                 <span className="size-6 rounded-full bg-grey-100 grid place-items-center text-[10px] font-semibold">
                                     {person[0]}
@@ -304,8 +314,8 @@ const Account = () => (
                     </div>
                 </div>
                 <div className="rounded-2xl bg-paper p-4 text-[13px] flex flex-col gap-2">
-                    <p className="text-[12px] font-semibold">Approvals</p>
-                    {["Every outbound message", "Published content", "New campaigns"].map(rule => (
+                    <p className="text-[12px] font-semibold">{t.account.approvals}</p>
+                    {t.account.rules.map(rule => (
                         <span key={rule} className="flex items-center gap-2">
                             <span className="grid place-items-center size-4 rounded-full bg-success text-white"><Check size={9} /></span>
                             {rule}
@@ -317,7 +327,7 @@ const Account = () => (
     </>
 )
 
-export const PLATFORM_SCREENS: Record<IAppScreen, () => ReactNode> = {
+export const PLATFORM_SCREENS: Record<IAppScreen, (props: IScreenProps) => ReactNode> = {
     playbooks: Playbooks,
     campaigns: Campaigns,
     epic: Epic,

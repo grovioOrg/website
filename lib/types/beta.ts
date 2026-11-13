@@ -24,6 +24,7 @@ export interface IBetaRegistration {
     size: ICompanySize
     interest: IBetaInterest
     consent: true
+    language: string
 }
 
 export interface IRawBetaRegistration {
@@ -34,6 +35,7 @@ export interface IRawBetaRegistration {
     company_size: ICompanySize
     primary_interest: IBetaInterest
     consent: true
+    language: string
     source: "landing"
 }
 
@@ -47,5 +49,6 @@ export const serializeBeta = (
     company_size: beta.size,
     primary_interest: beta.interest,
     consent: beta.consent,
+    language: beta.language,
     source: "landing",
 })

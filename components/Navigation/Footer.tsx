@@ -1,6 +1,12 @@
 // #region imports
-import { footerLinks } from "@/data"
+import { getFooterLinks } from "@/data"
 import { BetaButton } from "@/components/Buttons"
+
+import type {
+    IDictionary,
+    ILocale
+} from "@/dictionaries"
+
 import {
     CursorField,
     IDriftingCursor
@@ -12,9 +18,9 @@ import { Wordmark } from "./Wordmark"
 const CURSORS: IDriftingCursor[] = [
     {
         by: "graphic",
-        path: [[8, 18], [37, 70], [37, 70], [28, 12]],
+        path: [[8, 18], [42, 70], [42, 70], [28, 12]],
         duration: 11,
-        select: { rect: [18.5, 4, 19, 74], from: 0.25, to: 0.55 },
+        select: { rect: [35, 4, 19, 74], from: 0.25, to: 0.55 },
     },
     {
         by: "sales",
@@ -35,23 +41,29 @@ const CURSORS: IDriftingCursor[] = [
 
 const linkClass = "text-grey-300 hover:text-ink smooth"
 
-export const Footer = () => (
+export const Footer = ({
+    lang,
+    t,
+}: {
+    lang: ILocale
+    t: IDictionary
+}) => (
     <footer className="relative bg-paper overflow-hidden">
         <div className="
             relative max-w-7xl mx-auto px-6 pt-20 pb-10
-            grid grid-cols-[1.4fr_repeat(3,1fr)] gap-10
+            grid grid-cols-[1.4fr_repeat(4,1fr)] gap-10
             max-tablet:grid-cols-2 max-mobile:grid-cols-1
             max-mobile:px-4
         ">
             <div className="flex flex-col gap-5 max-tablet:col-span-full">
                 <Wordmark size={34} />
                 <p className="text-grey-300 max-w-xs text-sm leading-relaxed">
-                    An AI workforce for sales and marketing. Hire specialised contractors, manage their work, and approve what ships.
+                    {t.common.footer.blurb}
                 </p>
                 <BetaButton size="sm" className="w-fit" />
             </div>
 
-            {footerLinks.map(({ title, urls }) => (
+            {getFooterLinks(lang, t).map(({ title, urls }) => (
                 <nav
                     key={title}
                     aria-label={title}
@@ -83,7 +95,7 @@ export const Footer = () => (
                         text-[clamp(5rem,22vw,20rem)] text-ink select-none
                     "
                 >
-                    GORVIO
+                    GROVIO
                 </p>
             </CursorField>
         </div>
@@ -95,8 +107,8 @@ export const Footer = () => (
                 max-w-7xl mx-auto px-6 py-5 flex justify-between gap-4
                 max-mobile:flex-col max-mobile:px-4
             ">
-                <p>© 2026 GORVIO. Currently in private beta.</p>
-                <p>Built for the EU · GDPR compliant</p>
+                <p>{t.common.footer.rights}</p>
+                <p>{t.common.footer.eu}</p>
             </div>
         </div>
     </footer>

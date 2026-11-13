@@ -5,6 +5,7 @@ import { cn } from "@/utils"
 import { IAgentId } from "@/lib/types"
 import { Logo } from "@/icons"
 import { AgentAvatar } from "@/components/Mascots"
+import type { IDictionary } from "@/dictionaries"
 
 import {
     Glyph,
@@ -21,18 +22,19 @@ export type IAppScreen =
     | "playground"
     | "account"
 
+export type IAppCopy = IDictionary["common"]["mockup"]
+
 export const APP_NAV: {
     id: IAppScreen
-    name: string
     glyph: IGlyph
 }[] = [
-    { id: "playbooks", name: "Playbooks", glyph: "playbooks" },
-    { id: "campaigns", name: "Campaigns", glyph: "campaigns" },
-    { id: "epic", name: "Epic Board", glyph: "epic" },
-    { id: "seo", name: "SEO Intelligence", glyph: "seo" },
-    { id: "marketing", name: "Marketing Board", glyph: "marketing" },
-    { id: "playground", name: "AI Playground", glyph: "playground" },
-    { id: "account", name: "Account", glyph: "account" },
+    { id: "playbooks", glyph: "playbooks" },
+    { id: "campaigns", glyph: "campaigns" },
+    { id: "epic", glyph: "epic" },
+    { id: "seo", glyph: "seo" },
+    { id: "marketing", glyph: "marketing" },
+    { id: "playground", glyph: "playground" },
+    { id: "account", glyph: "account" },
 ]
 
 const SIDEBAR_AGENTS: {
@@ -40,16 +42,18 @@ const SIDEBAR_AGENTS: {
     name: string
     busy: boolean
 }[] = [
-    { id: "sales", name: "Sales Agent", busy: true },
-    { id: "researcher", name: "Lead Researcher", busy: true },
-    { id: "signal", name: "Signal Analyst", busy: false },
+    { id: "sales", name: "Sunny · Sales", busy: true },
+    { id: "researcher", name: "Bolt · Sales", busy: true },
+    { id: "signal", name: "Echo · Sales", busy: false },
     { id: "seo", name: "SEO Agent", busy: true },
     { id: "writer", name: "Writer Agent", busy: false },
 ]
 
 export const AppSidebar = ({
+    t,
     active,
 }: {
+    t: IAppCopy
     active?: IAppScreen
 }) => (
     <aside className="
@@ -66,7 +70,7 @@ export const AppSidebar = ({
         </div>
 
         <nav className="flex flex-col gap-0.5 px-2 mt-1">
-            {APP_NAV.map(({ id, name, glyph }) => (
+            {APP_NAV.map(({ id, glyph }) => (
                 <span
                     key={id}
                     data-active={active === id}
@@ -78,13 +82,13 @@ export const AppSidebar = ({
                     "
                 >
                     <Glyph name={glyph} size={15} />
-                    {name}
+                    {t.nav[id]}
                 </span>
             ))}
         </nav>
 
         <p className="px-4 mt-5 mb-1.5 text-[11px] font-medium text-grey-200">
-            Your workforce
+            {t.workforce}
         </p>
 
         <div className="flex flex-col gap-0.5 px-2">
@@ -111,7 +115,7 @@ export const AppSidebar = ({
                 shadow-[0_0_0_1px_rgb(10_10_10/0.08)] text-ink
             ">
                 <Glyph name="search" size={15} className="text-grey-200" />
-                Ask your workforce
+                {t.ask}
                 <span className="ml-auto text-[11px] text-grey-200">⌘K</span>
             </span>
         </div>
@@ -119,12 +123,14 @@ export const AppSidebar = ({
 )
 
 export const AppWindow = ({
+    t,
     children,
-    title = "GORVIO",
+    title = "Grovio",
     active,
     sidebar = true,
     className = "",
 }: {
+    t: IAppCopy
     children: ReactNode
     title?: string
     active?: IAppScreen
@@ -154,7 +160,7 @@ export const AppWindow = ({
         </div>
 
         <div className="flex flex-1 min-h-0">
-            {sidebar && <AppSidebar active={active} />}
+            {sidebar && <AppSidebar t={t} active={active} />}
             <div className="flex-1 min-w-0 flex flex-col">
                 {children}
             </div>

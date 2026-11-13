@@ -12,16 +12,19 @@ import {
 
 import { Modal } from "@/base"
 import { IAgentId } from "@/lib/types"
+import { IBetaInterest } from "@/lib/types/beta"
 import { AgentAvatar } from "@/components/Mascots"
 
 import {
     BetaForm,
     BetaSuccess
 } from "@/components/Forms/Beta"
+
+import { useDictionary } from "./DictionaryProvider"
 // #endregion
 
 interface IBetaContext {
-    openBeta: () => void
+    openBeta: (interest?: IBetaInterest) => void
     closeBeta: () => void
 }
 
@@ -36,10 +39,16 @@ export const BetaProvider = ({
 }: {
     children: React.ReactNode
 }) => {
+    const { beta: t } = useDictionary()
     const [open, setOpen] = useState(false)
+    const [interest, setInterest] = useState<IBetaInterest | undefined>()
     const [receipt, setReceipt] = useState<{ duplicate: boolean } | null>(null)
 
-    const openBeta = useCallback(() => setOpen(true), [])
+    const openBeta = useCallback((next?: IBetaInterest) => {
+        setInterest(next)
+        setOpen(true)
+    }, [])
+
     const closeBeta = useCallback(() => {
         setOpen(false)
         if (window.location.hash === BETA_HASH)
@@ -74,6 +83,7 @@ export const BetaProvider = ({
             <Modal
                 open={open}
                 onClose={closeBeta}
+                closeLabel={t.close}
                 size="lg"
                 padding="none"
             >
@@ -85,10 +95,10 @@ export const BetaProvider = ({
                     ">
                         <div>
                             <h2 className="font-display text-4xl font-semibold tracking-tight leading-[1.02]">
-                                Build your first AI workforce.
+                                {t.panelTitle}
                             </h2>
                             <p className="mt-4 text-sm text-ink/70">
-                                We&apos;re onboarding a small group of teams to hire GORVIO&apos;s sales and marketing agents and shape the product with us.
+                                {t.panelBody}
                             </p>
                         </div>
                         <div className="flex flex-col gap-4">
@@ -105,7 +115,7 @@ export const BetaProvider = ({
                                 ))}
                             </div>
                             <p className="text-xs font-medium text-ink/70">
-                                Built for the EU · GDPR compliant
+                                {t.panelEu}
                             </p>
                         </div>
                     </aside>
@@ -116,12 +126,16 @@ export const BetaProvider = ({
                             : (
                                 <>
                                     <h2 className="font-display text-2xl font-semibold tracking-tight pr-10">
-                                        Apply for beta access
+                                        {t.title}
                                     </h2>
                                     <p className="text-sm text-grey-300 mt-1 mb-6">
-                                        Tell us about your business and we&apos;ll match you with the right agents.
+                                        {t.subtitle}
                                     </p>
-                                    <BetaForm onSuccess={handleSuccess} />
+                                    <BetaForm
+                                        key={interest ?? "any"}
+                                        interest={interest}
+                                        onSuccess={handleSuccess}
+                                    />
                                 </>
                             )
                         }

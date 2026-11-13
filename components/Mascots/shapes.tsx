@@ -105,4 +105,41 @@ export const AGENT_SHAPES: Record<IAgentId, IAgentShape> = {
         look: [2, 0],
         bounds: [46, 26, 132, 142],
     },
+
+    caller: {
+        body: rounded(
+            "38 44 L162 44 L162 128 L96 128 L58 160 L64 128 L38 128",
+            "var(--color-agent-caller)"
+        ),
+        eyes: [[82, 86], [118, 86]],
+        look: [2, 1],
+        bounds: [30, 36, 140, 132],
+    },
+
+    concierge: {
+        body: (
+            <g fill="var(--color-agent-concierge)">
+                <path d="M40 132 A60 64 0 0 1 160 132 Z" />
+                <rect x={28} y={128} width={144} height={22} rx={11} />
+                <circle cx={100} cy={62} r={10} />
+            </g>
+        ),
+        eyes: [[82, 106], [118, 106]],
+        look: [0, 2],
+        bounds: [28, 52, 144, 98],
+    },
+
+    community: {
+        body: (
+            <g fill="var(--color-agent-community)">
+                <circle cx={100} cy={66} r={36} />
+                <circle cx={64} cy={124} r={36} />
+                <circle cx={136} cy={124} r={36} />
+                <path d="M100 66 L64 124 L136 124 Z" />
+            </g>
+        ),
+        eyes: [[86, 100], [114, 100]],
+        look: [-2, 2],
+        bounds: [28, 30, 144, 130],
+    },
 }

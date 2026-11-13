@@ -16,7 +16,7 @@ export const Wordmark = ({
             className="font-display font-bold tracking-tight"
             style={{ fontSize: size * 0.72 }}
         >
-            GORVIO
+            GROVIO
         </span>
     </span>
 )

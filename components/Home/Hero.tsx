@@ -15,8 +15,9 @@ import { Check } from "@/icons"
 import { BetaButton } from "@/components/Buttons"
 import { Pill } from "@/components/Mockups"
 
-import { IAgentId } from "@/lib/types"
 import { AgentAvatar } from "@/components/Mascots"
+
+import type { IDictionary } from "@/dictionaries"
 
 import { HeroBoard } from "./HeroBoard"
 // #endregion
@@ -58,16 +59,19 @@ const FloatCard = ({
 )
 
 const FLANKS: {
-    agent: IAgentId
-    title: string
+    agent: "sales" | "seo"
     className: string
     delay: number
 }[] = [
-    { agent: "sales", title: "Sunny, the Sales Agent", className: "left-4 top-20 desktop:left-16", delay: 0.5 },
-    { agent: "seo", title: "Scout, the SEO Agent", className: "right-4 top-40 desktop:right-16", delay: 0.7 },
+    { agent: "sales", className: "left-4 top-20 desktop:left-16", delay: 0.5 },
+    { agent: "seo", className: "right-4 top-40 desktop:right-16", delay: 0.7 },
 ]
 
-export const Hero = () => {
+export const Hero = ({
+    t,
+}: {
+    t: IDictionary["home"]["hero"]
+}) => {
     const ref = useRef<HTMLElement | null>(null)
     const reduced = useReducedMotion()
 
@@ -99,7 +103,7 @@ export const Hero = () => {
             <div className="relative max-w-7xl mx-auto px-6 max-mobile:px-4">
                 <div className="relative flex flex-col items-center text-center">
 
-                    {FLANKS.map(({ agent, title, className, delay }, index) => (
+                    {FLANKS.map(({ agent, className, delay }, index) => (
                         <motion.div
                             key={agent}
                             style={{ y: reduced ? 0 : index ? flankRightY : flankLeftY }}
@@ -118,7 +122,7 @@ export const Hero = () => {
                                     track
                                     hover
                                     delay={index * 1.3}
-                                    title={title}
+                                    title={t.sides[agent]}
                                     className="shadow-card"
                                 />
                             </motion.div>
@@ -134,9 +138,9 @@ export const Hero = () => {
                             max-w-[12ch]
                         "
                     >
-                        Your next{" "}
+                        {t.titleStart}{" "}
                         <span className="relative inline-block">
-                            team
+                            {t.titleMark}
                             <svg
                                 aria-hidden
                                 viewBox="0 0 300 30"
@@ -155,7 +159,7 @@ export const Hero = () => {
                                 />
                             </svg>
                         </span>{" "}
-                        doesn&apos;t need an office.
+                        {t.titleEnd}
                     </motion.h1>
 
                     <motion.p
@@ -165,9 +169,7 @@ export const Hero = () => {
                             max-mobile:text-base
                         "
                     >
-                        Meet GORVIO, a workforce of AI contractors for your sales and marketing.
-                        Hire specialised agents, hand them real work, and approve what ships.
-                        They take it from there.
+                        {t.body}
                     </motion.p>
 
                     <motion.div
@@ -176,7 +178,7 @@ export const Hero = () => {
                     >
                         <BetaButton size="lg" className="max-mobile:w-full" />
                         <a
-                            href="#workforce"
+                            href="#walkthrough"
                             className="
                                 inline-flex items-center justify-center gap-2 rounded-full
                                 px-7 py-3.5 font-medium ring-1 ring-grey-100 bg-white
@@ -184,7 +186,7 @@ export const Hero = () => {
                                 max-mobile:w-full
                             "
                         >
-                            Meet the agents
+                            {t.secondary}
                         </a>
                     </motion.div>
 
@@ -193,7 +195,7 @@ export const Hero = () => {
                         className="mt-5 inline-flex items-center gap-2 text-sm text-grey-300"
                     >
                         <Check size={14} className="text-success" />
-                        Built in and for the EU · GDPR compliant
+                        {t.eu}
                     </motion.p>
                 </div>
 
@@ -205,17 +207,17 @@ export const Hero = () => {
                 >
                     <motion.div style={reduced ? undefined : { scale: boardScale, y: boardY }}>
                         <ScaledFrame width={1200} height={720}>
-                            <HeroBoard />
+                            <HeroBoard t={t.board} />
                         </ScaledFrame>
                     </motion.div>
 
                     <motion.div style={reduced ? undefined : { y: cardsY }} className="absolute inset-0 pointer-events-none">
                         <FloatCard className="-left-10 top-[66%] desktop:-left-24" delay={1.4}>
                             <div className="flex items-center gap-2.5">
-                                <AgentAvatar agent="researcher" size={30} />
+                                <AgentAvatar agent="sales" size={30} />
                                 <div className="text-left">
-                                    <p className="font-semibold">51 leads accepted</p>
-                                    <p className="text-grey-200 text-xs">9 discarded, reasons logged</p>
+                                    <p className="font-semibold">{t.icpTitle}</p>
+                                    <p className="text-grey-200 text-xs">{t.icpBody}</p>
                                 </div>
                                 <span className="ml-2 grid place-items-center size-6 rounded-full bg-success text-white">
                                     <Check size={13} />
@@ -227,11 +229,11 @@ export const Hero = () => {
                             <div className="flex flex-col gap-2 text-left w-56">
                                 <div className="flex items-center gap-2">
                                     <AgentAvatar agent="signal" size={22} />
-                                    <span className="font-semibold">Positive reply</span>
-                                    <Pill tone="green" className="ml-auto">CRM synced</Pill>
+                                    <span className="font-semibold">{t.replyTitle}</span>
+                                    <Pill tone="green" className="ml-auto">{t.replyPill}</Pill>
                                 </div>
                                 <p className="text-grey-300 text-xs leading-relaxed">
-                                    &ldquo;Sounds interesting — can we talk Thursday?&rdquo;
+                                    &ldquo;{t.replyQuote}&rdquo;
                                 </p>
                             </div>
                         </FloatCard>

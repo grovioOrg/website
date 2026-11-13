@@ -6,15 +6,27 @@ export type IAgentId =
     | "writer"
     | "graphic"
     | "video"
+    | "caller"
+    | "concierge"
+    | "community"
 
-export type ITeam = "sales" | "marketing"
+export type ITeam = "sales" | "marketing" | "vertical"
 
-export interface IAgent {
-    id: IAgentId
+export type IAgentStatus = "available" | "upcoming"
+
+export type IAgentPage =
+    | "sales-agent"
+    | "seo-agent"
+    | "writer-agent"
+    | "graphic-designer"
+    | "video-agent"
+    | "hot-leads-caller"
+    | "concierge"
+    | "community-growth"
+
+export interface IAgentCopy {
     name: string
     role: string
-    team: ITeam
-    color: string
     tagline: string
     description: string
     quirk: string
@@ -24,3 +36,13 @@ export interface IAgent {
         result: string
     }
 }
+
+export interface IAgentMeta {
+    id: IAgentId
+    team: ITeam
+    status: IAgentStatus
+    page: IAgentPage
+    color: string
+}
+
+export interface IAgent extends IAgentMeta, IAgentCopy {}

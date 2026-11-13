@@ -3,6 +3,7 @@
 // #region imports
 import {
     useEffect,
+    useMemo,
     useRef,
     useState
 } from "react"
@@ -17,6 +18,8 @@ import {
 
 import { IAgentId } from "@/lib/types"
 import { getAgent } from "@/data"
+import { useDictionary } from "@/context"
+import { formatText, type IDictionary } from "@/dictionaries"
 import { Check, Plus } from "@/icons"
 import {
     AgentAvatar,
@@ -34,6 +37,7 @@ import {
 
 type IColumn = "todo" | "doing" | "review" | "done"
 type ICarrier = ICursorOwner
+type IBoardCopy = IDictionary["home"]["hero"]["board"]
 
 interface ITask {
     id: string
@@ -44,41 +48,42 @@ interface ITask {
     archived?: boolean
 }
 
-const POOL: Omit<ITask, "id">[] = [
-    { title: "Find 60 fintech founders in London", agent: "sales", tag: "Leads", tone: "yellow" },
-    { title: "Write: Bookkeeping for seed startups", agent: "writer", tag: "Content", tone: "green" },
-    { title: "Refresh pricing page CTAs", agent: "seo", tag: "SEO", tone: "blue" },
-    { title: "Qualify webinar sign-ups", agent: "researcher", tag: "Research", tone: "blue" },
-    { title: "30s teaser for the launch post", agent: "video", tag: "Video", tone: "pink" },
-    { title: "Follow-up for warm replies", agent: "signal", tag: "Outreach", tone: "green" },
-    { title: "Cover art for October newsletter", agent: "graphic", tag: "Design", tone: "purple" },
-    { title: "Keyword gap audit vs. 3 competitors", agent: "seo", tag: "SEO", tone: "blue" },
-    { title: "Sync 18 positive replies to CRM", agent: "signal", tag: "CRM", tone: "green" },
-    { title: "Personalised intro for Lumen Labs", agent: "researcher", tag: "Drafts", tone: "blue" },
-    { title: "Source leads from Comment Sniffer", agent: "sales", tag: "Leads", tone: "yellow" },
-    { title: "LinkedIn carousel: 5 hiring myths", agent: "graphic", tag: "Design", tone: "purple" },
+const POOL: Pick<ITask, "agent" | "tone">[] = [
+    { agent: "sales", tone: "yellow" },
+    { agent: "writer", tone: "green" },
+    { agent: "seo", tone: "blue" },
+    { agent: "researcher", tone: "blue" },
+    { agent: "video", tone: "pink" },
+    { agent: "signal", tone: "green" },
+    { agent: "graphic", tone: "purple" },
+    { agent: "seo", tone: "blue" },
+    { agent: "signal", tone: "yellow" },
+    { agent: "researcher", tone: "blue" },
+    { agent: "sales", tone: "yellow" },
+    { agent: "graphic", tone: "purple" },
 ]
 
-const seed = (indexes: number[]) =>
-    indexes.map(index => ({ ...POOL[index], id: `s${index}` }))
+const seed = (pool: Omit<ITask, "id">[]): Record<IColumn, ITask[]> => {
+    const pick = (indexes: number[]) =>
+        indexes.map(index => ({ ...pool[index], id: `s${index}` }))
 
-const INITIAL: Record<IColumn, ITask[]> = {
-    todo: seed([0, 1, 2]),
-    doing: seed([3, 4]),
-    review: seed([5, 6]),
-    done: seed([7, 8]),
+    return {
+        todo: pick([0, 1, 2]),
+        doing: pick([3, 4]),
+        review: pick([5, 6]),
+        done: pick([7, 8]),
+    }
 }
 
 const COLUMNS: {
     id: IColumn
-    name: string
     tone: IPillTone
     surface: string
 }[] = [
-    { id: "todo", name: "To do", tone: "purple", surface: "bg-[#FAF8FE]" },
-    { id: "doing", name: "In progress", tone: "yellow", surface: "bg-[#FFFCF0]" },
-    { id: "review", name: "Needs approval", tone: "blue", surface: "bg-[#F6F8FF]" },
-    { id: "done", name: "Done", tone: "green", surface: "bg-[#F4FBF7]" },
+    { id: "todo", tone: "purple", surface: "bg-[#FAF8FE]" },
+    { id: "doing", tone: "yellow", surface: "bg-[#FFFCF0]" },
+    { id: "review", tone: "blue", surface: "bg-[#F6F8FF]" },
+    { id: "done", tone: "green", surface: "bg-[#F4FBF7]" },
 ]
 
 const NEXT: Record<IColumn, IColumn> = {
@@ -115,11 +120,15 @@ const TypingText = ({ text }: { text: string }) => {
 }
 
 const TaskCard = ({
+    t,
+    you,
     task,
     column,
     carrier,
     typing,
 }: {
+    t: IBoardCopy
+    you: string
     task: ITask
     column: IColumn
     carrier?: ICarrier
@@ -168,10 +177,10 @@ const TaskCard = ({
                         ${approving ? "bg-success text-white" : "bg-ink text-white"}
                     `}>
                         {approving && <Check size={11} />}
-                        {approving ? "Approved" : "Approve"}
+                        {approving ? t.approved : t.approve}
                     </span>
                     <span className="rounded-md px-2 py-0.5 text-[11px] font-medium ring-1 ring-grey-100 text-grey-300">
-                        Edit
+                        {t.edit}
                     </span>
                 </div>
             )}
@@ -191,7 +200,7 @@ const TaskCard = ({
                         exit={{ opacity: 0, scale: 0.6 }}
                         className="absolute -right-3 -bottom-5 z-30"
                     >
-                        <AgentCursor by={carrier} size="sm" />
+                        <AgentCursor by={carrier} label={carrier === "you" ? you : undefined} size="sm" />
                     </motion.span>
                 )}
             </AnimatePresence>
@@ -199,19 +208,29 @@ const TaskCard = ({
     )
 }
 
-export const HeroBoard = () => {
+export const HeroBoard = ({
+    t,
+}: {
+    t: IBoardCopy
+}) => {
+    const { common } = useDictionary()
     const ref = useRef<HTMLDivElement | null>(null)
     const inView = useInView(ref, { margin: "-10% 0px" })
     const reduced = useReducedMotion()
 
-    const [board, setBoard] = useState(INITIAL)
+    const pool = useMemo(
+        () => POOL.map((item, index) => ({ ...item, ...t.tasks[index] })),
+        [t]
+    )
+
+    const [board, setBoard] = useState(() => seed(pool))
     const [carry, setCarry] = useState<{ id: string, by: ICarrier } | null>(null)
     const [typing, setTyping] = useState<string | null>(null)
-    const [activity, setActivity] = useState("Sunny started sourcing leads for Q4 Fintech")
+    const [activity, setActivity] = useState(t.activity.start)
 
     const boardRef = useRef(board)
     const cycle = useRef(0)
-    const pool = useRef(9)
+    const next = useRef(9)
     const counter = useRef(0)
 
     useEffect(() => {
@@ -234,9 +253,9 @@ export const HeroBoard = () => {
                     .flat()
                     .map(item => item.title)
 
-                let base = POOL[pool.current++ % POOL.length]
+                let base = pool[next.current++ % pool.length]
                 while (onBoard.includes(base.title))
-                    base = POOL[pool.current++ % POOL.length]
+                    base = pool[next.current++ % pool.length]
 
                 const task: ITask = {
                     ...base,
@@ -246,7 +265,7 @@ export const HeroBoard = () => {
                 setBoard(current => ({ ...current, todo: [...current.todo, task] }))
                 setCarry({ id: task.id, by: "you" })
                 setTyping(task.id)
-                setActivity(`You briefed ${getAgent(task.agent).role}: “${task.title}”`)
+                setActivity(formatText(t.activity.briefed, { agent: getAgent(task.agent).role, task: task.title }))
 
                 later(() => {
                     setTyping(null)
@@ -262,8 +281,8 @@ export const HeroBoard = () => {
 
                     setCarry({ id: task.id, by })
                     setActivity(by === "you"
-                        ? `You approved “${task.title}”`
-                        : `${getAgent(task.agent).name} moved “${task.title}” to ${COLUMNS.find(c => c.id === to)?.name}`
+                        ? formatText(t.activity.approved, { task: task.title })
+                        : formatText(t.activity.moved, { agent: getAgent(task.agent).name, task: task.title, column: t.columns[to] })
                     )
 
                     later(() => setBoard(current => {
@@ -300,13 +319,14 @@ export const HeroBoard = () => {
 
         later(run, 900)
         return () => timers.forEach(clearTimeout)
-    }, [inView, reduced])
+    }, [inView, reduced, pool, t])
 
     return (
         <div ref={ref}>
             <AppWindow
+                t={common.mockup}
                 active="epic"
-                title="Northwind · Epic Board"
+                title={`Northwind · ${common.mockup.nav.epic}`}
                 className="h-[720px]"
             >
                 <div className="px-8 pt-7 pb-4 border-b border-grey-100">
@@ -316,10 +336,10 @@ export const HeroBoard = () => {
                         </span>
                         <div>
                             <h3 className="font-display text-[26px] font-semibold tracking-tight leading-none">
-                                Q4 Growth Sprint
+                                {t.title}
                             </h3>
                             <p className="text-[12px] text-grey-200 mt-1">
-                                7 agents · 2 campaigns · Sprint ends Friday
+                                {t.meta}
                             </p>
                         </div>
 
@@ -333,20 +353,20 @@ export const HeroBoard = () => {
                                 inline-flex items-center gap-1 rounded-lg bg-ink text-white
                                 text-[12px] font-medium px-3 py-1.5
                             ">
-                                <Plus size={13} /> New task
+                                <Plus size={13} /> {t.newTask}
                             </span>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-5 mt-5 text-[13px] text-grey-300">
                         <span className="flex items-center gap-1.5 text-ink font-medium">
-                            <Glyph name="board" size={15} /> Board
+                            <Glyph name="board" size={15} /> {t.views[0]}
                         </span>
                         <span className="flex items-center gap-1.5">
-                            <Glyph name="timeline" size={15} /> Timeline
+                            <Glyph name="timeline" size={15} /> {t.views[1]}
                         </span>
                         <span className="flex items-center gap-1.5">
-                            <Glyph name="filter" size={15} /> By agent
+                            <Glyph name="filter" size={15} /> {t.views[2]}
                         </span>
 
                         <span className="ml-auto flex items-center gap-2 text-[12px] max-w-[440px]">
@@ -372,13 +392,13 @@ export const HeroBoard = () => {
 
                 <LayoutGroup>
                     <div className="grid grid-cols-4 gap-3 p-5 flex-1 min-h-0 overflow-hidden">
-                        {COLUMNS.map(({ id, name, tone, surface }) => (
+                        {COLUMNS.map(({ id, tone, surface }) => (
                             <div
                                 key={id}
                                 className={`flex flex-col gap-2 rounded-xl p-2 ${surface}`}
                             >
                                 <div className="flex items-center gap-2 px-1 py-1">
-                                    <Pill tone={tone} dot>{name}</Pill>
+                                    <Pill tone={tone} dot>{t.columns[id]}</Pill>
                                     <span className="text-[12px] text-grey-200">
                                         {board[id].filter(task => !task.archived).length}
                                     </span>
@@ -387,6 +407,8 @@ export const HeroBoard = () => {
                                 {board[id].map(task => (
                                     <TaskCard
                                         key={task.id}
+                                        t={t}
+                                        you={common.you}
                                         task={task}
                                         column={id}
                                         carrier={carry?.id === task.id ? carry.by : undefined}
@@ -396,7 +418,7 @@ export const HeroBoard = () => {
 
                                 {id === "todo" && (
                                     <span className="flex items-center gap-1.5 px-2 py-1 text-[12px] text-grey-200">
-                                        <Plus size={12} /> Brief an agent
+                                        <Plus size={12} /> {t.brief}
                                     </span>
                                 )}
                             </div>

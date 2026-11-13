@@ -12,6 +12,7 @@ import {
 } from "framer-motion"
 
 import { ScaledFrame } from "@/base"
+import { useDictionary } from "@/context"
 import { useTicker } from "@/hooks"
 import { Check } from "@/icons"
 import { IAgentId } from "@/lib/types"
@@ -21,10 +22,13 @@ import { AgentAvatar } from "@/components/Mascots"
 
 import { Glyph } from "@/components/Mockups"
 
+import type { IDictionary } from "@/dictionaries"
+
 import { SectionHeading } from "./SectionHeading"
 // #endregion
 
 type IStageState = "idle" | "active" | "done"
+type IFlow = IDictionary["home"]["sales"]["flow"]
 
 interface IStage {
     id: string
@@ -33,21 +37,16 @@ interface IStage {
     agent?: IAgentId | "you"
     log: string
     rect: [number, number, number, number]
-    body?: (state: IStageState) => ReactNode
+    body?: (state: IStageState, t: IFlow) => ReactNode
 }
 
-const PROVIDERS = ["CSV upload", "Provider API", "Comment Sniffer", "Scrapers"]
-
-const STAGES: IStage[] = [
+const STAGES: Omit<IStage, "title" | "caption" | "log">[] = [
     {
         id: "providers",
-        title: "Lead providers",
-        caption: "Where prospects come from",
-        log: "Imported 412 profiles from Provider API",
         rect: [10, 16, 200, 244],
-        body: (state) => (
+        body: (state, t) => (
             <div className="mt-3 flex flex-col gap-1.5">
-                {PROVIDERS.map((name, index) => (
+                {t.providers.map((name, index) => (
                     <motion.span
                         key={name}
                         initial={false}
@@ -64,90 +63,66 @@ const STAGES: IStage[] = [
     },
     {
         id: "sales",
-        title: "Sales Agent",
-        caption: "Matches each prospect to your ICP",
         agent: "sales",
-        log: "Sunny matched 60 profiles to the campaign ICP",
         rect: [250, 82, 190, 96],
     },
     {
         id: "researcher",
-        title: "Lead Researcher",
-        caption: "Accepts or discards, with reasons",
-        agent: "researcher",
-        log: "Bolt accepted 51 leads and discarded 9, reasons logged",
+        agent: "sales",
         rect: [480, 64, 220, 132],
-        body: (state) => (
+        body: (state, t) => (
             <div className="mt-3 grid grid-cols-2 gap-1.5 text-[11px]">
                 <span className="rounded-md bg-success/20 text-[#7BE0B5] px-2 py-1 font-medium">
-                    {state === "idle" ? "—" : "51"} accepted
+                    {state === "idle" ? "—" : "4"} {t.accepted}
                 </span>
                 <span className="rounded-md bg-error/20 text-[#FF9C8F] px-2 py-1 font-medium">
-                    {state === "idle" ? "—" : "9"} discarded
+                    {state === "idle" ? "—" : "1"} {t.discarded}
                 </span>
             </div>
         ),
     },
     {
         id: "funnel",
-        title: "Leads Funnel",
-        caption: "Qualified and ready for outreach",
-        log: "51 qualified leads moved into the Leads Funnel",
         rect: [740, 82, 200, 96],
     },
     {
         id: "draft",
-        title: "Message draft",
-        caption: "Personal openers from research",
         agent: "sales",
-        log: "Sunny drafted 51 personalised openers",
         rect: [740, 372, 200, 96],
     },
     {
         id: "outreach",
-        title: "Outreach Funnel",
-        caption: "Nothing sends without you",
         agent: "you",
-        log: "You approved 48 messages and edited 3",
         rect: [480, 354, 220, 132],
-        body: (state) => (
+        body: (state, t) => (
             <div className="mt-3 flex gap-1.5 text-[11px] font-medium">
-                <span className="rounded-md bg-white/[0.08] text-white/70 px-2 py-1">Edit</span>
+                <span className="rounded-md bg-white/[0.08] text-white/70 px-1.5 py-1">{t.edit}</span>
                 <motion.span
                     initial={false}
                     animate={{ scale: state === "active" ? [1, 1.12, 1] : 1 }}
                     transition={{ delay: 0.5, duration: 0.4 }}
                     className={cn(
-                        "rounded-md px-2 py-1 smooth",
+                        "rounded-md px-1.5 py-1 smooth",
                         state === "idle" ? "bg-white/[0.08] text-white/70" : "bg-yellow-100 text-ink"
                     )}
                 >
-                    Accept
+                    {t.accept}
                 </motion.span>
-                <span className="rounded-md bg-white/[0.08] text-white/70 px-2 py-1">Discard</span>
+                <span className="rounded-md bg-white/[0.08] text-white/70 px-1.5 py-1">{t.discard}</span>
             </div>
         ),
     },
     {
         id: "sent",
-        title: "Message sent",
-        caption: "On schedule, one by one",
-        log: "48 messages queued and sent on schedule",
         rect: [250, 372, 190, 96],
     },
     {
         id: "signal",
-        title: "Signal Analyst",
-        caption: "Reads every reply for intent",
-        agent: "signal",
-        log: "Echo flagged 7 positive replies",
+        agent: "sales",
         rect: [10, 372, 200, 96],
     },
     {
         id: "crm",
-        title: "CRM + follow-up",
-        caption: "",
-        log: "7 contacts synced to CRM, follow-ups scheduled",
         rect: [10, 520, 200, 56],
     },
 ]
@@ -173,9 +148,13 @@ const STAGE_ICON: Record<string, ReactNode> = {
 }
 
 const StageCard = ({
+    t,
+    you,
     stage,
     state,
 }: {
+    t: IFlow
+    you: string
     stage: IStage
     state: IStageState
 }) => {
@@ -199,7 +178,7 @@ const StageCard = ({
             <div className="flex items-center gap-2.5">
                 {stage.agent === "you" ? (
                     <span className="grid place-items-center size-7 rounded-full bg-white text-ink text-[11px] font-bold shrink-0">
-                        You
+                        {you}
                     </span>
                 ) : stage.agent ? (
                     <AgentAvatar agent={stage.agent} size={28} ring={false} />
@@ -228,16 +207,22 @@ const StageCard = ({
                 </span>
             </div>
 
-            {stage.body?.(state)}
+            {stage.body?.(state, t)}
         </motion.div>
     )
 }
 
 const Pipeline = ({
+    t,
+    you,
+    stages,
     stage,
     tick,
     running,
 }: {
+    t: IFlow
+    you: string
+    stages: IStage[]
     stage: number
     tick: number
     running: boolean
@@ -263,7 +248,7 @@ const Pipeline = ({
                 strokeDasharray="5 6"
             />
             <text x={525} y={552} textAnchor="middle" fill="rgb(255 255 255 / 0.45)" fontSize={11}>
-                Follow-up loop: no reply in 4 days, Sunny drafts the next touch
+                {t.loop}
             </text>
         </svg>
 
@@ -290,9 +275,11 @@ const Pipeline = ({
             />
         )}
 
-        {STAGES.map((item, index) => (
+        {stages.map((item, index) => (
             <StageCard
                 key={item.id}
+                t={t}
+                you={you}
                 stage={item}
                 state={index < stage ? "done" : index === stage ? "active" : "idle"}
             />
@@ -300,23 +287,33 @@ const Pipeline = ({
     </div>
 )
 
-const RunLog = ({ step }: { step: number }) => {
+const RunLog = ({
+    t,
+    you,
+    stages,
+    step,
+}: {
+    t: IFlow
+    you: string
+    stages: IStage[]
+    step: number
+}) => {
     const entries = Array.from({ length: Math.min(6, step + 1) }, (_, offset) => {
         const at = step - offset
-        const index = at % STAGES.length
-        return { ...STAGES[index], index, key: at }
+        const index = at % stages.length
+        return { ...stages[index], index, key: at }
     })
 
     return (
         <div className="rounded-3xl bg-charcoal-100 ring-1 ring-white/10 p-5 flex flex-col min-h-[420px]">
             <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-white">Run log</p>
+                <p className="text-sm font-semibold text-white">{t.runLog}</p>
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-[#7BE0B5]">
                     <span className="relative flex size-2">
                         <span className="absolute inset-0 rounded-full bg-success animate-ping opacity-60" />
                         <span className="relative size-2 rounded-full bg-success" />
                     </span>
-                    London fintech · live
+                    {t.live}
                 </span>
             </div>
 
@@ -336,7 +333,7 @@ const RunLog = ({ step }: { step: number }) => {
                                 <AgentAvatar agent={item.agent} size={22} ring={false} />
                             ) : (
                                 <span className="grid place-items-center size-[22px] rounded-full bg-white/10 text-white text-[9px] font-bold shrink-0">
-                                    {item.agent === "you" ? "You" : <Glyph name="bolt" size={11} />}
+                                    {item.agent === "you" ? you : <Glyph name="bolt" size={11} />}
                                 </span>
                             )}
                             <span className="text-[13px] text-white/80 leading-snug">{item.log}</span>
@@ -351,9 +348,15 @@ const RunLog = ({ step }: { step: number }) => {
     )
 }
 
-export const SalesWorkforce = () => {
+export const SalesWorkforce = ({
+    t,
+}: {
+    t: IDictionary["home"]["sales"]
+}) => {
+    const { common } = useDictionary()
     const ref = useRef<HTMLDivElement | null>(null)
     const { tick, running, reduced } = useTicker(ref, 1600)
+    const stages: IStage[] = STAGES.map((item, index) => ({ ...item, ...t.flow.stages[index] }))
 
     const last = STAGES.length - 1
     const step = reduced ? last : tick
@@ -370,14 +373,17 @@ export const SalesWorkforce = () => {
                 <div className="flex items-end justify-between gap-10 max-tablet:flex-col max-tablet:items-start">
                     <SectionHeading
                         tone="dark"
-                        title={<>From cold list to warm reply. On a loop.</>}
-                        description="Three contractors run your outbound end to end: sourcing, research, drafting and reading replies. You approve every message before it leaves, and outreach respects GDPR: a lawful basis for every contact and opt-outs honoured right away."
+                        title={t.title}
+                        description={t.description}
                     />
 
-                    <div className="flex -space-x-3 shrink-0">
-                        {(["sales", "researcher", "signal"] as IAgentId[]).map(id => (
-                            <AgentAvatar key={id} agent={id} size={52} className="ring-ink!" />
-                        ))}
+                    <div className="flex flex-col items-end gap-3 shrink-0 max-tablet:items-start">
+                        <div className="flex -space-x-3">
+                            {(["sales", "researcher", "signal"] as IAgentId[]).map(id => (
+                                <AgentAvatar key={id} agent={id} size={52} className="ring-ink!" />
+                            ))}
+                        </div>
+                        <p className="text-xs text-white/55 max-w-48 tablet:text-right">{t.agentsNote}</p>
                     </div>
                 </div>
 
@@ -387,12 +393,12 @@ export const SalesWorkforce = () => {
                 >
                     <div className="relative rounded-3xl bg-white/[0.03] ring-1 ring-white/10 p-6 max-mobile:hidden">
                         <ScaledFrame width={960} height={600}>
-                            <Pipeline stage={stage} tick={tick} running={running} />
+                            <Pipeline t={t.flow} you={common.you} stages={stages} stage={stage} tick={tick} running={running} />
                         </ScaledFrame>
                     </div>
 
                     <ol className="mobile:hidden flex flex-col gap-2">
-                        {STAGES.map((item, index) => (
+                        {stages.map((item, index) => (
                             <li
                                 key={item.id}
                                 className={cn(
@@ -414,7 +420,7 @@ export const SalesWorkforce = () => {
                         ))}
                     </ol>
 
-                    <RunLog step={step} />
+                    <RunLog t={t.flow} you={common.you} stages={stages} step={step} />
                 </div>
             </div>
         </section>

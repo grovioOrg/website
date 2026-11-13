@@ -61,6 +61,7 @@ export interface IModalProps {
 
     closeOnOutside?: boolean
     showClose?: boolean
+    closeLabel?: string
 
     className?: string
     overlayClassName?: string
@@ -79,6 +80,7 @@ const Modal = ({
 
     closeOnOutside = true,
     showClose = true,
+    closeLabel = "Close",
 
     className = "",
     overlayClassName = "",
@@ -150,7 +152,7 @@ const Modal = ({
                         showClose &&
                         <button
                             type="button"
-                            aria-label="Close"
+                            aria-label={closeLabel}
                             onClick={onClose}
                             className={modalVariants.close}
                         >

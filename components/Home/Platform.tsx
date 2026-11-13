@@ -15,6 +15,7 @@ import {
 } from "framer-motion"
 
 import { ScaledFrame } from "@/base"
+import { useDictionary } from "@/context"
 import { cn } from "@/utils"
 
 import {
@@ -25,22 +26,21 @@ import {
 } from "@/components/Mockups"
 
 import { PLATFORM_SCREENS } from "./PlatformScreens"
+import type { IDictionary } from "@/dictionaries"
+
 import { SectionHeading } from "./SectionHeading"
 // #endregion
 
-const DESCRIPTIONS: Record<IAppScreen, string> = {
-    playbooks: "Save what works as a play. Run it again with one click.",
-    campaigns: "Each campaign gets its own workforce, goals and approvals.",
-    epic: "One board for every task your agents and your team are working on.",
-    seo: "Keywords, page health and CTA ideas, refreshed by your SEO agent.",
-    marketing: "A content calendar your creators fill and you sign off.",
-    playground: "Try a prompt with any agent before you brief them for real.",
-    account: "Hire, pause and manage contracts, people and approval rules.",
-}
-
 const DESKTOP_QUERY = "(min-width: 1030px)"
 
-export const Platform = () => {
+export const Platform = ({
+    t,
+}: {
+    t: IDictionary["home"]["platform"]
+}) => {
+    const { common } = useDictionary()
+    const app = common.mockup
+    const DESCRIPTIONS: Record<IAppScreen, string> = t.screens
     const track = useRef<HTMLDivElement | null>(null)
     const [active, setActive] = useState(0)
     const [pinned, setPinned] = useState(false)
@@ -87,8 +87,8 @@ export const Platform = () => {
         <section id="platform" className="relative bg-white">
             <div className="max-w-7xl mx-auto px-6 pt-28 max-mobile:px-4 max-mobile:pt-20">
                 <SectionHeading
-                    title={<>One workspace for the whole workforce.</>}
-                    description="Brief agents, review their work and watch campaigns move, all in the same place your team already plans."
+                    title={t.title}
+                    description={t.description}
                 />
             </div>
 
@@ -104,7 +104,7 @@ export const Platform = () => {
                     ">
                         <div
                             role="tablist"
-                            aria-label="Platform areas"
+                            aria-label={t.tablist}
                             className="
                                 flex flex-col gap-1
                                 max-tablet:flex-row max-tablet:overflow-x-auto
@@ -136,7 +136,7 @@ export const Platform = () => {
                                             selected ? "font-semibold" : "font-medium text-grey-200 hover:text-grey-300"
                                         )}>
                                             <Glyph name={item.glyph} size={17} />
-                                            {item.name}
+                                            {app.nav[item.id]}
                                         </span>
                                         <AnimatePresence initial={false}>
                                             {selected && (
@@ -161,8 +161,9 @@ export const Platform = () => {
                             </p>
                             <ScaledFrame width={1100} height={660}>
                                 <AppWindow
+                                    t={app}
                                     active={screen.id}
-                                    title={`Northwind · ${screen.name}`}
+                                    title={`Northwind · ${app.nav[screen.id]}`}
                                     className="h-[660px]"
                                 >
                                     <AnimatePresence mode="wait">
@@ -174,7 +175,7 @@ export const Platform = () => {
                                             transition={{ duration: 0.3, ease: [0.2, 0.7, 0.2, 1] }}
                                             className="flex-1 min-h-0 overflow-hidden"
                                         >
-                                            <Screen />
+                                            <Screen t={t.mockup} app={app} />
                                         </motion.div>
                                     </AnimatePresence>
                                 </AppWindow>

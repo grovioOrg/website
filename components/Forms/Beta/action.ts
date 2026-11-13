@@ -7,6 +7,13 @@ import {
 } from "@/lib/common"
 
 import { registerBeta } from "@/lib/api"
+import { _BETA_URL } from "@/constants"
+
+import {
+    DEFAULT_LOCALE,
+    getDictionary,
+    hasLocale
+} from "@/dictionaries"
 
 import {
     IBetaInterest,
@@ -28,8 +35,11 @@ export const betaAction = async (
     formData: FormData,
 ): Promise<IBetaResponse> => {
 
+    const lang = String(formData.get("lang") ?? "")
+    const t = (await getDictionary(hasLocale(lang) ? lang : DEFAULT_LOCALE)).beta
+
     const data = parseForm<IBetaForm>(formData)
-    const errors = validateBetaFields(data)
+    const errors = validateBetaFields(data, t.errors)
 
     if (errors !== null)
         return {
@@ -46,6 +56,7 @@ export const betaAction = async (
         size: data.size as ICompanySize,
         interest: data.interest as IBetaInterest,
         consent: true,
+        language: hasLocale(lang) ? lang : DEFAULT_LOCALE,
     })
 
     if (res.success)
@@ -57,6 +68,6 @@ export const betaAction = async (
     return {
         success: false,
         data,
-        message: res.error ?? "Something went wrong. Please try again.",
+        message: _BETA_URL ? t.errors.generic : t.errors.unavailable,
     }
 }

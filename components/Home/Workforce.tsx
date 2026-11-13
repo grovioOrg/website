@@ -8,8 +8,10 @@ import {
 
 import { motion } from "framer-motion"
 
-import { agents } from "@/data"
+import { agentLink } from "@/data/links"
 import { Check } from "@/icons"
+import { useDictionary } from "@/context"
+import { formatText, type IDictionary } from "@/dictionaries"
 import { IAgent, IAgentId } from "@/lib/types"
 import { cn } from "@/utils"
 
@@ -20,7 +22,9 @@ import { BetaButton } from "@/components/Buttons"
 import { SectionHeading } from "./SectionHeading"
 // #endregion
 
-const TaskTicket = ({ agent }: { agent: IAgent }) => {
+type IWorkforceCopy = IDictionary["home"]["workforce"]
+
+const TaskTicket = ({ agent, t }: { agent: IAgent, t: IWorkforceCopy }) => {
     const [done, setDone] = useState(0)
 
     useEffect(() => {
@@ -36,9 +40,9 @@ const TaskTicket = ({ agent }: { agent: IAgent }) => {
     return (
         <div className="h-full min-h-[340px] flex flex-col rounded-2xl bg-white ring-1 ring-ink/6 shadow-card p-5">
             <div className="flex items-center justify-between gap-3">
-                <p className="text-xs font-medium text-grey-200">Example task</p>
+                <p className="text-xs font-medium text-grey-200">{t.exampleTask}</p>
                 <Pill tone={complete ? "green" : "yellow"} dot>
-                    {complete ? "Done" : "Working"}
+                    {complete ? t.done : t.working}
                 </Pill>
             </div>
 
@@ -73,14 +77,21 @@ const TaskTicket = ({ agent }: { agent: IAgent }) => {
                 animate={{ opacity: complete ? 1 : 0.35 }}
                 className="mt-auto pt-4 border-t border-grey-100 flex items-center justify-between text-sm"
             >
-                <span className="text-grey-300">Result</span>
+                <span className="text-grey-300">{t.result}</span>
                 <span className="font-semibold">{agent.task.result}</span>
             </motion.div>
         </div>
     )
 }
 
-export const Workforce = () => {
+export const Workforce = ({
+    t,
+    agents,
+}: {
+    t: IWorkforceCopy
+    agents: IAgent[]
+}) => {
+    const { lang, common } = useDictionary()
     const [selected, setSelected] = useState<IAgentId>("sales")
     const agent = agents.find(item => item.id === selected) ?? agents[0]
 
@@ -97,7 +108,7 @@ export const Workforce = () => {
         sync()
         window.addEventListener("hashchange", sync)
         return () => window.removeEventListener("hashchange", sync)
-    }, [])
+    }, [agents])
 
     return (
         <section
@@ -107,17 +118,17 @@ export const Workforce = () => {
             <div className="max-w-7xl mx-auto px-6 max-mobile:px-4">
                 <div className="flex items-end justify-between gap-10 max-tablet:flex-col max-tablet:items-start">
                     <SectionHeading
-                        title={<>Seven specialists. One connected team.</>}
-                        description="Every GORVIO agent is a contractor with a job description, a working style and a queue of real tasks. Hire them monthly, individually or as a team."
+                        title={t.title}
+                        description={t.description}
                     />
                     <p className="text-sm text-grey-300 max-w-56 tablet:text-right">
-                        Pick a contractor to see what a working day looks like.
+                        {t.hint}
                     </p>
                 </div>
 
                 <div
                     role="tablist"
-                    aria-label="GORVIO agents"
+                    aria-label={t.tablist}
                     className="
                         relative mt-16 flex items-end justify-between gap-2
                         max-tablet:overflow-x-auto max-tablet:snap-x
@@ -178,7 +189,8 @@ export const Workforce = () => {
                                     "text-[13px] whitespace-nowrap smooth",
                                     active ? "text-ink font-semibold" : "font-medium text-grey-200 group-hover:text-grey-300"
                                 )}>
-                                    {item.role}
+                                    {item.name}
+                                    <span className="block text-[11px] font-medium text-grey-200">{item.role}</span>
                                 </span>
                             </button>
                         )
@@ -214,13 +226,13 @@ export const Workforce = () => {
                                 >
                                     <div className="flex items-center gap-3 flex-wrap">
                                         <AgentAvatar agent={item.id} size={40} ring={false} />
-                                        <Pill tone="ink">{item.team === "sales" ? "Sales workforce" : "Marketing workforce"}</Pill>
-                                        <Pill>Monthly contract</Pill>
+                                        <Pill tone="ink">{common.teams[item.team]}</Pill>
+                                        <Pill>{common.monthlyContract}</Pill>
                                     </div>
 
                                     <div>
                                         <p className="text-sm text-grey-300">
-                                            Meet <span className="font-semibold text-ink">{item.name}</span>, your
+                                            {formatText(t.meet, { name: item.name })}
                                         </p>
                                         <h3 className="font-display text-5xl font-semibold tracking-[-0.04em] mt-1 max-mobile:text-4xl">
                                             {item.role}
@@ -236,19 +248,27 @@ export const Workforce = () => {
 
                                     <div className="mt-auto flex items-center justify-between gap-4 pt-4 border-t border-grey-100 max-mobile:flex-col max-mobile:items-start">
                                         <p className="text-sm">
-                                            <span className="text-grey-200">Known for: </span>
+                                            <span className="text-grey-200">{t.knownFor} </span>
                                             {item.quirk}
                                         </p>
-                                        <BetaButton size="sm" variant="secondary">
-                                            Hire {item.name}
-                                        </BetaButton>
+                                        <div className="flex items-center gap-2">
+                                            <a
+                                                href={agentLink(lang, item.page)}
+                                                className="text-sm font-medium text-grey-300 hover:text-ink underline-offset-4 hover:underline smooth px-2"
+                                            >
+                                                {t.profile}
+                                            </a>
+                                            <BetaButton size="sm" variant="secondary" interest={item.team === "marketing" ? "marketing" : "sales"}>
+                                                {formatText(t.hire, { name: item.name })}
+                                            </BetaButton>
+                                        </div>
                                     </div>
                                 </motion.div>
                             )
                         })}
                     </div>
 
-                    <TaskTicket key={agent.id} agent={agent} />
+                    <TaskTicket key={agent.id} agent={agent} t={t} />
                 </div>
             </div>
         </section>

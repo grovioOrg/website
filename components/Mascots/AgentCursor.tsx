@@ -10,25 +10,30 @@ export type ICursorOwner = IAgentId | "you"
 export const CURSOR_STYLE: Record<ICursorOwner, { label: string, color: string }> = {
     you: { label: "You", color: "var(--color-ink)" },
     sales: { label: "Sunny · Sales", color: "var(--color-agent-sales)" },
-    researcher: { label: "Bolt · Research", color: "var(--color-agent-researcher)" },
-    signal: { label: "Echo · Signals", color: "var(--color-agent-signal)" },
+    researcher: { label: "Bolt · Sales", color: "var(--color-agent-researcher)" },
+    signal: { label: "Echo · Sales", color: "var(--color-agent-signal)" },
     seo: { label: "Scout · SEO", color: "var(--color-agent-seo)" },
     writer: { label: "Quill · Writer", color: "var(--color-agent-writer)" },
     graphic: { label: "Pixie · Design", color: "var(--color-agent-graphic)" },
     video: { label: "Reel · Video", color: "var(--color-agent-video)" },
+    caller: { label: "Dash · Calls", color: "var(--color-agent-caller)" },
+    concierge: { label: "Bell · Concierge", color: "var(--color-agent-concierge)" },
+    community: { label: "Kin · Community", color: "var(--color-agent-community)" },
 }
 
 /** Multiplayer-style pointer with a name pill in the owner's colour. */
 export const AgentCursor = ({
     by,
+    label = CURSOR_STYLE[by].label,
     size = "md",
     className = "",
 }: {
     by: ICursorOwner
+    label?: string
     size?: "sm" | "md"
     className?: string
 }) => {
-    const { label, color } = CURSOR_STYLE[by]
+    const { color } = CURSOR_STYLE[by]
     const small = size === "sm"
 
     return (

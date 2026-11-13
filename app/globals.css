@@ -25,6 +25,12 @@
     --color-agent-writer: #B3E04A;
     --color-agent-graphic: #B78BF2;
     --color-agent-video: #FF6E9B;
+    --color-agent-caller: #FF9A3D;
+    --color-agent-concierge: #F0564A;
+    --color-agent-community: #3FC27E;
+
+    /* EU */
+    --color-eu-blue: #003399;
 
     /* Screens */
     --breakpoint-mobile: 640px;

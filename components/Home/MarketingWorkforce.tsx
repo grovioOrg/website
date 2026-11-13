@@ -12,6 +12,7 @@ import {
     motion
 } from "framer-motion"
 
+import { useDictionary } from "@/context"
 import { useTicker } from "@/hooks"
 import { Check } from "@/icons"
 import { IAgentId } from "@/lib/types"
@@ -24,29 +25,27 @@ import {
     IPillTone
 } from "@/components/Mockups"
 
+import type { IDictionary } from "@/dictionaries"
+
 import { SectionHeading } from "./SectionHeading"
 // #endregion
 
 const PHASES = 6
 
 const KEYWORDS = [
-    { term: "bookkeeping for startups", volume: "2.4k", width: 88 },
-    { term: "seed round accounting", volume: "1.9k", width: 70 },
-    { term: "r&d tax credits uk", volume: "1.2k", width: 52 },
+    { volume: "2.4k", width: 88 },
+    { volume: "1.9k", width: 70 },
+    { volume: "1.2k", width: 52 },
 ]
 
 const CREATORS: {
     agent: IAgentId
-    format: string
-    title: string
     tone: IPillTone
 }[] = [
-    { agent: "writer", format: "Blog post", title: "Bookkeeping for seed startups", tone: "green" },
-    { agent: "graphic", format: "Carousel", title: "5 finance myths founders believe", tone: "purple" },
-    { agent: "video", format: "Short video", title: "30s teaser: month-end in 5 minutes", tone: "pink" },
+    { agent: "writer", tone: "green" },
+    { agent: "graphic", tone: "purple" },
+    { agent: "video", tone: "pink" },
 ]
-
-const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"]
 
 const Column = ({
     step,
@@ -91,7 +90,14 @@ const Done = ({ on }: { on: boolean }) => (
     </span>
 )
 
-export const MarketingWorkforce = () => {
+export const MarketingWorkforce = ({
+    t,
+}: {
+    t: IDictionary["home"]["marketing"]
+}) => {
+    const { common } = useDictionary()
+    const copy = t.flow
+    const creators = CREATORS.map((item, index) => ({ ...item, ...copy.creatorItems[index] }))
     const ref = useRef<HTMLDivElement | null>(null)
     const { tick, reduced } = useTicker(ref, 1500)
     const phase = reduced ? PHASES - 1 : tick % PHASES
@@ -106,8 +112,8 @@ export const MarketingWorkforce = () => {
         >
             <div className="max-w-7xl mx-auto px-6 max-mobile:px-4">
                 <SectionHeading
-                    title={<>Your website in. A content calendar out.</>}
-                    description="Scout reads your site and search landscape, then briefs Quill, Pixie and Reel. They draft the work, you review it, and it lands on your schedule."
+                    title={t.title}
+                    description={t.description}
                 />
 
                 <div
@@ -118,7 +124,7 @@ export const MarketingWorkforce = () => {
                         max-tablet:grid-cols-2 max-mobile:grid-cols-1
                     "
                 >
-                    <Column step={1} title="Your presence" active={phase === 0}>
+                    <Column step={1} title={copy.presence} active={phase === 0}>
                         <div className="rounded-xl ring-1 ring-grey-100 overflow-hidden">
                             <div className="flex items-center gap-1 px-2.5 h-6 bg-grey-50">
                                 <span className="size-1.5 rounded-full bg-grey-150" />
@@ -143,10 +149,10 @@ export const MarketingWorkforce = () => {
 
                         <div className="flex flex-col gap-2 text-[13px]">
                             <span className="flex items-center gap-2">
-                                <Done on={phase >= 1} /> Business website
+                                <Done on={phase >= 1} /> {copy.website}
                             </span>
                             <span className="flex items-center gap-2">
-                                <Done on={phase >= 1} /> Digital identity
+                                <Done on={phase >= 1} /> {copy.identity}
                             </span>
                         </div>
 
@@ -157,13 +163,13 @@ export const MarketingWorkforce = () => {
                         </div>
                     </Column>
 
-                    <Column step={2} title="SEO Intelligence" agent="seo" active={phase === 1}>
+                    <Column step={2} title={common.mockup.nav.seo} agent="seo" active={phase === 1}>
                         <div className="flex flex-col gap-2.5">
-                            <p className="text-[11px] font-medium text-grey-200">Keyword opportunities</p>
-                            {KEYWORDS.map(({ term, volume, width }, index) => (
-                                <div key={term} className="flex flex-col gap-1">
-                                    <span className="flex justify-between text-[13px]">
-                                        {term}
+                            <p className="text-[11px] font-medium text-grey-200">{copy.keywordsTitle}</p>
+                            {KEYWORDS.map(({ volume, width }, index) => (
+                                <div key={index} className="flex flex-col gap-1">
+                                    <span className="flex justify-between gap-2 text-[13px]">
+                                        {copy.keywords[index]}
                                         <span className="text-grey-200 tabular-nums">{volume}</span>
                                     </span>
                                     <span className="h-1.5 rounded-full bg-grey-50 overflow-hidden">
@@ -180,23 +186,23 @@ export const MarketingWorkforce = () => {
 
                         <div className="grid grid-cols-2 gap-2">
                             <div className="rounded-xl bg-paper p-2.5">
-                                <p className="text-[11px] text-grey-200">Pages to improve</p>
+                                <p className="text-[11px] text-grey-200">{copy.pages}</p>
                                 <p className="font-display text-2xl font-semibold">{phase >= 1 ? 6 : "–"}</p>
                             </div>
                             <div className="rounded-xl bg-paper p-2.5">
-                                <p className="text-[11px] text-grey-200">Content gaps</p>
+                                <p className="text-[11px] text-grey-200">{copy.gaps}</p>
                                 <p className="font-display text-2xl font-semibold">{phase >= 1 ? 14 : "–"}</p>
                             </div>
                         </div>
 
                         <div className="rounded-xl bg-yellow-50 px-3 py-2 text-[12px] leading-snug">
-                            <span className="font-semibold">CTA idea: </span>
-                            swap &ldquo;Contact us&rdquo; for &ldquo;Book a 15-min finance check&rdquo;
+                            <span className="font-semibold">{copy.ctaLabel} </span>
+                            {copy.cta}
                         </div>
                     </Column>
 
-                    <Column step={3} title="Creators at work" active={phase === 2}>
-                        {CREATORS.map(({ agent, format, title, tone }, index) => {
+                    <Column step={3} title={copy.creators} active={phase === 2}>
+                        {creators.map(({ agent, format, title, tone }, index) => {
                             const ready = phase >= 3 || (phase === 2 && reduced)
 
                             return (
@@ -205,7 +211,7 @@ export const MarketingWorkforce = () => {
                                         <AgentAvatar agent={agent} size={22} ring={false} />
                                         <Pill tone={tone}>{format}</Pill>
                                         <span className="ml-auto text-[11px] text-grey-200">
-                                            {ready ? "Ready for review" : phase === 2 ? "Drafting" : "Briefed"}
+                                            {ready ? copy.ready : phase === 2 ? copy.drafting : copy.briefed}
                                         </span>
                                     </div>
                                     <p className="text-[13px] font-medium leading-snug">{title}</p>
@@ -222,11 +228,11 @@ export const MarketingWorkforce = () => {
                         })}
                     </Column>
 
-                    <Column step={4} title="Content schedule" active={phase >= 3}>
+                    <Column step={4} title={copy.schedule} active={phase >= 3}>
                         <LayoutGroup>
                             <div className="grid grid-cols-5 gap-1.5">
-                                {DAYS.map((day, index) => {
-                                    const post = [CREATORS[0], undefined, CREATORS[1], undefined, CREATORS[2]][index]
+                                {common.mockup.days.map((day, index) => {
+                                    const post = [creators[0], undefined, creators[1], undefined, creators[2]][index]
 
                                     return (
                                         <div key={day} className="flex flex-col gap-1.5">
@@ -264,10 +270,10 @@ export const MarketingWorkforce = () => {
 
                         <div className="flex flex-col gap-2 text-[13px]">
                             <span className="flex items-center gap-2">
-                                <Done on={scheduled} /> Reviewed and scheduled
+                                <Done on={scheduled} /> {copy.scheduled}
                             </span>
                             <span className="flex items-center gap-2">
-                                <Done on={published} /> Posted to your channels
+                                <Done on={published} /> {copy.posted}
                             </span>
                         </div>
 
@@ -277,7 +283,7 @@ export const MarketingWorkforce = () => {
                             className="mt-auto rounded-xl bg-ink text-white px-3 py-2.5 text-[12px] flex items-center gap-2"
                         >
                             <AgentAvatar agent="seo" size={20} ring={false} />
-                            3 posts live this week. Next brief is ready.
+                            {copy.live}
                         </motion.div>
                     </Column>
                 </div>

@@ -17,7 +17,9 @@ import {
 
 import { Arrow } from "@/icons"
 import { IFieldErrors } from "@/lib/common"
+import { BETA_INTERESTS, IBetaInterest } from "@/lib/types/beta"
 import { AgentAvatar } from "@/components/Mascots"
+import { useDictionary } from "@/context/DictionaryProvider"
 import { _PRIVACY_URL } from "@/constants"
 
 import {
@@ -26,7 +28,6 @@ import {
 } from "./action"
 
 import {
-    BETA_CONSENT_TEXT,
     IBetaForm,
     validateBetaFields
 } from "./rules"
@@ -40,12 +41,7 @@ const SIZE_OPTIONS = [
     { name: "1k+", value: "1000+" },
 ]
 
-const INTEREST_OPTIONS = [
-    { name: "Sales Workforce", value: "sales", hint: "Leads, research, outreach" },
-    { name: "Marketing Workforce", value: "marketing", hint: "SEO, content, video" },
-    { name: "Both", value: "both", hint: "The whole team" },
-    { name: "Exploring GORVIO", value: "exploring", hint: "Just looking around" },
-]
+const FIELDS: (keyof IBetaForm)[] = ["name", "email", "company", "website", "size", "interest", "consent"]
 
 export const BetaSuccess = ({
     duplicate = false,
@@ -53,41 +49,46 @@ export const BetaSuccess = ({
 }: {
     duplicate?: boolean
     onDone?: () => void
-}) => (
-    <div
-        role="status"
-        className="flex flex-col items-center text-center py-6 gap-5"
-    >
-        <div className="flex items-center gap-3">
-            <AgentAvatar agent="researcher" size={64} ring={false} live delay={0.2} />
-            <AgentAvatar agent="sales" size={80} ring={false} live />
-            <AgentAvatar agent="video" size={64} ring={false} live delay={0.5} />
+}) => {
+    const { beta: t } = useDictionary()
+
+    return (
+        <div
+            role="status"
+            className="flex flex-col items-center text-center py-6 gap-5"
+        >
+            <div className="flex items-center gap-3">
+                <AgentAvatar agent="researcher" size={64} ring={false} live delay={0.2} />
+                <AgentAvatar agent="sales" size={80} ring={false} live />
+                <AgentAvatar agent="video" size={64} ring={false} live delay={0.5} />
+            </div>
+
+            <h3 className="font-display text-3xl font-semibold tracking-tight">
+                {duplicate ? t.success.duplicateTitle : t.success.title}
+            </h3>
+
+            <p className="text-grey-300 max-w-sm">
+                {duplicate ? t.success.duplicateBody : t.success.body}
+            </p>
+
+            {onDone && (
+                <Button variant="secondary" onClick={onDone}>
+                    {t.success.done}
+                </Button>
+            )}
         </div>
-
-        <h3 className="font-display text-3xl font-semibold tracking-tight">
-            {duplicate ? "You're already on the list." : "You're on the list."}
-        </h3>
-
-        <p className="text-grey-300 max-w-sm">
-            {duplicate
-                ? "We already have your application. We'll be in touch at your work email as beta spots open."
-                : "Thanks for applying. We'll review your application and reach out at your work email as beta spots open."
-            }
-        </p>
-
-        {onDone && (
-            <Button variant="secondary" onClick={onDone}>
-                Back to the site
-            </Button>
-        )}
-    </div>
-)
+    )
+}
 
 export const BetaForm = ({
+    interest,
     onSuccess,
 }: {
+    interest?: IBetaInterest
     onSuccess?: (duplicate: boolean) => void
 }) => {
+    const { lang, beta: t } = useDictionary()
+
     const [state, action, isPending] = useActionState<IBetaResponse, FormData>(
         betaAction,
         {
@@ -114,9 +115,9 @@ export const BetaForm = ({
         const formData = new FormData(event.currentTarget)
         const fieldErrors = validateBetaFields(
             Object.fromEntries(
-                ["name", "email", "company", "website", "size", "interest", "consent"]
-                    .map(key => [key, String(formData.get(key) ?? "")])
-            ) as unknown as IBetaForm
+                FIELDS.map(key => [key, String(formData.get(key) ?? "")])
+            ) as unknown as IBetaForm,
+            t.errors
         )
 
         setClientErrors(fieldErrors)
@@ -136,11 +137,13 @@ export const BetaForm = ({
             onChange={() => clientErrors && setClientErrors(null)}
             className="grid grid-cols-2 gap-x-4 gap-y-1 max-mobile:grid-cols-1"
         >
+            <input type="hidden" name="lang" value={lang} />
+
             <TextField
                 name="name"
-                label="Name"
+                label={t.fields.name}
                 autoComplete="name"
-                placeholder="Ada Lovelace"
+                placeholder={t.fields.namePlaceholder}
                 defaultValue={state.data?.name}
                 error={!!errors.name}
                 helperText={errors.name}
@@ -149,9 +152,9 @@ export const BetaForm = ({
             <TextField
                 name="email"
                 type="email"
-                label="Work email"
+                label={t.fields.email}
                 autoComplete="email"
-                placeholder="ada@company.com"
+                placeholder={t.fields.emailPlaceholder}
                 defaultValue={state.data?.email}
                 error={!!errors.email}
                 helperText={errors.email}
@@ -159,9 +162,9 @@ export const BetaForm = ({
 
             <TextField
                 name="company"
-                label="Company"
+                label={t.fields.company}
                 autoComplete="organization"
-                placeholder="Acme Inc."
+                placeholder={t.fields.companyPlaceholder}
                 defaultValue={state.data?.company}
                 error={!!errors.company}
                 helperText={errors.company}
@@ -169,9 +172,9 @@ export const BetaForm = ({
 
             <TextField
                 name="website"
-                label="Website"
+                label={t.fields.website}
                 autoComplete="url"
-                placeholder="acme.com"
+                placeholder={t.fields.websitePlaceholder}
                 inputMode="url"
                 defaultValue={state.data?.website}
                 error={!!errors.website}
@@ -180,7 +183,7 @@ export const BetaForm = ({
 
             <SelectGroup
                 name="size"
-                title="Company size"
+                title={t.fields.size}
                 columns={5}
                 options={SIZE_OPTIONS}
                 defaultValue={state.data?.size}
@@ -191,10 +194,10 @@ export const BetaForm = ({
 
             <SelectGroup
                 name="interest"
-                title="What would you like to hire for?"
+                title={t.fields.interest}
                 columns={2}
-                options={INTEREST_OPTIONS}
-                defaultValue={state.data?.interest}
+                options={BETA_INTERESTS.map(value => ({ value, ...t.interests[value] }))}
+                defaultValue={state.data?.interest ?? interest}
                 error={!!errors.interest}
                 helperText={errors.interest}
                 className="col-span-full"
@@ -212,7 +215,7 @@ export const BetaForm = ({
                         className="mt-0.5 size-[18px] shrink-0 rounded accent-ink cursor-pointer"
                     />
                     <span>
-                        {BETA_CONSENT_TEXT}
+                        {t.consent}
                         {_PRIVACY_URL && (
                             <>
                                 {" "}
@@ -222,7 +225,7 @@ export const BetaForm = ({
                                     rel="noreferrer"
                                     className="text-ink underline underline-offset-2 hover:text-grey-300 smooth"
                                 >
-                                    Privacy policy
+                                    {t.privacy}
                                 </a>
                             </>
                         )}
@@ -252,17 +255,17 @@ export const BetaForm = ({
                 max-mobile:flex-col-reverse max-mobile:items-stretch
             ">
                 <p className="text-xs text-grey-200 max-w-xs">
-                    Built for the EU and GDPR compliant. We only use these details to review your application.
+                    {t.note}
                 </p>
 
                 <Button
                     type="submit"
                     size="lg"
                     loading={isPending}
-                    loadingText="Submitting…"
+                    loadingText={t.submitting}
                     endIcon={<Arrow size={16} />}
                 >
-                    Apply for Beta Access
+                    {t.submit}
                 </Button>
             </div>
         </form>

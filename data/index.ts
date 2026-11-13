@@ -1,2 +1,5 @@
 export * from "./agents"
+export * from "./industries"
+export * from "./integrations"
 export * from "./links"
+export * from "./pricing"
