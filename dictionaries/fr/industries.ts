@@ -37,7 +37,7 @@ export const industries = {
                     "points": [
                         "Trouve agences événementielles, organisateurs et travel managers près de chez vous",
                         "Repère les séminaires, conférences et mariages à venir",
-                        "Rédige un DM personnalisé pour chacun, cinq à la fois"
+                        "Rédige un DM personnalisé pour chacun"
                     ],
                     "output": "5 DM de réservation de groupe prêts"
                 },
@@ -82,7 +82,7 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Grovio peut-il échanger avec les clients ?",
@@ -162,7 +162,7 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Prenez-vous les réservations pour nous ?",
@@ -238,7 +238,7 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Est-ce adapté aux petits catalogues ?",
@@ -314,11 +314,11 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Puis-je mener des campagnes locales et en ligne ?",
-                    "a": "Oui. Chaque Sales Agent mène jusqu'à trois campagnes, chacune avec son propre ICP."
+                    "a": "Oui. Chaque Sales Agent mène autant de campagnes que nécessaire, chacune avec son propre ICP, sur jusqu'à 5 secteurs et 3 000 leads par mois."
                 }
             ]
         },
@@ -390,7 +390,7 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "La prospection auprès des propriétaires est-elle autorisée ?",
@@ -466,7 +466,7 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Les agents peuvent-ils écrire sur la réglementation ?",
@@ -542,7 +542,7 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Est-ce compatible avec mon CRM ?",
@@ -618,87 +618,11 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Puis-je contrôler le ton et la formulation ?",
                     "a": "Oui. Définissez simplement le ton, le niveau de formalité et les mots à éviter. Vous validez chaque message."
-                }
-            ]
-        },
-        "tax-advisors": {
-            "name": "Conseillers fiscaux",
-            "short": "Fondateurs, indépendants et PME",
-            "metaTitle": "Vente et marketing par IA pour les conseillers fiscaux",
-            "metaDescription": "Les agents IA de Grovio apportent aux conseillers fiscaux les bons clients : fondateurs, indépendants et PME, avec des contenus utiles à chaque échéance.",
-            "title": "Les bons clients, avant chaque échéance.",
-            "pitch": "Les agents de Grovio contactent fondateurs, indépendants et entreprises en croissance au moment où ils ont besoin d'un conseiller fiscal, et publient des guides clairs à chaque échéance.",
-            "pains": [
-                "Les demandes arrivent toutes en même temps, juste avant les échéances",
-                "Les clients mal ciblés prennent le plus de temps",
-                "Les contenus clairs et utiles ne sont jamais rédigés"
-            ],
-            "agents": [
-                "Contacte les fondateurs et PME qui correspondent à votre client idéal",
-                "Rédige guides des échéances et newsletters",
-                "Crée des explications simples pour les réseaux sociaux"
-            ],
-            "useCases": [
-                {
-                    "title": "Remplir votre portefeuille avec les bons clients",
-                    "points": [
-                        "Trouve les fondateurs, indépendants et PME qui vous correspondent",
-                        "Repère les nouvelles immatriculations et les signaux de croissance",
-                        "Rédige un DM personnalisé pour chacun"
-                    ],
-                    "output": "5 DM clients prêts"
-                },
-                {
-                    "title": "Ne manquer aucun post d'échéance",
-                    "points": [
-                        "Guides et rappels des échéances",
-                        "Newsletters sur les évolutions fiscales",
-                        "Posts qui répondent aux questions fréquentes"
-                    ],
-                    "output": "Guide des échéances prêt à relire"
-                },
-                {
-                    "title": "Rendre la fiscalité simple à partager",
-                    "points": [
-                        "Transforme vos guides en explications simples",
-                        "Crée des carrousels pour LinkedIn et Instagram",
-                        "Respecte votre charte graphique"
-                    ],
-                    "output": "Carrousel explicatif prêt"
-                }
-            ],
-            "icp": [
-                {
-                    "name": "GmbH nouvellement créées",
-                    "fit": 90
-                },
-                {
-                    "name": "Indépendants au CA supérieur à 50k €",
-                    "fit": 84
-                },
-                {
-                    "name": "E-commerçants vendant à l'international",
-                    "fit": 78
-                }
-            ],
-            "dm": "Bonjour Lukas, félicitations pour l'immatriculation de votre GmbH. C'est sur les premiers comptes annuels que la plupart des fondateurs perdent du temps. Nous accompagnons 40 jeunes entreprises à Vienne. Voulez-vous notre checklist de la première année ?",
-            "faq": [
-                {
-                    "q": "Quels défis les experts-comptables ont-ils quand les demandes affluent avant les échéances ?",
-                    "a": "Les demandes arrivent toutes en même temps, juste avant les échéances. Les clients mal ciblés prennent le plus de temps. Les contenus clairs et utiles ne sont jamais rédigés."
-                },
-                {
-                    "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
-                },
-                {
-                    "q": "Puis-je cibler uniquement certains types de clients ?",
-                    "a": "Oui. Votre campagne ICP définit précisément qui le Sales Agent contacte et qui il écarte."
                 }
             ]
         },
@@ -715,7 +639,7 @@ export const industries = {
                 "Les agences et les gros outils coûtent trop cher"
             ],
             "agents": [
-                "Trouve des clients et rédige des DM, cinq à la fois",
+                "Trouve des clients et rédige des DM",
                 "Rédige posts et articles avec votre ton",
                 "Commence avec un agent, en ajoute quand c'est rentable"
             ],
@@ -725,7 +649,7 @@ export const industries = {
                     "points": [
                         "Trouve des clients qui correspondent à votre offre",
                         "Analyse chacun d'eux avant de le contacter",
-                        "Rédige des DM, cinq à la fois, pour votre validation"
+                        "Rédige des DM pour votre validation"
                     ],
                     "output": "5 DM clients prêts"
                 },
@@ -770,7 +694,7 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Puis-je commencer avec un seul agent ?",
@@ -846,7 +770,7 @@ export const industries = {
                 },
                 {
                     "q": "Comment passer de mon site à des rendez-vous pris avec Grovio ?",
-                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez leads et DM par lots de cinq avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
+                    "a": "Vous collez le lien de votre site et Grovio le lit pour comprendre qui achète chez vous. Vous recevez une campagne ICP avec des segments d'acheteurs classés par adéquation. Vous validez chaque lead et chaque DM avant tout envoi. Les réponses chaudes atterrissent dans votre CRM et votre calendrier."
                 },
                 {
                     "q": "Je ne suis pas sur les réseaux sociaux. Est-ce un problème ?",

@@ -15,6 +15,9 @@ export const _INVESTOR_EMAIL =
     process.env.NEXT_PUBLIC_INVESTOR_EMAIL ??
     "vshon447@gmail.com"
 
+/** Enterprise and general sales inquiries when contact email is unset. */
+export const _ENTERPRISE_EMAIL = _CONTACT_EMAIL ?? _INVESTOR_EMAIL
+
 export const _OPUS_CO_URL = "https://opusco.dev/"
 
 export const _BETA_URL = _BASE_URL

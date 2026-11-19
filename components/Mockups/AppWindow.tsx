@@ -62,7 +62,7 @@ export const AppSidebar = ({
     ">
         <div className="flex items-center gap-2 px-4 h-12">
             <Logo size={20} />
-            <span className="font-semibold text-ink">Northwind</span>
+            <span className="font-semibold text-ink">{t.workspace}</span>
             <span className="ml-auto flex gap-2 text-grey-200">
                 <Glyph name="search" size={15} />
                 <Glyph name="inbox" size={15} />

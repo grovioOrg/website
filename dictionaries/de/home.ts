@@ -10,7 +10,7 @@ export const home = {
         "secondary": "So funktioniert’s",
         "eu": "In und für die EU entwickelt · DSGVO-konform",
         "icpTitle": "ICP-Kampagne erstellt",
-        "icpBody": "4 Käufersegmente von northwind.co",
+        "icpBody": "4 Käufersegmente von alpenhof.at",
         "replyTitle": "Positive Antwort",
         "replyPill": "Im CRM",
         "replyQuote": "Klingt interessant – können wir am Donnerstag sprechen?",
@@ -38,58 +38,58 @@ export const home = {
                 "done": "Erledigt"
             },
             "activity": {
-                "start": "Sunny sucht Leads für Q4 Fintech",
+                "start": "Sunny sucht Eventplaner für Frühlingsgruppen",
                 "briefed": "Sie haben {agent} gebrieft: „{task}“",
                 "approved": "Sie haben „{task}“ freigegeben",
                 "moved": "{agent} hat „{task}“ nach „{column}“ verschoben"
             },
             "tasks": [
                 {
-                    "title": "ICP-Kampagne aus northwind.co erstellen",
+                    "title": "ICP für Frühlings-Gruppenbuchungen erstellen",
                     "tag": "ICP"
                 },
                 {
-                    "title": "Text: Buchhaltung für Seed-Startups",
+                    "title": "Text: Ein Wochenende im Hotel Alpenhof",
                     "tag": "Content"
                 },
                 {
-                    "title": "CTAs der Preisseite auffrischen",
+                    "title": "CTAs für Private Dining auffrischen",
                     "tag": "SEO"
                 },
                 {
-                    "title": "Webinar-Anmeldungen qualifizieren",
+                    "title": "Anfragen für Küchenrenovierungen qualifizieren",
                     "tag": "Recherche"
                 },
                 {
-                    "title": "30-s-Teaser für den Launch-Post",
+                    "title": "30-s-Rundgang durch das fertige Stadthaus",
                     "tag": "Video"
                 },
                 {
-                    "title": "Follow-up für warme Antworten",
+                    "title": "Follow-up für warme Gruppen-Antworten",
                     "tag": "Ansprache"
                 },
                 {
-                    "title": "Titelbild für den Oktober-Newsletter",
+                    "title": "Titelbild für die Frühlingskarte",
                     "tag": "Design"
                 },
                 {
-                    "title": "Keyword-Lücken vs. 3 Wettbewerber",
+                    "title": "Keyword-Lücken: Gruppenhotels bei Wien",
                     "tag": "SEO"
                 },
                 {
-                    "title": "ICP-Kampagne erstellt: 4 Segmente",
+                    "title": "Gruppen-ICP: 4 Planer-Segmente",
                     "tag": "ICP"
                 },
                 {
-                    "title": "Persönliches Intro für Lumen Labs",
+                    "title": "Persönliches Intro für Marco Berger",
                     "tag": "Entwürfe"
                 },
                 {
-                    "title": "Leads aus dem Comment Sniffer holen",
+                    "title": "Leads für Büro-Mittagessen holen",
                     "tag": "Leads"
                 },
                 {
-                    "title": "LinkedIn-Karussell: 5 Recruiting-Mythen",
+                    "title": "Karussell: 5 Menüs fürs Team-Mittagessen",
                     "tag": "Design"
                 }
             ]
@@ -124,17 +124,17 @@ export const home = {
             },
             {
                 "title": "Die besten Leads",
-                "description": "Die passendsten Leads, immer fünf auf einmal, bereit für Ihre Freigabe."
+                "description": "Sie prüfen jeden Lead, bevor etwas rausgeht."
             },
             {
                 "title": "Campaign Studio",
-                "description": "Freigeben, bearbeiten oder verwerfen. Die nächsten fünf kommen von selbst."
+                "description": "Freigeben, bearbeiten oder verwerfen. Neue Leads kommen laufend nach."
             }
         ],
         "demo": {
             "urlLabel": "Ihre Website",
             "analyse": "Analysieren",
-            "reading": "Lese northwind.co",
+            "reading": "Lese alpenhof.at",
             "sources": [
                 "Website",
                 "LinkedIn",
@@ -146,47 +146,47 @@ export const home = {
             "intentLabel": "Personen mit Kaufinteresse",
             "missedLabel": "verpasste Signale gefunden",
             "opportunities": [
-                "Gründer vergleichen Buchhaltungstools auf LinkedIn",
-                "Finanzverantwortliche suchen ihren ersten Buchhalter",
-                "Agenturen suchen Hilfe beim Monatsabschluss"
+                "Eventplaner buchen Frühlings-Offsites",
+                "Firmen vergleichen Gruppenhotels bei Wien",
+                "Hochzeitsplaner suchen ein Wochenend-Haus",
             ],
             "helps": "Grovio kann helfen",
-            "campaignName": "Gründer in der Seed-Phase · UK",
+            "campaignName": "Frühlings-Gruppenbuchungen",
             "segment": "Segment",
             "fit": "Passung",
             "segments": [
                 {
-                    "name": "SaaS-Gründer in der Seed-Phase",
+                    "name": "Eventagenturen im Umkreis von 200 km",
                     "fit": 92
                 },
                 {
-                    "name": "Agenturinhaber, 10–50 Mitarbeitende",
+                    "name": "Travel Manager in Unternehmen",
                     "fit": 86
                 },
                 {
-                    "name": "Finanzverantwortliche im Fintech",
+                    "name": "Hochzeitsplaner",
                     "fit": 79
                 },
                 {
-                    "name": "E-Commerce-Betreiber",
+                    "name": "Firmen mit geplanten Offsites",
                     "fit": 71
                 }
             ],
-            "batch": "Batch 1 mit 5 Leads",
+            "batch": "Die besten Leads",
             "awaiting": "Wartet auf Ihre Freigabe",
-            "approveAll": "Batch freigeben",
+            "approveAll": "Alle freigeben",
             "approved": "Freigegeben",
-            "next": "Nächste 5 folgen",
+            "next": "Weitere Leads folgen",
             "studio": "Campaign Studio",
             "sent": "gesendet",
             "replies": "Antworten",
             "meetings": "Termine",
             "leadRoles": [
-                "Gründerin · Lumen Labs",
-                "CEO · Brightline",
-                "COO · Fernway",
-                "Gründer · Kettle & Co",
-                "Leiterin Operations · Tidepool"
+                "Planer · Berger Events",
+                "Travel Manager · Nordbahn",
+                "Planerin · Weiss Weddings",
+                "Office Manager · Atelier GmbH",
+                "Eventleitung · Stadtverein",
             ]
         }
     },
@@ -205,8 +205,8 @@ export const home = {
         "title": "Von der kalten Liste zur warmen Antwort. In Schleife.",
         "points": [
             "Findet, qualifiziert und recherchiert jeden neuen Lead",
-            "Schreibt jede DM und jedes Follow-up in Ihrem Ton",
-            "DSGVO-konform, nichts geht ohne Ihre Freigabe raus"
+            "Sendet DMs und Follow-ups in Ihrem Ton und bucht den Termin",
+            "Überträgt Deals in Ihr CRM und verschickt Angebote direkt von dort, mit Ihrer Freigabe"
         ],
         "flow": {
             "providers": [
@@ -224,7 +224,7 @@ export const home = {
                 {
                     "title": "Leads abrufen",
                     "caption": "Prüft Kontakte gegen Ihr ICP",
-                    "log": "Sunny hat 5 Profile passend zum Kampagnen-ICP abgerufen"
+                    "log": "Sunny hat Eventplaner passend zum Gruppen-ICP abgerufen",
                 },
                 {
                     "title": "Einordnen + prüfen",
@@ -254,12 +254,12 @@ export const home = {
                 {
                     "title": "Signalanalyse",
                     "caption": "Prüft jede Antwort auf Interesse",
-                    "log": "Sunny hat 2 positive Antworten markiert"
+                    "log": "Sunny hat 2 positive Antworten markiert und einen Termin am Donnerstag gebucht"
                 },
                 {
-                    "title": "CRM + Follow-up",
+                    "title": "CRM + Angebot",
                     "caption": "",
-                    "log": "2 Kontakte ins CRM übertragen, nächster 5er-Batch gestartet"
+                    "log": "Deal in HubSpot angelegt, Angebot aus Ihrem CRM gesendet"
                 }
             ],
             "accepted": "angenommen",
@@ -267,9 +267,9 @@ export const home = {
             "edit": "Ändern",
             "accept": "Annehmen",
             "discard": "Verwerfen",
-            "loop": "Nächster Batch: Nach Ihrer Freigabe startet Sunny mit den nächsten 5 Leads",
+            "loop": "Nach Ihrer Freigabe sucht Sunny weiter nach neuen Leads",
             "runLog": "Protokoll",
-            "live": "London Fintech · live"
+            "live": "Hotel Alpenhof · Gruppenbuchungen",
         }
     },
     "teach": {
@@ -279,7 +279,7 @@ export const home = {
         "chatTitle": "Briefen Sie Ihren Sales Agent",
         "inputPlaceholder": "Sagen Sie Sunny, wie Sie verkaufen…",
         "dmTitle": "Nächste DM, Live-Vorschau",
-        "to": "An: Lena Huber, Hotel Alpenhof",
+        "to": "An: Marco Berger, Berger Events",
         "rulesTitle": "Was Sunny sich merkt",
         "greeting": "Hallo, ich bin Sunny. Sagen Sie mir, wie Sie verkaufen, und ich passe jede DM an.",
         "learned": "{n} von {total} Regeln gelernt",
@@ -293,11 +293,11 @@ export const home = {
         ],
         "messages": [
             {
-                "you": "Wir verkaufen Buchungssoftware an Boutique-Hotels in Österreich.",
-                "agent": "Verstanden. Ich spreche Boutique-Hotels in Österreich an und stelle Buchungen in den Mittelpunkt.",
+                "you": "Wir sind das Hotel Alpenhof bei Wien. Wir verkaufen Gruppenaufenthalte für 20–80 Personen.",
+                "agent": "Verstanden. Ich spreche Eventplaner an und stelle Gruppenaufenthalte in den Mittelpunkt.",
                 "rule": {
                     "label": "Zielgruppe",
-                    "value": "Boutique-Hotels · AT"
+                    "value": "Eventplaner · AT",
                 }
             },
             {
@@ -317,20 +317,20 @@ export const home = {
                 }
             },
             {
-                "you": "Die Alpenhof-Fallstudie erwähnen. Nie den Preis nennen.",
-                "agent": "Ich nenne die Fallstudie und spare den Preis fürs Gespräch auf.",
+                "you": "Seeblick und Tagungsräume erwähnen. Nie den Rack Rate nennen.",
+                "agent": "Ich nenne den Seeblick und spare die Raten fürs Gespräch auf.",
                 "rule": {
                     "label": "Immer / nie",
-                    "value": "Fallstudie · kein Preis"
+                    "value": "Seeblick · kein Rack Rate",
                 }
             }
         ],
         "drafts": [
-            "Hallo Lena, ich wollte mich wegen unserer Software bei dir melden. Sie hilft Unternehmen, Zeit zu sparen und zu wachsen. Hättest du diese Woche Zeit für einen kurzen Call, damit ich dir mehr über uns erzählen kann?",
-            "Hallo Lena, Boutique-Hotels wie deins verlieren jede Saison Direktbuchungen an Buchungsportale. Unsere Buchungssoftware hilft dir, sie zurückzugewinnen. Hast du diese Woche Zeit für einen kurzen Call?",
-            "Sehr geehrte Frau Huber, Boutique-Hotels wie Ihres verlieren jede Saison Direktbuchungen an Buchungsportale. Unsere Software hilft Ihnen, diese zurückzugewinnen. Hätten Sie diese Woche Zeit für ein kurzes Gespräch?",
-            "Sehr geehrte Frau Huber, Boutique-Hotels verlieren jede Saison Direktbuchungen an Portale. Unsere Software holt sie zurück. Hätten Sie diese Woche 15 Minuten?",
-            "Sehr geehrte Frau Huber, das Hotel Alpenhof hat mit uns 31 % mehr Direktbuchungen erzielt. Ich zeige Ihnen gern in 15 Minuten, wie das auch bei Ihnen gelingt. Passt Ihnen Donnerstag?"
+            "Hallo Marco, ich wollte mich wegen unseres Hotels melden. Wir empfangen Gruppen und erzählen gern mehr. Hättest du diese Woche Zeit für einen kurzen Call?",
+            "Hallo Marco, Teams wie deins planen Offsites Monate im Voraus. Wir empfangen Gruppen von 20–80 Personen mit Tagungsräumen und Seeblick, 40 Minuten von Wien. Darf ich dir unsere Gruppenkonditionen schicken?",
+            "Sehr geehrter Herr Berger, Teams wie Ihres planen Offsites Monate im Voraus. Wir empfangen Gruppen von 20–80 Personen mit Tagungsräumen und Seeblick, 40 Minuten von Wien. Darf ich Ihnen unsere Gruppenkonditionen schicken?",
+            "Sehr geehrter Herr Berger, wir empfangen Gruppen von 20–80 Personen mit Tagungsräumen und Seeblick, 40 Minuten von Wien. Hätten Sie diese Woche 15 Minuten?",
+            "Sehr geehrter Herr Berger, für Ihr Frühlings-Offsite haben wir Tagungsräume und Seeblick, 40 Minuten von Wien, für Gruppen von 20–80. Passt Ihnen Donnerstag für einen kurzen Blick auf die Konditionen?",
         ],
         "words": "{n} Wörter"
     },
@@ -349,26 +349,26 @@ export const home = {
             "identity": "Digitale Identität",
             "keywordsTitle": "Keyword-Chancen",
             "keywords": [
-                "Buchhaltung für Startups",
-                "Buchhaltung Seed-Runde",
-                "F&E-Steuergutschrift UK"
+                "Private Dining Wien",
+                "Team-Mittagessen Mariahilf",
+                "Restaurant Tische unter der Woche",
             ],
             "pages": "Seiten verbessern",
             "gaps": "Content-Lücken",
             "ctaLabel": "CTA-Idee:",
-            "cta": "„Kontakt“ durch „15-Min-Finanzcheck buchen“ ersetzen",
+            "cta": "„Kontakt“ durch „Separee buchen“ ersetzen",
             "creatorItems": [
                 {
                     "format": "Blogartikel",
-                    "title": "Buchhaltung für Seed-Startups"
+                    "title": "Ein Dienstagstisch im Casa Linden",
                 },
                 {
                     "format": "Karussell",
-                    "title": "5 Finanzmythen, die Gründer glauben"
+                    "title": "5 Menüs fürs Team-Mittagessen",
                 },
                 {
                     "format": "Kurzvideo",
-                    "title": "30-s-Teaser: Monatsabschluss in 5 Minuten"
+                    "title": "30 Sekunden im Separee",
                 }
             ],
             "ready": "Bereit zur Prüfung",
@@ -402,10 +402,10 @@ export const home = {
                     "marketing": "Marketing"
                 },
                 "plays": [
-                    "Outbound an Seed-Fintechs",
-                    "Wöchentliche Content-Maschine",
-                    "Webinar-Follow-up",
-                    "Launch-Teaser-Kit"
+                    "Outreach für Gruppenbuchungen",
+                    "Wöchentliche Menü-Posts",
+                    "Follow-up für Renovierungen",
+                    "Kit für Hochzeitswochenenden",
                 ]
             },
             "campaigns": {
@@ -424,28 +424,28 @@ export const home = {
                     "paused": "Pausiert"
                 },
                 "names": [
-                    "Fintech-Gründer London",
-                    "Content-Offensive Q4",
-                    "Webinar-Anmeldungen",
-                    "Produktlaunch-Teaser",
-                    "Kalte Leads reaktivieren"
+                    "Alpenhof · Frühlingsgruppen",
+                    "Casa Linden · Private Dining",
+                    "Holm · Küchenrenovierungen",
+                    "Alpenhof · Hochzeitswochenenden",
+                    "Casa Linden · Büro-Mittagessen",
                 ]
             },
             "epic": {
                 "title": "Wachstumssprint Q4",
                 "subtitle": "Zeitleiste · wer macht was, und wann",
                 "tasks": [
-                    "Fintech-ICP-Batch",
-                    "DACH-SaaS-Batch",
-                    "Agentur-Antworten",
+                    "Leads Gruppenbuchungen",
+                    "Leads Büro-Mittagessen",
+                    "Antworten zu Renovierungen",
                     "Keyword-Audit",
-                    "Buchhaltungs-Guide",
-                    "Karussell",
-                    "Launch-Teaser"
+                    "Guide fürs See-Wochenende",
+                    "Menü-Karussell",
+                    "Rundgang durchs Stadthaus",
                 ]
             },
             "seo": {
-                "subtitle": "northwind.co · heute Morgen von Scout aktualisiert",
+                "subtitle": "alpenhof.at · heute Morgen von Scout aktualisiert",
                 "tracked": "148 Seiten erfasst",
                 "health": "Website-Zustand",
                 "columns": [
@@ -455,11 +455,11 @@ export const home = {
                     "Aktion"
                 ],
                 "keywords": [
-                    "Buchhaltung für Startups",
-                    "Buchhaltung Seed-Runde",
-                    "F&E-Steuergutschrift UK",
-                    "CFO-Service für Startups",
-                    "Checkliste Monatsabschluss"
+                    "Gruppenhotel bei Wien",
+                    "Firmen-Offsite Österreich",
+                    "Hochzeitslocation Wochenende",
+                    "Direktbuchung Hotel",
+                    "Tagungsräume Wien",
                 ],
                 "actions": [
                     "Guide schreiben",
@@ -498,12 +498,12 @@ export const home = {
             },
             "playground": {
                 "subtitle": "Testen Sie Ideen mit jedem Agent, bevor Sie ihn briefen",
-                "prompt": "Drei Betreffzeilen für die London-Fintech-Kampagne, bitte. Freundlich, nicht werblich.",
+                "prompt": "Drei Betreffzeilen für die Kampagne Frühlings-Gruppenbuchungen, bitte. Freundlich, nicht werblich.",
                 "reply": "Hier sind drei, sortiert danach, wie gut sie zu Ihrem Tonfall passen:",
                 "lines": [
-                    "Monatsabschluss an einem Nachmittag?",
-                    "Eine kurze Idee für Lumens Finanz-Stack",
-                    "Was Seed-Gründer uns am häufigsten fragen"
+                    "Frühlings-Offsite am See?",
+                    "Tagungsräume für 40",
+                    "Was Planer vor der Buchung fragen",
                 ],
                 "send": "An Sales Agent senden",
                 "retry": "Neu versuchen",
@@ -525,15 +525,15 @@ export const home = {
                 "09:11"
             ],
             "summary": "Guten Morgen! Über Nacht hat Ihr Team **51 Leads** qualifiziert, **3 Posts** entworfen und **7 positive Antworten** gefunden. Zwei Punkte brauchen heute Ihre Entscheidung.",
-            "opener": "Einstieg für Maya bei Lumen Labs, aus der Recherche von heute Morgen:",
-            "dm": "Glückwunsch zur abgeschlossenen Seed-Runde von Lumen! Teams Ihrer Größe verlieren jeden Monat einen Tag mit dem Abschluss. Hätten Sie 15 Minuten, um zu sehen, wie Northwind ihn zurückholt?",
+            "opener": "Einstieg für Marco bei Berger Events, aus der Recherche von heute Morgen:",
+            "dm": "Berger Events plant die Offsite-Saison im Frühjahr. Wir empfangen Gruppen von 20–80 Personen mit Tagungsräumen und Seeblick, 40 Minuten von Wien. Darf ich Ihnen unsere Gruppenkonditionen schicken?",
             "approve": "Freigeben",
             "edit": "Bearbeiten",
             "approved": "Von Ihnen freigegeben",
             "tryIt": "Probieren Sie es aus",
             "composer": "Nachricht an",
-            "scheduled": "Danke! Geplant für 9:30 Uhr ihrer Zeit. Ich behalte die Antwort im Blick.",
-            "reply": "Positive Antwort von **Theo bei Brightline**: „Können wir am Donnerstag sprechen?“ Ins CRM übernommen und für Sie markiert."
+            "scheduled": "Danke! Geplant für 9:30 Uhr seiner Zeit. Ich behalte die Antwort im Blick.",
+            "reply": "Positive Antwort von **Marco bei Berger Events**: „Können wir am Donnerstag sprechen?“ Termin für Donnerstag gebucht und Deal ins CRM übertragen.",
         }
     },
     "integrations": {

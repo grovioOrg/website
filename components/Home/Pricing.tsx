@@ -4,25 +4,24 @@
 import { useState } from "react"
 
 import { cn } from "@/utils"
-import { PLANS } from "@/data"
+import { ENTERPRISE_AGENTS, PLANS } from "@/data"
 import type { IDictionary } from "@/dictionaries"
 
 import { Pill } from "@/components/Mockups"
-import { PlanCard } from "@/components/Pages"
+import { EnterprisePlanCard, PlanCard } from "@/components/Pages"
 
-import { SectionHeading } from "./SectionHeading"
 // #endregion
 
-type ITeamTab = keyof typeof PLANS
+type IPricingTab = keyof typeof PLANS | "enterprise"
 
-const TABS: ITeamTab[] = ["sales", "marketing"]
+const TABS: IPricingTab[] = ["sales", "marketing", "enterprise"]
 
 export const Pricing = ({
     t,
 }: {
     t: IDictionary["pricing"]
 }) => {
-    const [team, setTeam] = useState<ITeamTab>("sales")
+    const [team, setTeam] = useState<IPricingTab>("sales")
 
     return (
         <section
@@ -36,7 +35,7 @@ export const Pricing = ({
                 <div
                     role="tablist"
                     aria-label={t.title}
-                    className="flex shrink-0 rounded-full bg-paper ring-1 ring-ink/6 p-1 w-max"
+                    className="flex shrink-0 rounded-full bg-paper ring-1 ring-ink/6 p-1 w-max max-w-full overflow-x-auto"
                 >
                     {TABS.map(tab => (
                         <button
@@ -48,7 +47,7 @@ export const Pricing = ({
                             aria-controls="pricing-panel"
                             onClick={() => setTeam(tab)}
                             className={cn(
-                                "rounded-full px-5 py-2 text-sm font-semibold cursor-pointer outline-none smooth",
+                                "rounded-full px-5 py-2 text-sm font-semibold cursor-pointer outline-none smooth shrink-0",
                                 "focus-visible:ring-2 focus-visible:ring-ink",
                                 team === tab ? "bg-ink text-white" : "text-grey-300 hover:text-ink"
                             )}
@@ -64,18 +63,37 @@ export const Pricing = ({
                     aria-labelledby={`pricing-tab-${team}`}
                     className="mt-14 w-full"
                 >
-                    <div className="grid w-full grid-cols-3 gap-5 items-stretch max-tablet:grid-cols-1">
-                        {PLANS[team].map(plan => (
-                            <PlanCard key={plan.id} plan={plan} t={t} />
-                        ))}
-                    </div>
+                    {team === "enterprise" ? (
+                        <div className="grid w-full grid-cols-2 gap-5 items-stretch max-tablet:grid-cols-1">
+                            <EnterprisePlanCard
+                                copy={t.enterprise.sales}
+                                agents={ENTERPRISE_AGENTS.sales}
+                                t={t}
+                            />
+                            <EnterprisePlanCard
+                                copy={t.enterprise.marketing}
+                                agents={ENTERPRISE_AGENTS.marketing}
+                                t={t}
+                            />
+                        </div>
+                    ) : (
+                        <div className="grid w-full grid-cols-3 gap-5 items-stretch max-tablet:grid-cols-1">
+                            {PLANS[team].map(plan => (
+                                <PlanCard key={plan.id} plan={plan} t={t} />
+                            ))}
+                        </div>
+                    )}
 
-                    <div className="mt-6 grid w-full grid-cols-[1fr_auto] gap-6 items-start rounded-3xl bg-paper ring-1 ring-ink/6 p-6 max-tablet:grid-cols-1">
-                        <p className="text-sm text-grey-300 leading-relaxed max-w-2xl">
-                            {team === "sales" ? t.salesNote : t.marketingNote}
+                    <div className="mt-6 flex w-full flex-col gap-4 rounded-3xl bg-paper ring-1 ring-ink/6 p-6">
+                        <p className="text-sm text-grey-300 leading-relaxed max-w-3xl">
+                            {team === "sales"
+                                ? t.salesNote
+                                : team === "marketing"
+                                    ? t.marketingNote
+                                    : t.enterpriseNote}
                         </p>
                         {team === "sales" && (
-                            <ul className="flex flex-wrap gap-2 justify-end max-tablet:justify-start">
+                            <ul className="flex flex-wrap gap-2">
                                 {t.salesLimits.map(limit => (
                                     <li key={limit}>
                                         <Pill className="text-[12px] px-2.5 py-1">{limit}</Pill>

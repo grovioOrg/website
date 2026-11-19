@@ -85,13 +85,13 @@ export const SlackScreen = ({
                     <span className="size-3 rounded-full bg-[#28C840]" />
                 </span>
                 <span className="absolute left-1/2 -translate-x-1/2 rounded-md bg-white/15 px-24 py-1 text-[12px] text-white/70">
-                    Northwind
+                    Hotel Alpenhof
                 </span>
             </div>
 
             <div className="flex flex-1 min-h-0">
                 <aside className="w-56 shrink-0 bg-[#3F0E40] text-white/70 p-4 text-[13px] flex flex-col gap-0.5">
-                    <p className="font-semibold text-white text-[14px] mb-3">Northwind</p>
+                    <p className="font-semibold text-white text-[14px] mb-3">Hotel Alpenhof</p>
                     {t.channels.map((channel, index) => (
                         <span
                             key={channel}

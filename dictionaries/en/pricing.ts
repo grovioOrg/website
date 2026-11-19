@@ -8,29 +8,59 @@ export const pricing = {
     tabs: {
         sales: "Sales",
         marketing: "Marketing",
+        enterprise: "Enterprise",
     },
-    salesNote: "Every Sales Agent runs the whole flow: lead fetching, classification, research and DMs. Bundling adds more agents working side by side, not different jobs.",
+    enterpriseNote: "Custom agent counts, industries, lead volume and daily email limits. Sales and marketing are scoped and priced separately, with dedicated onboarding for your team.",
+    salesNote: "Every Sales Agent runs the whole flow: leads, research, DMs, booked meetings and offers sent from your CRM. Each agent covers up to 5 industries and 3,000 leads a month, split across as many campaigns as you like. Bundling adds more agents for more reach and a faster flow.",
     marketingNote: "Each marketing agent does its own job. Bundles start with the Writer and add the Graphic Designer and Video Agent. SEO intelligence is included in every bundle.",
     salesLimits: [
-        "Up to 3 campaigns per agent",
-        "Runs 24/7",
-        "5 leads at a time for your approval, then the next 5",
+        "5 industries · 3k leads/mo per agent",
+        "100 emails/day per agent",
+        "Unlimited campaigns",
+        "Every DM needs approval",
     ],
+    enterprisePrice: "Custom",
+    enterprise: {
+        sales: {
+            name: "Enterprise Sales",
+            summary: "More agents, higher limits and hands-on onboarding for larger teams.",
+            features: [
+                "Custom industries & leads",
+                "Higher email limits",
+                "Dedicated onboarding",
+            ],
+            cta: "Contact sales",
+            mailSubject: "Grovio Enterprise — Sales",
+            mailBody: "Hi,\n\nI'm interested in a Grovio Enterprise sales plan.\n\nCompany name:\nWebsite:\nApprox. team size:\nWhat we're selling:\n\nThanks,",
+        },
+        marketing: {
+            name: "Enterprise Marketing",
+            summary: "A custom marketing workforce with the agents and volume you need.",
+            features: [
+                "Custom agent mix",
+                "Brand & channels at scale",
+                "Dedicated onboarding",
+            ],
+            cta: "Contact us",
+            mailSubject: "Grovio Enterprise — Marketing",
+            mailBody: "Hi,\n\nI'm interested in a Grovio Enterprise marketing plan.\n\nCompany name:\nWebsite:\nChannels we publish on:\nWhat we need help with:\n\nThanks,",
+        },
+    },
     plans: {
         "sales-1": {
             name: "1 Sales Agent",
             summary: "One full-flow agent for focused outbound.",
-            features: ["Up to 3 campaigns", "Lead fetching, classification, research and DMs", "DM setup in plain language"],
+            features: ["Up to 5 industries", "3,000 leads a month", "100 emails a day", "Unlimited campaigns"],
         },
         "sales-2": {
             name: "2 Sales Agents",
-            summary: "Two agents in parallel, up to 6 campaigns.",
-            features: ["Up to 6 campaigns", "Two batches of 5 moving at once", "Shared research across agents"],
+            summary: "Two agents in parallel, up to 10 industries.",
+            features: ["Up to 10 industries", "6,000 leads a month", "100 emails a day", "Faster flow"],
         },
         "sales-3": {
             name: "3 Sales Agents",
-            summary: "The full sales team, up to 9 campaigns.",
-            features: ["Up to 9 campaigns", "Three batches of 5 moving at once", "Priority onboarding"],
+            summary: "The full sales team, up to 15 industries.",
+            features: ["Up to 15 industries", "9,000 leads a month", "100 emails a day", "Fastest flow"],
         },
         writer: {
             name: "Writer",

@@ -60,7 +60,7 @@ const AppScreen = ({
         <AppWindow
             t={app}
             active={id}
-            title={`Northwind · ${app.nav[id]}`}
+            title={`${app.workspace} · ${app.nav[id]}`}
             className="w-[1200px] h-[720px]"
         >
             <AnimatePresence mode="wait">
@@ -70,7 +70,7 @@ const AppScreen = ({
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.3, ease: [0.2, 0.7, 0.2, 1] }}
-                    className="flex-1 min-h-0 overflow-hidden"
+                    className="flex-1 min-h-0 h-full overflow-hidden flex flex-col"
                 >
                     <Screen t={t.mockup} app={app} />
                 </motion.div>

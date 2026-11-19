@@ -52,7 +52,7 @@ export const PlanCard = ({
                         <span className="grid place-items-center size-4.5 mt-0.5 shrink-0 rounded-full bg-yellow-100 text-ink">
                             <Check size={10} />
                         </span>
-                        {feature}
+                        <span className="text-pretty">{feature}</span>
                     </li>
                 ))}
             </ul>

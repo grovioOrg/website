@@ -7,13 +7,13 @@ export const agents = {
             "description": "Gère toute votre prospection : recherche les leads, les qualifie selon votre ICP, analyse chacun d'eux et rédige le DM. Rapide, enthousiaste et intraitable sur les relances.",
             "quirk": "Ne laisse jamais un lead refroidir.",
             "task": {
-                "title": "Campagne fintech à Londres : lot suivant",
+                "title": "Groupes de printemps : nouveaux leads",
                 "steps": [
-                    "5 fondateurs trouvés correspondant à l'ICP",
-                    "Signaux de levée de fonds et de recrutement analysés",
-                    "5 DM rédigés pour votre validation"
+                    "Organisateurs d'événements trouvés correspondant à l'ICP",
+                    "Offsites et dates de mariage analysés",
+                    "DM de séjour de groupe rédigés pour votre validation"
                 ],
-                "result": "Lot de 5 prêt"
+                "result": "DM prêts"
             }
         },
         "researcher": {
@@ -23,13 +23,13 @@ export const agents = {
             "description": "Le même Sales Agent complet, avec un côté méthodique. Leads, qualification, recherche et DM, avec une justification pour chaque lead accepté ou écarté.",
             "quirk": "Justifie chacune de ses décisions.",
             "task": {
-                "title": "Campagne SaaS DACH : lot suivant",
+                "title": "Privatisation Casa Linden : nouveaux leads",
                 "steps": [
-                    "5 directeurs commerciaux trouvés à Vienne et Munich",
-                    "1 lead hors ICP écarté, avec la raison",
-                    "4 DM rédigés en allemand formel"
+                    "Office managers trouvés à Vienne",
+                    "Lead hors ICP écarté, avec la raison",
+                    "Invitations à déjeuner rédigées en allemand formel"
                 ],
-                "result": "4 prêts · 1 écarté"
+                "result": "Prêts à valider"
             }
         },
         "signal": {
@@ -39,13 +39,13 @@ export const agents = {
             "description": "Un autre Sales Agent complet, avec l'oreille fine pour les réponses. Il gère le même processus du lead au DM et repère le plus vite l'intention positive pour caler la suite.",
             "quirk": "Ne laisse jamais refroidir une réponse positive.",
             "task": {
-                "title": "Campagne agences : réponses et lot suivant",
+                "title": "Rénovations de cuisine : rendez-vous et offres",
                 "steps": [
-                    "12 réponses lues, 3 positives signalées",
-                    "3 contacts synchronisés avec votre CRM",
-                    "5 leads suivants trouvés et DM rédigés"
+                    "12 réponses de gestionnaires d'immeubles lues, 3 positives signalées",
+                    "Rendez-vous réservés et deals poussés dans le CRM",
+                    "Offre envoyée depuis le CRM"
                 ],
-                "result": "3 positifs · 5 rédigés"
+                "result": "Rendez-vous réservé · offre envoyée"
             }
         },
         "seo": {
@@ -55,7 +55,7 @@ export const agents = {
             "description": "Analyse votre site web et votre identité numérique, révèle les mots-clés manquants, suit les performances et recommande les CTA à corriger en priorité. Inclus dans chaque pack marketing.",
             "quirk": "Porte une loupe. Et s'en sert.",
             "task": {
-                "title": "Audit d'acme.com face à trois concurrents",
+                "title": "Audit d'alpenhof.at face à trois hôtels de groupe",
                 "steps": [
                     "148 pages explorées",
                     "23 mots-clés manquants détectés",
@@ -71,7 +71,7 @@ export const agents = {
             "description": "Transforme les briefs SEO en articles, posts et newsletters dans la voix de votre marque, prêts à relire dans votre pipeline de contenu.",
             "quirk": "Relit tout deux fois.",
             "task": {
-                "title": "Brouillon : « La comptabilité pour les startups en amorçage »",
+                "title": "Brouillon : « Un week-end à l'Hotel Alpenhof »",
                 "steps": [
                     "Plan établi à partir du brief SEO",
                     "1 450 mots rédigés dans votre style maison",
@@ -87,7 +87,7 @@ export const agents = {
             "description": "Crée des visuels fidèles à votre marque pour chaque contenu, des couvertures de blog aux carrousels pour les réseaux sociaux, selon votre configuration de style.",
             "quirk": "Fait un clin d'œil quand le crénage est parfait.",
             "task": {
-                "title": "Couverture et carrousel pour l'article sur la comptabilité",
+                "title": "Couverture et carrousel pour la carte de printemps de Casa Linden",
                 "steps": [
                     "Configuration de style de la marque appliquée",
                     "4 propositions de couverture générées",
@@ -103,7 +103,7 @@ export const agents = {
             "description": "Produit des vidéos courtes à partir de vos articles et lancements, montées aux formats attendus par chaque canal.",
             "quirk": "Dit « action » avant chaque tâche.",
             "task": {
-                "title": "Teaser de 30 secondes pour l'article sur la comptabilité",
+                "title": "Visite de 30 secondes de la maison de ville terminée",
                 "steps": [
                     "Storyboard de 5 scènes",
                     "Versions verticale et carrée montées",
@@ -119,7 +119,7 @@ export const agents = {
             "description": "Appelle vos leads, pose les questions qui comptent et ne vous transmet que ceux prêts à échanger, avec une prochaine étape claire convenue pendant l'appel.",
             "quirk": "Termine toujours par une prochaine étape.",
             "task": {
-                "title": "Qualifier par téléphone 40 inscrits au webinaire",
+                "title": "Qualifier par téléphone 40 demandes de groupes",
                 "steps": [
                     "40 leads appelés dans leur fuseau horaire",
                     "3 questions de qualification posées",
@@ -151,9 +151,9 @@ export const agents = {
             "description": "Contacte les personnes qui correspondent à votre communauté, accueille les nouveaux membres et met en relation ceux qui peuvent s'entraider, pour une communauté qui grandit et devient plus utile.",
             "quirk": "Ne présente jamais quelqu'un sans raison.",
             "task": {
-                "title": "Développer le cercle des fondateurs de Vienne",
+                "title": "Inviter les organisateurs qui ont réservé un groupe au printemps dernier",
                 "steps": [
-                    "25 fondateurs correspondant au groupe invités",
+                    "25 organisateurs d'événements correspondants invités",
                     "9 nouveaux membres accueillis",
                     "6 mises en relation entre membres"
                 ],
@@ -162,7 +162,7 @@ export const agents = {
         }
     },
     "menu": {
-        "sales-agent": "Leads, recherche et DM. Jusqu'à 3 en pack.",
+        "sales-agent": "Leads, DM, rendez-vous et offres. Jusqu'à 3 en pack.",
         "seo-agent": "Mots-clés manquants, santé des pages et CTA",
         "writer-agent": "Articles, posts et newsletters",
         "graphic-designer": "Couvertures, carrousels et visuels",
@@ -180,7 +180,7 @@ export const agents = {
         "hire": "Recruter {name}",
         "upcomingNote": "Cet agent est en développement. Rejoignez la liste d'attente et nous vous préviendrons dès qu'il sera disponible.",
         "teamTitle": "Choisissez vos Sales Agents",
-        "teamBody": "Sunny, Bolt et Echo sont le même Sales Agent complet, avec des personnalités différentes. Recrutez-en un, ou associez-en deux ou trois pour mener plus de campagnes en parallèle.",
+        "teamBody": "Sunny, Bolt et Echo sont le même Sales Agent complet, avec des personnalités différentes. Recrutez-en un, ou associez-en deux ou trois pour couvrir plus de secteurs et de leads, plus vite.",
         "ctaTitle": "Prêt à recruter {name} ?",
         "teamCtaTitle": "Prêt à constituer votre équipe commerciale ?",
         "ctaBody": "Nous accueillons un petit groupe d'équipes pour la bêta privée.",
@@ -189,34 +189,49 @@ export const agents = {
     },
     "pages": {
         "sales-agent": {
-            "metaTitle": "Sales Agent IA : leads, recherche et DM en continu",
-            "metaDescription": "Recrutez le Sales Agent IA de Grovio. Il trouve des leads, les qualifie selon votre ICP, analyse chacun d'eux et rédige des DM que vous validez. Jusqu'à trois en pack.",
+            "metaTitle": "Sales Agent IA : leads, DM, rendez-vous et offres",
+            "metaDescription": "Recrutez le Sales Agent IA de Grovio. Il trouve et analyse des leads, envoie les DM que vous validez, réserve les rendez-vous, pousse les deals dans votre CRM et envoie les offres depuis celui-ci. Jusqu'à trois en pack.",
             "title": "Un Sales Agent IA qui gère tout le processus.",
-            "pitch": "Donnez-lui une campagne et un ICP. Il trouve les leads, les qualifie, analyse chacun d'eux et rédige le DM, cinq à la fois, pour votre validation. Jour et nuit.",
+            "pitch": "Donnez-lui une campagne et un ICP. Il trouve et analyse les leads, envoie les DM que vous validez, réserve les rendez-vous et pousse chaque deal dans votre CRM, où il crée et envoie l'offre. Jour et nuit.",
             "flow": [
                 "Trouver des leads pour l'ICP de la campagne",
                 "Qualifier : accepter ou écarter, avec les raisons",
                 "Analyser chaque lead accepté",
                 "Rédiger le DM dans votre style",
-                "Attendre votre validation, par lot de 5",
-                "Envoyer, lire les réponses, relancer"
+                "Attendre votre validation",
+                "Envoyer les DM, lire les réponses, relancer",
+                "Réserver le rendez-vous dans votre agenda",
+                "Pousser le deal dans votre CRM",
+                "Créer et envoyer l'offre depuis votre CRM"
             ],
             "properties": [
                 {
+                    "label": "Couverture",
+                    "value": "Jusqu'à 5 secteurs, 3 000 leads par mois"
+                },
+                {
                     "label": "Campagnes",
-                    "value": "Jusqu'à 3 par agent"
+                    "value": "Illimitées, leads répartis entre elles"
+                },
+                {
+                    "label": "E-mail",
+                    "value": "100 max. par jour et par agent"
                 },
                 {
                     "label": "Horaires",
                     "value": "Actif 24 h/24, 7 j/7"
                 },
                 {
-                    "label": "Lots",
-                    "value": "5 leads à la fois, puis les 5 suivants après validation"
-                },
-                {
                     "label": "Validation",
                     "value": "Rien ne part sans vous"
+                },
+                {
+                    "label": "CRM",
+                    "value": "HubSpot, Salesforce, Pipedrive, Zoho CRM"
+                },
+                {
+                    "label": "Rendez-vous",
+                    "value": "Réservés via Google Calendar ou Calendly"
                 },
                 {
                     "label": "Packs",
@@ -230,11 +245,15 @@ export const agents = {
             "faq": [
                 {
                     "q": "Sunny, Bolt et Echo ont-ils des rôles différents ?",
-                    "a": "Non. Tous trois sont le même Sales Agent et chacun gère tout le processus, du lead au DM. Ils ont des personnalités différentes, et en associer plusieurs vous permet de mener plus de campagnes à la fois."
+                    "a": "Non. Tous trois sont le même Sales Agent et chacun gère tout le processus, du lead au DM. Ils ont des personnalités différentes, et en associer plusieurs vous permet de couvrir plus de secteurs et de leads, plus vite."
                 },
                 {
-                    "q": "Pourquoi des lots de cinq ?",
-                    "a": "Pour que vous gardiez le contrôle. Chaque agent prépare cinq leads et DM, vous les validez ou les modifiez, et ce n'est qu'ensuite qu'il passe aux cinq suivants."
+                    "q": "Dois-je valider chaque DM ?",
+                    "a": "Oui, pour que vous gardiez le contrôle. Chaque agent prépare des leads et des DM, vous les validez ou les modifiez, et rien ne part avant."
+                },
+                {
+                    "q": "Est-ce compatible avec mon CRM ?",
+                    "a": "Oui. Sunny pousse contacts, deals et notes de rendez-vous dans HubSpot, Salesforce, Pipedrive ou Zoho CRM, y crée l'offre et l'envoie après votre validation."
                 },
                 {
                     "q": "Puis-je changer la façon dont les DM sont rédigés ?",

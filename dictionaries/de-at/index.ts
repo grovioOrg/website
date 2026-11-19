@@ -31,10 +31,6 @@ export const deAt: IDictionary = {
                 ...de.industries.list["car-dealerships"],
                 dm: "Hallo Stefan, Ihr Team in Salzburg ist heuer auf 40 Personen gewachsen. Wir betreuen Firmenautos von der Bestellung bis zum Service, mit einem fixen Ansprechpartner. Darf ich Ihnen unsere Flottenkonditionen schicken?",
             },
-            "tax-advisors": {
-                ...de.industries.list["tax-advisors"],
-                dm: "Hallo Lukas, herzlichen Glückwunsch zur Firmenbuch-Eintragung Ihrer GmbH. Beim ersten Jahresabschluss verlieren die meisten Gründer viel Zeit. Wir betreuen 40 junge Unternehmen in Wien. Möchten Sie unsere Checkliste für das erste Jahr?",
-            },
         },
     },
 }

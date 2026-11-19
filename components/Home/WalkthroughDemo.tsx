@@ -55,7 +55,7 @@ const Url = ({ t }: { t: IDemo }) => (
                 animate={{ width: "auto" }}
                 transition={{ duration: 1, delay: 0.4, ease: "linear" }}
             >
-                northwind.co
+                alpenhof.at
             </motion.span>
             <span className="w-px h-6 bg-ink animate-caret" />
             <motion.span

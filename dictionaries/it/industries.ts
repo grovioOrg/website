@@ -37,7 +37,7 @@ export const industries = {
                     "points": [
                         "Trova agenzie di eventi, organizzatori e travel manager nella tua zona",
                         "Individua offsite, conferenze e matrimoni in programma",
-                        "Scrive un DM personalizzato per ciascuno, cinque alla volta"
+                        "Scrive un DM personalizzato per ciascuno"
                     ],
                     "output": "5 DM per prenotazioni di gruppo pronti"
                 },
@@ -82,7 +82,7 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Grovio può parlare con gli ospiti?",
@@ -162,7 +162,7 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Gestite le prenotazioni per noi?",
@@ -238,7 +238,7 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Funziona anche con cataloghi piccoli?",
@@ -314,11 +314,11 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Posso gestire campagne locali e online?",
-                    "a": "Sì. Ogni Sales Agent gestisce fino a tre campagne, ciascuna con il proprio ICP."
+                    "a": "Sì. Ogni Sales Agent gestisce tutte le campagne che vuoi, ciascuna con il proprio ICP, su un massimo di 5 settori e 3.000 lead al mese."
                 }
             ]
         },
@@ -390,7 +390,7 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "È consentito contattare i proprietari?",
@@ -466,7 +466,7 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Gli agenti possono scrivere di normative?",
@@ -542,7 +542,7 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Funziona con il mio CRM?",
@@ -618,87 +618,11 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Posso controllare tono e formulazioni?",
                     "a": "Sì. Imposta tono, livello di formalità e parole da evitare con parole semplici. Approvi tu ogni messaggio."
-                }
-            ]
-        },
-        "tax-advisors": {
-            "name": "Commercialisti",
-            "short": "Founder, freelance e PMI",
-            "metaTitle": "Vendite e marketing con l'AI per commercialisti",
-            "metaDescription": "Gli agenti AI di Grovio portano ai commercialisti i clienti giusti: founder, freelance e PMI, con contenuti tempestivi per ogni scadenza.",
-            "title": "I clienti giusti, prima di ogni scadenza.",
-            "pitch": "Gli agenti di Grovio raggiungono founder, freelance e aziende in crescita nel momento in cui hanno bisogno di un commercialista, e pubblicano guide chiare per ogni scadenza.",
-            "pains": [
-                "Le richieste arrivano tutte insieme, a ridosso delle scadenze",
-                "I clienti meno adatti richiedono più tempo",
-                "I contenuti chiari e utili non vengono mai scritti"
-            ],
-            "agents": [
-                "Raggiunge founder e PMI in linea con il tuo cliente ideale",
-                "Scrive guide alle scadenze e newsletter",
-                "Crea spiegazioni semplici per i social"
-            ],
-            "useCases": [
-                {
-                    "title": "Riempi il portafoglio con i clienti giusti",
-                    "points": [
-                        "Trova founder, freelance e PMI in linea con te",
-                        "Analizza nuove registrazioni e segnali di crescita",
-                        "Scrive un DM personalizzato per ciascuno"
-                    ],
-                    "output": "5 DM per clienti pronti"
-                },
-                {
-                    "title": "Non perdere mai un post sulle scadenze",
-                    "points": [
-                        "Guide e promemoria sulle scadenze",
-                        "Newsletter sulle novità fiscali",
-                        "Post che rispondono alle domande più comuni"
-                    ],
-                    "output": "Guida alle scadenze pronta per la revisione"
-                },
-                {
-                    "title": "Rendi il fisco semplice da condividere",
-                    "points": [
-                        "Trasforma le guide in spiegazioni semplici",
-                        "Crea caroselli per LinkedIn e Instagram",
-                        "Usa lo stile del tuo brand"
-                    ],
-                    "output": "Carosello esplicativo pronto"
-                }
-            ],
-            "icp": [
-                {
-                    "name": "GmbH di nuova costituzione",
-                    "fit": 90
-                },
-                {
-                    "name": "Freelance con oltre 50.000 € di fatturato",
-                    "fit": 84
-                },
-                {
-                    "name": "Venditori e-commerce che vendono all'estero",
-                    "fit": 78
-                }
-            ],
-            "dm": "Buongiorno Lukas, congratulazioni per la registrazione della Sua GmbH. Il primo bilancio annuale è dove la maggior parte dei founder perde tempo. Lavoriamo con 40 giovani aziende a Vienna. Desidera ricevere la nostra checklist per il primo anno?",
-            "faq": [
-                {
-                    "q": "Quali sfide hanno i commercialisti quando le richieste esplodono prima delle scadenze?",
-                    "a": "Le richieste arrivano tutte insieme, a ridosso delle scadenze. I clienti meno adatti richiedono più tempo. I contenuti chiari e utili non vengono mai scritti."
-                },
-                {
-                    "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
-                },
-                {
-                    "q": "Posso rivolgermi solo a certi tipi di clienti?",
-                    "a": "Sì. La tua campagna ICP definisce esattamente chi il Sales Agent contatta e chi scarta."
                 }
             ]
         },
@@ -715,7 +639,7 @@ export const industries = {
                 "Agenzie e grandi strumenti costano troppo"
             ],
             "agents": [
-                "Trova clienti e scrive DM, cinque alla volta",
+                "Trova clienti e scrive DM",
                 "Scrive post e articoli con la tua voce",
                 "Si parte con un agente e se ne aggiungono altri quando conviene"
             ],
@@ -725,7 +649,7 @@ export const industries = {
                     "points": [
                         "Trova clienti in linea con ciò che offri",
                         "Analizza ciascuno prima di contattarlo",
-                        "Scrive DM, cinque alla volta, da sottoporre alla tua approvazione"
+                        "Scrive DM da sottoporre alla tua approvazione"
                     ],
                     "output": "5 DM per clienti pronti"
                 },
@@ -770,7 +694,7 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Posso iniziare con un solo agente?",
@@ -846,7 +770,7 @@ export const industries = {
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi lead e DM a gruppi di cinque prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
                 },
                 {
                     "q": "Non sono sui social. È un problema?",

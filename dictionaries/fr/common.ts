@@ -57,6 +57,7 @@ export const common = {
             "playground": "AI Playground",
             "account": "Compte"
         },
+        "workspace": "Hotel Alpenhof",
         "workforce": "Votre équipe IA",
         "ask": "Demander à l'équipe",
         "days": [

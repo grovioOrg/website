@@ -13,7 +13,6 @@ export type IIndustry =
     | "property-management"
     | "car-dealerships"
     | "law-firms"
-    | "tax-advisors"
     | "self-employed"
     | "tradespeople"
 
@@ -27,7 +26,6 @@ export const INDUSTRIES: { id: IIndustry, glyph: IGlyph, agents: IAgentId[], too
     { id: "property-management", glyph: "building", agents: ["sales", "writer", "seo"], tools: ["sheets", "linkedin", "outlook", "salesforce", "facebook", "gcal"] },
     { id: "car-dealerships", glyph: "car", agents: ["sales", "writer", "video"], tools: ["linkedin", "outlook", "salesforce", "instagram", "tiktok", "youtube"] },
     { id: "law-firms", glyph: "scale", agents: ["sales", "writer", "seo"], tools: ["linkedin", "outlook", "salesforce", "hubspot", "slack", "calendly"] },
-    { id: "tax-advisors", glyph: "receipt", agents: ["sales", "writer", "graphic"], tools: ["sheets", "linkedin", "gmail", "zoho", "instagram", "calendly"] },
     { id: "self-employed", glyph: "person", agents: ["sales", "writer", "researcher"], tools: ["csv", "linkedin", "gmail", "pipedrive", "instagram", "calendly"] },
     { id: "tradespeople", glyph: "wrench", agents: ["sales", "video", "seo"], tools: ["sheets", "linkedin", "gmail", "instagram", "tiktok", "youtube"] },
 ]

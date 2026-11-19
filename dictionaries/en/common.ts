@@ -57,6 +57,7 @@ export const common = {
             playground: "AI Playground",
             account: "Account",
         },
+        workspace: "Hotel Alpenhof",
         workforce: "Your workforce",
         ask: "Ask your workforce",
         days: ["Mon", "Tue", "Wed", "Thu", "Fri"],

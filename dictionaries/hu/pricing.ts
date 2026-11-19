@@ -7,41 +7,72 @@ export const pricing = {
     "popular": "Legnépszerűbb",
     "tabs": {
         "sales": "Értékesítés",
-        "marketing": "Marketing"
+        "marketing": "Marketing",
+        "enterprise": "Enterprise"
     },
-    "salesNote": "Minden Sales Agent a teljes folyamatot viszi: leadgyűjtés, besorolás, kutatás és DM-ek. A csomagok több, párhuzamosan dolgozó ügynököt jelentenek, nem eltérő feladatokat.",
+    "enterpriseNote": "Egyedi ügynökszám, iparágak, lead-volumen és napi e-mail limit. Az értékesítés és marketing külön árazott, dedikált bevezetéssel.",
+    "salesNote": "Minden Sales Agent a teljes folyamatot viszi: leadek, kutatás, DM-ek, lefoglalt megbeszélések és a CRM-edből küldött ajánlatok. Ügynökönként legfeljebb 5 iparág és havi 3000 lead, tetszőleges számú kampány között elosztva. A csomagok több ügynökkel nagyobb lefedettséget és gyorsabb folyamatot adnak.",
     "marketingNote": "Minden marketingügynök a saját feladatát végzi. A csomagok a Writerrel kezdődnek, és a Graphic Designerrel, valamint a Video Agenttel bővülnek. Az SEO-elemzés minden csomag része.",
     "salesLimits": [
-        "Ügynökönként legfeljebb 3 kampány",
-        "0–24-ben dolgozik",
-        "Egyszerre 5 lead jóváhagyásra, utána a következő 5"
+        "5 iparág · 3k lead/hó ügynökönként",
+        "100 e-mail/nap ügynökönként",
+        "Korlátlan kampány",
+        "Minden DM jóváhagyást kér"
     ],
+    "enterprisePrice": "Egyedi",
+    "enterprise": {
+        "sales": {
+            "name": "Enterprise értékesítés",
+            "summary": "Több ügynök, magasabb limitek és személyes bevezetés nagyobb csapatoknak.",
+            "features": ["Egyedi iparágak & leadek",
+                "Magasabb e-mail limit",
+                "Dedikált bevezetés"
+            ],
+            "cta": "Értékesítés felvétele",
+            "mailSubject": "Grovio Enterprise — Értékesítés",
+            "mailBody": "Szia,\n\nÉrdekel a Grovio Enterprise értékesítési csomag.\n\nCégnév:\nWeboldal:\nCsapat mérete (kb.):\nMit adunk el:\n\nKöszönöm,"
+        },
+        "marketing": {
+            "name": "Enterprise marketing",
+            "summary": "Egyedi marketing csapat az ügynökökkel és volumennel, amire szükséged van.",
+            "features": ["Egyedi ügynök-kombináció",
+                "Márka & csatornák nagy léptékben",
+                "Dedikált bevezetés"
+            ],
+            "cta": "Kapcsolatfelvétel",
+            "mailSubject": "Grovio Enterprise — Marketing",
+            "mailBody": "Szia,\n\nÉrdekel a Grovio Enterprise marketing csomag.\n\nCégnév:\nWeboldal:\nCsatornák, ahol publikálunk:\nMiben kell segítség:\n\nKöszönöm,"
+        }
+    },
     "plans": {
         "sales-1": {
             "name": "1 Sales Agent",
             "summary": "Egy teljes folyamatot vivő ügynök a fókuszált megkeresésekhez.",
             "features": [
-                "Legfeljebb 3 kampány",
-                "Leadgyűjtés, besorolás, kutatás és DM-ek",
-                "DM-beállítás egyszerű szavakkal"
+                "Legfeljebb 5 iparág",
+                "Havi 3000 lead",
+                "100 e-mail naponta",
+                "Korlátlan kampány"
             ]
         },
         "sales-2": {
             "name": "2 Sales Agent",
-            "summary": "Két ügynök párhuzamosan, legfeljebb 6 kampány.",
+            "summary": "Két ügynök párhuzamosan, legfeljebb 10 iparág.",
             "features": [
-                "Legfeljebb 6 kampány",
-                "Egyszerre két 5-ös adag",
-                "Közös kutatás az ügynökök között"
+                "Legfeljebb 10 iparág",
+                "Havi 6000 lead",
+                "100 e-mail naponta",
+                "Gyorsabb folyamat"
             ]
         },
         "sales-3": {
             "name": "3 Sales Agent",
-            "summary": "A teljes értékesítési csapat, legfeljebb 9 kampány.",
+            "summary": "A teljes értékesítési csapat, legfeljebb 15 iparág.",
             "features": [
-                "Legfeljebb 9 kampány",
-                "Egyszerre három 5-ös adag",
-                "Elsőbbségi bevezetés"
+                "Legfeljebb 15 iparág",
+                "Havi 9000 lead",
+                "100 e-mail naponta",
+                "Leggyorsabb folyamat"
             ]
         },
         "writer": {

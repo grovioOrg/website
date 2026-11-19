@@ -155,7 +155,7 @@ export const Walkthrough = ({
                             <AppWindow
                                 t={common.mockup}
                                 sidebar={false}
-                                title={`northwind.co · ${step.title}`}
+                                title={`alpenhof.at · ${step.title}`}
                                 className="w-[1200px] h-[640px]"
                             >
                                 <div className="relative flex-1 min-h-0 bg-paper">

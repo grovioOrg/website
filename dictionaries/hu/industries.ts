@@ -37,7 +37,7 @@ export const industries = {
                     "points": [
                         "Megtalálja a környékbeli rendezvényügynökségeket, szervezőket és utazási menedzsereket",
                         "Utánajár a közelgő offsite-oknak, konferenciáknak és esküvőknek",
-                        "Mindegyiknek személyes DM-et ír, ötösével"
+                        "Mindegyiknek személyes DM-et ír"
                     ],
                     "output": "5 csoportfoglalási DM kész"
                 },
@@ -82,7 +82,7 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Tud a Grovio a vendégekkel kommunikálni?",
@@ -162,7 +162,7 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Felveszitek helyettünk a foglalásokat?",
@@ -238,7 +238,7 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Kis termékkínálatnál is működik?",
@@ -314,11 +314,11 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Futtathatok helyi és online kampányokat is?",
-                    "a": "Igen. Minden Sales Agent legfeljebb három kampányt visz, mindegyiket saját ICP-vel."
+                    "a": "Igen. Minden Sales Agent annyi kampányt visz, amennyit szeretnél, mindegyiket saját ICP-vel, legfeljebb 5 iparágban és havi 3000 leaddel."
                 }
             ]
         },
@@ -390,7 +390,7 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Szabad megkeresni a tulajdonosokat?",
@@ -466,7 +466,7 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Írhatnak az ügynökök szabályozásról?",
@@ -542,7 +542,7 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Működik a CRM-emmel?",
@@ -618,87 +618,11 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Szabályozhatom a hangnemet és a megfogalmazást?",
                     "a": "Igen. Egyszerű szavakkal állítsd be a hangnemet, a formalitást és a kerülendő szavakat. Minden üzenetet te hagysz jóvá."
-                }
-            ]
-        },
-        "tax-advisors": {
-            "name": "Adótanácsadók",
-            "short": "Alapítók, szabadúszók és kkv-k",
-            "metaTitle": "AI értékesítés és marketing adótanácsadóknak",
-            "metaDescription": "A Grovio AI-ügynökei a megfelelő ügyfeleket hozzák az adótanácsadóknak: alapítókat, szabadúszókat és kkv-kat, minden határidőhöz időszerű tartalommal.",
-            "title": "A megfelelő ügyfelek, minden határidő előtt.",
-            "pitch": "A Grovio ügynökei akkor érik el az alapítókat, szabadúszókat és növekvő vállalkozásokat, amikor adótanácsadóra van szükségük, és minden határidőhöz érthető útmutatókat tesznek közzé.",
-            "pains": [
-                "A megkeresések egyszerre, közvetlenül a határidők előtt érkeznek",
-                "A nem illő ügyfelek viszik el a legtöbb időt",
-                "Érthető, hasznos tartalom sosem készül"
-            ],
-            "agents": [
-                "Eléri az ideális ügyfélképedbe illő alapítókat és kkv-kat",
-                "Határidő-útmutatókat és hírleveleket ír",
-                "Egyszerű magyarázó anyagokat készít a közösségi médiára"
-            ],
-            "useCases": [
-                {
-                    "title": "Töltsd fel az ügyfélköröd a megfelelőkkel",
-                    "points": [
-                        "Megtalálja az illő alapítókat, szabadúszókat és kkv-kat",
-                        "Utánajár az új cégbejegyzéseknek és növekedési jeleknek",
-                        "Mindegyiknek személyes DM-et ír"
-                    ],
-                    "output": "5 ügyfél-DM kész"
-                },
-                {
-                    "title": "Egyetlen határidős poszt se maradjon el",
-                    "points": [
-                        "Határidő-útmutatók és emlékeztetők",
-                        "Hírlevelek az adóváltozásokról",
-                        "Posztok, amelyek a gyakori kérdésekre válaszolnak"
-                    ],
-                    "output": "Határidő-útmutató átnézésre készen"
-                },
-                {
-                    "title": "Az adó egyszerűen, megoszthatóan",
-                    "points": [
-                        "Az útmutatókból egyszerű magyarázó anyagokat készít",
-                        "Karusszeleket készít LinkedInre és Instagramra",
-                        "A márkád stílusát használja"
-                    ],
-                    "output": "Magyarázó karusszel kész"
-                }
-            ],
-            "icp": [
-                {
-                    "name": "Újonnan alapított GmbH-k",
-                    "fit": 90
-                },
-                {
-                    "name": "Szabadúszók 50 ezer € bevétel felett",
-                    "fit": 84
-                },
-                {
-                    "name": "Határon átnyúló e-kereskedők",
-                    "fit": 78
-                }
-            ],
-            "dm": "Kedves Lukas! Gratulálok a GmbH bejegyzéséhez. A legtöbb alapító az első éves beszámolónál veszít a legtöbb időt. 40 bécsi fiatal céggel dolgozunk. Elküldjem az első éves ellenőrzőlistánkat?",
-            "faq": [
-                {
-                    "q": "Milyen kihívásokkal szembesülnek az adótanácsadók a határidők előtti csúcsnál?",
-                    "a": "A megkeresések egyszerre, közvetlenül a határidők előtt érkeznek. A nem illő ügyfelek viszik el a legtöbb időt. Érthető, hasznos tartalom sosem készül."
-                },
-                {
-                    "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
-                },
-                {
-                    "q": "Célozhatok csak bizonyos ügyféltípusokat?",
-                    "a": "Igen. Az ICP-kampányod pontosan meghatározza, kit keres meg a Sales Agent, és kit vet el."
                 }
             ]
         },
@@ -715,7 +639,7 @@ export const industries = {
                 "Az ügynökségek és a nagy eszközök túl drágák"
             ],
             "agents": [
-                "Ügyfeleket talál és DM-eket ír, ötösével",
+                "Ügyfeleket talál és DM-eket ír",
                 "A te hangodon ír posztokat és cikkeket",
                 "Egy ügynökkel indul, és bővül, amikor megtérül"
             ],
@@ -725,7 +649,7 @@ export const industries = {
                     "points": [
                         "Olyan ügyfeleket talál, akikhez illik, amit kínálsz",
                         "Megkeresés előtt mindegyiknek utánajár",
-                        "Ötösével ír DM-eket a jóváhagyásodra"
+                        "DM-eket ír a jóváhagyásodra"
                     ],
                     "output": "5 ügyfél-DM kész"
                 },
@@ -770,7 +694,7 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Kezdhetek egyetlen ügynökkel?",
@@ -846,7 +770,7 @@ export const industries = {
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Ötösével hagyod jóvá a leadeket és a DM-eket, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
                 },
                 {
                     "q": "Nem vagyok fent a közösségi médiában. Számít ez?",

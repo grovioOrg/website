@@ -144,7 +144,7 @@ export const MarketingWorkforce = ({
                             <div className="flex items-center gap-1 px-2.5 h-6 bg-grey-50">
                                 <span className="size-1.5 rounded-full bg-grey-150" />
                                 <span className="size-1.5 rounded-full bg-grey-150" />
-                                <span className="ml-1.5 text-[10px] text-grey-300">northwind.co</span>
+                                <span className="ml-1.5 text-[10px] text-grey-300">casalinden.at</span>
                             </div>
                             <div className="relative p-2.5 flex flex-col gap-1.5">
                                 <span className="h-2 w-3/4 rounded-full bg-grey-100" />

@@ -10,7 +10,7 @@ export const home = {
         "secondary": "Voir le fonctionnement",
         "eu": "Conçu dans et pour l'UE · Conforme au RGPD",
         "icpTitle": "Campagne ICP créée",
-        "icpBody": "4 segments d'acheteurs issus de northwind.co",
+        "icpBody": "4 segments d'acheteurs depuis alpenhof.at",
         "replyTitle": "Réponse positive",
         "replyPill": "Synchronisé au CRM",
         "replyQuote": "Ça m'intéresse. On peut en parler jeudi ?",
@@ -38,58 +38,58 @@ export const home = {
                 "done": "Terminé"
             },
             "activity": {
-                "start": "Sunny a commencé à sourcer des leads pour Fintech T4",
+                "start": "Sunny a commencé à sourcer des organisateurs d'événements pour les groupes de printemps",
                 "briefed": "Vous avez briefé {agent} : « {task} »",
                 "approved": "Vous avez validé « {task} »",
                 "moved": "{agent} a déplacé « {task} » vers {column}"
             },
             "tasks": [
                 {
-                    "title": "Créer la campagne ICP depuis northwind.co",
+                    "title": "Créer l'ICP des groupes de printemps",
                     "tag": "ICP"
                 },
                 {
-                    "title": "Article : la compta des startups en amorçage",
+                    "title": "Article : un week-end à l'Hotel Alpenhof",
                     "tag": "Contenu"
                 },
                 {
-                    "title": "Revoir les CTA de la page tarifs",
+                    "title": "Revoir les CTA de la privatisation",
                     "tag": "SEO"
                 },
                 {
-                    "title": "Qualifier les inscrits au webinar",
+                    "title": "Qualifier les demandes de rénovation de cuisine",
                     "tag": "Recherche"
                 },
                 {
-                    "title": "Teaser de 30 s pour le post de lancement",
+                    "title": "Visite de 30 s de la maison de ville terminée",
                     "tag": "Vidéo"
                 },
                 {
-                    "title": "Relancer les réponses positives",
+                    "title": "Relancer les réponses positives des groupes",
                     "tag": "Prospection"
                 },
                 {
-                    "title": "Visuel de la newsletter d'octobre",
+                    "title": "Visuel de la carte de printemps",
                     "tag": "Design"
                 },
                 {
-                    "title": "Audit des mots-clés vs 3 concurrents",
+                    "title": "Écart de mots-clés : hôtels de groupe près de Vienne",
                     "tag": "SEO"
                 },
                 {
-                    "title": "Campagne ICP créée : 4 segments",
+                    "title": "ICP groupes : 4 segments d'organisateurs",
                     "tag": "ICP"
                 },
                 {
-                    "title": "Intro personnalisée pour Lumen Labs",
+                    "title": "Intro personnalisée pour Marco Berger",
                     "tag": "Brouillons"
                 },
                 {
-                    "title": "Sourcer des leads via Comment Sniffer",
+                    "title": "Sourcer des leads de déjeuners d'entreprise",
                     "tag": "Leads"
                 },
                 {
-                    "title": "Carrousel LinkedIn : 5 mythes du recrutement",
+                    "title": "Carrousel : 5 menus pour un déjeuner d'équipe",
                     "tag": "Design"
                 }
             ]
@@ -124,17 +124,17 @@ export const home = {
             },
             {
                 "title": "Les meilleurs leads",
-                "description": "Les leads les plus pertinents, cinq à la fois, en attente de votre validation."
+                "description": "Vous relisez chaque lead avant tout envoi."
             },
             {
                 "title": "Campaign Studio",
-                "description": "Validez, modifiez ou écartez. Les cinq suivants arrivent d'eux-mêmes."
+                "description": "Validez, modifiez ou écartez. De nouveaux leads arrivent en continu."
             }
         ],
         "demo": {
             "urlLabel": "Votre site web",
             "analyse": "Analyser",
-            "reading": "Lecture de northwind.co",
+            "reading": "Lecture de alpenhof.at",
             "sources": [
                 "Site web",
                 "LinkedIn",
@@ -146,47 +146,47 @@ export const home = {
             "intentLabel": "personnes avec une intention positive",
             "missedLabel": "signaux manqués détectés",
             "opportunities": [
-                "Des fondateurs comparent des outils de comptabilité sur LinkedIn",
-                "Des responsables financiers recrutent leur premier comptable",
-                "Des agences cherchent de l'aide pour la clôture mensuelle"
+                "Des organisateurs réservent des offsites de printemps",
+                "Des entreprises comparent des hôtels de groupe près de Vienne",
+                "Des wedding planners cherchent un lieu pour le week-end",
             ],
             "helps": "Grovio peut aider",
-            "campaignName": "Fondateurs en phase d'amorçage · UK",
+            "campaignName": "Groupes de printemps",
             "segment": "Segment",
             "fit": "Pertinence",
             "segments": [
                 {
-                    "name": "Fondateurs SaaS en amorçage",
+                    "name": "Agences événementielles dans un rayon de 200 km",
                     "fit": 92
                 },
                 {
-                    "name": "Dirigeants d'agence, 10 à 50 salariés",
+                    "name": "Responsables voyages d'entreprise",
                     "fit": 86
                 },
                 {
-                    "name": "Responsables financiers fintech",
+                    "name": "Wedding planners",
                     "fit": 79
                 },
                 {
-                    "name": "Exploitants e-commerce",
+                    "name": "Entreprises qui préparent un offsite",
                     "fit": 71
                 }
             ],
-            "batch": "Lot 1 de 5 leads",
+            "batch": "Les meilleurs leads",
             "awaiting": "En attente de votre validation",
-            "approveAll": "Valider le lot",
+            "approveAll": "Tout valider",
             "approved": "Validé",
-            "next": "Les 5 suivants arrivent",
+            "next": "D'autres leads arrivent",
             "studio": "Campaign Studio",
             "sent": "envoyés",
             "replies": "réponses",
             "meetings": "rendez-vous",
             "leadRoles": [
-                "Fondatrice · Lumen Labs",
-                "CEO · Brightline",
-                "COO · Fernway",
-                "Fondateur · Kettle & Co",
-                "Directrice des opérations · Tidepool"
+                "Organisateur · Berger Events",
+                "Responsable voyages · Nordbahn",
+                "Organisatrice · Weiss Weddings",
+                "Office manager · Atelier GmbH",
+                "Responsable événements · Stadtverein",
             ]
         }
     },
@@ -205,8 +205,8 @@ export const home = {
         "title": "D'une liste froide à une réponse chaleureuse. En boucle.",
         "points": [
             "Trouve, qualifie et analyse chaque nouveau lead",
-            "Rédige chaque DM et relance avec votre ton",
-            "Conforme au RGPD, rien ne part sans validation"
+            "Envoie DM et relances avec votre ton, puis réserve le rendez-vous",
+            "Pousse les deals dans votre CRM et envoie les offres depuis celui-ci, avec votre validation"
         ],
         "flow": {
             "providers": [
@@ -224,7 +224,7 @@ export const home = {
                 {
                     "title": "Collecte de leads",
                     "caption": "Compare chaque prospect à votre ICP",
-                    "log": "Sunny a collecté 5 profils correspondant à l'ICP de la campagne"
+                    "log": "Sunny a collecté des organisateurs correspondant à l'ICP groupes",
                 },
                 {
                     "title": "Tri + recherche",
@@ -254,12 +254,12 @@ export const home = {
                 {
                     "title": "Analyse des signaux",
                     "caption": "Lit l'intention de chaque réponse",
-                    "log": "Sunny a repéré 2 réponses positives"
+                    "log": "Sunny a repéré 2 réponses positives et réservé un rendez-vous jeudi"
                 },
                 {
-                    "title": "CRM + relance",
+                    "title": "CRM + offre",
                     "caption": "",
-                    "log": "2 contacts synchronisés au CRM, lot suivant de 5 lancé"
+                    "log": "Deal créé dans HubSpot, offre envoyée depuis votre CRM"
                 }
             ],
             "accepted": "acceptés",
@@ -267,9 +267,9 @@ export const home = {
             "edit": "Modifier",
             "accept": "Accepter",
             "discard": "Rejeter",
-            "loop": "Lot suivant : après votre validation, Sunny passe aux 5 leads suivants",
+            "loop": "Après votre validation, Sunny continue à chercher de nouveaux leads",
             "runLog": "Journal",
-            "live": "Fintech Londres · en direct"
+            "live": "Hotel Alpenhof · groupes",
         }
     },
     "teach": {
@@ -279,7 +279,7 @@ export const home = {
         "chatTitle": "Briefez votre Sales Agent",
         "inputPlaceholder": "Expliquez à Sunny comment vous vendez…",
         "dmTitle": "Prochain DM, aperçu en direct",
-        "to": "À : Lena Huber, Hotel Alpenhof",
+        "to": "À : Marco Berger, Berger Events",
         "rulesTitle": "Ce que Sunny retiendra",
         "greeting": "Bonjour, je suis Sunny. Dites-moi comment vous vendez et j'adapte chaque DM.",
         "learned": "{n} règles apprises sur {total}",
@@ -293,11 +293,11 @@ export const home = {
         ],
         "messages": [
             {
-                "you": "On vend un logiciel de réservation aux hôtels de charme en Autriche.",
-                "agent": "Compris. Je cible les hôtels de charme en Autriche et je mets en avant les réservations.",
+                "you": "Nous sommes l'Hotel Alpenhof, près de Vienne. Nous vendons des séjours de groupe pour 20 à 80 personnes.",
+                "agent": "Compris. Je cible les organisateurs d'événements et je mets en avant les séjours de groupe.",
                 "rule": {
                     "label": "Cible",
-                    "value": "Hôtels de charme · AT"
+                    "value": "Organisateurs d'événements · AT",
                 }
             },
             {
@@ -317,20 +317,20 @@ export const home = {
                 }
             },
             {
-                "you": "Cite l'étude de cas Alpenhof. Ne parle jamais de prix.",
-                "agent": "Je citerai l'étude de cas et garderai les tarifs pour l'appel.",
+                "you": "Parle de la vue sur le lac et des salles de réunion. Ne mentionne jamais le tarif affiché.",
+                "agent": "Je citerai la vue sur le lac et garderai les tarifs pour l'appel.",
                 "rule": {
                     "label": "Toujours / jamais",
-                    "value": "Étude de cas · pas de prix"
+                    "value": "Vue sur le lac · pas de tarif",
                 }
             }
         ],
         "drafts": [
-            "Salut Lena, je voulais te parler de notre logiciel. Il aide les entreprises à gagner du temps et à se développer. Tu serais dispo pour un petit appel cette semaine pour découvrir ce qu'on fait ?",
-            "Salut Lena, chaque saison, les hôtels de charme comme le tien perdent des réservations directes au profit des OTA. Notre logiciel de réservation t'aide à les récupérer. Un petit appel cette semaine ?",
-            "Madame Huber, chaque saison, les hôtels de charme comme le vôtre perdent des réservations directes au profit des plateformes de réservation. Notre logiciel vous aide à les reconquérir. Auriez-vous un moment cette semaine pour un bref échange ?",
-            "Madame Huber, chaque saison, les hôtels de charme perdent des réservations directes au profit des plateformes. Notre logiciel les récupère. Auriez-vous 15 minutes cette semaine ?",
-            "Madame Huber, l'Hotel Alpenhof a obtenu 31 % de réservations directes en plus avec nous. Je vous montre volontiers en 15 minutes comment y parvenir chez vous. Jeudi vous conviendrait-il ?"
+            "Salut Marco, je voulais te parler de notre hôtel. Nous accueillons des groupes et aimerions t'en dire plus. Tu serais dispo pour un petit appel cette semaine ?",
+            "Salut Marco, les équipes comme la tienne réservent leurs offsites de printemps des mois à l'avance. Nous accueillons des groupes de 20 à 80 personnes, avec salles de réunion et vue sur le lac, à 40 minutes de Vienne. Je t'envoie nos tarifs groupes ?",
+            "Monsieur Berger, les équipes comme la vôtre réservent leurs offsites des mois à l'avance. Nous accueillons des groupes de 20 à 80 personnes, avec salles de réunion et vue sur le lac, à 40 minutes de Vienne. Puis-je vous envoyer nos tarifs groupes ?",
+            "Monsieur Berger, nous accueillons des groupes de 20 à 80 personnes, avec salles de réunion et vue sur le lac, à 40 minutes de Vienne. Auriez-vous 15 minutes cette semaine ?",
+            "Monsieur Berger, pour votre offsite de printemps nous avons des salles de réunion et une vue sur le lac, à 40 minutes de Vienne, pour des groupes de 20 à 80. Jeudi vous conviendrait-il pour un bref aperçu des tarifs ?"
         ],
         "words": "{n} mots"
     },
@@ -349,26 +349,26 @@ export const home = {
             "identity": "Identité numérique",
             "keywordsTitle": "Opportunités de mots-clés",
             "keywords": [
-                "comptabilité startup",
-                "comptabilité levée seed",
-                "crédit d'impôt r&d uk"
+                "privatisation vienne",
+                "déjeuner d'équipe mariahilf",
+                "tables de restaurant en semaine",
             ],
             "pages": "Pages à améliorer",
             "gaps": "Sujets manquants",
             "ctaLabel": "Idée de CTA :",
-            "cta": "remplacer « Contactez-nous » par « Réserver un bilan financier de 15 min »",
+            "cta": "remplacer « Contactez-nous » par « Réserver le salon privé »",
             "creatorItems": [
                 {
                     "format": "Article de blog",
-                    "title": "La compta des startups en amorçage"
+                    "title": "Une table du mardi chez Casa Linden",
                 },
                 {
                     "format": "Carrousel",
-                    "title": "5 idées reçues des fondateurs sur la finance"
+                    "title": "5 menus pour un déjeuner d'équipe",
                 },
                 {
                     "format": "Vidéo courte",
-                    "title": "Teaser 30 s : la clôture en 5 minutes"
+                    "title": "30 secondes du salon privé",
                 }
             ],
             "ready": "Prêt à relire",
@@ -402,10 +402,10 @@ export const home = {
                     "marketing": "Marketing"
                 },
                 "plays": [
-                    "Outbound fintech en amorçage",
-                    "Machine à contenu hebdo",
-                    "Relance post-webinar",
-                    "Kit teaser de lancement"
+                    "Prospection groupes",
+                    "Posts de menu hebdomadaires",
+                    "Relance rénovations",
+                    "Kit week-end mariage",
                 ]
             },
             "campaigns": {
@@ -424,28 +424,28 @@ export const home = {
                     "paused": "En pause"
                 },
                 "names": [
-                    "Fondateurs fintech à Londres",
-                    "Offensive contenu T4",
-                    "Inscrits au webinar",
-                    "Teaser lancement produit",
-                    "Relancer les leads froids"
+                    "Alpenhof · groupes de printemps",
+                    "Casa Linden · privatisation",
+                    "Holm · rénovations de cuisine",
+                    "Alpenhof · week-ends mariage",
+                    "Casa Linden · déjeuners d'entreprise",
                 ]
             },
             "epic": {
                 "title": "Sprint croissance T4",
                 "subtitle": "Vue chronologique · qui fait quoi, et quand",
                 "tasks": [
-                    "Lot ICP fintech",
-                    "Lot SaaS DACH",
-                    "Réponses agences",
+                    "Leads groupes",
+                    "Leads déjeuners d'entreprise",
+                    "Réponses rénovations",
                     "Audit mots-clés",
-                    "Guide compta",
-                    "Carrousel",
-                    "Teaser de lancement"
+                    "Guide week-end au lac",
+                    "Carrousel menu",
+                    "Visite de la maison de ville",
                 ]
             },
             "seo": {
-                "subtitle": "northwind.co · mis à jour par Scout ce matin",
+                "subtitle": "alpenhof.at · mis à jour par Scout ce matin",
                 "tracked": "148 pages suivies",
                 "health": "Score de santé du site",
                 "columns": [
@@ -455,11 +455,11 @@ export const home = {
                     "Action"
                 ],
                 "keywords": [
-                    "comptabilité startup",
-                    "comptabilité levée seed",
-                    "crédit d'impôt r&d uk",
-                    "cfo externalisé startup",
-                    "checklist clôture mensuelle"
+                    "hôtel de groupe près de vienne",
+                    "offsite entreprise autriche",
+                    "lieu de mariage week-end",
+                    "réservation directe hôtel",
+                    "salles de réunion vienne",
                 ],
                 "actions": [
                     "Rédiger un guide",
@@ -498,12 +498,12 @@ export const home = {
             },
             "playground": {
                 "subtitle": "Testez vos idées avec n'importe quel agent avant de le briefer",
-                "prompt": "Trois objets d'e-mail pour la campagne fintech à Londres. Sympas, pas commerciaux.",
+                "prompt": "Trois objets d'e-mail pour la campagne groupes de printemps. Sympas, pas commerciaux.",
                 "reply": "En voici trois, classés selon votre charte éditoriale :",
                 "lines": [
-                    "La clôture en un après-midi ?",
-                    "Une idée rapide pour la stack finance de Lumen",
-                    "Ce que les fondateurs en amorçage nous demandent le plus"
+                    "Un offsite de printemps au bord du lac ?",
+                    "Des salles de réunion pour 40",
+                    "Ce que les organisateurs demandent avant de réserver",
                 ],
                 "send": "Envoyer au Sales Agent",
                 "retry": "Réessayer",
@@ -525,15 +525,15 @@ export const home = {
                 "09:11"
             ],
             "summary": "Bonjour ! Cette nuit, votre équipe a qualifié **51 leads**, rédigé **3 posts** et trouvé **7 réponses positives**. Deux points ont besoin de vous aujourd'hui.",
-            "opener": "Accroche pour Maya chez Lumen Labs, tirée des recherches de ce matin :",
-            "dm": "J'ai vu que Lumen vient de boucler son tour d'amorçage. Félicitations ! La plupart des équipes de votre taille perdent une journée par mois sur la clôture. 15 minutes pour voir comment Northwind vous la rend ?",
+            "opener": "Accroche pour Marco chez Berger Events, tirée des recherches de ce matin :",
+            "dm": "Berger Events prépare la saison des offsites de printemps. Nous accueillons des groupes de 20 à 80 personnes, avec salles de réunion et vue sur le lac, à 40 minutes de Vienne. Un aperçu de nos tarifs groupes ?",
             "approve": "Valider",
             "edit": "Modifier",
             "approved": "Validé par vous",
             "tryIt": "Essayez",
             "composer": "Écrire dans",
-            "scheduled": "Merci ! Programmé pour 9 h 30, heure locale. Je surveille la réponse.",
-            "reply": "Réponse positive de **Theo chez Brightline** : « On peut en parler jeudi ? » Ajouté au CRM et signalé pour vous."
+            "scheduled": "Merci ! Programmé pour 9 h 30, son heure. Je surveille la réponse.",
+            "reply": "Réponse positive de **Marco chez Berger Events** : « On peut en parler jeudi ? » Rendez-vous réservé jeudi et deal poussé dans votre CRM.",
         }
     },
     "integrations": {

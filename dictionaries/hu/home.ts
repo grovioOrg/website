@@ -10,7 +10,7 @@ export const home = {
         "secondary": "Így működik",
         "eu": "Az EU-ban, az EU-nak készült · GDPR-megfelelő",
         "icpTitle": "ICP-kampány létrehozva",
-        "icpBody": "4 vevői szegmens a northwind.co alapján",
+        "icpBody": "4 vevői szegmens az alpenhof.at alapján",
         "replyTitle": "Pozitív válasz",
         "replyPill": "CRM szinkronizálva",
         "replyQuote": "Érdekesen hangzik – beszélhetnénk csütörtökön?",
@@ -38,58 +38,58 @@ export const home = {
                 "done": "Kész"
             },
             "activity": {
-                "start": "Sunny elkezdte a leadgyűjtést a Q4 Fintech kampányhoz",
+                "start": "Sunny elkezdett rendezvényszervezőket keresni a tavaszi csoportokhoz",
                 "briefed": "Briefelted: {agent} – „{task}”",
                 "approved": "Jóváhagytad: „{task}”",
                 "moved": "{agent} áthelyezte: „{task}” → {column}"
             },
             "tasks": [
                 {
-                    "title": "ICP-kampány a northwind.co alapján",
+                    "title": "ICP a tavaszi csoportfoglalásokhoz",
                     "tag": "ICP"
                 },
                 {
-                    "title": "Cikk: könyvelés seed startupoknak",
+                    "title": "Cikk: egy hétvége a Hotel Alpenhofban",
                     "tag": "Tartalom"
                 },
                 {
-                    "title": "Árazási oldal CTA-inak frissítése",
+                    "title": "A privát vacsora CTA-inak frissítése",
                     "tag": "SEO"
                 },
                 {
-                    "title": "Webinár-jelentkezők minősítése",
+                    "title": "Konyhafelújítási érdeklődések minősítése",
                     "tag": "Kutatás"
                 },
                 {
-                    "title": "30 mp-es teaser a launch-poszthoz",
+                    "title": "30 mp-es séta a kész sorházban",
                     "tag": "Videó"
                 },
                 {
-                    "title": "Utánkövetés a meleg válaszokra",
+                    "title": "Utánkövetés a meleg csoportválaszokra",
                     "tag": "Megkeresés"
                 },
                 {
-                    "title": "Borítókép az októberi hírlevélhez",
+                    "title": "Borítókép a tavaszi étlaphoz",
                     "tag": "Design"
                 },
                 {
-                    "title": "Kulcsszóhiány-audit, 3 versenytárs",
+                    "title": "Kulcsszóhiány: csoportos szállodák Bécs közelében",
                     "tag": "SEO"
                 },
                 {
-                    "title": "ICP-kampány kész: 4 szegmens",
+                    "title": "Csoport-ICP: 4 szervezői szegmens",
                     "tag": "ICP"
                 },
                 {
-                    "title": "Személyre szabott intro: Lumen Labs",
+                    "title": "Személyre szabott intro: Marco Berger",
                     "tag": "Vázlatok"
                 },
                 {
-                    "title": "Leadek a Comment Snifferből",
+                    "title": "Irodai ebéd leadek",
                     "tag": "Leadek"
                 },
                 {
-                    "title": "LinkedIn-karusszel: 5 toborzási tévhit",
+                    "title": "Karusszel: 5 menü a csapat ebédhez",
                     "tag": "Design"
                 }
             ]
@@ -124,17 +124,17 @@ export const home = {
             },
             {
                 "title": "A legjobb leadek",
-                "description": "A legjobban illeszkedő leadek, ötösével, jóváhagyásra várva."
+                "description": "Minden leadet átnézel, mielőtt bármi kimegy."
             },
             {
                 "title": "Campaign Studio",
-                "description": "Jóváhagyod, szerkeszted vagy elveted. A következő öt magától érkezik."
+                "description": "Jóváhagyod, szerkeszted vagy elveted. Folyamatosan jönnek az új leadek."
             }
         ],
         "demo": {
             "urlLabel": "A weboldalad",
             "analyse": "Elemzés",
-            "reading": "A northwind.co feldolgozása",
+            "reading": "Az alpenhof.at feldolgozása",
             "sources": [
                 "Weboldal",
                 "LinkedIn",
@@ -146,47 +146,47 @@ export const home = {
             "intentLabel": "ember mutat pozitív szándékot",
             "missedLabel": "elszalasztott jel",
             "opportunities": [
-                "Könyvelőprogramokat hasonlítanak össze alapítók a LinkedInen",
-                "Pénzügyi vezetők, akik az első könyvelőjüket keresik",
-                "Ügynökségek, amelyek segítséget kérnek a hónapzáráshoz"
+                "Rendezvényszervezők tavaszi offsite-okat foglalnak",
+                "Cégek csoportos szállodákat hasonlítanak Bécs közelében",
+                "Esküvőszervezők hétvégi helyszínt keresnek",
             ],
             "helps": "A Grovio segíthet",
-            "campaignName": "Seed fázisú alapítók · UK",
+            "campaignName": "Tavaszi csoportfoglalások",
             "segment": "Szegmens",
             "fit": "Illeszkedés",
             "segments": [
                 {
-                    "name": "Seed fázisú SaaS-alapítók",
+                    "name": "Rendezvényügynökségek 200 km-en belül",
                     "fit": 92
                 },
                 {
-                    "name": "Ügynökségvezetők, 10–50 fő",
+                    "name": "Céges utazási menedzserek",
                     "fit": 86
                 },
                 {
-                    "name": "Fintech pénzügyi vezetők",
+                    "name": "Esküvőszervezők",
                     "fit": 79
                 },
                 {
-                    "name": "E-kereskedelmi üzemeltetők",
+                    "name": "Offsite-ot tervező cégek",
                     "fit": 71
                 }
             ],
-            "batch": "1. adag: 5 lead",
+            "batch": "A legjobb leadek",
             "awaiting": "Jóváhagyásodra vár",
-            "approveAll": "Adag jóváhagyása",
+            "approveAll": "Összes jóváhagyása",
             "approved": "Jóváhagyva",
-            "next": "Jön a következő 5",
+            "next": "Újabb leadek érkeznek",
             "studio": "Campaign Studio",
             "sent": "elküldve",
             "replies": "válasz",
             "meetings": "megbeszélés",
             "leadRoles": [
-                "Alapító · Lumen Labs",
-                "CEO · Brightline",
-                "COO · Fernway",
-                "Alapító · Kettle & Co",
-                "Operatív vezető · Tidepool"
+                "Szervező · Berger Events",
+                "Utazási menedzser · Nordbahn",
+                "Szervező · Weiss Weddings",
+                "Office manager · Atelier GmbH",
+                "Rendezvényvezető · Stadtverein",
             ]
         }
     },
@@ -205,8 +205,8 @@ export const home = {
         "title": "Hideg listától meleg válaszig. Folyamatosan.",
         "points": [
             "Megtalál, minősít és kikutat minden új leadet",
-            "Minden DM-et és utánkövetést a te hangodon ír",
-            "GDPR-megfelelő, semmi nem megy ki jóváhagyás nélkül"
+            "A te hangodon küldi a DM-eket és utánkövetéseket, és lefoglalja a megbeszélést",
+            "A dealeket a CRM-edbe teszi, és onnan küldi az ajánlatot, a jóváhagyásoddal"
         ],
         "flow": {
             "providers": [
@@ -224,7 +224,7 @@ export const home = {
                 {
                     "title": "Leadgyűjtés",
                     "caption": "Minden érdeklődőt az ICP-hez mér",
-                    "log": "Sunny 5, a kampány ICP-jének megfelelő profilt gyűjtött"
+                    "log": "Sunny a csoport-ICP-nek megfelelő rendezvényszervezőket gyűjtött",
                 },
                 {
                     "title": "Szűrés + kutatás",
@@ -254,12 +254,12 @@ export const home = {
                 {
                     "title": "Jelek elemzése",
                     "caption": "Minden válasz szándékát elemzi",
-                    "log": "Sunny 2 pozitív választ jelölt meg"
+                    "log": "Sunny 2 pozitív választ jelölt meg, és csütörtökre megbeszélést foglalt"
                 },
                 {
-                    "title": "CRM + utánkövetés",
+                    "title": "CRM + ajánlat",
                     "caption": "",
-                    "log": "2 kontakt szinkronizálva a CRM-be, indul a következő 5"
+                    "log": "Deal létrehozva a HubSpotban, ajánlat elküldve a CRM-edből"
                 }
             ],
             "accepted": "elfogadva",
@@ -267,9 +267,9 @@ export const home = {
             "edit": "Szerkeszt",
             "accept": "Elfogad",
             "discard": "Elvet",
-            "loop": "Következő adag: jóváhagyásod után Sunny a következő 5 leaddel folytatja",
+            "loop": "Jóváhagyásod után Sunny további új leadeket keres",
             "runLog": "Napló",
-            "live": "Londoni fintech · élő"
+            "live": "Hotel Alpenhof · csoportfoglalások"
         }
     },
     "teach": {
@@ -279,7 +279,7 @@ export const home = {
         "chatTitle": "Briefeld a Sales Agentet",
         "inputPlaceholder": "Mondd el Sunnynak, hogyan értékesítesz…",
         "dmTitle": "Következő DM, élő előnézet",
-        "to": "Címzett: Lena Huber, Hotel Alpenhof",
+        "to": "Címzett: Marco Berger, Berger Events",
         "rulesTitle": "Amit Sunny megjegyez",
         "greeting": "Szia, Sunny vagyok. Mondd el, hogyan értékesítesz, és minden DM-et ehhez igazítok.",
         "learned": "{total} szabályból {n} megtanulva",
@@ -293,11 +293,11 @@ export const home = {
         ],
         "messages": [
             {
-                "you": "Foglalási szoftvert árulunk ausztriai butikhoteleknek.",
-                "agent": "Értem. Ausztriai butikhotelekre fókuszálok, és a foglalásokkal nyitok.",
+                "you": "A Hotel Alpenhof vagyunk, Bécs közelében. 20–80 fős csoportos tartózkodásokat adunk el.",
+                "agent": "Értem. Rendezvényszervezőkre fókuszálok, és a csoportos tartózkodással nyitok.",
                 "rule": {
                     "label": "Célcsoport",
-                    "value": "Butikhotelek · AT"
+                    "value": "Rendezvényszervezők · AT",
                 }
             },
             {
@@ -317,20 +317,20 @@ export const home = {
                 }
             },
             {
-                "you": "Említsd meg az Alpenhof esettanulmányt. Az árat soha ne említsd.",
-                "agent": "Hivatkozom az esettanulmányra, az árat pedig meghagyom a hívásra.",
+                "you": "Említsd a tóparti kilátást és a tárgyalókat. A listaárat soha ne említsd.",
+                "agent": "Hivatkozom a tóparti kilátásra, az árakat pedig meghagyom a hívásra.",
                 "rule": {
                     "label": "Mindig / soha",
-                    "value": "Esettanulmány · ár nélkül"
+                    "value": "Tóparti kilátás · listaár nélkül",
                 }
             }
         ],
         "drafts": [
-            "Szia Lena! Szerettem volna bemutatni a szoftverünket. Segít a vállalkozásoknak időt spórolni és növekedni. Lenne kedved a héten egy rövid hívásra, hogy többet megtudj arról, mivel foglalkozunk?",
-            "Szia Lena! A hozzátok hasonló butikhotelek minden szezonban közvetlen foglalásokat veszítenek az OTA-k javára. A foglalási szoftverünk segít ezeket visszaszerezni. Belefér a héten egy rövid hívás?",
-            "Tisztelt Huber Asszony! Az Önökéhez hasonló butikhotelek minden szezonban közvetlen foglalásokat veszítenek a foglalási portálok javára. Szoftverünk segít Önöknek ezeket visszaszerezni. Lenne ideje a héten egy rövid beszélgetésre?",
-            "Tisztelt Huber Asszony! A butikhotelek minden szezonban közvetlen foglalásokat veszítenek a portálok miatt. Szoftverünk visszahozza ezeket. Szánna rám a héten 15 percet?",
-            "Tisztelt Huber Asszony! A Hotel Alpenhof velünk 31%-kal több közvetlen foglalást ért el. 15 percben szívesen megmutatom, hogyan sikerülhet ez Önöknél is. Megfelelne Önnek csütörtökön?"
+            "Szia Marco! Szerettem volna bemutatni a szállodánkat. Csoportokat fogadunk, és szívesen mesélnénk többet. Lenne kedved a héten egy rövid hívásra?",
+            "Szia Marco! A tiédhez hasonló csapatok hónapokkal előre foglalják a tavaszi offsite-ot. 20–80 fős csoportokat fogadunk tárgyalókkal és tóparti kilátással, 40 percre Bécstől. Elküldjem a csoportárainkat?",
+            "Tisztelt Berger Úr! Az Önéhez hasonló csapatok hónapokkal előre foglalják az offsite-ot. 20–80 fős csoportokat fogadunk tárgyalókkal és tóparti kilátással, 40 percre Bécstől. Elküldhetem a csoportárainkat?",
+            "Tisztelt Berger Úr! 20–80 fős csoportokat fogadunk tárgyalókkal és tóparti kilátással, 40 percre Bécstől. Szánna rám a héten 15 percet?",
+            "Tisztelt Berger Úr! A tavaszi offsite-jukhoz tárgyalóink és tóparti kilátásunk van, 40 percre Bécstől, 20–80 fős csoportoknak. Megfelelne csütörtök egy rövid áttekintésre az árakról?",
         ],
         "words": "{n} szó"
     },
@@ -349,26 +349,26 @@ export const home = {
             "identity": "Digitális identitás",
             "keywordsTitle": "Kulcsszó-lehetőségek",
             "keywords": [
-                "könyvelés startupoknak",
-                "seed kör könyvelés",
-                "k+f adókedvezmény uk"
+                "privát vacsora bécs",
+                "csapat ebéd mariahilf",
+                "hétköznapi éttermi asztalok",
             ],
             "pages": "Javítandó oldalak",
             "gaps": "Tartalomhiányok",
             "ctaLabel": "CTA-ötlet:",
-            "cta": "a „Kapcsolat” helyett „Foglalj 15 perces pénzügyi átvilágítást”",
+            "cta": "a „Kapcsolat” helyett „Foglald le a privát termet”",
             "creatorItems": [
                 {
                     "format": "Blogposzt",
-                    "title": "Könyvelés seed startupoknak"
+                    "title": "Egy keddi asztal a Casa Lindenben",
                 },
                 {
                     "format": "Karusszel",
-                    "title": "5 pénzügyi tévhit, amiben az alapítók hisznek"
+                    "title": "5 menü a csapat ebédhez",
                 },
                 {
                     "format": "Rövid videó",
-                    "title": "30 mp-es teaser: hónapzárás 5 perc alatt"
+                    "title": "30 mp a privát teremből",
                 }
             ],
             "ready": "Átnézésre kész",
@@ -402,10 +402,10 @@ export const home = {
                     "marketing": "Marketing"
                 },
                 "plays": [
-                    "Outbound seed fázisú fintecheknek",
-                    "Heti tartalomgyár",
-                    "Webinár-utánkövetés",
-                    "Launch teaser csomag"
+                    "Csoportfoglalási outreach",
+                    "Heti étlap posztok",
+                    "Felújítási utánkövetés",
+                    "Esküvői hétvége csomag",
                 ]
             },
             "campaigns": {
@@ -424,28 +424,28 @@ export const home = {
                     "paused": "Szünetel"
                 },
                 "names": [
-                    "Londoni fintech alapítók",
-                    "Q4 tartalomkampány",
-                    "Webinár-jelentkezők",
-                    "Termékbevezető teaser",
-                    "Hideg leadek újraaktiválása"
+                    "Alpenhof · tavaszi csoportok",
+                    "Casa Linden · privát vacsora",
+                    "Holm · konyhafelújítások",
+                    "Alpenhof · esküvői hétvégék",
+                    "Casa Linden · irodai ebédek",
                 ]
             },
             "epic": {
                 "title": "Q4 növekedési sprint",
                 "subtitle": "Idővonal · ki mit csinál, és mikor",
                 "tasks": [
-                    "Fintech ICP-adag",
-                    "DACH SaaS-adag",
-                    "Ügynökségi válaszok",
+                    "Csoportfoglalási leadek",
+                    "Irodai ebéd leadek",
+                    "Felújítási válaszok",
                     "Kulcsszó-audit",
-                    "Könyvelési útmutató",
-                    "Karusszel",
-                    "Launch teaser"
+                    "Tóparti hétvége útmutató",
+                    "Étlap karusszel",
+                    "Sorház séta",
                 ]
             },
             "seo": {
-                "subtitle": "northwind.co · Scout frissítette ma reggel",
+                "subtitle": "alpenhof.at · Scout frissítette ma reggel",
                 "tracked": "148 oldal követve",
                 "health": "Weboldal-állapot",
                 "columns": [
@@ -455,11 +455,11 @@ export const home = {
                     "Teendő"
                 ],
                 "keywords": [
-                    "könyvelés startupoknak",
-                    "seed kör könyvelés",
-                    "k+f adókedvezmény uk",
-                    "startup cfo szolgáltatás",
-                    "hónapzárási checklist"
+                    "csoportos szálloda bécs közelében",
+                    "céges offsite ausztria",
+                    "esküvői helyszín hétvége",
+                    "közvetlen szállodafoglalás",
+                    "tárgyalók bécs",
                 ],
                 "actions": [
                     "Útmutató írása",
@@ -498,12 +498,12 @@ export const home = {
             },
             "playground": {
                 "subtitle": "Próbálj ki ötleteket bármelyik ügynökkel, mielőtt briefelnéd",
-                "prompt": "Adj három tárgysort a londoni fintech kampányhoz. Barátságosan, ne tolakodóan.",
+                "prompt": "Adj három tárgysort a tavaszi csoportfoglalási kampányhoz. Barátságosan, ne tolakodóan.",
                 "reply": "Íme három, aszerint rangsorolva, mennyire illik a hangnemedhez:",
                 "lines": [
-                    "Hónapzárás egy délután alatt?",
-                    "Egy gyors ötlet a Lumen pénzügyi stackjéhez",
-                    "Amit a seed alapítók a leggyakrabban kérdeznek"
+                    "Tavaszi offsite a tóparton?",
+                    "Tárgyalók 40 főre",
+                    "Amit a szervezők a foglalás előtt kérdeznek",
                 ],
                 "send": "Küldés a Sales Agentnek",
                 "retry": "Újra",
@@ -525,15 +525,15 @@ export const home = {
                 "9:11"
             ],
             "summary": "Jó reggelt! Az éjjel a csapatod **51 leadet** minősített, **3 posztot** írt és **7 pozitív választ** talált. Ma két dologhoz kellesz.",
-            "opener": "Nyitóüzenet Mayának (Lumen Labs) a ma reggeli kutatás alapján:",
-            "dm": "Láttam, hogy a Lumen most zárta le a seed körét. Gratulálok! A hasonló méretű csapatok havonta egy napot veszítenek a hónapzárással. Megérne 15 percet, hogy megnézzük, hogyan adja ezt vissza a Northwind?",
+            "opener": "Nyitóüzenet Marcónak (Berger Events) a ma reggeli kutatás alapján:",
+            "dm": "A Berger Events a tavaszi offsite-szezont tervezi. 20–80 fős csoportokat fogadunk tárgyalókkal és tóparti kilátással, 40 percre Bécstől. Megérne egy pillantást a csoportárainkra?",
             "approve": "Jóváhagyás",
             "edit": "Szerkesztés",
             "approved": "Jóváhagytad",
             "tryIt": "Próbáld ki",
             "composer": "Üzenet ide:",
             "scheduled": "Köszi! Ütemezve az ő idejével 9:30-ra. Figyelem a választ.",
-            "reply": "Pozitív válasz **Theótól (Brightline)**: „Beszélhetnénk csütörtökön?” Bekerült a CRM-be, és megjelöltem neked."
+            "reply": "Pozitív válasz **Marcótól (Berger Events)**: „Beszélhetnénk csütörtökön?” Csütörtökre lefoglaltam a megbeszélést, a deal bekerült a CRM-edbe.",
         }
     },
     "integrations": {

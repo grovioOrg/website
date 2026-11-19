@@ -1,5 +1,6 @@
 export * from "./Blocks"
 export * from "./BrandMark"
 export * from "./PlanCard"
+export * from "./EnterprisePlanCard"
 export * from "./UseCase"
 export * from "./Flow"

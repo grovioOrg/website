@@ -106,7 +106,7 @@ const Campaigns = ({ t, app }: IScreenProps) => (
                 [["signal", "sales"], "paused", "grey", "120", "11"],
             ] as [IAgentId[], ICampaignStatus, IPillTone, string, string][]).map(([ids, status, tone, leads, replies], index) => (
                 <div key={index} className="grid grid-cols-[2fr_1.2fr_1fr_0.8fr_0.8fr] items-center text-[13px] px-4 py-3.5 border-t border-grey-100">
-                    <span className="font-medium">{t.campaigns.names[index]}</span>
+                    <span className="font-medium min-w-0 truncate pr-3">{t.campaigns.names[index]}</span>
                     <Avatars ids={ids} />
                     <span><Pill tone={tone} dot>{t.campaigns.status[status]}</Pill></span>
                     <span className="tabular-nums">{leads}</span>
@@ -179,7 +179,7 @@ const Seo = ({ t, app }: IScreenProps) => (
                     ["720", "31"],
                 ]).map(([volume, position], index) => (
                     <div key={index} className="grid grid-cols-[2fr_1fr_1fr_1.2fr] items-center text-[13px] px-4 py-3 border-t border-grey-100">
-                        <span className="font-medium">{t.seo.keywords[index]}</span>
+                        <span className="font-medium min-w-0 truncate pr-2">{t.seo.keywords[index]}</span>
                         <span className="tabular-nums text-grey-300">{volume}</span>
                         <span className="tabular-nums text-grey-300">{position}</span>
                         <span><Pill tone="blue">{t.seo.actions[index]}</Pill></span>
@@ -245,36 +245,44 @@ const Marketing = ({ t, app }: IScreenProps) => {
 }
 
 const Playground = ({ t, app }: IScreenProps) => (
-    <>
+    <div className="flex flex-col h-full min-h-0">
         <ScreenHeader
             title={app.nav.playground}
             subtitle={t.playground.subtitle}
             action={<span className="flex items-center gap-2"><Avatars ids={["writer", "sales", "seo"]} /></span>}
         />
-        <div className="p-6 flex flex-col gap-4 max-w-[640px]">
-            <div className="self-end rounded-2xl rounded-br-md bg-ink text-white px-4 py-3 text-[13px] max-w-[420px]">
-                {t.playground.prompt}
-            </div>
-            <div className="flex gap-3">
-                <AgentAvatar agent="writer" size={30} />
-                <div className="rounded-2xl rounded-tl-md bg-paper px-4 py-3 text-[13px] flex flex-col gap-2">
-                    <p className="text-grey-300">{t.playground.reply}</p>
-                    {t.playground.lines.map((line, index) => (
-                        <span key={line} className="flex items-center gap-2 rounded-lg bg-white ring-1 ring-grey-100 px-3 py-2">
-                            <span className="text-grey-200 tabular-nums">{index + 1}</span> {line}
+        <div className="flex-1 min-h-0 overflow-hidden flex flex-col">
+            <div className="flex-1 min-h-0 overflow-hidden px-8 py-6 flex flex-col justify-end gap-5">
+                <div className="flex justify-end">
+                    <p className="rounded-2xl rounded-br-md bg-ink text-white px-4 py-3 text-[13px] leading-relaxed max-w-[28rem]">
+                        {t.playground.prompt}
+                    </p>
+                </div>
+                <div className="flex items-start gap-3 max-w-[32rem]">
+                    <AgentAvatar agent="writer" size={30} />
+                    <div className="min-w-0 rounded-2xl rounded-tl-md bg-paper px-4 py-3 text-[13px] leading-relaxed flex flex-col gap-2">
+                        <p className="text-grey-300">{t.playground.reply}</p>
+                        {t.playground.lines.map((line, index) => (
+                            <span key={line} className="flex items-center gap-2 rounded-lg bg-white ring-1 ring-grey-100 px-3 py-2">
+                                <span className="text-grey-200 tabular-nums shrink-0">{index + 1}</span>
+                                {line}
+                            </span>
+                        ))}
+                        <span className="flex gap-2 mt-1">
+                            <Pill tone="ink">{t.playground.send}</Pill>
+                            <Pill>{t.playground.retry}</Pill>
                         </span>
-                    ))}
-                    <span className="flex gap-2 mt-1">
-                        <Pill tone="ink">{t.playground.send}</Pill>
-                        <Pill>{t.playground.retry}</Pill>
-                    </span>
+                    </div>
                 </div>
             </div>
-            <div className="mt-2 flex items-center gap-2 rounded-full ring-1 ring-grey-150 px-4 py-2.5 text-[13px] text-grey-200">
-                <Glyph name="chat" size={15} /> {t.playground.ask}
+            <div className="shrink-0 border-t border-grey-100 px-8 py-4">
+                <div className="flex items-center gap-2 rounded-2xl bg-paper px-4 py-3 text-[13px] text-grey-200">
+                    <Glyph name="chat" size={15} className="shrink-0" />
+                    <span className="flex-1">{t.playground.ask}</span>
+                </div>
             </div>
         </div>
-    </>
+    </div>
 )
 
 export const PLATFORM_SCREENS: Record<IPlatformScreen, (props: IScreenProps) => ReactNode> = {

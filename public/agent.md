@@ -58,7 +58,7 @@ Grovio works with the tools in a sales and marketing flow. Connections are set u
 
 ## Industries
 
-Pages at `/en/industries/{slug}` for: `hotels`, `restaurants`, `ecommerce`, `retail`, `real-estate`, `property-management`, `car-dealerships`, `law-firms`, `tax-advisors`, `self-employed`, `tradespeople`.
+Pages at `/en/industries/{slug}` for: `hotels`, `restaurants`, `ecommerce`, `retail`, `real-estate`, `property-management`, `car-dealerships`, `law-firms`, `self-employed`, `tradespeople`.
 
 ## Languages
 

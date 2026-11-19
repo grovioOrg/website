@@ -7,13 +7,13 @@ export const agents = {
             description: "Runs your whole outbound flow: fetches leads, classifies them against your ICP, researches each one and drafts the DM. Fast, upbeat and relentless about follow-ups.",
             quirk: "Never lets a lead go cold.",
             task: {
-                title: "London fintech campaign: next batch",
+                title: "Spring group bookings: new leads",
                 steps: [
-                    "Fetched 5 founders matching the ICP",
-                    "Researched funding and hiring signals",
-                    "Drafted 5 DMs for your approval",
+                    "Fetched event planners matching the ICP",
+                    "Researched offsites and wedding dates",
+                    "Drafted group-stay DMs for your approval",
                 ],
-                result: "Batch of 5 ready",
+                result: "DMs ready",
             },
         },
         researcher: {
@@ -23,13 +23,13 @@ export const agents = {
             description: "The same full-flow Sales Agent with a methodical streak. Leads, classification, research and DMs, with receipts for every accept and discard.",
             quirk: "Keeps receipts for every decision.",
             task: {
-                title: "DACH SaaS campaign: next batch",
+                title: "Casa Linden private dining: new leads",
                 steps: [
-                    "Fetched 5 heads of sales in Vienna and Munich",
-                    "Discarded 1 outside ICP, with the reason",
-                    "Drafted 4 DMs in formal German",
+                    "Fetched office managers in Vienna",
+                    "Discarded anyone outside the ICP, with the reason",
+                    "Drafted lunch invites in formal German",
                 ],
-                result: "4 ready · 1 discarded",
+                result: "Ready for approval",
             },
         },
         signal: {
@@ -39,13 +39,13 @@ export const agents = {
             description: "Another full-flow Sales Agent, with an ear for replies. Runs the same lead-to-DM flow and is quickest to spot positive intent and book the follow-up.",
             quirk: "Never lets a warm reply go cold.",
             task: {
-                title: "Agency campaign: replies and next batch",
+                title: "Kitchen renovations: meetings and offers",
                 steps: [
-                    "Read 12 replies, flagged 3 positive",
-                    "Synced 3 contacts to your CRM",
-                    "Fetched and drafted the next 5",
+                    "Read 12 replies from property managers, flagged 3 positive",
+                    "Booked meetings and pushed deals to your CRM",
+                    "Sent the offer from your CRM",
                 ],
-                result: "3 warm · 5 drafted",
+                result: "Meeting booked · offer sent",
             },
         },
         seo: {
@@ -55,7 +55,7 @@ export const agents = {
             description: "Analyses your website and digital identity, surfaces keyword gaps, tracks performance and recommends the CTAs worth fixing first. Included with every marketing bundle.",
             quirk: "Carries a magnifying glass. Uses it.",
             task: {
-                title: "Audit acme.com against three competitors",
+                title: "Audit alpenhof.at against three group hotels",
                 steps: [
                     "Crawled 148 pages",
                     "Found 23 keyword gaps",
@@ -71,7 +71,7 @@ export const agents = {
             description: "Turns SEO briefs into articles, posts and newsletters in your brand voice, ready for your review in the content pipeline.",
             quirk: "Reads everything twice.",
             task: {
-                title: "Draft: 'Bookkeeping for seed-stage startups'",
+                title: "Draft: 'A weekend at Hotel Alpenhof'",
                 steps: [
                     "Outlined from the SEO brief",
                     "Wrote 1,450 words in house style",
@@ -87,7 +87,7 @@ export const agents = {
             description: "Creates on-brand visuals for every piece of content, from blog covers to social carousels, using your style configuration.",
             quirk: "Winks when the kerning is right.",
             task: {
-                title: "Cover and carousel for the bookkeeping article",
+                title: "Cover and carousel for the Casa Linden spring menu",
                 steps: [
                     "Applied brand style config",
                     "Generated 4 cover options",
@@ -103,7 +103,7 @@ export const agents = {
             description: "Produces short-form video assets from your articles and launches, cut to the formats each channel expects.",
             quirk: "Says 'action' before every task.",
             task: {
-                title: "30-second teaser for the bookkeeping article",
+                title: "30-second tour of the finished townhouse",
                 steps: [
                     "Storyboarded 5 scenes",
                     "Cut vertical and square versions",
@@ -119,7 +119,7 @@ export const agents = {
             description: "Calls your leads, asks the questions that matter and hands you only the ones ready to talk, with a clear next step agreed on the call.",
             quirk: "Always ends with a next step.",
             task: {
-                title: "Qualify 40 webinar sign-ups by phone",
+                title: "Qualify 40 group-booking enquiries by phone",
                 steps: [
                     "Called 40 leads in their time zone",
                     "Asked 3 qualifying questions",
@@ -151,9 +151,9 @@ export const agents = {
             description: "Reaches out to people who fit your community, welcomes new members, and introduces members who can help each other, so the community grows and gets more useful.",
             quirk: "Never sends an intro without a reason.",
             task: {
-                title: "Grow the Vienna founders circle",
+                title: "Invite planners who booked a group last spring",
                 steps: [
-                    "Invited 25 founders who match the group",
+                    "Invited 25 event planners who match",
                     "Welcomed 9 new members",
                     "Made 6 member-to-member intros",
                 ],
@@ -162,7 +162,7 @@ export const agents = {
         },
     },
     menu: {
-        "sales-agent": "Leads, research and DMs. Bundle up to 3.",
+        "sales-agent": "Leads, DMs, meetings and offers. Bundle up to 3.",
         "seo-agent": "Keyword gaps, page health and CTAs",
         "writer-agent": "Articles, posts and newsletters",
         "graphic-designer": "Covers, carousels and visuals",
@@ -180,7 +180,7 @@ export const agents = {
         hire: "Hire {name}",
         upcomingNote: "This agent is in development. Join the waitlist and we'll let you know when it's ready to hire.",
         teamTitle: "Pick your Sales Agents",
-        teamBody: "Sunny, Bolt and Echo are the same full-flow Sales Agent with different personalities. Hire one, or bundle two or three to run more campaigns side by side.",
+        teamBody: "Sunny, Bolt and Echo are the same full-flow Sales Agent with different personalities. Hire one, or bundle two or three to reach more industries and leads, faster.",
         ctaTitle: "Ready to hire {name}?",
         teamCtaTitle: "Ready to build your sales team?",
         ctaBody: "We're onboarding a small group of teams for the private beta.",
@@ -189,29 +189,36 @@ export const agents = {
     },
     pages: {
         "sales-agent": {
-            metaTitle: "AI Sales Agent: leads, research and DMs on a loop",
-            metaDescription: "Hire Grovio's AI Sales Agent. It fetches leads, classifies them against your ICP, researches each one and drafts DMs you approve. Bundle up to three.",
+            metaTitle: "AI Sales Agent: leads, DMs, meetings and offers",
+            metaDescription: "Hire Grovio's AI Sales Agent. It finds and researches leads, sends the DMs you approve, books meetings, pushes deals to your CRM and sends offers from it. Bundle up to three.",
             title: "An AI Sales Agent that runs the whole flow.",
-            pitch: "Give it a campaign and an ICP. It fetches leads, classifies them, researches each one and drafts the DM, five at a time, for you to approve. Around the clock.",
+            pitch: "Give it a campaign and an ICP. It finds and researches leads, sends the DMs you approve, books meetings and pushes every deal into your CRM, where it creates and sends the offer. Around the clock.",
             flow: [
                 "Fetch leads for the campaign ICP",
                 "Classify: accept or discard with reasons",
                 "Research each accepted lead",
                 "Draft the DM in your style",
-                "Wait for your approval, batch of 5",
-                "Send, read replies, follow up",
+                "Wait for your approval",
+                "Send DMs, read replies, follow up",
+                "Book the meeting on your calendar",
+                "Push the deal to your CRM",
+                "Create and send the offer from your CRM",
             ],
             properties: [
-                { label: "Campaigns", value: "Up to 3 per agent" },
+                { label: "Coverage", value: "Up to 5 industries, 3,000 leads a month" },
+                { label: "Campaigns", value: "Unlimited, leads split across them" },
+                { label: "Email", value: "Max 100 a day per agent" },
                 { label: "Hours", value: "Runs 24/7" },
-                { label: "Batches", value: "5 leads at a time, then the next 5 after approval" },
                 { label: "Approval", value: "Nothing sends without you" },
+                { label: "CRM", value: "HubSpot, Salesforce, Pipedrive, Zoho CRM" },
+                { label: "Meetings", value: "Booked on Google Calendar or Calendly" },
                 { label: "Bundles", value: "1, 2 or 3 agents, all full-flow" },
                 { label: "Compliance", value: "GDPR compliant, opt-outs honoured" },
             ],
             faq: [
-                { q: "Are Sunny, Bolt and Echo different jobs?", a: "No. All three are the same Sales Agent and each runs the full flow from lead to DM. They have different personalities, and bundling more of them lets you run more campaigns at once." },
-                { q: "Why batches of five?", a: "So you stay in control. Each agent prepares five leads and DMs, you approve or edit them, and only then does it start on the next five." },
+                { q: "Are Sunny, Bolt and Echo different jobs?", a: "No. All three are the same Sales Agent and each runs the full flow from lead to DM. They have different personalities, and bundling more of them lets you reach more industries and leads, faster." },
+                { q: "Do I approve every DM?", a: "Yes, so you stay in control. Each agent prepares leads and DMs, you approve or edit them, and nothing is sent until you do." },
+                { q: "Does it work with my CRM?", a: "Yes. Sunny pushes contacts, deals and meeting notes into HubSpot, Salesforce, Pipedrive or Zoho CRM, then creates the offer there and sends it once you approve." },
                 { q: "Can I change how DMs are written?", a: "Yes. Tell the agent in plain language how you want DMs to sound: length, tone, language, what to mention and what to avoid. It applies that to every draft." },
                 { q: "Is outreach GDPR compliant?", a: "Grovio is built for the EU and GDPR compliant. Every contact has a lawful basis and opt-outs are honoured right away." },
             ],

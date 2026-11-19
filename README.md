@@ -27,7 +27,7 @@ Open [http://localhost:3000](http://localhost:3000). You'll be redirected to you
 | --- | --- |
 | `/{lang}` | Home |
 | `/{lang}/agents/{slug}` | Agent pages: `sales-agent`, `seo-agent`, `writer-agent`, `graphic-designer`, `video-agent`, and the upcoming `hot-leads-caller`, `concierge`, `community-growth` |
-| `/{lang}/industries/{slug}` | Industry pages: `hotels`, `restaurants`, `ecommerce`, `retail`, `real-estate`, `property-management`, `car-dealerships`, `law-firms`, `tax-advisors`, `self-employed`, `tradespeople` |
+| `/{lang}/industries/{slug}` | Industry pages: `hotels`, `restaurants`, `ecommerce`, `retail`, `real-estate`, `property-management`, `car-dealerships`, `law-firms`, `self-employed`, `tradespeople` |
 
 `{lang}` is one of `en`, `de`, `de-at`, `it`, `fr`, `hu`. `proxy.ts` redirects paths without a locale using the `Accept-Language` header, falling back to `en`. Every page sets `hreflang` alternates.
 

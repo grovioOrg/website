@@ -326,7 +326,7 @@ export const HeroBoard = ({
             <AppWindow
                 t={common.mockup}
                 active="epic"
-                title={`Northwind · ${common.mockup.nav.epic}`}
+                title={`${common.mockup.workspace} · ${common.mockup.nav.epic}`}
                 className="h-[720px]"
             >
                 <div className="px-8 pt-7 pb-4 border-b border-grey-100">

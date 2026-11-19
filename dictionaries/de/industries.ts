@@ -37,7 +37,7 @@ export const industries = {
                     "points": [
                         "Findet Eventagenturen, Planer und Travel Manager in Ihrer Nähe",
                         "Recherchiert anstehende Offsites, Konferenzen und Hochzeiten",
-                        "Entwirft für jeden eine persönliche DM, immer fünf auf einmal"
+                        "Entwirft für jeden eine persönliche DM"
                     ],
                     "output": "5 DMs für Gruppenbuchungen bereit"
                 },
@@ -82,7 +82,7 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Kann Grovio mit Gästen kommunizieren?",
@@ -162,7 +162,7 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Nehmen Sie Reservierungen für uns an?",
@@ -238,7 +238,7 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Funktioniert das auch mit kleinem Sortiment?",
@@ -314,11 +314,11 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Kann ich lokale und Online-Kampagnen fahren?",
-                    "a": "Ja. Jeder Sales Agent führt bis zu drei Kampagnen, jede mit eigenem ICP."
+                    "a": "Ja. Jeder Sales Agent führt beliebig viele Kampagnen, jede mit eigenem ICP, über bis zu 5 Branchen und 3.000 Leads pro Monat."
                 }
             ]
         },
@@ -390,7 +390,7 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Ist die Ansprache von Eigentümern erlaubt?",
@@ -466,7 +466,7 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Können die Agents über Vorschriften schreiben?",
@@ -542,7 +542,7 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Funktioniert das mit meinem CRM?",
@@ -618,87 +618,11 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Kann ich Ton und Wortwahl steuern?",
                     "a": "Ja. Legen Sie Ton, Förmlichkeit und zu vermeidende Begriffe in einfachen Worten fest. Sie geben jede Nachricht frei."
-                }
-            ]
-        },
-        "tax-advisors": {
-            "name": "Steuerberatung",
-            "short": "Gründer, Freelancer und KMU",
-            "metaTitle": "KI für Vertrieb und Marketing in der Steuerberatung",
-            "metaDescription": "Die KI-Agents von Grovio bringen Steuerberatern die richtigen Mandanten: Gründer, Freelancer und KMU, mit passenden Inhalten zu jeder Frist.",
-            "title": "Die richtigen Mandanten, vor jeder Frist.",
-            "pitch": "Die Agents von Grovio erreichen Gründer, Freelancer und wachsende Unternehmen genau dann, wenn sie eine Steuerberatung brauchen, und veröffentlichen verständliche Ratgeber zu jeder Frist.",
-            "pains": [
-                "Anfragen kommen alle auf einmal, kurz vor den Fristen",
-                "Unpassende Mandanten kosten die meiste Zeit",
-                "Klare, nützliche Inhalte werden nie geschrieben"
-            ],
-            "agents": [
-                "Erreicht Gründer und KMU, die zu Ihren Wunschmandanten passen",
-                "Schreibt Fristen-Ratgeber und Newsletter",
-                "Erstellt einfache Erklärstücke für Social Media"
-            ],
-            "useCases": [
-                {
-                    "title": "Ihre Mandantenliste mit den Richtigen füllen",
-                    "points": [
-                        "Findet passende Gründer, Freelancer und KMU",
-                        "Recherchiert Neueintragungen und Wachstumssignale",
-                        "Entwirft für jeden eine persönliche DM"
-                    ],
-                    "output": "5 Mandanten-DMs bereit"
-                },
-                {
-                    "title": "Keinen Fristen-Post mehr verpassen",
-                    "points": [
-                        "Fristen-Ratgeber und Erinnerungen",
-                        "Newsletter zu steuerlichen Änderungen",
-                        "Posts, die häufige Fragen beantworten"
-                    ],
-                    "output": "Fristen-Ratgeber zur Prüfung bereit"
-                },
-                {
-                    "title": "Steuern einfach teilbar machen",
-                    "points": [
-                        "Macht aus Ratgebern einfache Erklärstücke",
-                        "Erstellt Karussells für LinkedIn und Instagram",
-                        "Nutzt Ihren Markenstil"
-                    ],
-                    "output": "Erklär-Karussell bereit"
-                }
-            ],
-            "icp": [
-                {
-                    "name": "Neu gegründete GmbHs",
-                    "fit": 90
-                },
-                {
-                    "name": "Freelancer mit über 50.000 € Umsatz",
-                    "fit": 84
-                },
-                {
-                    "name": "Onlinehändler mit Verkauf ins Ausland",
-                    "fit": 78
-                }
-            ],
-            "dm": "Hallo Lukas, herzlichen Glückwunsch zur Eintragung Ihrer GmbH. Beim ersten Jahresabschluss verlieren die meisten Gründer viel Zeit. Wir betreuen 40 junge Unternehmen in Wien. Möchten Sie unsere Checkliste für das erste Jahr?",
-            "faq": [
-                {
-                    "q": "Welche Herausforderungen haben Steuerberater, wenn Anfragen vor Fristen explodieren?",
-                    "a": "Anfragen kommen alle auf einmal, kurz vor den Fristen. Unpassende Mandanten kosten die meiste Zeit. Klare, nützliche Inhalte werden nie geschrieben."
-                },
-                {
-                    "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
-                },
-                {
-                    "q": "Kann ich gezielt bestimmte Mandanten ansprechen?",
-                    "a": "Ja. Ihre ICP-Kampagne legt genau fest, wen der Sales Agent kontaktiert und wen er verwirft."
                 }
             ]
         },
@@ -715,7 +639,7 @@ export const industries = {
                 "Agenturen und große Tools sind zu teuer"
             ],
             "agents": [
-                "Findet Kunden und schreibt DMs, immer fünf auf einmal",
+                "Findet Kunden und schreibt DMs",
                 "Schreibt Posts und Artikel in Ihrem Ton",
                 "Startet mit einem Agent, mehr kommen dazu, wenn es sich lohnt"
             ],
@@ -725,7 +649,7 @@ export const industries = {
                     "points": [
                         "Findet Kunden, die zu Ihrem Angebot passen",
                         "Recherchiert jeden, bevor er angesprochen wird",
-                        "Entwirft DMs, immer fünf auf einmal, zur Freigabe"
+                        "Entwirft DMs zur Freigabe"
                     ],
                     "output": "5 Kunden-DMs bereit"
                 },
@@ -770,7 +694,7 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Kann ich mit nur einem Agent starten?",
@@ -846,7 +770,7 @@ export const industries = {
                 },
                 {
                     "q": "Wie bringe ich mit Grovio von meiner Website zu gebuchten Terminen?",
-                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen Leads und DMs in Fünfer-Paketen, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
+                    "a": "Sie fügen Ihren Link ein: Grovio liest Ihre Website und ermittelt, wer bei Ihnen kauft. Sie erhalten eine ICP-Kampagne mit nach Passung sortierten Käufersegmenten. Sie genehmigen jeden Lead und jede DM, bevor etwas versendet wird. Warme Antworten landen in Ihrem CRM und Kalender."
                 },
                 {
                     "q": "Ich bin nicht auf Social Media. Ist das ein Problem?",

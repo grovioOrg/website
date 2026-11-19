@@ -20,6 +20,11 @@ export interface IPlan {
     popular?: boolean
 }
 
+export const ENTERPRISE_AGENTS: Record<"sales" | "marketing", IAgentId[]> = {
+    sales: ["sales", "researcher", "signal"],
+    marketing: ["writer", "graphic", "video", "seo"],
+}
+
 export const PLANS: Record<"sales" | "marketing", IPlan[]> = {
     sales: [
         { id: "sales-1", agents: ["sales"], price: 249, interest: "sales" },

@@ -7,13 +7,13 @@ export const agents = {
             "description": "A teljes kimenő értékesítést viszi: leadeket gyűjt, besorolja őket az ICP-d alapján, mindegyiknek utánajár, és megírja a DM-et. Gyors, lelkes, és az utánkövetésben kérlelhetetlen.",
             "quirk": "Egy leadet sem hagy kihűlni.",
             "task": {
-                "title": "Londoni fintech kampány: következő adag",
+                "title": "Tavaszi csoportfoglalások: új leadek",
                 "steps": [
-                    "5 ICP-be illő alapító összegyűjtve",
-                    "Finanszírozási és toborzási jelek feltárva",
-                    "5 DM megírva jóváhagyásra"
+                    "ICP-be illő rendezvényszervezők összegyűjtve",
+                    "Offsite-ok és esküvői dátumok feltárva",
+                    "Csoportos tartózkodás DM-ek megírva jóváhagyásra"
                 ],
-                "result": "5 lead kész"
+                "result": "DM-ek kész"
             }
         },
         "researcher": {
@@ -23,13 +23,13 @@ export const agents = {
             "description": "Ugyanaz a teljes folyamatot vivő Sales Agent, módszeresebb alkattal. Leadek, besorolás, kutatás és DM-ek, minden elfogadás és elvetés indoklásával.",
             "quirk": "Minden döntését dokumentálja.",
             "task": {
-                "title": "DACH SaaS kampány: következő adag",
+                "title": "Casa Linden privát vacsora: új leadek",
                 "steps": [
-                    "5 értékesítési vezető Bécsből és Münchenből",
-                    "1 ICP-n kívüli elvetve, indoklással",
-                    "4 DM megírva, hivatalos német nyelven"
+                    "Office managerek Bécsből",
+                    "ICP-n kívüliek elvetve, indoklással",
+                    "Ebédmeghívók megírva, hivatalos német nyelven"
                 ],
-                "result": "4 kész · 1 elvetve"
+                "result": "Jóváhagyásra kész"
             }
         },
         "signal": {
@@ -39,13 +39,13 @@ export const agents = {
             "description": "Szintén teljes folyamatot vivő Sales Agent, kiváló füllel a válaszokhoz. Ugyanazt a leadtől DM-ig tartó folyamatot viszi, és ő veszi észre leggyorsabban a pozitív szándékot és egyezteti az utánkövetést.",
             "quirk": "Egy meleg választ sem hagy kihűlni.",
             "task": {
-                "title": "Ügynökségi kampány: válaszok és következő adag",
+                "title": "Konyhafelújítások: megbeszélések és ajánlatok",
                 "steps": [
-                    "12 válasz elolvasva, 3 pozitív megjelölve",
-                    "3 kapcsolat szinkronizálva a CRM-be",
-                    "A következő 5 összegyűjtve és megírva"
+                    "12 válasz elolvasva ingatlankezelőktől, 3 pozitív megjelölve",
+                    "Megbeszélések lefoglalva, dealek a CRM-ben",
+                    "Ajánlat elküldve a CRM-ből"
                 ],
-                "result": "3 meleg · 5 megírva"
+                "result": "Megbeszélés lefoglalva · ajánlat elküldve"
             }
         },
         "seo": {
@@ -55,7 +55,7 @@ export const agents = {
             "description": "Elemzi a weboldaladat és az online arculatodat, feltárja a kulcsszóréseket, követi a teljesítményt, és javasolja, mely CTA-kat érdemes elsőként javítani. Minden marketingcsomag része.",
             "quirk": "Nagyító van nála. Használja is.",
             "task": {
-                "title": "Az acme.com auditja három versenytárssal szemben",
+                "title": "Az alpenhof.at auditja három csoportos szállodával szemben",
                 "steps": [
                     "148 oldal feltérképezve",
                     "23 kulcsszórés azonosítva",
@@ -71,7 +71,7 @@ export const agents = {
             "description": "Az SEO-briefekből cikkeket, posztokat és hírleveleket ír a márkád hangján, átnézésre készen a tartalomfolyamatban.",
             "quirk": "Mindent kétszer olvas el.",
             "task": {
-                "title": "Vázlat: „Könyvelés seed fázisú startupoknak”",
+                "title": "Vázlat: „Egy hétvége a Hotel Alpenhofban”",
                 "steps": [
                     "Vázlatpontok az SEO-brief alapján",
                     "1 450 szó a márka stílusában",
@@ -87,7 +87,7 @@ export const agents = {
             "description": "Márkahű vizuálokat készít minden tartalomhoz, a blogborítóktól a közösségimédia-karusszelekig, a stílusbeállításaid alapján.",
             "quirk": "Kacsint, ha stimmel a betűköz.",
             "task": {
-                "title": "Borító és karusszel a könyvelési cikkhez",
+                "title": "Borító és karusszel a Casa Linden tavaszi étlapjához",
                 "steps": [
                     "Márkastílus-beállítások alkalmazva",
                     "4 borítóváltozat elkészítve",
@@ -103,7 +103,7 @@ export const agents = {
             "description": "Rövid videókat készít a cikkeidből és bejelentéseidből, minden csatorna elvárt formátumára vágva.",
             "quirk": "Minden feladat előtt azt mondja: „Felvétel!”",
             "task": {
-                "title": "30 másodperces előzetes a könyvelési cikkhez",
+                "title": "30 másodperces séta a kész sorházban",
                 "steps": [
                     "5 jelenetes storyboard",
                     "Álló és négyzetes változat vágva",
@@ -119,7 +119,7 @@ export const agents = {
             "description": "Felhívja a leadjeidet, felteszi a lényeges kérdéseket, és csak azokat adja át, akik készek beszélni, a hívás során egyeztetett, egyértelmű következő lépéssel.",
             "quirk": "Mindig egy következő lépéssel zár.",
             "task": {
-                "title": "40 webinárjelentkező minősítése telefonon",
+                "title": "40 csoportfoglalási érdeklődés minősítése telefonon",
                 "steps": [
                     "40 lead felhívva a saját időzónájában",
                     "3 minősítő kérdés feltéve",
@@ -151,9 +151,9 @@ export const agents = {
             "description": "Megkeresi a közösségedbe illő embereket, üdvözli az új tagokat, és összeismerteti azokat, akik segíthetnek egymásnak, így a közösség nő és egyre hasznosabb lesz.",
             "quirk": "Soha nem ismertet össze senkit ok nélkül.",
             "task": {
-                "title": "A bécsi alapítói kör bővítése",
+                "title": "Meghívni a szervezőket, akik tavaly tavasszal csoportot foglaltak",
                 "steps": [
-                    "25 a csoportba illő alapító meghívva",
+                    "25 a csoportba illő rendezvényszervező meghívva",
                     "9 új tag üdvözölve",
                     "6 tag-tag bemutatás"
                 ],
@@ -162,7 +162,7 @@ export const agents = {
         }
     },
     "menu": {
-        "sales-agent": "Leadek, kutatás és DM-ek. Akár 3 egy csomagban.",
+        "sales-agent": "Leadek, DM-ek, megbeszélések és ajánlatok. Akár 3 egy csomagban.",
         "seo-agent": "Kulcsszórések, oldalállapot és CTA-k",
         "writer-agent": "Cikkek, posztok és hírlevelek",
         "graphic-designer": "Borítók, karusszelek és vizuálok",
@@ -180,7 +180,7 @@ export const agents = {
         "hire": "Felveszem: {name}",
         "upcomingNote": "Ez az ügynök fejlesztés alatt áll. Iratkozz fel a várólistára, és szólunk, amint felveheted.",
         "teamTitle": "Válaszd ki a Sales Agentjeidet",
-        "teamBody": "Sunny, Bolt és Echo ugyanaz a teljes folyamatot vivő Sales Agent, eltérő személyiséggel. Vegyél fel egyet, vagy csomagban kettőt-hármat, hogy több kampány fusson párhuzamosan.",
+        "teamBody": "Sunny, Bolt és Echo ugyanaz a teljes folyamatot vivő Sales Agent, eltérő személyiséggel. Vegyél fel egyet, vagy csomagban kettőt-hármat, hogy több iparágat és leadet érj el, gyorsabban.",
         "ctaTitle": "{name} készen áll. És te?",
         "teamCtaTitle": "Felépítenéd az értékesítési csapatod?",
         "ctaBody": "Egy szűk körű csapatcsoportot vonunk be a zárt bétába.",
@@ -189,34 +189,49 @@ export const agents = {
     },
     "pages": {
         "sales-agent": {
-            "metaTitle": "AI Sales Agent: leadek, kutatás és DM-ek folyamatosan",
-            "metaDescription": "Vedd fel a Grovio AI Sales Agentjét. Leadeket gyűjt, besorolja őket az ICP-d alapján, mindegyiknek utánajár, és DM-eket ír, amelyeket te hagysz jóvá. Akár három egy csomagban.",
+            "metaTitle": "AI Sales Agent: leadek, DM-ek, megbeszélések és ajánlatok",
+            "metaDescription": "Vedd fel a Grovio AI Sales Agentjét. Leadeket talál és kutat, elküldi a jóváhagyott DM-eket, megbeszéléseket foglal, a dealeket a CRM-edbe teszi, és onnan küldi az ajánlatot. Akár három egy csomagban.",
             "title": "AI Sales Agent, aki a teljes folyamatot viszi.",
-            "pitch": "Adj neki egy kampányt és egy ICP-t. Leadeket gyűjt, besorolja őket, mindegyiknek utánajár, és megírja a DM-et, ötösével, a jóváhagyásodra várva. Éjjel-nappal.",
+            "pitch": "Adj neki egy kampányt és egy ICP-t. Leadeket talál és kutat, elküldi a jóváhagyott DM-eket, megbeszéléseket foglal, és minden dealt a CRM-edbe tesz, ahol elkészíti és elküldi az ajánlatot. Éjjel-nappal.",
             "flow": [
                 "Leadek gyűjtése a kampány ICP-je alapján",
                 "Besorolás: elfogadás vagy elvetés indoklással",
                 "Minden elfogadott lead kutatása",
                 "DM megírása a te stílusodban",
-                "Jóváhagyásra vár, 5-ös adagokban",
-                "Küldés, válaszok olvasása, utánkövetés"
+                "Jóváhagyásra vár",
+                "DM-ek küldése, válaszok olvasása, utánkövetés",
+                "Megbeszélés foglalása a naptáradban",
+                "A deal felvitele a CRM-edbe",
+                "Ajánlat elkészítése és küldése a CRM-ből"
             ],
             "properties": [
                 {
+                    "label": "Lefedettség",
+                    "value": "Legfeljebb 5 iparág, havi 3000 lead"
+                },
+                {
                     "label": "Kampányok",
-                    "value": "Ügynökönként legfeljebb 3"
+                    "value": "Korlátlan, a leadek elosztva köztük"
+                },
+                {
+                    "label": "E-mail",
+                    "value": "Naponta legfeljebb 100 ügynökönként"
                 },
                 {
                     "label": "Munkaidő",
                     "value": "0–24-ben dolgozik"
                 },
                 {
-                    "label": "Adagok",
-                    "value": "Egyszerre 5 lead, jóváhagyás után a következő 5"
-                },
-                {
                     "label": "Jóváhagyás",
                     "value": "Semmi nem megy ki nélküled"
+                },
+                {
+                    "label": "CRM",
+                    "value": "HubSpot, Salesforce, Pipedrive, Zoho CRM"
+                },
+                {
+                    "label": "Megbeszélések",
+                    "value": "Google Calendarban vagy Calendlyben foglalva"
                 },
                 {
                     "label": "Csomagok",
@@ -230,11 +245,15 @@ export const agents = {
             "faq": [
                 {
                     "q": "Sunny, Bolt és Echo más-más feladatot végez?",
-                    "a": "Nem. Mindhárman ugyanaz a Sales Agent, és mindegyikük a teljes folyamatot viszi a leadtől a DM-ig. A személyiségük különbözik, és ha többet veszel fel, több kampányt futtathatsz egyszerre."
+                    "a": "Nem. Mindhárman ugyanaz a Sales Agent, és mindegyikük a teljes folyamatot viszi a leadtől a DM-ig. A személyiségük különbözik, és ha többet veszel fel, több iparágat és leadet érsz el, gyorsabban."
                 },
                 {
-                    "q": "Miért ötös adagok?",
-                    "a": "Hogy te irányíts. Minden ügynök öt leadet és DM-et készít elő, te jóváhagyod vagy szerkeszted őket, és csak ezután kezd a következő ötbe."
+                    "q": "Minden DM-et jóvá kell hagynom?",
+                    "a": "Igen, hogy te irányíts. Minden ügynök leadeket és DM-eket készít elő, te jóváhagyod vagy szerkeszted őket, és addig semmi nem megy ki."
+                },
+                {
+                    "q": "Működik a CRM-emmel?",
+                    "a": "Igen. Sunny a kontaktokat, dealeket és megbeszélés-jegyzeteket a HubSpotba, Salesforce-ba, Pipedrive-ba vagy Zoho CRM-be teszi, ott elkészíti az ajánlatot, és a jóváhagyásod után elküldi."
                 },
                 {
                     "q": "Módosíthatom, hogyan íródnak a DM-ek?",
