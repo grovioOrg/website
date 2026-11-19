@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  transpilePackages: ["lenis"],
+  serverExternalPackages: ["source-map-js"],
 };
 
 export default nextConfig;

@@ -45,14 +45,14 @@ export const NavAnimation = ({
             }}
             data-scrolled={showBg}
             className={`
-                group/nav fixed top-0 inset-x-0 z-50
-                flex justify-center ${className}
+                group/nav fixed top-0 inset-x-0 z-50 pt-6
+                flex justify-center items-center ${className}
             `}
         >
             <motion.div
                 className="
-                    absolute inset-0 bg-white/85 backdrop-blur-md
-                    border-b border-grey-100
+                    absolute h-full bg-white/85 backdrop-blur-md rounded-full
+                    border border-grey-100 min-w-auto w-[62%] justify-self-center
                 "
                 initial={false}
                 animate={{ opacity: showBg ? 1 : 0 }}

@@ -36,7 +36,6 @@ export const common = {
         pricing: "Pricing",
         platform: "Platform",
         collaboration: "Slack collaboration",
-        why: "Why Grovio",
         joinBeta: "Join the beta",
         investors: "Investors",
         contact: "Contact",

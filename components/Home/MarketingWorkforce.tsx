@@ -28,6 +28,7 @@ import {
 import type { IDictionary } from "@/dictionaries"
 
 import { SectionHeading } from "./SectionHeading"
+import { WORKFORCE_DEMO_MIN_H } from "./workforceDemo"
 // #endregion
 
 const PHASES = 6
@@ -48,14 +49,12 @@ const CREATORS: {
 ]
 
 const Column = ({
-    step,
     title,
     agent,
     children,
     active,
     className = "",
 }: {
-    step: number
     title: string
     agent?: IAgentId
     children: ReactNode
@@ -63,16 +62,16 @@ const Column = ({
     className?: string
 }) => (
     <div className={cn(
-        "relative rounded-3xl bg-white p-5 flex flex-col gap-4 smooth duration-500",
-        active ? "ring-2 ring-ink shadow-lift" : "ring-1 ring-ink/6 shadow-card",
+        "relative rounded-2xl bg-white text-ink p-5 flex h-full flex-col gap-4 smooth duration-500",
+        active ? "ring-2 ring-yellow-100 shadow-lift" : "ring-1 ring-white/10",
         className
     )}>
         <div className="flex items-center gap-2">
             <span className={cn(
-                "grid place-items-center size-6 rounded-full text-[11px] font-bold smooth duration-500",
-                active ? "bg-yellow-100 text-ink" : "bg-grey-50 text-grey-300"
+                "grid place-items-center size-6 rounded-full smooth duration-500",
+                active ? "bg-yellow-100 text-ink" : "bg-grey-50 text-grey-200"
             )}>
-                {step}
+                <Check size={10} />
             </span>
             <p className="text-sm font-semibold">{title}</p>
             {agent && <AgentAvatar agent={agent} size={24} className="ml-auto" />}
@@ -108,23 +107,39 @@ export const MarketingWorkforce = ({
     return (
         <section
             id="marketing"
-            className="relative bg-paper py-32 max-mobile:py-20"
+            className="relative bg-ink text-white pb-32 max-mobile:pb-20 overflow-hidden rounded-b-3xl"
         >
-            <div className="max-w-7xl mx-auto px-6 max-mobile:px-4">
-                <SectionHeading
-                    title={t.title}
-                    description={t.description}
-                />
+            <div aria-hidden className="absolute inset-0 dot-grid-dark" />
+
+            <div className="relative max-w-7xl mx-auto px-6 max-mobile:px-4">
+                <div className="
+                    flex items-end justify-between gap-10 pt-16
+                    max-tablet:flex-col max-tablet:items-start max-mobile:pt-12
+                ">
+                    <SectionHeading
+                        tone="dark"
+                        title={t.title}
+                        points={t.points}
+                    />
+
+                    <div className="flex -space-x-3 shrink-0">
+                        {(["seo", ...CREATORS.map(({ agent }) => agent)] as IAgentId[]).map(id => (
+                            <AgentAvatar key={id} agent={id} size={52} className="ring-ink!" />
+                        ))}
+                    </div>
+                </div>
 
                 <div
                     ref={ref}
-                    className="
-                        relative mt-16 grid gap-5
-                        grid-cols-[0.9fr_1.1fr_1.2fr_1.1fr]
-                        max-tablet:grid-cols-2 max-mobile:grid-cols-1
-                    "
+                    className={cn(
+                        "relative mt-16 grid items-stretch gap-4 rounded-3xl bg-white/[0.03] ring-1 ring-white/10 p-6",
+                        WORKFORCE_DEMO_MIN_H,
+                        "grid-cols-[0.9fr_1.1fr_1.2fr_1.1fr]",
+                        "max-tablet:grid-cols-2 max-mobile:grid-cols-1 max-mobile:p-3 max-mobile:min-h-0",
+                    )}
                 >
-                    <Column step={1} title={copy.presence} active={phase === 0}>
+                    <Column title={copy.presence} active={phase === 0}>
+                        <div className="flex flex-1 flex-col gap-4 min-h-0">
                         <div className="rounded-xl ring-1 ring-grey-100 overflow-hidden">
                             <div className="flex items-center gap-1 px-2.5 h-6 bg-grey-50">
                                 <span className="size-1.5 rounded-full bg-grey-150" />
@@ -156,14 +171,16 @@ export const MarketingWorkforce = ({
                             </span>
                         </div>
 
-                        <div className="flex flex-wrap gap-1">
+                        <div className="mt-auto flex flex-wrap gap-1">
                             {["LinkedIn", "Instagram", "YouTube", "Blog"].map(name => (
                                 <Pill key={name}>{name}</Pill>
                             ))}
                         </div>
+                        </div>
                     </Column>
 
-                    <Column step={2} title={common.mockup.nav.seo} agent="seo" active={phase === 1}>
+                    <Column title={common.mockup.nav.seo} agent="seo" active={phase === 1}>
+                        <div className="flex flex-1 flex-col gap-4 min-h-0">
                         <div className="flex flex-col gap-2.5">
                             <p className="text-[11px] font-medium text-grey-200">{copy.keywordsTitle}</p>
                             {KEYWORDS.map(({ volume, width }, index) => (
@@ -195,18 +212,20 @@ export const MarketingWorkforce = ({
                             </div>
                         </div>
 
-                        <div className="rounded-xl bg-yellow-50 px-3 py-2 text-[12px] leading-snug">
+                        <div className="mt-auto rounded-xl bg-yellow-50 px-3 py-2 text-[12px] leading-snug">
                             <span className="font-semibold">{copy.ctaLabel} </span>
                             {copy.cta}
                         </div>
+                        </div>
                     </Column>
 
-                    <Column step={3} title={copy.creators} active={phase === 2}>
+                    <Column title={copy.creators} active={phase === 2}>
+                        <div className="flex flex-1 flex-col gap-2 min-h-0">
                         {creators.map(({ agent, format, title, tone }, index) => {
                             const ready = phase >= 3 || (phase === 2 && reduced)
 
                             return (
-                                <div key={agent} className="rounded-xl ring-1 ring-grey-100 p-3 flex flex-col gap-2">
+                                <div key={agent} className="flex flex-1 flex-col rounded-xl ring-1 ring-grey-100 p-3 gap-2 min-h-[7.5rem]">
                                     <div className="flex items-center gap-2">
                                         <AgentAvatar agent={agent} size={22} ring={false} />
                                         <Pill tone={tone}>{format}</Pill>
@@ -226,9 +245,11 @@ export const MarketingWorkforce = ({
                                 </div>
                             )
                         })}
+                        </div>
                     </Column>
 
-                    <Column step={4} title={copy.schedule} active={phase >= 3}>
+                    <Column title={copy.schedule} active={phase >= 3}>
+                        <div className="flex flex-1 flex-col gap-4 min-h-0">
                         <LayoutGroup>
                             <div className="grid grid-cols-5 gap-1.5">
                                 {common.mockup.days.map((day, index) => {
@@ -237,7 +258,7 @@ export const MarketingWorkforce = ({
                                     return (
                                         <div key={day} className="flex flex-col gap-1.5">
                                             <span className="text-[10px] text-grey-200 text-center">{day}</span>
-                                            <div className="h-24 rounded-lg bg-paper p-1 flex flex-col">
+                                            <div className="h-32 rounded-lg bg-paper p-1 flex flex-col flex-1 min-h-28">
                                                 <AnimatePresence>
                                                     {scheduled && post && (
                                                         <motion.span
@@ -285,6 +306,7 @@ export const MarketingWorkforce = ({
                             <AgentAvatar agent="seo" size={20} ring={false} />
                             {copy.live}
                         </motion.div>
+                        </div>
                     </Column>
                 </div>
             </div>

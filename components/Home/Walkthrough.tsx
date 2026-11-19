@@ -6,43 +6,73 @@ import {
     useState
 } from "react"
 
-import { ScaledFrame } from "@/base"
+import {
+    AnimatePresence,
+    motion
+} from "framer-motion"
+
+import { Button, ScaledFrame } from "@/base"
+import { useDictionary } from "@/context"
 import { useTicker } from "@/hooks"
 import { Arrow } from "@/icons"
 import { cn } from "@/utils"
 import { _OPUS_CO_URL } from "@/constants"
-import { formatText, type IDictionary } from "@/dictionaries"
+import type { IDictionary } from "@/dictionaries"
+
+import {
+    AppWindow,
+    Glyph,
+    type IGlyph,
+} from "@/components/Mockups"
 
 import { SectionHeading } from "./SectionHeading"
 import { WalkthroughDemo } from "./WalkthroughDemo"
 // #endregion
 
-const STEP_MS = 3200
+const STEP_MS = 4200
+
+/** Fixed design size so the window never changes height between steps. */
+const FRAME_W = 1200
+const FRAME_H = 640
+
+const STEP_GLYPHS: IGlyph[] = [
+    "globe",
+    "marketing",
+    "filter",
+    "bolt",
+    "campaigns",
+    "people",
+    "board",
+]
 
 export const Walkthrough = ({
     t,
 }: {
     t: IDictionary["home"]["walkthrough"]
 }) => {
+    const { common } = useDictionary()
     const ref = useRef<HTMLDivElement | null>(null)
     const { tick } = useTicker(ref, STEP_MS)
     const [offset, setOffset] = useState(0)
 
     const total = t.steps.length
-    const step = (((tick + offset) % total) + total) % total
+    const active = (((tick + offset) % total) + total) % total
+    const step = t.steps[active]
 
     return (
         <section
             id="walkthrough"
-            className="relative bg-white py-32 max-mobile:py-20"
+            className="relative flex w-full flex-col items-center"
         >
-            <div className="max-w-7xl mx-auto px-6 max-mobile:px-4">
-                <div className="flex items-end justify-between gap-10 max-tablet:flex-col max-tablet:items-start">
-                    <SectionHeading
-                        title={t.title}
-                        description={t.description}
-                    />
-                    <p className="text-sm text-grey-300 tablet:text-right">
+            <div className="mx-auto w-full max-w-7xl px-6 pt-28 max-mobile:px-4 max-mobile:pt-20">
+                <SectionHeading
+                    multiline
+                    align="center"
+                    title={t.title}
+                />
+
+                <div className="flex flex-col items-center gap-3 text-center">
+                    <p className="text-sm text-grey-300 mt-2">
                         {t.noSite}{" "}
                         <a
                             href={_OPUS_CO_URL}
@@ -53,82 +83,91 @@ export const Walkthrough = ({
                             {t.noSiteLink}
                         </a>
                     </p>
-                </div>
 
+                    <Button
+                        className="mt-4"
+                        type="button"
+                        variant="yellow"
+                        onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
+                        endIcon={<Arrow size={14} className="group-hover:translate-x-0.5 smooth" />}
+                    >
+                        {t.seePricing}
+                    </Button>
+                </div>
+            </div>
+
+            <div
+                ref={ref}
+                className="relative mt-14 w-full pb-24 max-mobile:mt-10 max-mobile:pb-16"
+            >
                 <div
-                    ref={ref}
+                    aria-hidden
                     className="
-                        mt-16 grid grid-cols-[320px_1fr] gap-8 items-start
-                        max-tablet:grid-cols-1 max-tablet:gap-6
+                        pointer-events-none absolute inset-0 dot-grid
+                        mask-[radial-gradient(ellipse_at_center,black_18%,transparent_72%)]
                     "
-                >
-                    <ol
+                />
+
+                <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-8 px-6 max-mobile:px-4">
+                    <div
+                        role="tablist"
                         aria-label={t.title}
-                        className="flex flex-col gap-1 max-tablet:order-2"
+                        className="
+                            flex w-full flex-wrap items-center justify-center gap-2 p-1
+                            max-mobile:-mx-4 max-mobile:w-[calc(100%+2rem)] max-mobile:flex-nowrap
+                            max-mobile:justify-start max-mobile:overflow-x-auto max-mobile:px-4 no-scrollbar
+                        "
                     >
                         {t.steps.map((item, index) => {
-                            const active = index === step
+                            const selected = index === active
 
                             return (
-                                <li key={item.title}>
-                                    <button
-                                        type="button"
-                                        aria-current={active ? "step" : undefined}
-                                        onClick={() => setOffset(index - tick)}
-                                        className={cn(
-                                            "w-full text-left rounded-2xl px-4 py-3 cursor-pointer outline-none smooth",
-                                            "focus-visible:ring-2 focus-visible:ring-ink",
-                                            active
-                                                ? "bg-white ring-1 ring-ink/8 shadow-card"
-                                                : "hover:bg-paper"
-                                        )}
-                                    >
-                                        <span className="flex items-center gap-3">
-                                            <span aria-hidden className={cn(
-                                                "grid place-items-center size-6 shrink-0 rounded-full text-[11px] font-bold smooth",
-                                                active ? "bg-yellow-100 text-ink" : "bg-grey-50 text-grey-300"
-                                            )}>
-                                                {index + 1}
-                                            </span>
-                                            <span className={cn(
-                                                "text-[15px] smooth",
-                                                active ? "font-semibold text-ink" : "font-medium text-grey-300"
-                                            )}>
-                                                <span className="sr-only">{formatText(t.stepLabel, { n: index + 1 })}: </span>
-                                                {item.title}
-                                            </span>
-                                        </span>
-                                        <span className={cn(
-                                            "grid transition-[grid-template-rows] duration-300",
-                                            active ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                                        )}>
-                                            <span className="overflow-hidden">
-                                                <span className="block pt-1.5 pl-9 text-sm text-grey-300 leading-relaxed">
-                                                    {item.description}
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </button>
-                                </li>
+                                <button
+                                    key={item.title}
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={selected}
+                                    aria-controls="walkthrough-screen"
+                                    onClick={() => setOffset(index - tick)}
+                                    className={cn(
+                                        "flex shrink-0 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-2 outline-none smooth",
+                                        "focus-visible:ring-2 focus-visible:ring-ink",
+                                        "text-[13px]",
+                                        selected
+                                            ? "bg-ink font-semibold text-white"
+                                            : "font-medium text-grey-300 ring-1 ring-grey-100 hover:text-ink hover:ring-grey-150",
+                                    )}
+                                >
+                                    <Glyph name={STEP_GLYPHS[index]} size={15} />
+                                    {item.title}
+                                </button>
                             )
                         })}
-
-                        <li className="mt-3 px-4">
-                            <a
-                                href="#pricing"
-                                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-ink"
-                            >
-                                {t.seePricing}
-                                <Arrow size={14} className="group-hover:translate-x-0.5 smooth" />
-                            </a>
-                        </li>
-                    </ol>
+                    </div>
 
                     <div
-                        className="rounded-[28px] bg-paper ring-1 ring-ink/5 p-5 max-mobile:p-2.5 max-mobile:rounded-2xl"
+                        id="walkthrough-screen"
+                        role="tabpanel"
+                        aria-live="polite"
+                        className="w-full"
                     >
-                        <ScaledFrame width={1000} height={600}>
-                            <WalkthroughDemo t={t} step={step} />
+                        <ScaledFrame width={FRAME_W} height={FRAME_H}>
+                            <AppWindow
+                                t={common.mockup}
+                                sidebar={false}
+                                title={`northwind.co · ${step.title}`}
+                                className="w-[1200px] h-[640px]"
+                            >
+                                <div className="relative flex-1 min-h-0 bg-paper">
+                                    <div
+                                        aria-hidden
+                                        className="absolute inset-0 dot-grid mask-[radial-gradient(ellipse_at_center,black_30%,transparent_80%)]"
+                                    />
+                                    <div className="relative grid size-full place-items-center">
+                                        <WalkthroughDemo t={t} step={active} />
+                                    </div>
+                                </div>
+                            </AppWindow>
                         </ScaledFrame>
                     </div>
                 </div>

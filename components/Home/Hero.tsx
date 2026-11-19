@@ -64,7 +64,7 @@ const FLANKS: {
     delay: number
 }[] = [
     { agent: "sales", className: "left-4 top-20 desktop:left-16", delay: 0.5 },
-    { agent: "seo", className: "right-4 top-40 desktop:right-16", delay: 0.7 },
+    { agent: "seo", className: "right-4 top-40 desktop:right-24", delay: 0.7 },
 ]
 
 export const Hero = ({
@@ -82,15 +82,15 @@ export const Hero = ({
 
     const boardScale = useTransform(scrollYProgress, [0, 0.5], [0.97, 1])
     const boardY = useTransform(scrollYProgress, [0, 1], [0, -60])
-    const flankLeftY = useTransform(scrollYProgress, [0, 1], [0, 140])
-    const flankRightY = useTransform(scrollYProgress, [0, 1], [0, 90])
+    const flankLeftY = useTransform(scrollYProgress, [0, 1], [0, 180])
+    const flankRightY = useTransform(scrollYProgress, [0, 1], [0, 40])
     const cardsY = useTransform(scrollYProgress, [0, 1], [0, -140])
 
     return (
         <section
             id="top"
             ref={ref}
-            className="relative pt-32 pb-24 overflow-hidden max-mobile:pt-24"
+            className="relative overflow-hidden pt-32 pb-28 max-mobile:pt-24 max-mobile:pb-20"
         >
             <div
                 aria-hidden
@@ -100,7 +100,7 @@ export const Hero = ({
                 "
             />
 
-            <div className="relative max-w-7xl mx-auto px-6 max-mobile:px-4">
+            <div className="relative max-w-[65%] mx-auto px-6 max-mobile:px-4">
                 <div className="relative flex flex-col items-center text-center">
 
                     {FLANKS.map(({ agent, className, delay }, index) => (
@@ -112,11 +112,11 @@ export const Hero = ({
                             <motion.div
                                 initial={{ opacity: 0, y: 30, scale: 0.85 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                                transition={{ type: "spring", stiffness: 90, damping: 12, delay }}
+                                transition={{ type: "spring", stiffness: 100, damping: 12, delay }}
                             >
                                 <AgentAvatar
                                     agent={agent}
-                                    size={112}
+                                    size={130}
                                     ring={false}
                                     live
                                     track
@@ -133,19 +133,19 @@ export const Hero = ({
                         {...rise(0.1)}
                         className="
                             font-display font-semibold text-ink mt-10
-                            text-[clamp(2.9rem,7.6vw,6.9rem)]
-                            leading-[0.94] tracking-[-0.045em]
-                            max-w-[12ch]
+                            text-[clamp(2.5rem,6.2vw,6.5rem)]
+                            leading-[1.02] tracking-[-0.04em]
+                            max-w-[14ch] max-mobile:max-w-[13ch]
                         "
                     >
                         {t.titleStart}{" "}
-                        <span className="relative inline-block">
+                        <span className="relative inline-block z-10">
                             {t.titleMark}
                             <svg
                                 aria-hidden
                                 viewBox="0 0 300 30"
                                 preserveAspectRatio="none"
-                                className="absolute left-[-4%] -bottom-[0.12em] w-[108%] h-[0.3em]"
+                                className="absolute left-[-4%] bottom-[-0.12em] w-[108%] h-[0.3em] -z-10"
                             >
                                 <motion.path
                                     d="M4 20 C 70 6, 170 4, 296 14"
@@ -153,9 +153,11 @@ export const Hero = ({
                                     stroke="var(--color-yellow-100)"
                                     strokeWidth={12}
                                     strokeLinecap="round"
-                                    initial={{ pathLength: 0 }}
-                                    animate={{ pathLength: 1 }}
-                                    transition={{ duration: 0.9, delay: 0.9, ease: "easeInOut" }}
+                                    pathLength={1}
+                                    initial={{ opacity: 0, strokeDashoffset: 1 }}
+                                    animate={{ opacity: 1, strokeDashoffset: 0 }}
+                                    transition={{ duration: 0.9, delay: 0.2, ease: "easeInOut" }}
+                                    style={{ strokeDasharray: "1 1" }}
                                 />
                             </svg>
                         </span>{" "}
@@ -163,20 +165,18 @@ export const Hero = ({
                     </motion.h1>
 
                     <motion.p
-                        {...rise(0.3)}
-                        className="
-                            mt-7 max-w-[40rem] text-lg text-grey-300 leading-relaxed
-                            max-mobile:text-base
-                        "
+                        {...rise(0.5)}
+                        className="mt-5 inline-flex items-center gap-2 text-sm text-grey-300"
                     >
-                        {t.body}
+                        <Check size={14} className="text-success" />
+                        {t.eu}
                     </motion.p>
 
                     <motion.div
                         {...rise(0.4)}
                         className="mt-9 flex items-center gap-3 max-mobile:flex-col max-mobile:w-full"
                     >
-                        <BetaButton size="lg" className="max-mobile:w-full" />
+                        <BetaButton variant="yellow" size="lg" className="max-mobile:w-full" />
                         <a
                             href="#walkthrough"
                             className="
@@ -190,13 +190,6 @@ export const Hero = ({
                         </a>
                     </motion.div>
 
-                    <motion.p
-                        {...rise(0.5)}
-                        className="mt-5 inline-flex items-center gap-2 text-sm text-grey-300"
-                    >
-                        <Check size={14} className="text-success" />
-                        {t.eu}
-                    </motion.p>
                 </div>
 
                 <motion.div

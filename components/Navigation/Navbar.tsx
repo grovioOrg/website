@@ -40,13 +40,13 @@ export const Navbar = ({
         <NavAnimation>
             <div className="
                 relative w-full max-w-7xl flex items-center
-                justify-between gap-6 px-6 h-16
+                justify-between gap-6 px-6
                 max-mobile:px-4
             ">
                 <a
                     href={localePath(lang, "/")}
                     aria-label={t.common.nav.home}
-                    className="rounded-full"
+                    className="rounded-full items-center flex h-full"
                 >
                     <Wordmark size={30} />
                 </a>

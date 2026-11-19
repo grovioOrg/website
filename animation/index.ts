@@ -1,3 +1,5 @@
 export * from "./Reveal"
 export * from "./NavAnimation"
 export * from "./ParallaxAnimation"
+export * from "./SectionElevate"
+export * from "./SmoothScroll"

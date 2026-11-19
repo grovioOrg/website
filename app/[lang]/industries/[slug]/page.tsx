@@ -91,7 +91,7 @@ const IndustryPage = async ({
             <Navbar lang={lang} t={t} />
             <main>
                 <section className="relative bg-white pt-36 pb-4 overflow-hidden max-mobile:pt-28 max-mobile:pb-0">
-                    <div aria-hidden className="absolute inset-0 dot-grid opacity-50 [mask-image:linear-gradient(to_bottom,black,transparent_80%)]" />
+                    <div aria-hidden className="absolute inset-0 dot-grid [mask-image:linear-gradient(to_bottom,black,transparent_80%)]" />
                     <div className="
                         relative max-w-7xl mx-auto px-6 max-mobile:px-4
                         grid grid-cols-[1.1fr_0.9fr] gap-14 items-center

@@ -47,7 +47,6 @@ const BrandSvg = ({ mark, size }: { mark: IBrandGlyph, size: number }) => {
 export const BrandMark = ({
     tool,
     size = 36,
-    className = "",
 }: {
     tool: IToolId
     size?: number
@@ -55,14 +54,7 @@ export const BrandMark = ({
 }) => {
     const mark = BRAND_PATHS[TOOLS[tool].brand]
 
-    return (
-        <span
-            className={cn("grid place-items-center shrink-0 rounded-xl bg-white ring-1 ring-ink/8", className)}
-            style={{ width: size, height: size }}
-        >
-            <BrandSvg mark={mark} size={size} />
-        </span>
-    )
+    return <BrandSvg mark={mark} size={size}/>
 }
 
 export const ToolChip = ({ tool, name }: { tool: IToolId, name?: string }) => (

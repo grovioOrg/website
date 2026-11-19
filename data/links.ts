@@ -37,7 +37,6 @@ export const industryLink = (lang: ILocale, id: string) =>
 export const getNavLinks = (lang: ILocale, t: IDictionary["common"]["nav"]): ILink[] => [
     { name: t.howItWorks, url: homeLink(lang, "walkthrough") },
     { name: t.pricing, url: homeLink(lang, "pricing") },
-    { name: t.platform, url: homeLink(lang, "platform") },
 ]
 
 export const getFooterLinks = (lang: ILocale, t: IDictionary): ILinkGroup[] => [
@@ -45,11 +44,10 @@ export const getFooterLinks = (lang: ILocale, t: IDictionary): ILinkGroup[] => [
         title: t.common.footer.product,
         urls: [
             { name: t.common.footer.walkthrough, url: homeLink(lang, "walkthrough") },
-            { name: t.common.footer.howItWorks, url: homeLink(lang, "how-it-works") },
+            { name: t.common.footer.howItWorks, url: homeLink(lang, "walkthrough") },
             { name: t.common.footer.pricing, url: homeLink(lang, "pricing") },
             { name: t.common.footer.platform, url: homeLink(lang, "platform") },
-            { name: t.common.footer.collaboration, url: homeLink(lang, "collaboration") },
-            { name: t.common.footer.why, url: homeLink(lang, "why") },
+            { name: t.common.footer.collaboration, url: homeLink(lang, "platform") },
         ],
     },
     {

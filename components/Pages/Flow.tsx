@@ -122,7 +122,7 @@ export const UseCaseFlow = ({
 
     return (
         <div className="relative rounded-[28px] bg-paper ring-1 ring-ink/5 p-8 overflow-hidden max-mobile:p-5">
-            <div aria-hidden className="absolute inset-0 dot-grid opacity-60" />
+            <div aria-hidden className="absolute inset-0 dot-grid" />
 
             <motion.div {...stage} className="relative flex flex-col items-center">
                 <motion.ul {...item(0)} className="flex flex-wrap justify-center gap-2">
@@ -198,7 +198,7 @@ export const ToolHub = ({
 
     return (
         <div className="relative rounded-[28px] bg-white ring-1 ring-ink/5 p-10 overflow-hidden max-mobile:p-5">
-            <div aria-hidden className="absolute inset-0 dot-grid opacity-60" />
+            <div aria-hidden className="absolute inset-0 dot-grid" />
 
             <motion.div {...stage} className="
                 relative flex items-center justify-center gap-2

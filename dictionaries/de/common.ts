@@ -1,67 +1,70 @@
-import type { IDictionary } from "@/dictionaries"
-
-export const common: IDictionary["common"] = {
-    brand: "Grovio",
-    joinBeta: "Zur Beta anmelden",
-    joinWaitlist: "Auf die Warteliste",
-    comingSoon: "Demnächst",
-    monthlyContract: "Monatsvertrag",
-    you: "Sie",
-    teams: {
-        sales: "Vertriebsteam",
-        marketing: "Marketingteam",
-        vertical: "Branchen-Agent",
+export const common = {
+    "brand": "Grovio",
+    "joinBeta": "Zur Beta anmelden",
+    "joinWaitlist": "Auf die Warteliste",
+    "comingSoon": "Demnächst",
+    "monthlyContract": "Monatsvertrag",
+    "you": "Sie",
+    "teams": {
+        "sales": "Vertriebsteam",
+        "marketing": "Marketingteam",
+        "vertical": "Branchen-Agent"
     },
-    nav: {
-        primary: "Hauptnavigation",
-        home: "Grovio Startseite",
-        agents: "Agents",
-        industries: "Branchen",
-        howItWorks: "So funktioniert’s",
-        pricing: "Preise",
-        platform: "Plattform",
-        openMenu: "Menü öffnen",
-        closeMenu: "Menü schließen",
-        language: "Sprache",
-        agentsAvailable: "Sofort verfügbar",
-        agentsUpcoming: "Demnächst",
-        industriesTitle: "Für Ihre Branche gebaut",
+    "nav": {
+        "primary": "Hauptnavigation",
+        "home": "Grovio Startseite",
+        "agents": "Agents",
+        "industries": "Branchen",
+        "howItWorks": "So funktioniert’s",
+        "pricing": "Preise",
+        "platform": "Plattform",
+        "openMenu": "Menü öffnen",
+        "closeMenu": "Menü schließen",
+        "language": "Sprache",
+        "agentsAvailable": "Sofort verfügbar",
+        "agentsUpcoming": "Demnächst",
+        "industriesTitle": "Für Ihre Branche gebaut"
     },
-    footer: {
-        blurb: "Ein KI-Team für Vertrieb und Marketing. Stellen Sie spezialisierte Fachkräfte ein, steuern Sie ihre Arbeit und geben Sie frei, was rausgeht.",
-        product: "Produkt",
-        agents: "Agents",
-        industries: "Branchen",
-        company: "Unternehmen",
-        howItWorks: "So funktioniert’s",
-        walkthrough: "Rundgang",
-        pricing: "Preise",
-        platform: "Plattform",
-        collaboration: "Zusammenarbeit in Slack",
-        why: "Warum Grovio",
-        joinBeta: "Zur Beta anmelden",
-        investors: "Investoren",
-        contact: "Kontakt",
-        privacy: "Datenschutz",
-        rights: "© 2026 Grovio. Derzeit in der privaten Beta.",
-        eu: "Für die EU gebaut · DSGVO-konform",
+    "footer": {
+        "blurb": "Ein KI-Team für Vertrieb und Marketing. Stellen Sie spezialisierte Fachkräfte ein, steuern Sie ihre Arbeit und geben Sie frei, was rausgeht.",
+        "product": "Produkt",
+        "agents": "Agents",
+        "industries": "Branchen",
+        "company": "Unternehmen",
+        "howItWorks": "So funktioniert’s",
+        "walkthrough": "Rundgang",
+        "pricing": "Preise",
+        "platform": "Plattform",
+        "collaboration": "Zusammenarbeit in Slack",
+        "joinBeta": "Zur Beta anmelden",
+        "investors": "Investoren",
+        "contact": "Kontakt",
+        "privacy": "Datenschutz",
+        "rights": "© 2026 Grovio. Derzeit in der privaten Beta.",
+        "eu": "Für die EU gebaut · DSGVO-konform"
     },
-    euStamp: {
-        label: "In der EU entwickelt & gehostet",
-        aria: "In der EU entwickelt und gehostet. Mehr zur DSGVO bei Grovio.",
+    "euStamp": {
+        "label": "In der EU entwickelt & gehostet",
+        "aria": "In der EU entwickelt und gehostet. Mehr zur DSGVO bei Grovio."
     },
-    mockup: {
-        nav: {
-            playbooks: "Playbooks",
-            campaigns: "Kampagnen",
-            epic: "Epic Board",
-            seo: "SEO Intelligence",
-            marketing: "Marketing Board",
-            playground: "AI Playground",
-            account: "Konto",
+    "mockup": {
+        "nav": {
+            "playbooks": "Playbooks",
+            "campaigns": "Kampagnen",
+            "epic": "Epic Board",
+            "seo": "SEO Intelligence",
+            "marketing": "Marketing Board",
+            "playground": "AI Playground",
+            "account": "Konto"
         },
-        workforce: "Ihre Fachkräfte",
-        ask: "Ihr Team fragen",
-        days: ["Mo", "Di", "Mi", "Do", "Fr"],
-    },
+        "workforce": "Ihre Fachkräfte",
+        "ask": "Ihr Team fragen",
+        "days": [
+            "Mo",
+            "Di",
+            "Mi",
+            "Do",
+            "Fr"
+        ]
+    }
 }

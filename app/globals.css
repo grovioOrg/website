@@ -132,15 +132,9 @@
     }
     .dot-grid {
         background-image: radial-gradient(
-            rgb(10 10 10 / 0.09) 1px,
-            transparent 1px
-        );
-        background-size: 22px 22px;
-    }
-    .dot-grid-dark {
-        background-image: radial-gradient(
-            rgb(255 255 255 / 0.08) 1px,
-            transparent 1px
+            circle,
+            rgba(10, 10, 10, 0.074) 1.3px,
+            transparent 1.8px
         );
         background-size: 22px 22px;
     }

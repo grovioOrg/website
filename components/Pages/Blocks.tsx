@@ -100,7 +100,7 @@ export const CtaBand = ({
                 flex flex-col items-center gap-5 relative overflow-hidden
                 max-mobile:px-6 max-mobile:py-10 max-mobile:rounded-3xl
             ">
-                <div aria-hidden className="absolute inset-0 dot-grid opacity-60" />
+                <div aria-hidden className="absolute inset-0 dot-grid" />
                 <h2 className="relative font-display font-semibold text-[clamp(2.2rem,5vw,4rem)] leading-[0.98] tracking-[-0.045em] max-w-[16ch]">
                     {title}
                 </h2>

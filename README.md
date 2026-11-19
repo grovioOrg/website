@@ -85,7 +85,7 @@ If the base URL is missing, the form shows an error and logs a warning on the se
 
 - `public/agent.md` (served at `/agent.md`) describes Grovio for AI assistants and crawlers. Update it when agents, prices or integrations change.
 - The integrations section lists tools in the sales and marketing flow; connections are set up per workspace at onboarding. Logos are vendored in `icons/brands.ts` from Simple Icons (CC0), Devicon (MIT, Slack), theSVG (MIT, Pipedrive) and Lucide (ISC, CSV and MCP).
-- The Slack collaboration section, the walkthrough demo and the "brief your agents" chat are visual previews, labelled as such where relevant. They are not wired to live systems.
+- The Slack tab in the platform section, the walkthrough demo and the "brief your agents" chat are visual previews, labelled as such where relevant. They are not wired to live systems.
 - The hero board recreates the product video as a live, animated component instead of embedding the video file.
 - Upcoming agents (Hot Leads Caller, Concierge, Community Growth) are marked "Coming soon" and their buttons join the waitlist.
 - Animations respect `prefers-reduced-motion`. Nothing hijacks scrolling.

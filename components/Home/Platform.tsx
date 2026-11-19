@@ -22,16 +22,62 @@ import {
     APP_NAV,
     AppWindow,
     Glyph,
-    IAppScreen
+    IGlyph,
 } from "@/components/Mockups"
 
-import { PLATFORM_SCREENS } from "./PlatformScreens"
+import { IPlatformScreen, PLATFORM_SCREENS } from "./PlatformScreens"
 import type { IDictionary } from "@/dictionaries"
 
 import { SectionHeading } from "./SectionHeading"
+import { SlackScreen } from "./SlackScreen"
 // #endregion
 
 const DESKTOP_QUERY = "(min-width: 1030px)"
+
+/** Match `Hero` board frame so the demo renders at the same visual scale. */
+const FRAME_W = 1200
+const FRAME_H = 720
+
+type ITab = IPlatformScreen | "slack"
+
+const TABS: { id: ITab, glyph: IGlyph }[] = [
+    ...APP_NAV.filter((item): item is { id: IPlatformScreen, glyph: IGlyph } => item.id !== "account"),
+    { id: "slack", glyph: "chat" },
+]
+
+const AppScreen = ({
+    id,
+    t,
+    app,
+}: {
+    id: IPlatformScreen
+    t: IDictionary["home"]["platform"]
+    app: IDictionary["common"]["mockup"]
+}) => {
+    const Screen = PLATFORM_SCREENS[id]
+
+    return (
+        <AppWindow
+            t={app}
+            active={id}
+            title={`Northwind · ${app.nav[id]}`}
+            className="w-[1200px] h-[720px]"
+        >
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={id}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.3, ease: [0.2, 0.7, 0.2, 1] }}
+                    className="flex-1 min-h-0 overflow-hidden"
+                >
+                    <Screen t={t.mockup} app={app} />
+                </motion.div>
+            </AnimatePresence>
+        </AppWindow>
+    )
+}
 
 export const Platform = ({
     t,
@@ -40,7 +86,8 @@ export const Platform = ({
 }) => {
     const { common } = useDictionary()
     const app = common.mockup
-    const DESCRIPTIONS: Record<IAppScreen, string> = t.screens
+    const DESCRIPTIONS: Record<ITab, string> = t.screens
+    const label = (id: ITab) => id === "slack" ? "Slack" : app.nav[id]
     const track = useRef<HTMLDivElement | null>(null)
     const [active, setActive] = useState(0)
     const [pinned, setPinned] = useState(false)
@@ -63,7 +110,7 @@ export const Platform = ({
         if (!pinned)
             return
 
-        const index = Math.min(APP_NAV.length - 1, Math.floor(value * APP_NAV.length))
+        const index = Math.min(TABS.length - 1, Math.floor(value * TABS.length))
         setActive(index)
     })
 
@@ -77,41 +124,43 @@ export const Platform = ({
         const top = el.getBoundingClientRect().top + window.scrollY
         const start = top - window.innerHeight * 0.2
         const end = top + el.offsetHeight - window.innerHeight * 0.8
-        window.scrollTo({ top: start + (end - start) * ((index + 0.5) / APP_NAV.length) })
+        window.scrollTo({ top: start + (end - start) * ((index + 0.5) / TABS.length) })
     }
 
-    const screen = APP_NAV[active]
-    const Screen = PLATFORM_SCREENS[screen.id]
+    const screen = TABS[active]
 
     return (
-        <section id="platform" className="relative bg-white">
-            <div className="max-w-7xl mx-auto px-6 pt-28 max-mobile:px-4 max-mobile:pt-20">
+        <section id="platform" className="relative bg-white flex flex-col items-center w-full">
+            <div className="mx-auto w-full max-w-7xl px-6 pt-24 max-mobile:px-4 max-mobile:pt-16">
                 <SectionHeading
+                    align="center"
                     title={t.title}
-                    description={t.description}
                 />
             </div>
 
             <div
                 ref={track}
-                className="relative mt-14 pb-28 tablet:h-[250vh] max-mobile:mt-10 max-mobile:pb-20"
+                className="relative mt-14 w-full pb-24 tablet:h-[250vh] max-mobile:mt-10 max-mobile:pb-16"
             >
-                <div className="tablet:sticky tablet:top-[20vh]">
-                    <div className="
-                        w-full max-w-7xl mx-auto px-6 max-mobile:px-4
-                        grid grid-cols-[300px_1fr] gap-10 items-center
-                        max-tablet:grid-cols-1 max-tablet:gap-6
-                    ">
+                <div
+                    aria-hidden
+                    className="
+                        pointer-events-none absolute inset-0 dot-grid
+                        mask-[radial-gradient(ellipse_at_center,black_18%,transparent_72%)]
+                    "
+                />
+
+                <div className="tablet:sticky tablet:top-[10vh] relative">
+                    <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-8 px-6 max-mobile:px-4">
                         <div
                             role="tablist"
                             aria-label={t.tablist}
                             className="
-                                flex flex-col gap-1
-                                max-tablet:flex-row max-tablet:overflow-x-auto
-                                max-tablet:-mx-6 max-tablet:px-6 no-scrollbar
+                                flex w-full items-center justify-center-safe gap-2 overflow-x-auto p-1 no-scrollbar
+                                max-mobile:-mx-4 max-mobile:w-[calc(100%+2rem)] max-mobile:px-4
                             "
                         >
-                            {APP_NAV.map((item, index) => {
+                            {TABS.map((item, index) => {
                                 const selected = index === active
 
                                 return (
@@ -123,64 +172,43 @@ export const Platform = ({
                                         aria-controls="platform-screen"
                                         onClick={() => select(index)}
                                         className={cn(
-                                            "relative text-left rounded-2xl px-4 py-3 cursor-pointer smooth outline-none",
+                                            "flex shrink-0 cursor-pointer items-center gap-2 whitespace-nowrap rounded-full px-4 py-2 outline-none smooth",
                                             "focus-visible:ring-2 focus-visible:ring-ink",
-                                            "max-tablet:shrink-0 max-tablet:rounded-full max-tablet:py-2",
+                                            "text-sm",
                                             selected
-                                                ? "max-tablet:bg-ink max-tablet:text-white"
-                                                : "max-tablet:ring-1 max-tablet:ring-grey-100"
+                                                ? "bg-ink text-white font-semibold"
+                                                : "font-medium text-grey-300 ring-1 ring-grey-100 hover:text-ink hover:ring-grey-150"
                                         )}
                                     >
-                                        <span className={cn(
-                                            "flex items-center gap-2.5 text-[15px] smooth max-tablet:text-sm",
-                                            selected ? "font-semibold" : "font-medium text-grey-200 hover:text-grey-300"
-                                        )}>
-                                            <Glyph name={item.glyph} size={17} />
-                                            {app.nav[item.id]}
-                                        </span>
-                                        <AnimatePresence initial={false}>
-                                            {selected && (
-                                                <motion.span
-                                                    initial={{ height: 0, opacity: 0 }}
-                                                    animate={{ height: "auto", opacity: 1 }}
-                                                    exit={{ height: 0, opacity: 0 }}
-                                                    className="block overflow-hidden text-sm text-grey-300 leading-relaxed pl-[27px] max-tablet:hidden"
-                                                >
-                                                    <span className="block pt-1.5">{DESCRIPTIONS[item.id]}</span>
-                                                </motion.span>
-                                            )}
-                                        </AnimatePresence>
+                                        <Glyph name={item.glyph} size={16} />
+                                        {label(item.id)}
                                     </button>
                                 )
                             })}
                         </div>
 
-                        <div id="platform-screen" role="tabpanel" aria-live="polite">
-                            <p className="tablet:hidden text-sm text-grey-300 mb-4">
-                                {DESCRIPTIONS[screen.id]}
-                            </p>
-                            <ScaledFrame width={1100} height={660}>
-                                <AppWindow
-                                    t={app}
-                                    active={screen.id}
-                                    title={`Northwind · ${app.nav[screen.id]}`}
-                                    className="h-[660px]"
-                                >
-                                    <AnimatePresence mode="wait">
-                                        <motion.div
-                                            key={screen.id}
-                                            initial={{ opacity: 0, y: 14 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: -8 }}
-                                            transition={{ duration: 0.3, ease: [0.2, 0.7, 0.2, 1] }}
-                                            className="flex-1 min-h-0 overflow-hidden"
-                                        >
-                                            <Screen t={t.mockup} app={app} />
-                                        </motion.div>
-                                    </AnimatePresence>
-                                </AppWindow>
+                        <div id="platform-screen" role="tabpanel" aria-live="polite" className="w-full">
+                            <ScaledFrame width={FRAME_W} height={FRAME_H}>
+                                {screen.id === "slack" ? (
+                                    <SlackScreen t={t.slack} width={FRAME_W} height={FRAME_H} />
+                                ) : (
+                                    <AppScreen id={screen.id} t={t} app={app} />
+                                )}
                             </ScaledFrame>
                         </div>
+
+                        <AnimatePresence mode="wait" initial={false}>
+                            <motion.p
+                                key={screen.id}
+                                initial={{ opacity: 0, y: 6 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.25 }}
+                                className="text-sm text-grey-300 leading-relaxed max-w-3xl text-center min-h-[1.75rem]"
+                            >
+                                {DESCRIPTIONS[screen.id]}
+                            </motion.p>
+                        </AnimatePresence>
                     </div>
                 </div>
             </div>

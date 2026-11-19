@@ -20,8 +20,8 @@ export const PlanCard = ({
 
     return (
         <article className={cn(
-            "relative flex flex-col rounded-3xl bg-white p-7 shadow-card",
-            plan.popular ? "ring-2 ring-ink" : "ring-1 ring-ink/6"
+            "relative flex h-full min-w-0 flex-col rounded-3xl bg-white p-7 shadow-card ring-1",
+            plan.popular ? "ring-ink shadow-lift" : "ring-ink/6"
         )}>
             <div className="flex items-center justify-between gap-3">
                 <div className="flex -space-x-2">

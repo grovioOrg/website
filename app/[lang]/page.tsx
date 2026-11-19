@@ -11,16 +11,16 @@ import {
     localizeAgents
 } from "@/data"
 
+import { SectionElevate, SmoothScroll } from "@/animation"
+
 import {
     Footer,
     Navbar
 } from "@/components/Navigation"
 
 import {
-    Collaboration,
     FinalCta,
     Hero,
-    HowItWorks,
     Integrations,
     Investors,
     MarketingWorkforce,
@@ -28,9 +28,7 @@ import {
     Pricing,
     SalesWorkforce,
     TeachAgents,
-    Upcoming,
     Walkthrough,
-    WhyGrovio,
     Workforce
 } from "@/components/Home"
 // #endregion
@@ -48,32 +46,29 @@ const Home = async ({
     const agents = localizeAgents(t.agents)
 
     return (
-        <>
+        <SmoothScroll>
             <Navbar lang={lang} t={t} />
             <main>
                 <Hero t={t.home.hero} />
-                <Walkthrough t={t.home.walkthrough} />
                 <Workforce t={t.home.workforce} agents={availableAgents(agents)} />
-                <HowItWorks t={t.home.howItWorks} />
-                <SalesWorkforce t={t.home.sales} />
-                <TeachAgents t={t.home.teach} />
-                <MarketingWorkforce t={t.home.marketing} />
+                <Walkthrough t={t.home.walkthrough} />
+
+                <SectionElevate>
+                    <section className="p-4">
+                        <SalesWorkforce t={t.home.sales} />
+                        <TeachAgents t={t.home.teach} agents={agents} />
+                        <MarketingWorkforce t={t.home.marketing} />
+                    </section>
+                </SectionElevate>
+
                 <Platform t={t.home.platform} />
-                <Collaboration t={t.home.collaboration} />
                 <Integrations t={t.home.integrations} />
                 <Pricing t={t.pricing} />
-                <WhyGrovio t={t.home.why} />
-                <Upcoming
-                    lang={lang}
-                    t={t.home.upcoming}
-                    soon={t.common.comingSoon}
-                    agents={agents.filter(agent => agent.status === "upcoming")}
-                />
-                <FinalCta t={t.home.finalCta} />
                 <Investors t={t.home.investors} />
+                <FinalCta t={t.home.finalCta} />
             </main>
             <Footer lang={lang} t={t} />
-        </>
+        </SmoothScroll>
     )
 }
 

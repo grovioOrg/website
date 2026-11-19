@@ -57,7 +57,7 @@ export const FinalCta = ({
 }: {
     t: IDictionary["home"]["finalCta"]
 }) => (
-    <section className="relative bg-white pt-24 pb-28 max-mobile:pb-20">
+    <section className="relative bg-paper pb-28 max-mobile:pb-20">
         <div className="max-w-7xl mx-auto px-6 max-mobile:px-4">
             <CursorField
                 cursors={cursors(t)}
@@ -67,8 +67,6 @@ export const FinalCta = ({
                     max-mobile:px-6 max-mobile:pt-16 max-mobile:pb-24 max-mobile:rounded-3xl
                 "
             >
-                <div aria-hidden className="absolute inset-0 dot-grid opacity-60" />
-
                 <div className="relative flex flex-col items-center gap-7">
                     <motion.h2
                         initial={{ opacity: 0, y: 24 }}

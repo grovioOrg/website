@@ -75,7 +75,7 @@ export const Footer = ({
 
                     {urls.map(({ name, url }) => (
                         <a
-                            key={url}
+                            key={name}
                             href={url}
                             className={linkClass}
                         >

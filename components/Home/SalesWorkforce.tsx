@@ -25,6 +25,7 @@ import { Glyph } from "@/components/Mockups"
 import type { IDictionary } from "@/dictionaries"
 
 import { SectionHeading } from "./SectionHeading"
+import { WORKFORCE_DEMO_MIN_H } from "./workforceDemo"
 // #endregion
 
 type IStageState = "idle" | "active" | "done"
@@ -305,7 +306,10 @@ const RunLog = ({
     })
 
     return (
-        <div className="rounded-3xl bg-charcoal-100 ring-1 ring-white/10 p-5 flex flex-col min-h-[420px]">
+        <div className={cn(
+            "rounded-3xl bg-charcoal-100 ring-1 ring-white/10 p-5 flex flex-col h-full",
+            WORKFORCE_DEMO_MIN_H,
+        )}>
             <div className="flex items-center justify-between">
                 <p className="text-sm font-semibold text-white">{t.runLog}</p>
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-[#7BE0B5]">
@@ -365,33 +369,33 @@ export const SalesWorkforce = ({
     return (
         <section
             id="sales"
-            className="relative bg-ink text-white py-32 max-mobile:py-20 overflow-hidden"
+            className="relative bg-ink text-white pt-32 pb-24 max-mobile:pt-20 max-mobile:pb-16 overflow-hidden rounded-t-3xl"
         >
-            <div aria-hidden className="absolute inset-0 dot-grid-dark opacity-60" />
+            <div aria-hidden className="absolute inset-0" />
 
             <div className="relative max-w-7xl mx-auto px-6 max-mobile:px-4">
                 <div className="flex items-end justify-between gap-10 max-tablet:flex-col max-tablet:items-start">
                     <SectionHeading
                         tone="dark"
                         title={t.title}
-                        description={t.description}
+                        points={t.points}
                     />
 
-                    <div className="flex flex-col items-end gap-3 shrink-0 max-tablet:items-start">
-                        <div className="flex -space-x-3">
-                            {(["sales", "researcher", "signal"] as IAgentId[]).map(id => (
-                                <AgentAvatar key={id} agent={id} size={52} className="ring-ink!" />
-                            ))}
-                        </div>
-                        <p className="text-xs text-white/55 max-w-48 tablet:text-right">{t.agentsNote}</p>
+                    <div className="flex -space-x-3 shrink-0">
+                        {(["sales", "researcher", "signal"] as IAgentId[]).map(id => (
+                            <AgentAvatar key={id} agent={id} size={52} className="ring-ink!" />
+                        ))}
                     </div>
                 </div>
 
                 <div
                     ref={ref}
-                    className="mt-16 grid grid-cols-[1fr_340px] gap-6 max-tablet:grid-cols-1"
+                    className="mt-16 grid grid-cols-[1fr_340px] items-stretch gap-6 max-tablet:grid-cols-1"
                 >
-                    <div className="relative rounded-3xl bg-white/[0.03] ring-1 ring-white/10 p-6 max-mobile:hidden">
+                    <div className={cn(
+                        "relative rounded-3xl bg-white/[0.03] ring-1 ring-white/10 p-6 max-mobile:hidden",
+                        WORKFORCE_DEMO_MIN_H,
+                    )}>
                         <ScaledFrame width={960} height={600}>
                             <Pipeline t={t.flow} you={common.you} stages={stages} stage={stage} tick={tick} running={running} />
                         </ScaledFrame>
@@ -409,7 +413,7 @@ export const SalesWorkforce = ({
                                     index > stage && "opacity-55"
                                 )}
                             >
-                                <span className="text-[11px] tabular-nums text-white/40 w-4">{index + 1}</span>
+                                <span className={cn("size-1.5 rounded-full shrink-0", index <= stage ? "bg-yellow-100" : "bg-white/25")} />
                                 <span className="text-sm font-semibold">{item.title}</span>
                                 {index < stage && (
                                     <span className="ml-auto grid place-items-center size-4 rounded-full bg-yellow-100 text-ink">

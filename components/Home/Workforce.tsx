@@ -24,6 +24,21 @@ import { SectionHeading } from "./SectionHeading"
 
 type IWorkforceCopy = IDictionary["home"]["workforce"]
 
+const WORKFORCE_CARD =
+    "rounded-2xl bg-white shadow-card border border-grey-50 p-9 max-mobile:p-6"
+
+const agentAccentBorder = (id: IAgentId) =>
+    ({
+        borderTopColor: agentAccent(id),
+        borderTopWidth: 3,
+    }) as const
+
+const agentAccent = (id: IAgentId) =>
+    id === "sales" ? "var(--color-yellow-200)" : `var(--color-agent-${id})`
+
+const agentAccentMuted = (id: IAgentId) =>
+    `color-mix(in srgb, ${agentAccent(id)} 58%, var(--color-grey-200))`
+
 const TaskTicket = ({ agent, t }: { agent: IAgent, t: IWorkforceCopy }) => {
     const [done, setDone] = useState(0)
 
@@ -38,7 +53,9 @@ const TaskTicket = ({ agent, t }: { agent: IAgent, t: IWorkforceCopy }) => {
     const complete = done >= agent.task.steps.length
 
     return (
-        <div className="h-full min-h-[340px] flex flex-col rounded-2xl bg-white ring-1 ring-ink/6 shadow-card p-5">
+        <div
+            className={cn("h-full min-h-[340px] flex flex-col", WORKFORCE_CARD)}
+        >
             <div className="flex items-center justify-between gap-3">
                 <p className="text-xs font-medium text-grey-200">{t.exampleTask}</p>
                 <Pill tone={complete ? "green" : "yellow"} dot>
@@ -56,12 +73,15 @@ const TaskTicket = ({ agent, t }: { agent: IAgent, t: IWorkforceCopy }) => {
 
                     return (
                         <li key={step} className="flex items-start gap-2.5 text-sm">
-                            <span className={cn(
-                                "grid place-items-center size-5 shrink-0 rounded-full mt-px smooth",
-                                checked
-                                    ? "bg-ink text-white"
-                                    : "ring-1 ring-grey-150 text-transparent"
-                            )}>
+                            <span
+                                className={cn(
+                                    "grid place-items-center size-5 shrink-0 rounded-full mt-px smooth",
+                                    checked
+                                        ? "text-ink"
+                                        : "ring-1 ring-grey-150 text-transparent"
+                                )}
+                                style={checked ? { background: agentAccent(agent.id) } : undefined}
+                            >
                                 <Check size={11} />
                             </span>
                             <span className={checked ? "text-ink" : "text-grey-200"}>
@@ -75,9 +95,9 @@ const TaskTicket = ({ agent, t }: { agent: IAgent, t: IWorkforceCopy }) => {
             <motion.div
                 initial={false}
                 animate={{ opacity: complete ? 1 : 0.35 }}
-                className="mt-auto pt-4 border-t border-grey-100 flex items-center justify-between text-sm"
+                className="mt-auto pt-4 flex items-center justify-between text-sm"
             >
-                <span className="text-grey-300">{t.result}</span>
+                <span className="text-charcoal-100">{t.result}</span>
                 <span className="font-semibold">{agent.task.result}</span>
             </motion.div>
         </div>
@@ -113,27 +133,23 @@ export const Workforce = ({
     return (
         <section
             id="workforce"
-            className="relative bg-paper py-32 max-mobile:py-20 overflow-hidden"
+            className="relative bg-white"
         >
-            <div className="max-w-7xl mx-auto px-6 max-mobile:px-4">
-                <div className="flex items-end justify-between gap-10 max-tablet:flex-col max-tablet:items-start">
-                    <SectionHeading
-                        title={t.title}
-                        description={t.description}
-                    />
-                    <p className="text-sm text-grey-300 max-w-56 tablet:text-right">
-                        {t.hint}
-                    </p>
-                </div>
+            <div className="mx-auto w-full max-w-7xl px-6 max-mobile:px-4">
+
+                <SectionHeading
+                    align="center"
+                    title={t.title}
+                />
 
                 <div
                     role="tablist"
                     aria-label={t.tablist}
                     className="
-                        relative mt-16 flex items-end justify-between gap-2
+                        relative mt-14 flex w-full items-end justify-between gap-2
                         max-tablet:overflow-x-auto max-tablet:snap-x
                         max-tablet:justify-start no-scrollbar
-                        max-tablet:-mx-6 max-tablet:px-6
+                        max-tablet:-mx-6 max-tablet:px-6 max-mobile:mt-10
                     "
                 >
                     {agents.map((item, index) => {
@@ -150,9 +166,9 @@ export const Workforce = ({
                                 onClick={() => setSelected(item.id)}
                                 className="
                                     group relative flex flex-col items-center gap-3
-                                    w-[140px] shrink-0 snap-center cursor-pointer outline-none
+                                    w-35 shrink-0 snap-center cursor-pointer outline-none
                                     rounded-2xl focus-visible:outline-2 focus-visible:outline-ink
-                                    max-mobile:w-[110px]
+                                    max-mobile:w-27.5
                                 "
                             >
                                 <motion.div
@@ -160,17 +176,17 @@ export const Workforce = ({
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.06, ease: [0.2, 0.7, 0.2, 1] }}
-                                    className="grid place-items-center size-[112px] max-mobile:size-[88px]"
+                                    className="grid place-items-center size-28 max-mobile:size-22"
                                 >
                                     <span
                                         className={cn(
                                             "rounded-full smooth duration-300",
                                             active
-                                                ? "opacity-100 ring-[3px] ring-offset-4 ring-offset-paper"
+                                                ? "opacity-100 ring-[3px] ring-offset-2 ring-offset-paper"
                                                 : "opacity-50 group-hover:opacity-100"
                                         )}
                                         style={{
-                                            "--tw-ring-color": `color-mix(in srgb, var(--color-agent-${item.id}) 78%, var(--color-ink))`,
+                                            "--tw-ring-color": agentAccent(item.id),
                                         } as React.CSSProperties}
                                     >
                                         <AgentAvatar
@@ -180,15 +196,20 @@ export const Workforce = ({
                                             live
                                             hover
                                             delay={index * 0.6}
-                                            className="max-mobile:size-[72px]!"
+                                            className="max-mobile:size-18!"
                                         />
                                     </span>
                                 </motion.div>
 
-                                <span className={cn(
-                                    "text-[13px] whitespace-nowrap smooth",
-                                    active ? "text-ink font-semibold" : "font-medium text-grey-200 group-hover:text-grey-300"
-                                )}>
+                                <span
+                                    className={cn(
+                                        "text-[13px] whitespace-nowrap smooth",
+                                        active ? "font-semibold" : "font-medium",
+                                    )}
+                                    style={{
+                                        color: active ? agentAccent(item.id) : agentAccentMuted(item.id),
+                                    }}
+                                >
                                     {item.name}
                                     <span className="block text-[11px] font-medium text-grey-200">{item.role}</span>
                                 </span>
@@ -201,11 +222,12 @@ export const Workforce = ({
                     id="agent-profile"
                     role="tabpanel"
                     aria-live="polite"
-                    className="mt-14 grid grid-cols-[1.15fr_1fr] gap-6 max-tablet:grid-cols-1"
+                    className="mt-12 grid w-full grid-cols-[1.15fr_1fr] gap-6 max-tablet:grid-cols-1 max-mobile:mt-8"
                 >
                     <div className="grid">
                         {agents.map(item => {
                             const shown = item.id === agent.id
+                            const [meetBefore = "", meetAfter = ""] = t.meet.split("{name}")
 
                             return (
                                 <motion.div
@@ -219,22 +241,23 @@ export const Workforce = ({
                                         : { duration: 0.12 }
                                     }
                                     className={cn(
-                                        "[grid-area:1/1] rounded-3xl bg-white ring-1 ring-ink/6 p-9",
-                                        "flex flex-col gap-6 max-mobile:p-6",
+                                        "[grid-area:1/1] flex flex-col gap-6",
+                                        WORKFORCE_CARD,
                                         !shown && "pointer-events-none"
                                     )}
                                 >
-                                    <div className="flex items-center gap-3 flex-wrap">
-                                        <AgentAvatar agent={item.id} size={40} ring={false} />
-                                        <Pill tone="ink">{common.teams[item.team]}</Pill>
-                                        <Pill>{common.monthlyContract}</Pill>
-                                    </div>
-
                                     <div>
                                         <p className="text-sm text-grey-300">
-                                            {formatText(t.meet, { name: item.name })}
+                                            {meetBefore}
+                                            <span
+                                                className="font-semibold"
+                                                style={{ color: agentAccent(item.id) }}
+                                            >
+                                                {item.name}
+                                            </span>
+                                            {meetAfter}
                                         </p>
-                                        <h3 className="font-display text-5xl font-semibold tracking-[-0.04em] mt-1 max-mobile:text-4xl">
+                                        <h3 className="font-display text-5xl font-semibold tracking-[-0.04em] mt-1 text-ink max-mobile:text-4xl">
                                             {item.role}
                                         </h3>
                                         <p className="font-display text-xl mt-3 text-grey-300">
@@ -246,11 +269,8 @@ export const Workforce = ({
                                         {item.description}
                                     </p>
 
-                                    <div className="mt-auto flex items-center justify-between gap-4 pt-4 border-t border-grey-100 max-mobile:flex-col max-mobile:items-start">
-                                        <p className="text-sm">
-                                            <span className="text-grey-200">{t.knownFor} </span>
-                                            {item.quirk}
-                                        </p>
+                                    <div className="mt-auto flex items-center justify-between gap-4 pt-4 max-mobile:flex-col max-mobile:items-start">
+
                                         <div className="flex items-center gap-2">
                                             <a
                                                 href={agentLink(lang, item.page)}
@@ -258,7 +278,7 @@ export const Workforce = ({
                                             >
                                                 {t.profile}
                                             </a>
-                                            <BetaButton size="sm" variant="secondary" interest={item.team === "marketing" ? "marketing" : "sales"}>
+                                            <BetaButton size="sm" variant="primary" interest={item.team === "marketing" ? "marketing" : "sales"}>
                                                 {formatText(t.hire, { name: item.name })}
                                             </BetaButton>
                                         </div>

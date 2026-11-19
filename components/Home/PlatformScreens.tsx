@@ -3,7 +3,7 @@
 // #region imports
 import { ReactNode } from "react"
 
-import { Check, Plus } from "@/icons"
+import { Plus } from "@/icons"
 import { IAgentId } from "@/lib/types"
 import { cn } from "@/utils"
 import { formatText, type IDictionary } from "@/dictionaries"
@@ -18,6 +18,8 @@ import {
     Pill
 } from "@/components/Mockups"
 // #endregion
+
+export type IPlatformScreen = Exclude<IAppScreen, "account">
 
 type IScreenProps = {
     t: IDictionary["home"]["platform"]["mockup"]
@@ -275,64 +277,11 @@ const Playground = ({ t, app }: IScreenProps) => (
     </>
 )
 
-const Account = ({ t, app }: IScreenProps) => (
-    <>
-        <ScreenHeader title={app.nav.account} subtitle={t.account.subtitle} action={<Pill tone="yellow">{t.account.beta}</Pill>} />
-        <div className="grid grid-cols-[1.4fr_1fr] gap-5 p-6">
-            <div className="rounded-2xl ring-1 ring-grey-100">
-                <p className="px-4 py-3 text-[12px] font-semibold">{t.account.contracts}</p>
-                {([
-                    ["sales", "Sunny · Sales Agent", true],
-                    ["researcher", "Bolt · Sales Agent", true],
-                    ["signal", "Echo · Sales Agent", true],
-                    ["seo", "SEO Agent", true],
-                    ["writer", "Writer Agent", false],
-                    ["video", "Video Agent", false],
-                ] as [IAgentId, string, boolean][]).map(([id, name, on]) => (
-                    <div key={id} className="flex items-center gap-3 px-4 py-2.5 border-t border-grey-100 text-[13px]">
-                        <AgentAvatar agent={id} size={22} ring={false} />
-                        {name}
-                        <span className="ml-auto text-[11px] text-grey-200">{on ? t.account.active : t.account.paused}</span>
-                        <span className={cn("relative w-8 h-[18px] rounded-full", on ? "bg-ink" : "bg-grey-150")}>
-                            <span className={cn("absolute top-0.5 size-3.5 rounded-full bg-white", on ? "left-4" : "left-0.5")} />
-                        </span>
-                    </div>
-                ))}
-            </div>
-            <div className="flex flex-col gap-4">
-                <div className="rounded-2xl bg-paper p-4">
-                    <p className="text-[12px] font-semibold">{t.account.team}</p>
-                    <div className="mt-3 flex flex-col gap-2 text-[13px]">
-                        {t.account.people.map(person => (
-                            <span key={person} className="flex items-center gap-2">
-                                <span className="size-6 rounded-full bg-grey-100 grid place-items-center text-[10px] font-semibold">
-                                    {person[0]}
-                                </span>
-                                {person}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-                <div className="rounded-2xl bg-paper p-4 text-[13px] flex flex-col gap-2">
-                    <p className="text-[12px] font-semibold">{t.account.approvals}</p>
-                    {t.account.rules.map(rule => (
-                        <span key={rule} className="flex items-center gap-2">
-                            <span className="grid place-items-center size-4 rounded-full bg-success text-white"><Check size={9} /></span>
-                            {rule}
-                        </span>
-                    ))}
-                </div>
-            </div>
-        </div>
-    </>
-)
-
-export const PLATFORM_SCREENS: Record<IAppScreen, (props: IScreenProps) => ReactNode> = {
+export const PLATFORM_SCREENS: Record<IPlatformScreen, (props: IScreenProps) => ReactNode> = {
     playbooks: Playbooks,
     campaigns: Campaigns,
     epic: Epic,
     seo: Seo,
     marketing: Marketing,
     playground: Playground,
-    account: Account,
 }
