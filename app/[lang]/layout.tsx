@@ -49,9 +49,12 @@ export const generateMetadata = async ({
         description: t.home.meta.description,
         alternates: alternates(lang, ""),
         icons: {
-            icon: "/favicon.ico",
-            shortcut: "/logo128.png",
-            apple: "/logo512.png",
+            icon: [
+                { url: "/logo.svg", type: "image/svg+xml" },
+                { url: "/logo128.png", sizes: "128x128", type: "image/png" },
+                { url: "/favicon.ico", sizes: "32x32" },
+            ],
+            apple: [{ url: "/logo512.png", sizes: "180x180", type: "image/png" }],
         },
     }
 }
@@ -86,12 +89,16 @@ const RootLayout = async ({
     return (
         <html
             lang={HTML_LANG[lang]}
-            className={`${inter.variable} ${bricolage.variable}`}
+            translate="no"
+            className={`notranslate ${inter.variable} ${bricolage.variable}`}
         >
-            <body className="
-                antialiased min-h-screen overflow-x-clip
-                font-main text-ink bg-white
-            ">
+            <body
+                key={lang}
+                className="
+                    antialiased min-h-screen overflow-x-clip
+                    font-main text-ink bg-white
+                "
+            >
                 <MotionProvider>
                     <PortalProvider>
                         <DictionaryProvider value={{ lang, common: t.common, beta: t.beta }}>

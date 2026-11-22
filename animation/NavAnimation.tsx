@@ -45,7 +45,7 @@ export const NavAnimation = ({
             }}
             data-scrolled={showBg}
             className={`
-                group/nav fixed top-0 inset-x-0 z-50 pt-6
+                group/nav fixed top-0 left-0 right-[var(--scroll-lock-pad,0px)] z-50 pt-6
                 flex justify-center items-center ${className}
             `}
         >

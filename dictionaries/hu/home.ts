@@ -1,6 +1,6 @@
 export const home = {
     "meta": {
-        "title": "Grovio: AI-szerződők értékesítésre és marketingre",
+        "title": "Grovio",
         "description": "Add meg a weboldalad, és a Grovio felépíti az ICP-kampányodat, kiválasztja a legjobb leadeket, és munkára fogja az AI értékesítési és marketing szerződőket. Te hagyod jóvá, mi megy ki. Az EU-nak készült és GDPR-megfelelő."
     },
     "hero": {

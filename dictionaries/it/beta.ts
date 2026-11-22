@@ -7,7 +7,7 @@ export const beta = {
     "fields": {
         "name": "Nome",
         "namePlaceholder": "Ada Lovelace",
-        "email": "Email aziendale",
+        "email": "Email",
         "emailPlaceholder": "ada@company.com",
         "company": "Azienda",
         "companyPlaceholder": "Acme Inc.",
@@ -19,7 +19,7 @@ export const beta = {
     "interests": {
         "sales": {
             "name": "Team vendite",
-            "hint": "Lead, ricerca, outreach"
+            "hint": "Lead, ricerca, contatti"
         },
         "marketing": {
             "name": "Team marketing",
@@ -42,16 +42,15 @@ export const beta = {
     "close": "Chiudi",
     "success": {
         "title": "Sei in lista.",
-        "body": "Grazie per la candidatura. La valuteremo e ti scriveremo alla tua email aziendale non appena si libereranno posti nella beta.",
+        "body": "Grazie per la candidatura. La valuteremo e ti scriveremo alla tua email non appena si libereranno posti nella beta.",
         "duplicateTitle": "Sei già in lista.",
-        "duplicateBody": "Abbiamo già ricevuto la tua candidatura. Ti scriveremo alla tua email aziendale non appena si libereranno posti nella beta.",
+        "duplicateBody": "Abbiamo già ricevuto la tua candidatura. Ti scriveremo alla tua email non appena si libereranno posti nella beta.",
         "done": "Torna al sito"
     },
     "errors": {
         "name": "Inserisci il tuo nome",
-        "emailRequired": "L'email aziendale è obbligatoria",
+        "emailRequired": "L'email è obbligatoria",
         "emailFormat": "Inserisci un indirizzo email valido",
-        "workEmail": "Usa la tua email aziendale",
         "company": "Il nome dell'azienda è obbligatorio",
         "websiteRequired": "Il sito web è obbligatorio",
         "websiteFormat": "Inserisci un sito web valido, ad esempio acme.com",

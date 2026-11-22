@@ -1,6 +1,6 @@
 export const home = {
     "meta": {
-        "title": "Grovio : recrutez des prestataires IA pour la vente et le marketing",
+        "title": "Grovio",
         "description": "Indiquez votre site web : Grovio crée votre campagne ICP, sélectionne les meilleurs leads et met au travail des prestataires IA pour votre vente et votre marketing. Vous validez ce qui part. Conçu pour l'UE et conforme au RGPD."
     },
     "hero": {

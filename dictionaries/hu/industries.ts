@@ -1,45 +1,45 @@
 export const industries = {
     "page": {
-        "icp": "Minta ICP-kampány",
-        "dm": "Minta DM",
-        "dmNote": "A DM-beállításaid alapján írva. Küldés előtt te hagyod jóvá.",
+        "icp": "Kinek adunk el",
+        "dm": "Példa smart hook",
+        "dmNote": "Nyilvános vásárlási jelből írva. Te hagyod jóvá, mielőtt kimenne.",
         "faq": "Kérdések",
         "others": "További iparágak",
         "ctaTitle": "Grovio – {industry}",
-        "ctaBody": "Másold be a weboldalad, és megmutatjuk, milyen ICP-kampányt építenénk.",
+        "ctaBody": "Illeszd be a weboldalad, és megmutatjuk, mely vásárlási jelekre lépnénk.",
         "segment": "Szegmens",
         "fit": "Illeszkedés",
         "useCases": "Mit csinálnak az ügynökeid",
-        "useCasesBody": "Három feladat, amelyet a Grovio ügynökei lépésről lépésre átvállalnak. Hogy mi megy ki, azt te hagyod jóvá.",
+        "useCasesBody": "Az értékesítés nyilvános vásárlási jelekből indul. A marketing láthatóvá tesz. Te hagyod jóvá, ami kimegy.",
         "toolsTitle": "Együttműködik a már használt eszközeiddel"
     },
     "list": {
         "hotels": {
             "name": "Szállodák",
-            "short": "Közvetlen foglalások és csoportok",
+            "short": "Rendezvényszervezők, sportegyesületek, utazásszervezők",
             "metaTitle": "AI értékesítés és marketing szállodáknak",
-            "metaDescription": "A Grovio AI-ügynökei céges és csoportos foglalásokat szereznek, teli tartják a tartalomnaptáradat és válaszolnak a vendégeknek, így a szállodád kevésbé függ a foglalási portáloktól.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál hoteleknek — elfogyott kongresszusi kontingens, helyszín nélküli edzőtábor, partnerhotel nélküli katalógus — és megírja a megkeresést. Minden DM-et te hagysz jóvá.",
             "title": "Több közvetlen foglalás. Kevesebb portáljutalék.",
-            "pitch": "A Grovio ügynökei elérik azokat a cégeket, rendezvényszervezőket és utazási menedzsereket, akik nagy tételben foglalnak szobát, és jól rangsorolt tartalommal tartják láthatóan a szállodádat.",
+            "pitch": "A Grovio nyilvános üzleti adatokban keres vásárlási jeleket: kongresszus, ahol a hivatalos hotelszoba-kontingens elfogyott, sportegyesület edzőtáborral helyszín nélkül, buszos túra a régiódon át partnerhotel nélkül. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "A foglalási portálok minden szobából levágnak egy részt",
-                "A céges és csoportos értékesítés egyetlen túlterhelt emberen múlik",
-                "Holtszezonban elcsendesedik a weboldalad és a közösségi médiád"
+                "A közeli elfogyott kongresszusi kontingensek nem jutnak el az értékesítéshez",
+                "A sportegyesületek tábort hirdetnek hotel megnevezése nélkül",
+                "Az utazásszervezők partnerhotel nélkül haladnak át a régión",
             ],
             "agents": [
-                "Személyes DM-ekkel éri el az utazási menedzsereket és rendezvényszervezőket",
+                "Nyilvános jelekből talál rendezvényszervezőket, sportegyesületeket és utazásszervezőket, majd személyes DM-et ír",
                 "Szezonális ajánlókat és posztokat ír, amelyek vendégeket hoznak az oldaladra",
-                "Válaszol a vendégeknek és szobát foglal az eszközeiden keresztül"
+                "Válaszol a vendégeknek és szobát foglal az eszközeiden keresztül",
             ],
             "useCases": [
                 {
-                    "title": "Csoportos és céges foglalások",
+                    "title": "Lépj a csoportos foglalási jelekre",
                     "points": [
-                        "Megtalálja a környékbeli rendezvényügynökségeket, szervezőket és utazási menedzsereket",
-                        "Utánajár a közelgő offsite-oknak, konferenciáknak és esküvőknek",
-                        "Mindegyiknek személyes DM-et ír"
+                        "Figyeli a kongresszusi naptárakat, egyesületi oldalakat és túrakatalógusokat",
+                        "Jelzi az elfogyott hotelszoba-kontingenseket, helyszín nélküli táborokat és partner nélküli útvonalakat",
+                        "Minden jelből smart hookot ír"
                     ],
-                    "output": "5 csoportfoglalási DM kész"
+                    "output": "5 csoportos foglalási DM kész"
                 },
                 {
                     "title": "Hozd vissza a vendégeket az oldaladra",
@@ -61,28 +61,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Rendezvényügynökségek 200 km-en belül",
-                    "fit": 91
-                },
-                {
-                    "name": "Céges utazási menedzserek",
-                    "fit": 85
-                },
-                {
-                    "name": "Esküvőszervezők",
-                    "fit": 78
-                }
+                {"name": "Rendezvényszervezők elfogyott hotelszoba-kontingenssel", "fit": 91},
+                {"name": "Edzőtábort tervező sportegyesületek", "fit": 85},
+                {"name": "A régión áthaladó buszos utazásszervezők", "fit": 78},
             ],
-            "dm": "Kedves Marco! Láttam, hogy a csapata a tavaszi offsite-szezont tervezi. Mi 20–80 fős csoportokat fogadunk tárgyalótermekkel és tóra néző kilátással, 40 percre Bécstől. Megnézné a csoportos árainkat?",
+            "dm": "A tavaszi kongresszus hotelszoba-kontingense elfogyott. 40 szobánk van 20 percre a helyszíntől — tartsam őket a résztvevőiteknek?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek a szállodák a közvetlen és csoportos foglalásoknál?",
-                    "a": "A foglalási portálok minden szobából levágnak egy részt. A céges és csoportos értékesítés egyetlen túlterhelt emberen múlik. Holtszezonban elcsendesedik a weboldalad és a közösségi médiád."
+                    "q": "Milyen vásárlási jeleket talál a Grovio hoteleknek?",
+                    "a": "Közeli kongresszusok és vásárok elfogyott hivatalos hotelszoba-kontingense. Sportegyesületek, amelyek helyszín nélkül hirdetnek edzőtábort. Túrakatalógusok, amelyek partnerhotel nélkül haladnak át a régiódon."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Tud a Grovio a vendégekkel kommunikálni?",
@@ -96,30 +87,30 @@ export const industries = {
         },
         "restaurants": {
             "name": "Éttermek",
-            "short": "Különtermek, rendezvények, törzsvendégek",
+            "short": "Cégek, produkciók, konferenciaszervezők",
             "metaTitle": "AI értékesítés és marketing éttermeknek",
-            "metaDescription": "A Grovio AI-ügynökei megtöltik a különtermet és a rendezvényeket, frissen tartják a közösségi médiádat, és hamarosan a vendégeknek is válaszolnak és foglalásokat vesznek fel.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál éttermeknek — bezárt karácsonyi helyszín, forgatási engedély az utcádon, catering nélküli konferencia — és megírja a megkeresést.",
             "title": "Teli asztalok keddenként is.",
-            "pitch": "A Grovio ügynökei elérik azokat az irodákat és szervezőket, akik különtermet foglalnak, és a helyiek szeme előtt tartják a menüdet, a rendezvényeidet és a történetedet.",
+            "pitch": "A Grovio nyilvános adatokban keres vásárlási jeleket: cég, amelynek bezárt a karácsonyi helyszíne, forgatási engedély a kerületben, szomszédos konferencia házon belüli catering nélkül. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "Hétköznap esténként üresek az asztalok és a különtermek",
-                "Senkinek nincs ideje minden héten posztolni",
-                "A rendezvényes megkeresések öt különböző postafiókba érkeznek"
+                "A cég tavalyi helyszíne bezárt, és senki nem szól",
+                "A produkciók az utcádon forognak, és máshol esznek",
+                "A közeli konferenciáknak nincs házon belüli cateringjük",
             ],
             "agents": [
-                "Eléri a közeli irodavezetőket és rendezvényszervezőket",
+                "Nyilvános jelekből talál cégeket, produkciókat és konferenciaszervezőket, majd személyes meghívót ír",
                 "A te hangodon ír posztokat az új menükről és rendezvényekről",
-                "Válaszol a vendégeknek és asztalt foglal az eszközeiden keresztül"
+                "Válaszol a vendégeknek és asztalt foglal az eszközeiden keresztül",
             ],
             "useCases": [
                 {
-                    "title": "Teli különterem és rendezvények",
+                    "title": "Töltsd a privát termet nyilvános jelekből",
                     "points": [
-                        "Megtalálja a közeli irodákat és rendezvényszervezőket",
-                        "Kiszúrja a csapatrendezvényeket, bemutatókat és ünnepségeket",
-                        "Mindegyiknek személyes meghívó DM-et ír"
+                        "Figyeli a bezárásokat, forgatási hirdetményeket és konferenciaprogramokat",
+                        "Jelzi a bezárt partyhelyszíneket, a helyszíni stábokat és a catering nélküli eseményeket",
+                        "Minden jelből smart hookot ír"
                     ],
-                    "output": "5 rendezvényes DM kész"
+                    "output": "5 esemény-DM kész"
                 },
                 {
                     "title": "Maradj a helyiek szeme előtt",
@@ -141,28 +132,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Irodák 3 km-en belül",
-                    "fit": 90
-                },
-                {
-                    "name": "Rendezvény- és partiszervezők",
-                    "fit": 82
-                },
-                {
-                    "name": "Helyi üzleti klubok",
-                    "fit": 74
-                }
+                {"name": "Cégek, amelyek partyhelyszíne épp bezárt", "fit": 90},
+                {"name": "A kerületben forgató produkciók", "fit": 82},
+                {"name": "Konferenciaszervezők házon belüli catering nélkül", "fit": 74},
             ],
-            "dm": "Kedves Julia! Láttam, hogy a csapata nemrég beköltözött a Mariahilfer Straße-i irodába – üdvözöljük a környéken! Különtermünkben 24 fő fér el csapatebédekhez és -vacsorákhoz. Elküldjem a menüajánlatainkat?",
+            "dm": "A csapatotok karácsonyi partyhelyszíne idén bezárt. 60 főt ülünk privátban, és van még decemberi időpontunk. Elküldjem a menüt?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek az éttermek a hétközi és rendezvényes forgalomnál?",
-                    "a": "Hétköznap esténként üresek az asztalok és a különtermek. Senkinek nincs ideje minden héten posztolni. A rendezvényes megkeresések öt különböző postafiókba érkeznek."
+                    "q": "Milyen vásárlási jeleket talál a Grovio éttermeknek?",
+                    "a": "Egy cég korábbi karácsonyi helyszíne, bezártként jelölve. Forgatási engedélyek a kerületben. Közeli helyszínen tartott konferenciák házon belüli catering nélkül."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Felveszitek helyettünk a foglalásokat?",
@@ -172,30 +154,30 @@ export const industries = {
         },
         "ecommerce": {
             "name": "E-kereskedelem",
-            "short": "Nagykereskedők, alkotók és tartalom",
+            "short": "Viszonteladók, akiknek épp kiürült a polcuk",
             "metaTitle": "AI értékesítés és marketing e-kereskedelmi márkáknak",
-            "metaDescription": "A Grovio AI-ügynökei nagykereskedelmi partnereket és alkotókat találnak, és folyamatosan viszik a termékes tartalmaidat és az SEO-t.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál e-commerce márkáknak — nagykereskedést leállító versenytárs, hetek óta készlethiányos kiskereskedő, első kollekciót vásárló concept store — és megírja a megkeresést.",
             "title": "Növekedj a fizetett hirdetéseken túl.",
-            "pitch": "A Grovio ügynökei megtalálják azokat a boltokat, nagykereskedőket és alkotókat, akiknek a termékeidet kellene forgalmazniuk, és olyan keresési forgalmat építenek, amely nem áll le, amikor a hirdetési költés igen.",
+            "pitch": "A Grovio nyilvános adatokban keres viszonteladói jeleket: versenytárs, amely leállította a nagykereskedést, kiskereskedő, amely három hete készlethiányos a kategóriádban, nyitó concept store az első kollekciójával. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "A hirdetési költségek minden negyedévben nőnek",
-                "A nagykereskedelmi és partneri megkeresésekre sosem jut idő",
-                "A termékoldalak nem rangsorolnak"
+                "A versenytárs leállítja a nagykereskedést, és a viszonteladóinak üres a polca",
+                "A kiskereskedők hetekig készlethiányosak a kategóriádban",
+                "Az új concept store-ok nélküled veszik meg az első kollekciót",
             ],
             "agents": [
-                "Megtalálja és eléri a viszonteladókat, nagykereskedőket és alkotókat",
+                "Nyilvános jelekből talál viszonteladókat — üres polc, nyitás, nagykereskedést elhagyó márka — majd pitch-et ír",
                 "Megtalálja a kulcsszavakat, amelyeken a termékoldalaidnak nyerniük kellene",
-                "Útmutatókat, termékhistóriákat és rövid videókat készít"
+                "Útmutatókat, termékhistóriákat és rövid videókat készít",
             ],
             "useCases": [
                 {
-                    "title": "Viszonteladók és alkotók megszerzése",
+                    "title": "Szerezz viszonteladókat üres polcból",
                     "points": [
-                        "Megtalálja a márkádhoz illő boltokat, nagykereskedőket és alkotókat",
-                        "Utánajár, mit árulnak és kiket érnek el",
-                        "Mindegyiknek személyre szabott ajánlatot ír"
+                        "Figyeli a márkahirdetéseket, viszonteladói oldalakat és a bolti készletet",
+                        "Jelzi a nagykereskedést elhagyó márkákat, a 3+ hetes készlethiányt és az első kollekciót vásárló boltokat",
+                        "Minden jelből smart hookot ír"
                     ],
-                    "output": "5 partneri DM kész"
+                    "output": "5 partner-DM kész"
                 },
                 {
                     "title": "Nyerd meg a keresést, ami elad",
@@ -217,28 +199,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Független concept store-ok",
-                    "fit": 89
-                },
-                {
-                    "name": "Niche alkotók, 10–100 ezer követő",
-                    "fit": 83
-                },
-                {
-                    "name": "Regionális nagykereskedők",
-                    "fit": 76
-                }
+                {"name": "Viszonteladók, akiknek a márkája leállította a nagykereskedést", "fit": 89},
+                {"name": "Kiskereskedők készlethiánnyal a kategóriádban", "fit": 83},
+                {"name": "Első kollekciót vásárló concept store-ok", "fit": 76},
             ],
-            "dm": "Kedves Sophie! Az üzlete fenntartható lakberendezési kínálata telitalálat. Lenkollekciónk hasonló müncheni boltokban 6 hét alatt elfogy. Küldhetek egy mintadobozt?",
+            "dm": "Az a márka leállította a nagykereskedést — a boltotok még hat terméküket listázza. A mieink ugyanabban az ársávban vannak. Küldjek mintadobozt, mielőtt üres marad a polc?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek az e-kereskedők a dráguló hirdetéseknél?",
-                    "a": "A hirdetési költségek minden negyedévben nőnek. A nagykereskedelmi és partneri megkeresésekre sosem jut idő. A termékoldalak nem rangsorolnak."
+                    "q": "Milyen vásárlási jeleket talál a Grovio e-commerce márkáknak?",
+                    "a": "Versenytárs márka, amely leállítja a nagykereskedést, és üres polcot hagy a viszonteladóknak. Kiskereskedő, amely három hétig vagy tovább készlethiányos a kategóriádban. Concept store, amely nyitást hirdet, és megveszi az első kollekcióját."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Kis termékkínálatnál is működik?",
@@ -248,28 +221,28 @@ export const industries = {
         },
         "retail": {
             "name": "Kiskereskedelem",
-            "short": "B2B ügyfelek, partnerségek, helyi elérés",
+            "short": "Klubok, események, új vállalkozások",
             "metaTitle": "AI értékesítés és marketing kiskereskedőknek",
-            "metaDescription": "A Grovio AI-ügynökei B2B ügyfeleket és helyi partnerségeket szereznek a kiskereskedőknek, és a kampányok között is dolgoztatják a tartalmaidat.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál kiskereskedőknek — feljutó klub, résztvevői csomagot áruló verseny, nyitó hotel vagy étterem berendezéssel — és megírja a megkeresést.",
             "title": "Szerezd meg azokat az ügyfeleket, akiket az üzlet nem ér el.",
-            "pitch": "A Grovio ügynökei elérik azokat a cégeket, iskolákat és irodákat, amelyek nagy tételben vásárolnak, és a szezonok között is láthatóan tartják az üzletedet online.",
+            "pitch": "A Grovio nyilvános adatokban keres mennyiségi jeleket: klub, amely feljutott, helyi verseny vagy fesztivál résztvevői csomagokkal, közeli hotel- vagy étteremnyitás berendezési igénnyel. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "A céges és nagy tételes rendelések a véletlenen múlnak",
-                "A helyi partnerségekre senkinek sincs ideje",
-                "A szezonális kampányok túl későn indulnak"
+                "A klubok feljutnak, és attól rendelnek mezt, aki először hív",
+                "A versenyek és fesztiválok nélküled árulják a résztvevői csomagot",
+                "Az új hotelek és éttermek helyi beszállító nélkül rendezik be magukat",
             ],
             "agents": [
-                "Eléri a beszerzőket és irodavezetőket nagy tételes rendelésekhez",
+                "Nyilvános jelekből talál klubokat, eseményeket és új vállalkozásokat, majd személyes DM-et ír",
                 "Előre megtervezi a szezonális tartalmakat",
-                "Vizuálokat készít minden kampányhoz"
+                "Vizuálokat készít minden kampányhoz",
             ],
             "useCases": [
                 {
-                    "title": "B2B és nagy tételes ügyfelek",
+                    "title": "Nyiss B2B rendeléseket nyilvános jelekből",
                     "points": [
-                        "Megtalálja a közeli irodákat és beszerzési csapatokat",
-                        "Utánajár az ajándékozási szezonoknak és a nagy tételes igényeknek",
-                        "Mindegyiknek személyes DM-et ír"
+                        "Figyeli a tabellákat, esemény-regisztrációkat és nyitási hirdetményeket",
+                        "Jelzi a feljutást, a résztvevői csomagokat és a közeli berendezéseket",
+                        "Minden jelből smart hookot ír"
                     ],
                     "output": "5 B2B DM kész"
                 },
@@ -293,28 +266,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Ajándékot és kellékeket rendelő irodák",
-                    "fit": 87
-                },
-                {
-                    "name": "Iskolák és egyesületek",
-                    "fit": 80
-                },
-                {
-                    "name": "Helyi rendezvényszervezők",
-                    "fit": 72
-                }
+                {"name": "Magasabb ligába feljutó klubok", "fit": 87},
+                {"name": "Helyi versenyek és fesztiválok", "fit": 80},
+                {"name": "Közelben nyitó hotelek és éttermek", "fit": 72},
             ],
-            "dm": "Kedves Thomas! Közeleg az év végi ajándékozás, és sok grazi csapat rajtunk keresztül rendel 20+ főre. A csomagolást és a kiszállítást is intézzük. Elküldjem a céges katalógusunkat?",
+            "dm": "Gratulálok a feljutáshoz. Az új liga általában új mezt jelent — 3 hét alatt szállítunk. Küldjek látványtervet a címereitekkel?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek a kiskereskedők a B2B és helyi ügyfeleknél?",
-                    "a": "A céges és nagy tételes rendelések a véletlenen múlnak. A helyi partnerségekre senkinek sincs ideje. A szezonális kampányok túl későn indulnak."
+                    "q": "Milyen vásárlási jeleket talál a Grovio kiskereskedőknek?",
+                    "a": "Klub, amely feljutott, és új mezre van szüksége. Helyi verseny vagy fesztivál, amely bejegyezte a dátumát, és résztvevői csomagot árul. Közelben nyitó hotel vagy étterem berendezési igénnyel."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Futtathatok helyi és online kampányokat is?",
@@ -324,28 +288,28 @@ export const industries = {
         },
         "real-estate": {
             "name": "Ingatlanközvetítők",
-            "short": "Eladók, bérbeadók és befektetők",
+            "short": "Tulajdonosok és fejlesztők beragadt hirdetésekkel",
             "metaTitle": "AI értékesítés és marketing ingatlanközvetítőknek",
-            "metaDescription": "A Grovio AI-ügynökei eladó és bérbeadó leadeket találnak, utánkövetik a megkereséseket, és láthatóan tartják a hirdetéseidet és piaci elemzéseidet.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál ingatlanosoknak — 45+ napos hirdetés árcsökkentéssel, átadott de még elérhető lakások, újra kirakott albérletek — és megírja a megkeresést.",
             "title": "Több megbízás, több hideghívás nélkül.",
-            "pitch": "A Grovio ügynökei megtalálják a környékbeli tulajdonosokat, bérbeadókat és befektetőket, minden megkeresést utánkövetnek, és közzéteszik azokat a piaci elemzéseket, amelyektől te leszel a helyi név.",
+            "pitch": "A Grovio a hirdetési portálokon keres beragadt jeleket: magánhirdetés 45+ napja, két árcsökkentéssel, fejlesztői lakások hat hónappal az átadás után is elérhetők, ugyanaz a kiadó lakás pár hetente újra kikerül. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "A megbízás a szűk keresztmetszet, nem a vevő",
-                "A megkeresések kihűlnek, amíg ingatlant mutatsz",
-                "A piaci elemzés mindig jövő hétre csúszik"
+                "A hirdetések hetekig fent vannak árcsökkentéssel, és a tulajdonos váltana",
+                "Az átadott projektek még mindig elérhető lakásokat mutatnak",
+                "Ugyanaz a kiadó lakás pár hetente újra kikerül",
             ],
             "agents": [
-                "Személyes DM-ekkel éri el a bérbeadókat és befektetőket",
+                "Beragadt hirdetésekből és üres lakásokból talál tulajdonosokat és fejlesztőket, majd személyes DM-et ír",
                 "A te hangodon írja a helyi piaci elemzéseket",
-                "Hirdetési vizuálokat és rövid ingatlanvideókat készít"
+                "Hirdetési vizuálokat és rövid ingatlanvideókat készít",
             ],
             "useCases": [
                 {
-                    "title": "Eladók, bérbeadók és befektetők elérése",
+                    "title": "Érd el a tulajdonost, ha beragad a hirdetés",
                     "points": [
-                        "Megtalálja a környékbeli tulajdonosokat és befektetőket",
-                        "Utánajár a portfólióiknak és a friss aktivitásuknak",
-                        "Mindegyiknek személyes DM-et ír"
+                        "Figyeli a portálokat kor, árcsökkentés és újrakirakás szerint",
+                        "Jelzi a 45 napos hirdetéseket, az átadás utáni invenditeket és az ismételt kiadókat",
+                        "Minden jelből smart hookot ír"
                     ],
                     "output": "5 tulajdonosi DM kész"
                 },
@@ -369,28 +333,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Magánbérbeadók, 3+ lakás",
-                    "fit": 88
-                },
-                {
-                    "name": "Kisebb ingatlanbefektetők",
-                    "fit": 81
-                },
-                {
-                    "name": "Kisebb projektek fejlesztői",
-                    "fit": 73
-                }
+                {"name": "Tulajdonosok 45+ napos hirdetéssel", "fit": 88},
+                {"name": "Fejlesztők eladatlan, átadott lakásokkal", "fit": 81},
+                {"name": "Bérbeadók, akik újra kirakják ugyanazt a lakást", "fit": 73},
             ],
-            "dm": "Kedves Andreas! A leopoldstadti kétszobás lakások bérleti díja idén 6%-kal nőtt. Ha az ingatlanai eladásán vagy újbóli kiadásán gondolkodik, szívesen megmutatom, mennyit értek el hasonló lakások. Érdekli?",
+            "dm": "A lakásotok két hónapja fent van, két árcsökkentéssel. Idén négy hasonló lakást adtunk el a közelben. Elküldjem az összehasonlító árakat?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek az ingatlanosok, ha az ingatlanok szűken vannak?",
-                    "a": "A megbízás a szűk keresztmetszet, nem a vevő. A megkeresések kihűlnek, amíg ingatlant mutatsz. A piaci elemzés mindig jövő hétre csúszik."
+                    "q": "Milyen vásárlási jeleket talál a Grovio ingatlanosoknak?",
+                    "a": "Magánhirdetések 45 napja vagy tovább, két vagy több árcsökkentéssel. Fejlesztői lakások, amelyek hat hónappal az átadás után is elérhetők. Ugyanaz a kiadó lakás, amelyet pár hetente újra kiraknak."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Szabad megkeresni a tulajdonosokat?",
@@ -400,28 +355,28 @@ export const industries = {
         },
         "property-management": {
             "name": "Ingatlankezelés",
-            "short": "Új épületek és tulajdonosok",
+            "short": "Társasházak és fejlesztők átadáskor",
             "metaTitle": "AI értékesítés és marketing ingatlankezelőknek",
-            "metaDescription": "A Grovio AI-ügynökei megtalálják azokat a tulajdonosokat és társasházakat, amelyek jobb kezelőt keresnek, és láthatóan tartják a cégedet.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál ingatlankezelőknek — lassú javításos értékelések, átadás előtt álló új épület kezelő nélkül, újra kirakott kiadók — és megírja a megkeresést.",
             "title": "Nyerd meg a következő épületet a versenytársad előtt.",
-            "pitch": "A Grovio ügynökei megtalálják azokat a tulajdonosokat és társasházakat, amelyeknek jobb kezelő kell, és hasznos tartalommal tartják a cégedet a figyelem középpontjában.",
+            "pitch": "A Grovio nyilvános adatokban keres váltási szándékot: értékelések, hogy a kezelő nem válaszol, új épület átadás előtt megnevezett kezelő nélkül, ugyanaz a cím újra kirakott kiadókkal. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "Új megbízás csak ajánlásból jön",
-                "A tulajdonosok nem tudják, miben vagy jobb",
-                "A marketing csak utólagos gondolat"
+                "A bérlők lassú javításokat értékelnek, és a tulajdonosok új kezelőt keresnek",
+                "Az átadás előtt álló új épületeknek nincs megnevezett kezelőjük",
+                "Ugyanaz a cím folyamatosan újra kirakja a kiadókat",
             ],
             "agents": [
-                "Eléri a tulajdonosokat és társasházakat",
+                "Nyilvános váltási jelekből talál társasházakat és fejlesztőket, majd formális DM-et ír",
                 "Útmutatókat ír költségekről, szabályozásról és karbantartásról",
-                "Naprakészen tartja a weboldaladat és profiljaidat"
+                "Naprakészen tartja a weboldaladat és profiljaidat",
             ],
             "useCases": [
                 {
-                    "title": "Új épületek és tulajdonosok megszerzése",
+                    "title": "Nyerd meg az épületet váltási jelekből",
                     "points": [
-                        "Megtalálja a közeli tulajdonosokat és társasházakat",
-                        "Utánajár az épületeknek és a jelenlegi kezelőknek",
-                        "Mindegyiknek hivatalos, személyes DM-et ír"
+                        "Figyeli az értékeléseket, az átadásokat és az újra kirakott kiadókat",
+                        "Jelzi a lassú javításokat, a hiányzó kezelőt átadáskor és az ismételt üresedést",
+                        "Minden jelből smart hookot ír"
                     ],
                     "output": "5 tulajdonosi DM kész"
                 },
@@ -445,28 +400,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Társasházak, 10–60 lakás",
-                    "fit": 86
-                },
-                {
-                    "name": "Bérházak magántulajdonosai",
-                    "fit": 82
-                },
-                {
-                    "name": "Ingatlanos family office-ok",
-                    "fit": 70
-                }
+                {"name": "Társasházak lassú javításos értékelésekkel", "fit": 86},
+                {"name": "Fejlesztők átadáskor megnevezett kezelő nélkül", "fit": 82},
+                {"name": "Tulajdonosok, akik újra kirakják az üres kiadókat", "fit": 70},
             ],
-            "dm": "Kedves Petra! Az idei közösköltség-elszámolások után sok linzi társasház felülvizsgálja a kezelőjét. Mi minden költséget tételesen közzéteszünk. Megérne egy összehasonlítást?",
+            "dm": "A bérlők ezen a címen lassú javításokat értékelnek. 24 órán belül válaszolunk, fix szerelőhálózattal. Elküldjem az átadási tervet a közgyűlésre?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek a kezelők az ajánlásokon túl?",
-                    "a": "Új megbízás csak ajánlásból jön. A tulajdonosok nem tudják, miben vagy jobb. A marketing csak utólagos gondolat."
+                    "q": "Milyen vásárlási jeleket talál a Grovio ingatlankezelőknek?",
+                    "a": "Épületértékelések, amelyek szerint a kezelő nem válaszol. Új épület átadás előtt megnevezett kezelő nélkül. Ugyanaz a cím, amely újra kirakja a kiadókat."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Írhatnak az ügynökök szabályozásról?",
@@ -476,30 +422,30 @@ export const industries = {
         },
         "car-dealerships": {
             "name": "Autókereskedések",
-            "short": "Flották, beszámítás és szerviz",
+            "short": "Cégek, amelyek céges autóval vesznek fel",
             "metaTitle": "AI értékesítés és marketing autókereskedéseknek",
-            "metaDescription": "A Grovio AI-ügynökei flotta- és céges ügyfeleket szereznek a kereskedéseknek, és láthatóan tartják a készletedet és szervizajánlataidat.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál autókereskedőknek — céges autós álláshirdetések, bővülő gondozás vagy kiszállítás, új fiókot nyitó autósiskola — és megírja a megkeresést.",
             "title": "Flottát adj el, ne csak autót.",
-            "pitch": "A Grovio ügynökei elérik azokat a cégeket, amelyeknek céges autó és flottaszerviz kell, és online is láthatóan tartják a készletedet, ajánlataidat és szervizedet.",
+            "pitch": "A Grovio álláshirdetésekben és nyitásokban keres flotta jeleket: tíz vagy több hirdetés céges autóval, gondozási vagy kiszállító cég új kerületekben, autósiskola új fiókkal. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "A flottaértékesítés néhány kapcsolaton múlik",
-                "A szervizügyfelek független műhelyekhez vándorolnak",
-                "A készlet és az ajánlatok gyorsabban változnak, mint a weboldalad"
+                "A cégek céges autóval vesznek fel terepi munkatársakat, és senki nem ad flottaárajánlatot",
+                "A gondozás és a kiszállítás kerületenként bővül kereskedő nélkül",
+                "Az autósiskolák fiókot nyitnak, és máshol vesznek autót",
             ],
             "agents": [
-                "Eléri a flottamenedzsereket és cégtulajdonosokat",
+                "Nyilvános álláshirdetésekből talál céges autóval felvevő cégeket, majd flotta-DM-et ír",
                 "Ajánlatoldalakat és szervizútmutatókat ír",
-                "Rövid videókat vág az új készletről"
+                "Rövid videókat vág az új készletről",
             ],
             "useCases": [
                 {
-                    "title": "Flotta- és céges üzletek lezárása",
+                    "title": "Zárd a flottát felvételi jelekből",
                     "points": [
-                        "Megtalálja a flottamenedzsereket és a növekvő cégeket",
-                        "Utánajár a flottaméretnek és a megújítás idejének",
-                        "Mindegyiknek személyes DM-et ír"
+                        "Figyeli az állásportálokat céges autós sorokra és új fiókokra",
+                        "Jelzi a 10+ autós hirdetést, a bővülő kiszállítást és az új autósiskolákat",
+                        "Minden jelből smart hookot ír"
                     ],
-                    "output": "5 flottás DM kész"
+                    "output": "5 flotta-DM kész"
                 },
                 {
                     "title": "Az ajánlatokból forgalom lesz",
@@ -521,28 +467,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "10–200 fős cégek",
-                    "fit": 88
-                },
-                {
-                    "name": "Futár- és szolgáltatócégek",
-                    "fit": 84
-                },
-                {
-                    "name": "Lízingdöntéshozók",
-                    "fit": 75
-                }
+                {"name": "Cégek, amelyek céges autóval vesznek fel", "fit": 88},
+                {"name": "Bővülő gondozási és kiszállító cégek", "fit": 84},
+                {"name": "Új fiókot nyitó autósiskolák", "fit": 75},
             ],
-            "dm": "Kedves Stefan! Láttam, hogy a salzburgi csapatuk idén 40 főre bővült. Mi a rendeléstől a szervizig intézzük a céges autókat, egyetlen kapcsolattartóval. Elküldjem a flottafeltételeinket?",
+            "dm": "12 terepi technikust vesztek fel, mind céges autóval. 12 azonos furgont tudunk szállítani szervizzel, egy szerződésben. Küldjek flottaárajánlatot?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek a kereskedések a flotta és szerviz üzletnél?",
-                    "a": "A flottaértékesítés néhány kapcsolaton múlik. A szervizügyfelek független műhelyekhez vándorolnak. A készlet és az ajánlatok gyorsabban változnak, mint a weboldalad."
+                    "q": "Milyen vásárlási jeleket talál a Grovio autókereskedőknek?",
+                    "a": "Álláshirdetések céges autóval, különösen tíz vagy több egyszerre. Gondozási vagy kiszállító cég, amely új kerületekbe bővül. Autósiskola, amely új fiókot nyit."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Működik a CRM-emmel?",
@@ -552,30 +489,30 @@ export const industries = {
         },
         "law-firms": {
             "name": "Ügyvédi irodák",
-            "short": "Céges ügyfelek és szakmai tartalom",
+            "short": "Cégek bejelentéssel, felvétellel vagy első helyi állással",
             "metaTitle": "AI marketing és üzletfejlesztés ügyvédi irodáknak",
-            "metaDescription": "A Grovio AI-ügynökei segítenek az ügyvédi irodáknak elérni azokat a cégeket, amelyeknek szükségük van a szakterületeikre, és közzétenni a bizalmat építő szakmai tartalmakat.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál ügyvédi irodáknak — EU-védjegy képviselő nélkül, 60+ napja nyitott belső jogtanácsos, külföldi cég első helyi állásai — és kimért megkeresést ír.",
             "title": "Üzletfejlesztés, ahogy kell.",
-            "pitch": "A Grovio ügynökei megfontolt, professzionális üzenetekkel érik el azokat a cégeket, amelyeknek szükségük van a szakterületeidre, és olyan szakmai tartalmakat tesznek közzé, amelyek megmutatják a szakértelmedet.",
+            "pitch": "A Grovio nyilvános nyilvántartásokban és álláshirdetésekben keres jogi igényt: EU-védjegy képviselő nélkül, 60+ napja nyitott belső jogtanácsos, külföldi cég első helyi állásai. Minden jelből formális smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "A partnereknek nincs idejük üzletfejlesztésre",
-                "A szakértelem az ügyiratokban marad",
-                "Minden üzenetnek megfontoltnak és professzionálisnak kell lennie"
+                "Az EU-védjegybejelentések képviselő nélkül mennek be",
+                "A belső jogtanácsos pozíciók hónapokig nyitva maradnak",
+                "A külföldi cégek helyi tanácsadó nélkül hirdetik az első helyi állásaikat",
             ],
             "agents": [
-                "Hivatalosan és körültekintően éri el a jogi vezetőket és alapítókat",
+                "Nyilvános bejelentésekből és felvételekből talál cégeket, majd formális DM-et ír, amit egyesével hagysz jóvá",
                 "Cikkekké és hírlevelekké alakítja a szakértelmedet",
-                "Megtalálja, mire keresnek valójában az ügyfeleid"
+                "Megtalálja, mire keresnek valójában az ügyfeleid",
             ],
             "useCases": [
                 {
-                    "title": "Céges ügyfelek, körültekintően",
+                    "title": "Szerezz vállalati ügyfeleket nyilvános bejelentésekből",
                     "points": [
-                        "Megtalálja a szakterületeidhez illő jogi vezetőket és alapítókat",
-                        "Utánajár a tranzakcióknak, felvételeknek és szabályozási híreknek",
-                        "Hivatalos DM-eket ír, amelyeket egyenként hagysz jóvá"
+                        "Figyeli az EUIPO-bejelentéseket, a counsel állásokat és az első helyi hirdetéseket",
+                        "Jelzi a képviselő nélküli védjegyeket, a 60+ napos pozíciókat és a helyben felvevő külföldi cégeket",
+                        "Minden jelből formális smart hookot ír"
                     ],
-                    "output": "5 hivatalos DM kész"
+                    "output": "5 formális DM kész"
                 },
                 {
                     "title": "A szakértelemből szakmai tekintély",
@@ -597,28 +534,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Az EU-ba terjeszkedő scale-upok",
-                    "fit": 87
-                },
-                {
-                    "name": "Belső jogász nélküli cégek",
-                    "fit": 83
-                },
-                {
-                    "name": "Befektetési körre készülő alapítók",
-                    "fit": 79
-                }
+                {"name": "Cégek EU-védjeggyel, képviselő nélkül", "fit": 87},
+                {"name": "Cégek, amelyek belső jogtanácsos pozíciója nyitva marad", "fit": 83},
+                {"name": "Külföldi cégek első helyi állásaikkal", "fit": 79},
             ],
-            "dm": "Tisztelt Weber Asszony! Gratulálok a Series A befektetési körhöz. Ebben a szakaszban sok alapító felülvizsgálja a munkaszerződéseit és a szellemi tulajdon átruházását. Hasznos lenne egy rövid beszélgetés arról, mire érdemes ilyenkor odafigyelni?",
+            "dm": "Az EU-védjegybejelentéseteknek nincs képviselője. A felszólalási ablak három hónap múlva nyílik. Figyeljük nektek?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek az ügyvédi irodák az új ügyfeleknél?",
-                    "a": "A partnereknek nincs idejük üzletfejlesztésre. A szakértelem az ügyiratokban marad. Minden üzenetnek megfontoltnak és professzionálisnak kell lennie."
+                    "q": "Milyen vásárlási jeleket talál a Grovio ügyvédi irodáknak?",
+                    "a": "EU-védjegybejelentés képviselő nélkül. In-house counsel állás, 60 napja vagy tovább nyitva. Külföldi cég első helyi álláshirdetései. Küldés előtt ellenőrizd a kamara közvetlen megkeresésre vonatkozó szabályait a te joghatóságodban."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Szabályozhatom a hangnemet és a megfogalmazást?",
@@ -627,29 +555,29 @@ export const industries = {
             ]
         },
         "self-employed": {
-            "name": "Egyéni vállalkozók és kisvállalkozások",
-            "short": "Értékesítési és marketingcsapat egy főre",
-            "metaTitle": "AI értékesítés és marketing egyéni vállalkozóknak és kisvállalkozásoknak",
-            "metaDescription": "A Grovio értékesítési és marketingcsapatot ad az egyéni vállalkozóknak és kisvállalkozásoknak: leadek, DM-ek és tartalom, a te jóváhagyásoddal.",
+            "name": "Kisvállalkozások",
+            "short": "B2B ügyfelek, akik nem tudnak egy szerepet betölteni",
+            "metaTitle": "AI értékesítés és marketing kisvállalkozásoknak",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál kisvállalkozásoknak — 60+ napja újra kirakott freelancer szerep, ajánlást kérő cég, törött űrlapos oldal — és megírja a megkeresést.",
             "title": "Értékesítési és marketingcsapat egy főre.",
-            "pitch": "Te végzed a munkát. A Grovio ügynökei megtalálják az ügyfeleket, megírják a DM-eket és viszik a tartalmaidat, te pedig napi néhány perc alatt mindent jóváhagysz.",
+            "pitch": "A Grovio nyilvános adatokban keres ügyféljeleket: ugyanaz a freelancer szerep 60+ napja újra kirakva, cég, amely helyi csoportokban kér ajánlást, prospect oldal mobil foglalás vagy törött űrlap nélkül. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "Az értékesítés elveszi az időt a fizetős munkától",
-                "Marketing csak akkor van, amikor elfogy a munka",
-                "Az ügynökségek és a nagy eszközök túl drágák"
+                "Ugyanaz a designer vagy könyvelő pozíció hónapokig nyitva marad",
+                "A cégek helyi csoportokban kérnek ajánlást, és te sosem látod",
+                "A prospect oldalaknak törött a kapcsolatfelvételi űrlapja",
             ],
             "agents": [
-                "Ügyfeleket talál és DM-eket ír",
+                "Nyitott szerepekből, helyi kérésekből és törött űrlapokból talál B2B ügyfeleket, majd DM-et ír",
                 "A te hangodon ír posztokat és cikkeket",
-                "Egy ügynökkel indul, és bővül, amikor megtérül"
+                "Egy ügynökkel indul, és bővül, amikor megtérül",
             ],
             "useCases": [
                 {
-                    "title": "Találd meg a következő ügyfeleidet",
+                    "title": "Találj ügyfeleket betöltetlen szerepekből",
                     "points": [
-                        "Olyan ügyfeleket talál, akikhez illik, amit kínálsz",
-                        "Megkeresés előtt mindegyiknek utánajár",
-                        "DM-eket ír a jóváhagyásodra"
+                        "Figyeli az álláshirdetéseket, a helyi csoportokat és a prospect oldalakat",
+                        "Jelzi a 60+ napos szerepeket, a nyilvános kéréseket és a törött űrlapokat",
+                        "Minden jelből smart hookot ír"
                     ],
                     "output": "5 ügyfél-DM kész"
                 },
@@ -673,28 +601,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Kisvállalkozások a városodban",
-                    "fit": 88
-                },
-                {
-                    "name": "A szakterületedet kiszervező ügynökségek",
-                    "fit": 82
-                },
-                {
-                    "name": "Korábbi ügyfelek kollégái",
-                    "fit": 76
-                }
+                {"name": "Cégek, amelyek újra kiraknak egy freelancer szerepet", "fit": 88},
+                {"name": "Tulajdonosok, akik helyben kérnek ajánlást", "fit": 82},
+                {"name": "Oldalak törött kapcsolatfelvételi űrlappal", "fit": 76},
             ],
-            "dm": "Kedves Clara! Nagyon tetszett a múlt hónapban bemutatott arculatváltásuk. Szabadúszó szövegíró vagyok, bécsi designstúdióknak írok weboldalszövegeket. Hasznos lenne, ha lenne valaki, akire bevezetéseknél számíthatnak?",
+            "dm": "A designer pozíciótok szeptember óta nyitva van. Jövő héttől havi retainerrel le tudom fedni. Küldjek három mintát a szektorotokból?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek a freelancerek és kisvállalkozások az értékesítés és ügyfélmunka között?",
-                    "a": "Az értékesítés elveszi az időt a fizetős munkától. Marketing csak akkor van, amikor elfogy a munka. Az ügynökségek és a nagy eszközök túl drágák."
+                    "q": "Milyen vásárlási jeleket talál a Grovio kisvállalkozásoknak?",
+                    "a": "Ugyanaz a freelancer szerep, 60 napja vagy tovább újra kirakva. Cég, amely helyi LinkedIn-csoportokban kér ajánlást. Prospect oldal mobil foglalás nélkül vagy törött űrlappal."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Kezdhetek egyetlen ügynökkel?",
@@ -704,30 +623,30 @@ export const industries = {
         },
         "tradespeople": {
             "name": "Szakiparosok",
-            "short": "Céges munkák és állandó megrendelések",
+            "short": "Ingatlankezelők, hotelek, fejlesztők",
             "metaTitle": "AI értékesítés és marketing szakiparosoknak",
-            "metaDescription": "A Grovio AI-ügynökei céges munkákat és karbantartási szerződéseket szereznek a szakiparosoknak, és online is láthatóvá teszik az értékeléseidet és munkáidat.",
+            "metaDescription": "A Grovio nyilvános vásárlási jeleket talál szakiknak — felújítási engedély a kerületben, közbeszerzés a szakmádban, szezonális zárást hirdető hotel — és megírja a megkeresést.",
             "title": "Állandó munka, egész évben.",
-            "pitch": "A Grovio ügynökei elérik azokat az ingatlankezelőket, építőipari cégeket és vállalkozásokat, amelyeknek megbízható szakember kell, és online is megmutatják az elkészült munkáidat.",
+            "pitch": "A Grovio engedélyeket, közbeszerzéseket és hotelhirdetményeket figyel: felújítási engedély a kerületben, közbeszerzés a szakmádban, hotel szezonális zárással felújításra. Minden jelből smart hook lesz, amit küldés előtt te hagysz jóvá.",
             "pains": [
-                "A munka hullámokban jön",
-                "A céges ügyfeleket nehéz elérni",
-                "A legjobb munkáid sosem kerülnek fel online"
+                "A kerületben mennek a felújítási engedélyek, és más cég viszi a munkát",
+                "A szakmád közbeszerzései lezárulnak, mielőtt meglátnád őket",
+                "A hotelek szezonális zárást hirdetnek munkára a te ajánlatod nélkül",
             ],
             "agents": [
-                "Eléri az ingatlankezelőket és generálkivitelezőket",
+                "Engedélyekből és közbeszerzésekből talál ingatlankezelőket, hoteleket és fejlesztőket, majd személyes DM-et ír",
                 "A munkafotókból posztokat és rövid videókat készít",
-                "Helyi keresésben jól rangsoroló szolgáltatásoldalakat ír"
+                "Helyi keresésben jól rangsoroló szolgáltatásoldalakat ír",
             ],
             "useCases": [
                 {
-                    "title": "Állandó céges munkák",
+                    "title": "Szerezz kereskedelmi munkát engedélyekből és közbeszerzésből",
                     "points": [
-                        "Megtalálja a közeli ingatlankezelőket és kivitelezőket",
-                        "Utánajár az épületeknek és a közelgő projekteknek",
-                        "Mindegyiknek személyes DM-et ír"
+                        "Figyeli a felújítási engedélyeket, a közbeszerzési portálokat és a hotelhirdetményeket",
+                        "Jelzi a kiadott engedélyeket, a nyitott közbeszerzéseket és a szezonális zárásokat munkára",
+                        "Minden jelből smart hookot ír"
                     ],
-                    "output": "5 céges DM kész"
+                    "output": "5 kereskedelmi DM kész"
                 },
                 {
                     "title": "Az elkészült munkákból referencia lesz",
@@ -749,28 +668,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Ingatlankezelők a régiódban",
-                    "fit": 89
-                },
-                {
-                    "name": "Generálkivitelezők",
-                    "fit": 83
-                },
-                {
-                    "name": "Karbantartást igénylő szállodák és éttermek",
-                    "fit": 77
-                }
+                {"name": "Ingatlankezelők felújítási engedéllyel", "fit": 89},
+                {"name": "Közbeszerzések a szakmádban", "fit": 83},
+                {"name": "Szezonális felújításra záró hotelek", "fit": 77},
             ],
-            "dm": "Kedves Martin! Láttam, hogy 12 épületet kezel Innsbruckban. Helyi villanyszerelő cég vagyunk, karbantartási szerződést kínálunk 24 órás kiszállással. Elküldhetem a feltételeinket?",
+            "dm": "Láttam a felújítási engedélyt arra a címre. Hasonló projektekre csinálunk villanyszerelést a kerületben, és az Q1-ben van szabad stábunk. Küldjek elérhetőséget?",
             "faq": [
                 {
-                    "q": "Milyen kihívásokkal szembesülnek a szakiparosok az állandó céges munkáknál?",
-                    "a": "A munka hullámokban jön. A céges ügyfeleket nehéz elérni. A legjobb munkáid sosem kerülnek fel online."
+                    "q": "Milyen vásárlási jeleket talál a Grovio szakiknak?",
+                    "a": "Felújítási engedély a kerületben. Közbeszerzés a szakmád portálján. Hotel, amely szezonális zárást hirdet felújításra."
                 },
                 {
                     "q": "Hogyan jutok a weboldalamtól a lefoglalt megbeszélésekig a Grovióval?",
-                    "a": "Bemásolod a weboldalad linkjét, a Grovio elolvassa, és kitalálja, ki vásárol tőled. Kapsz egy ICP-kampányt, illeszkedés szerint rangsorolt vevői szegmensekkel. Minden leadet és DM-et jóváhagysz, mielőtt bármi kimegy. A meleg válaszok a CRM-edbe és a naptáradba kerülnek."
+                    "a": "Illeszd be a weboldalad, a Grovio ebből tanulja meg, kinek adsz el. Nyilvános üzleti adatokban is keres vásárlási szándékra utaló jeleket, és mindegyikből smart hookot ír. Minden leadet és DM-et te hagysz jóvá, mielőtt kimenne. A meleg válaszok a CRM-be és a naptárba kerülnek."
                 },
                 {
                     "q": "Nem vagyok fent a közösségi médiában. Számít ez?",

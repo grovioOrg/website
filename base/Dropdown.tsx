@@ -3,6 +3,7 @@
 // #region imports
 import {
     KeyboardEvent,
+    MouseEvent,
     ReactNode,
     useCallback,
     useEffect,
@@ -27,6 +28,8 @@ export interface IDropdownItem {
     description?: ReactNode
     icon?: ReactNode
     badge?: ReactNode
+    /** When set, runs instead of (or alongside) the default navigation. */
+    onClick?: (event: MouseEvent<HTMLAnchorElement>) => void
 }
 
 export interface IDropdownColumn {
@@ -182,22 +185,20 @@ const Dropdown = ({
                 hidden={!open}
                 onKeyDown={onPanelKey}
                 className={cn(
-                    "absolute top-full pt-3 z-50",
+                    "absolute top-full pt-3 z-50 ",
                     alignClasses[align],
                 )}
             >
                 <div className={cn(
-                    "flex gap-8 rounded-2xl bg-white p-5 shadow-lift ring-1 ring-ink/6",
+                    "rounded-2xl bg-white p-5 pr-7 shadow-lift ring-1 ring-ink/6",
                     "animate-fade-in-fast",
+                    columns.length > 1 ? "grid grid-cols-2 gap-x-5" : "flex",
                     panelClassName
                 )}>
                     {columns.map((column, index) => (
                         <div
                             key={index}
-                            className={cn(
-                                "flex flex-col min-w-0",
-                                index > 0 && "pl-8 border-l border-grey-100"
-                            )}
+                            className="flex flex-col min-w-0"
                         >
                             {column.title && (
                                 <p className="px-2.5 mb-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-grey-200">
@@ -205,31 +206,43 @@ const Dropdown = ({
                                 </p>
                             )}
                             <ul className={cn(
-                                "grid gap-0.5",
-                                column.split === 2 && "grid-cols-2 gap-x-4"
+                                "grid auto-rows-fr gap-1",
+                                column.split === 2 && "grid-cols-2 gap-x-3"
                             )}>
                                 {column.items.map(item => (
-                                    <li key={item.href}>
+                                    <li key={item.href} className="min-h-0">
                                         <a
                                             href={item.href}
-                                            onClick={() => close()}
-                                            className="
-                                                flex items-start gap-3 rounded-xl px-2.5 py-2 outline-none smooth
-                                                hover:bg-paper focus-visible:bg-paper focus-visible:ring-2 focus-visible:ring-ink
-                                            "
+                                            onClick={(event) => {
+                                                item.onClick?.(event)
+                                                if (!event.defaultPrevented)
+                                                    close()
+                                            }}
+                                            className={cn(
+                                                "flex rounded-xl w-full outline-none smooth",
+                                                "hover:bg-paper focus-visible:bg-paper focus-visible:ring-2 focus-visible:ring-ink",
+                                                item.description
+                                                    ? "items-start gap-3 px-2.5 py-2.5 h-full min-h-[4.75rem]"
+                                                    : "items-center gap-2.5 px-2.5 py-2"
+                                            )}
                                         >
                                             {item.icon && (
-                                                <span className="shrink-0 mt-0.5 text-grey-300">
+                                                <span className={cn(
+                                                    "shrink-0 text-grey-300",
+                                                    item.description && "mt-0.5"
+                                                )}>
                                                     {item.icon}
                                                 </span>
                                             )}
-                                            <span className="flex flex-col min-w-0">
-                                                <span className="flex items-center gap-2 text-sm font-medium text-ink whitespace-nowrap">
-                                                    {item.title}
-                                                    {item.badge}
+                                            <span className="flex flex-col min-w-0 flex-1">
+                                                <span className="flex items-center gap-2 min-w-0 text-sm font-medium text-ink">
+                                                    <span className="truncate">{item.title}</span>
+                                                    {item.badge && (
+                                                        <span className="shrink-0">{item.badge}</span>
+                                                    )}
                                                 </span>
                                                 {item.description && (
-                                                    <span className="text-xs text-grey-200 leading-snug mt-0.5">
+                                                    <span className="text-xs text-grey-200 leading-snug mt-0.5 line-clamp-2">
                                                         {item.description}
                                                     </span>
                                                 )}

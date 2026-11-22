@@ -1,12 +1,12 @@
 export const home = {
     meta: {
-        title: "Grovio: hire AI contractors for sales and marketing",
+        title: "Grovio",
         description: "Drop in your website and Grovio builds your ICP campaign, pulls the best leads and puts AI sales and marketing contractors to work. You approve what ships. Built for the EU and GDPR compliant.",
     },
     hero: {
-        titleStart: "AI",
-        titleMark: "agents",
-        titleEnd: "that run your sales and marketing.",
+        titleStart: "AI agents that",
+        titleMark: "run",
+        titleEnd: "your sales and marketing.",
         secondary: "See how it works",
         eu: "Built for EU · GDPR compliant",
         icpTitle: "ICP campaign created",

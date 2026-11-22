@@ -48,7 +48,6 @@ export const industryMenu = (lang: ILocale, t: IDictionary): IDropdownColumn[] =
         items: INDUSTRIES.map(({ id, glyph }) => ({
             href: industryLink(lang, id),
             title: t.industries.list[id].name,
-            description: t.industries.list[id].short,
             icon: <Glyph name={glyph} size={17} />,
         })),
     },

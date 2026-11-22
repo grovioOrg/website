@@ -29,42 +29,15 @@ export interface IBetaForm {
 
 export type IBetaErrors = IDictionary["beta"]["errors"]
 
-const FREE_EMAIL_DOMAINS = [
-    "gmail.com",
-    "yahoo.com",
-    "hotmail.com",
-    "outlook.com",
-    "icloud.com",
-    "aol.com",
-    "proton.me",
-    "protonmail.com",
-    "gmx.at",
-    "gmx.de",
-    "web.de",
-]
-
-export const getBetaRules = (errors: IBetaErrors): IValidator<IBetaForm> => {
-    const workEmailRule = emailField(errors.emailRequired, errors.emailFormat)
-
-    return {
-        name: requireField(errors.name),
-        email: (value) => {
-            const error = workEmailRule(value)
-            if (error)
-                return error
-
-            const domain = value.trim().split("@")[1]?.toLowerCase()
-            return FREE_EMAIL_DOMAINS.includes(domain)
-                ? errors.workEmail
-                : null
-        },
-        company: requireField(errors.company),
-        website: urlField(errors.websiteRequired, errors.websiteFormat),
-        size: oneOfField(COMPANY_SIZES, errors.size),
-        interest: oneOfField(BETA_INTERESTS, errors.interest),
-        consent: checkedField(errors.consent),
-    }
-}
+export const getBetaRules = (errors: IBetaErrors): IValidator<IBetaForm> => ({
+    name: requireField(errors.name),
+    email: emailField(errors.emailRequired, errors.emailFormat),
+    company: requireField(errors.company),
+    website: urlField(errors.websiteRequired, errors.websiteFormat),
+    size: oneOfField(COMPANY_SIZES, errors.size),
+    interest: oneOfField(BETA_INTERESTS, errors.interest),
+    consent: checkedField(errors.consent),
+})
 
 export const validateBetaFields = (data: IBetaForm, errors: IBetaErrors) =>
     validateForm(data, getBetaRules(errors))

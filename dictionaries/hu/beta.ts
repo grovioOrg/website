@@ -7,7 +7,7 @@ export const beta = {
     "fields": {
         "name": "Név",
         "namePlaceholder": "Ada Lovelace",
-        "email": "Munkahelyi e-mail-cím",
+        "email": "E-mail-cím",
         "emailPlaceholder": "ada@company.com",
         "company": "Cég",
         "companyPlaceholder": "Acme Inc.",
@@ -42,16 +42,15 @@ export const beta = {
     "close": "Bezárás",
     "success": {
         "title": "Rajta vagy a listán.",
-        "body": "Köszönjük a jelentkezést! Átnézzük, és a munkahelyi e-mail-címeden jelentkezünk, amint felszabadul egy béta-hely.",
+        "body": "Köszönjük a jelentkezést! Átnézzük, és e-mailben jelentkezünk, amint felszabadul egy béta-hely.",
         "duplicateTitle": "Már rajta vagy a listán.",
-        "duplicateBody": "A jelentkezésed már megérkezett hozzánk. A munkahelyi e-mail-címeden jelentkezünk, amint felszabadul egy béta-hely.",
+        "duplicateBody": "A jelentkezésed már megérkezett hozzánk. E-mailben jelentkezünk, amint felszabadul egy béta-hely.",
         "done": "Vissza az oldalra"
     },
     "errors": {
         "name": "Kérjük, add meg a neved",
-        "emailRequired": "A munkahelyi e-mail-cím megadása kötelező",
+        "emailRequired": "Az e-mail-cím megadása kötelező",
         "emailFormat": "Kérjük, érvényes e-mail-címet adj meg",
-        "workEmail": "Kérjük, a munkahelyi e-mail-címedet add meg",
         "company": "A cégnév megadása kötelező",
         "websiteRequired": "A weboldal megadása kötelező",
         "websiteFormat": "Kérjük, érvényes weboldalt adj meg, pl. acme.com",

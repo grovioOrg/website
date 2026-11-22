@@ -1,45 +1,45 @@
 export const industries = {
     "page": {
-        "icp": "Un esempio di campagna ICP",
-        "dm": "Un esempio di DM",
-        "dmNote": "Scritto secondo la tua configurazione dei DM. Lo approvi prima dell'invio.",
+        "icp": "A chi vendiamo",
+        "dm": "Uno smart hook di esempio",
+        "dmNote": "Scritto da un segnale pubblico di intento d'acquisto. Approvi prima dell'invio.",
         "faq": "Domande",
         "others": "Altri settori",
         "ctaTitle": "Grovio per il settore {industry}",
-        "ctaBody": "Incolla il tuo sito web e ti mostreremo la campagna ICP che creeremmo.",
+        "ctaBody": "Incolla il sito e ti mostriamo i segnali di intento su cui agiremmo.",
         "segment": "Segmento",
         "fit": "Affinità",
         "useCases": "Cosa fanno i tuoi agenti",
-        "useCasesBody": "Tre attività di cui si occupano i tuoi agenti Grovio, passo dopo passo. Tu approvi ciò che parte.",
+        "useCasesBody": "Le vendite partono da segnali pubblici di intento. Il marketing ti tiene visibile. Tu approvi ciò che esce.",
         "toolsTitle": "Funziona con gli strumenti che usi già"
     },
     "list": {
         "hotels": {
             "name": "Hotel",
-            "short": "Riempi le camere con prenotazioni dirette e gruppi",
+            "short": "Organizzatori di eventi, club sportivi, tour operator",
             "metaTitle": "Vendite e marketing con l'AI per hotel",
-            "metaDescription": "Gli agenti AI di Grovio conquistano prenotazioni aziendali e di gruppo, tengono pieno il tuo calendario editoriale e rispondono agli ospiti, così il tuo hotel dipende meno dai portali di prenotazione.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per gli hotel — blocchi congressi esauriti, ritiri senza sede, cataloghi tour senza hotel partner — e scrive il contatto. Approvi ogni DM.",
             "title": "Più prenotazioni dirette. Meno commissioni ai portali.",
-            "pitch": "Gli agenti di Grovio raggiungono le aziende, gli organizzatori di eventi e i travel manager che prenotano camere in blocco, e mantengono visibile il tuo hotel con contenuti che si posizionano.",
+            "pitch": "Grovio osserva i dati aziendali pubblici in cerca di segnali di intento: un congresso con blocco camere esaurito, un club che pianifica un ritiro senza sede, un tour in pullman nella tua zona senza hotel partner. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "I portali di prenotazione si prendono una fetta di ogni camera",
-                "Le vendite aziendali e di gruppo dipendono da una sola persona oberata",
-                "In bassa stagione sito e social tacciono"
+                "I blocchi congressi esauriti vicino a te non arrivano al commerciale",
+                "I club sportivi annunciano ritiri senza nominare un hotel",
+                "I tour operator passano dalla tua zona senza un partner",
             ],
             "agents": [
-                "Raggiunge travel manager e organizzatori di eventi con DM personalizzati",
+                "Trova event planner, club sportivi e tour operator da segnali pubblici, poi scrive una DM personale",
                 "Scrive guide stagionali e post che portano ospiti sul tuo sito",
-                "Risponde agli ospiti e prenota camere tramite i tuoi strumenti"
+                "Risponde agli ospiti e prenota camere tramite i tuoi strumenti",
             ],
             "useCases": [
                 {
-                    "title": "Conquista prenotazioni di gruppo e aziendali",
+                    "title": "Agisci sui segnali per i gruppi",
                     "points": [
-                        "Trova agenzie di eventi, organizzatori e travel manager nella tua zona",
-                        "Individua offsite, conferenze e matrimoni in programma",
-                        "Scrive un DM personalizzato per ciascuno"
+                        "Monitora calendari congressi, siti dei club e cataloghi tour",
+                        "Segnala blocco camere esaurito, ritiri senza sede e itinerari senza hotel partner",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM per prenotazioni di gruppo pronti"
+                    "output": "5 DM per gruppi pronte"
                 },
                 {
                     "title": "Fai tornare gli ospiti sul tuo sito",
@@ -61,28 +61,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Agenzie di eventi entro 200 km",
-                    "fit": 91
-                },
-                {
-                    "name": "Travel manager aziendali",
-                    "fit": 85
-                },
-                {
-                    "name": "Wedding planner",
-                    "fit": 78
-                }
+                {"name": "Organizzatori di eventi con blocco camere esaurito", "fit": 91},
+                {"name": "Club sportivi che pianificano un ritiro", "fit": 85},
+                {"name": "Tour operator in transito nella regione", "fit": 78},
             ],
-            "dm": "Buongiorno Marco, ho visto che il Suo team sta pianificando la stagione degli offsite primaverili. Ospitiamo gruppi da 20 a 80 persone, con sale riunioni e vista lago, a 40 minuti da Vienna. Le interessa dare un'occhiata alle nostre tariffe per gruppi?",
+            "dm": "Il blocco hotel del congresso di primavera risulta esaurito. Abbiamo 40 camere a 20 minuti dalla sede — le tengo per i vostri partecipanti?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno gli hotel su prenotazioni dirette e di gruppo?",
-                    "a": "I portali di prenotazione si prendono una fetta di ogni camera. Le vendite aziendali e di gruppo dipendono da una sola persona oberata. In bassa stagione sito e social tacciono."
+                    "q": "Quali segnali di intento trova Grovio per gli hotel?",
+                    "a": "Blocchi hotel ufficiali esauriti di congressi e fiere vicine. Club sportivi che annunciano un ritiro senza sede. Cataloghi tour che attraversano la tua zona senza hotel partner."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Grovio può parlare con gli ospiti?",
@@ -96,30 +87,30 @@ export const industries = {
         },
         "restaurants": {
             "name": "Ristoranti",
-            "short": "Sale private, eventi e clienti abituali",
+            "short": "Aziende, produzioni, organizzatori di conferenze",
             "metaTitle": "Vendite e marketing con l'AI per ristoranti",
-            "metaDescription": "Gli agenti AI di Grovio riempiono sale private ed eventi, tengono vivi i tuoi social e presto risponderanno agli ospiti e gestiranno le prenotazioni.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per i ristoranti — location di Natale chiusa, permesso di ripresa in zona, conferenza senza catering interno — e scrive il contatto.",
             "title": "Tavoli pieni anche di martedì.",
-            "pitch": "Gli agenti di Grovio raggiungono gli uffici e gli organizzatori che prenotano sale private, e tengono menu, eventi e la tua storia sotto gli occhi della gente del posto.",
+            "pitch": "Grovio osserva i dati pubblici: la location di Natale di un'azienda appena chiusa, un permesso di ripresa nel tuo distretto, una conferenza accanto senza catering interno. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "Le sere infrasettimanali e le sale private restano vuote",
-                "Nessuno ha tempo di pubblicare ogni settimana",
-                "Le richieste per eventi arrivano in cinque caselle diverse"
+                "La location usata da un'azienda l'anno scorso ha chiuso e nessuno te lo dice",
+                "Le produzioni girano in zona e mangiano altrove",
+                "Le conferenze vicine non hanno catering interno",
             ],
             "agents": [
-                "Raggiunge office manager e organizzatori di eventi della zona",
+                "Trova aziende, produzioni e organizzatori di conferenze da segnali pubblici, poi scrive un invito personale",
                 "Scrive post su nuovi menu ed eventi con la tua voce",
-                "Risponde agli ospiti e prenota tavoli tramite i tuoi strumenti"
+                "Risponde agli ospiti e prenota tavoli tramite i tuoi strumenti",
             ],
             "useCases": [
                 {
-                    "title": "Riempi sale private ed eventi",
+                    "title": "Riempi i privati con segnali pubblici",
                     "points": [
-                        "Trova uffici e organizzatori di eventi della zona",
-                        "Individua eventi aziendali, lanci e celebrazioni",
-                        "Scrive un DM di invito personalizzato per ciascuno"
+                        "Monitora chiusure, avvisi di ripresa e programmi di conferenze",
+                        "Segnala location chiuse, troupe on set ed eventi senza catering",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM per eventi pronti"
+                    "output": "5 DM per eventi pronte"
                 },
                 {
                     "title": "Resta sotto gli occhi della gente del posto",
@@ -141,28 +132,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Uffici entro 3 km",
-                    "fit": 90
-                },
-                {
-                    "name": "Organizzatori di eventi e feste",
-                    "fit": 82
-                },
-                {
-                    "name": "Club di imprenditori locali",
-                    "fit": 74
-                }
+                {"name": "Aziende la cui location per feste ha chiuso", "fit": 90},
+                {"name": "Produzioni in ripresa nel distretto", "fit": 82},
+                {"name": "Organizzatori di conferenze senza catering interno", "fit": 74},
             ],
-            "dm": "Buongiorno Julia, il Suo team si è appena trasferito nell'ufficio di Mariahilfer Straße: benvenuti nel quartiere. La nostra sala privata ospita 24 persone per pranzi e cene di team. Posso inviarLe i nostri menu fissi?",
+            "dm": "La location della festa di Natale del vostro team ha chiuso quest'anno. Sediamo 60 persone in privato e abbiamo ancora date a dicembre. Vi mando il menu?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno i ristoranti nel riempire i feriali e gli eventi privati?",
-                    "a": "Le sere infrasettimanali e le sale private restano vuote. Nessuno ha tempo di pubblicare ogni settimana. Le richieste per eventi arrivano in cinque caselle diverse."
+                    "q": "Quali segnali di intento trova Grovio per i ristoranti?",
+                    "a": "La location della festa di Natale di un'azienda segnata come chiusa. Permessi di ripresa nel tuo distretto. Conferenze in una sede vicina senza catering interno."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Gestite le prenotazioni per noi?",
@@ -172,30 +154,30 @@ export const industries = {
         },
         "ecommerce": {
             "name": "E-commerce",
-            "short": "Partner all'ingrosso, creator e contenuti",
+            "short": "Rivenditori con lo scaffale appena liberato",
             "metaTitle": "Vendite e marketing con l'AI per brand e-commerce",
-            "metaDescription": "Gli agenti AI di Grovio trovano partner all'ingrosso e creator, e fanno avanzare i contenuti di prodotto e la SEO.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per i brand e-commerce — un competitor che ferma l'ingrosso, un rivenditore esaurito da settimane, un concept store che compra la prima linea — e scrive il contatto.",
             "title": "Cresci oltre la pubblicità a pagamento.",
-            "pitch": "Gli agenti di Grovio trovano i negozi, i grossisti e i creator che dovrebbero proporre i tuoi prodotti, e costruiscono traffico organico che non si ferma quando si ferma il budget pubblicitario.",
+            "pitch": "Grovio osserva i dati pubblici: un brand competitor che smette l'ingrosso, un rivenditore esaurito nella tua categoria da tre settimane, un concept store in apertura che compra la prima linea. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "I costi pubblicitari salgono ogni trimestre",
-                "L'outreach verso grossisti e partner non si fa mai",
-                "Le pagine prodotto non si posizionano"
+                "Un competitor ferma l'ingrosso e i suoi rivenditori restano con lo scaffale vuoto",
+                "I rivenditori restano esauriti nella tua categoria per settimane",
+                "I nuovi concept store comprano la prima linea senza di te",
             ],
             "agents": [
-                "Trova e contatta rivenditori, grossisti e creator",
+                "Trova rivenditori da segnali pubblici — scaffali vuoti, aperture, brand che lasciano l'ingrosso — poi scrive un pitch",
                 "Trova le keyword su cui le tue pagine prodotto dovrebbero vincere",
-                "Scrive guide, storie di prodotto e video brevi"
+                "Scrive guide, storie di prodotto e video brevi",
             ],
             "useCases": [
                 {
-                    "title": "Conquista rivenditori e creator",
+                    "title": "Chiudi rivenditori da scaffali vuoti",
                     "points": [
-                        "Trova negozi, grossisti e creator in linea con il tuo brand",
-                        "Analizza cosa vendono e chi raggiungono",
-                        "Scrive una proposta su misura per ciascuno"
+                        "Monitora annunci dei brand, pagine rivenditori e scorte degli shop",
+                        "Segnala brand che lasciano l'ingrosso, stock-out da 3+ settimane e store che comprano la prima linea",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM per partner pronti"
+                    "output": "5 DM partner pronte"
                 },
                 {
                     "title": "Vinci le ricerche che portano vendite",
@@ -217,28 +199,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Concept store indipendenti",
-                    "fit": 89
-                },
-                {
-                    "name": "Creator di nicchia, 10k–100k follower",
-                    "fit": 83
-                },
-                {
-                    "name": "Grossisti regionali",
-                    "fit": 76
-                }
+                {"name": "Rivenditori di un brand che ha fermato l'ingrosso", "fit": 89},
+                {"name": "Rivenditori esauriti nella tua categoria", "fit": 83},
+                {"name": "Concept store che comprano la prima linea", "fit": 76},
             ],
-            "dm": "Buongiorno Sophie, la selezione di articoli per la casa sostenibili del Suo negozio è perfetta. La nostra linea in lino si esaurisce in 6 settimane in negozi simili a Monaco. Posso inviarLe una scatola di campioni?",
+            "dm": "Quel brand ha fermato l'ingrosso — il vostro shop elenca ancora sei loro prodotti. I nostri sono allo stesso prezzo. Vi mando una cassetta di campioni prima che lo scaffale resti vuoto?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno i brand e-commerce con i costi ads in crescita?",
-                    "a": "I costi pubblicitari salgono ogni trimestre. L'outreach verso grossisti e partner non si fa mai. Le pagine prodotto non si posizionano."
+                    "q": "Quali segnali di intento trova Grovio per i brand e-commerce?",
+                    "a": "Un brand competitor che ferma l'ingrosso, lasciando i rivenditori con lo scaffale vuoto. Un rivenditore esaurito nella tua categoria da tre o più settimane. Un concept store che annuncia l'apertura e compra la prima linea."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Funziona anche con cataloghi piccoli?",
@@ -248,30 +221,30 @@ export const industries = {
         },
         "retail": {
             "name": "Retail",
-            "short": "Clienti B2B, partnership e presenza locale",
+            "short": "Club, eventi, nuove attività",
             "metaTitle": "Vendite e marketing con l'AI per il retail",
-            "metaDescription": "Gli agenti AI di Grovio conquistano clienti B2B e partnership locali per i negozi, e mantengono attivi i tuoi contenuti tra una campagna e l'altra.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per i rivenditori — un club promosso, una gara che vende pack partecipanti, un hotel o ristorante in apertura che deve allestire — e scrive il contatto.",
             "title": "Conquista i clienti che il tuo negozio non raggiunge.",
-            "pitch": "Gli agenti di Grovio raggiungono le aziende, le scuole e gli uffici che acquistano in grandi quantità, e mantengono il tuo negozio visibile online tra una stagione e l'altra.",
+            "pitch": "Grovio osserva i dati pubblici: un club promosso in una serie superiore, una gara o un festival locale che vende pack partecipanti, un hotel o ristorante in apertura che deve allestire. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "Gli ordini aziendali e all'ingrosso sono lasciati al caso",
-                "Le partnership locali richiedono tempo che nessuno ha",
-                "Le campagne stagionali partono troppo tardi"
+                "I club vengono promossi e ordinano le kit da chi chiama per primo",
+                "Gare e festival vendono pack partecipanti senza di te",
+                "Nuovi hotel e ristoranti allestiscono senza un fornitore locale",
             ],
             "agents": [
-                "Raggiunge buyer e office manager per ordini all'ingrosso",
+                "Trova club, eventi e nuove attività da segnali pubblici, poi scrive una DM personale",
                 "Pianifica i contenuti stagionali in anticipo",
-                "Crea visual per ogni campagna"
+                "Crea visual per ogni campagna",
             ],
             "useCases": [
                 {
-                    "title": "Apri clienti B2B e all'ingrosso",
+                    "title": "Apri ordini B2B da segnali pubblici",
                     "points": [
-                        "Trova uffici e team acquisti della zona",
-                        "Analizza stagioni dei regali ed esigenze di grandi quantità",
-                        "Scrive un DM personalizzato per ciascuno"
+                        "Monitora classifiche, iscrizioni eventi e avvisi di apertura",
+                        "Segnala promozioni, pack partecipanti e allestimenti vicini",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM B2B pronti"
+                    "output": "5 DM B2B pronte"
                 },
                 {
                     "title": "Pianifica ogni stagione in anticipo",
@@ -293,28 +266,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Uffici che ordinano regali e forniture",
-                    "fit": 87
-                },
-                {
-                    "name": "Scuole e associazioni",
-                    "fit": 80
-                },
-                {
-                    "name": "Organizzatori di eventi locali",
-                    "fit": 72
-                }
+                {"name": "Club promossi in una serie superiore", "fit": 87},
+                {"name": "Gare e festival locali", "fit": 80},
+                {"name": "Hotel e ristoranti in apertura vicino a te", "fit": 72},
             ],
-            "dm": "Buongiorno Thomas, con l'arrivo dei regali di fine anno molti team di Graz ordinano da noi per oltre 20 persone. Ci occupiamo noi di confezione e consegna. Desidera ricevere il nostro catalogo aziendale?",
+            "dm": "Complimenti per la promozione. Una serie nuova di solito significa kit nuovi — consegniamo in 3 settimane. Vi mando un bozzetto con il vostro stemma?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno i retailer nell'aprire clienti B2B e locali?",
-                    "a": "Gli ordini aziendali e all'ingrosso sono lasciati al caso. Le partnership locali richiedono tempo che nessuno ha. Le campagne stagionali partono troppo tardi."
+                    "q": "Quali segnali di intento trova Grovio per i rivenditori?",
+                    "a": "Un club promosso in una serie superiore che ha bisogno di kit nuove. Una gara o un festival locale che ha registrato la data e vende pack partecipanti. Un hotel o ristorante in apertura vicino a te che deve allestire."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Posso gestire campagne locali e online?",
@@ -324,30 +288,30 @@ export const industries = {
         },
         "real-estate": {
             "name": "Agenti immobiliari",
-            "short": "Lead di venditori, proprietari e investitori",
+            "short": "Proprietari e sviluppatori con annunci fermi",
             "metaTitle": "Vendite e marketing con l'AI per agenti immobiliari",
-            "metaDescription": "Gli agenti AI di Grovio trovano lead di venditori e proprietari, seguono le richieste e mantengono visibili i tuoi annunci e aggiornamenti di mercato.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per gli agenti immobiliari — annunci online da 45+ giorni con ribassi, unità finite ancora disponibili, affitti ripubblicati ogni poche settimane — e scrive il contatto.",
             "title": "Più incarichi, senza più chiamate a freddo.",
-            "pitch": "Gli agenti di Grovio trovano proprietari, locatori e investitori nella tua zona, seguono ogni richiesta e pubblicano gli aggiornamenti di mercato che ti rendono il punto di riferimento locale.",
+            "pitch": "Grovio osserva i portali: un annuncio privato online da 45+ giorni con due ribassi, unità di uno sviluppatore ancora disponibili sei mesi dopo il completamento, lo stesso affitto ripubblicato ogni poche settimane. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "Il collo di bottiglia sono gli immobili, non gli acquirenti",
-                "Le richieste si raffreddano mentre sei alle visite",
-                "Gli aggiornamenti di mercato slittano sempre alla settimana dopo"
+                "Gli annunci restano online per settimane con ribassi, e il proprietario è pronto a cambiare",
+                "I progetti finiti mostrano ancora unità disponibili",
+                "Lo stesso affitto viene ripubblicato ogni poche settimane",
             ],
             "agents": [
-                "Raggiunge proprietari e investitori con DM personalizzati",
+                "Trova proprietari e sviluppatori da annunci fermi e unità vuote, poi scrive una DM personale",
                 "Scrive aggiornamenti sul mercato locale con la tua voce",
-                "Crea visual per gli annunci e brevi video degli immobili"
+                "Crea visual per gli annunci e brevi video degli immobili",
             ],
             "useCases": [
                 {
-                    "title": "Raggiungi venditori, locatori e investitori",
+                    "title": "Raggiungi i proprietari quando l'annuncio si ferma",
                     "points": [
-                        "Trova proprietari e investitori nella tua zona",
-                        "Analizza portafogli e attività recenti",
-                        "Scrive un DM personalizzato per ciascuno"
+                        "Monitora i portali per età, ribassi e ripubblicazioni",
+                        "Segnala annunci da 45 giorni, invenduti dopo il completamento e affitti ripetuti",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM per proprietari pronti"
+                    "output": "5 DM proprietari pronte"
                 },
                 {
                     "title": "Diventa l'esperto del mercato locale",
@@ -369,28 +333,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Proprietari privati, 3+ unità",
-                    "fit": 88
-                },
-                {
-                    "name": "Piccoli investitori immobiliari",
-                    "fit": 81
-                },
-                {
-                    "name": "Sviluppatori di piccoli progetti",
-                    "fit": 73
-                }
+                {"name": "Proprietari con annunci online da 45+ giorni", "fit": 88},
+                {"name": "Sviluppatori con unità finite invendute", "fit": 81},
+                {"name": "Proprietari che ripubblicano lo stesso affitto", "fit": 73},
             ],
-            "dm": "Buongiorno Andreas, quest'anno gli affitti dei bilocali a Leopoldstadt sono saliti del 6%. Se sta pensando di vendere o riaffittare i Suoi appartamenti, posso mostrarLe quanto hanno ottenuto immobili simili. Le interessa?",
+            "dm": "Il vostro appartamento è online da due mesi, con due ribassi. Quest'anno abbiamo venduto quattro unità simili qui vicino. Vi mando i prezzi comparabili?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno gli agenti quando mancano gli incarichi?",
-                    "a": "Il collo di bottiglia sono gli immobili, non gli acquirenti. Le richieste si raffreddano mentre sei alle visite. Gli aggiornamenti di mercato slittano sempre alla settimana dopo."
+                    "q": "Quali segnali di intento trova Grovio per gli agenti immobiliari?",
+                    "a": "Annunci privati online da 45 giorni o più con due o più ribassi. Unità di uno sviluppatore ancora disponibili sei mesi dopo il completamento. Lo stesso affitto ripubblicato ogni poche settimane."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "È consentito contattare i proprietari?",
@@ -400,30 +355,30 @@ export const industries = {
         },
         "property-management": {
             "name": "Gestione immobiliare",
-            "short": "Acquisisci nuovi stabili e proprietari",
+            "short": "Condomini e sviluppatori in consegna",
             "metaTitle": "Vendite e marketing con l'AI per amministratori immobiliari",
-            "metaDescription": "Gli agenti AI di Grovio trovano proprietari e condomini in cerca di un amministratore migliore, e mantengono visibile il tuo studio.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per gli amministratori — recensioni su riparazioni lente, nuovi edifici senza gestore, affitti ripubblicati allo stesso indirizzo — e scrive il contatto.",
             "title": "Acquisisci il prossimo stabile prima della concorrenza.",
-            "pitch": "Gli agenti di Grovio trovano proprietari e condomini che hanno bisogno di un amministratore migliore, e mantengono il tuo studio sempre presente con contenuti utili.",
+            "pitch": "Grovio osserva i dati pubblici: recensioni che dicono che l'amministrazione non risponde, un nuovo edificio in consegna senza gestore, lo stesso indirizzo che ripubblica gli affitti. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "I nuovi incarichi arrivano solo dal passaparola",
-                "I proprietari non sanno cosa fai meglio degli altri",
-                "Il marketing passa sempre in secondo piano"
+                "Gli inquilini recensiscono riparazioni lente e i proprietari cercano un nuovo gestore",
+                "I nuovi edifici in consegna non hanno un gestore nominato",
+                "Lo stesso indirizzo ripubblica continuamente gli affitti",
             ],
             "agents": [
-                "Raggiunge proprietari e condomini",
+                "Trova condomini e sviluppatori da segnali pubblici di cambio, poi scrive una DM formale",
                 "Scrive guide su costi, normative e manutenzione",
-                "Mantiene aggiornati il tuo sito e i tuoi profili"
+                "Mantiene aggiornati il tuo sito e i tuoi profili",
             ],
             "useCases": [
                 {
-                    "title": "Acquisisci nuovi stabili e proprietari",
+                    "title": "Vinci edifici da segnali di cambio",
                     "points": [
-                        "Trova proprietari e condomini della zona",
-                        "Analizza gli stabili e gli amministratori attuali",
-                        "Scrive un DM formale e personalizzato per ciascuno"
+                        "Monitora recensioni, completamenti e affitti ripubblicati",
+                        "Segnala riparazioni lente, gestori mancanti in consegna e sfitto ripetuto",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM per proprietari pronti"
+                    "output": "5 DM proprietari pronte"
                 },
                 {
                     "title": "Rispondi ai proprietari prima che chiedano",
@@ -445,28 +400,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Condomini, 10–60 unità",
-                    "fit": 86
-                },
-                {
-                    "name": "Proprietari privati di immobili in affitto",
-                    "fit": 82
-                },
-                {
-                    "name": "Family office con immobili",
-                    "fit": 70
-                }
+                {"name": "Condomini con recensioni su riparazioni lente", "fit": 86},
+                {"name": "Sviluppatori in consegna senza gestore", "fit": 82},
+                {"name": "Proprietari che ripubblicano sfitto", "fit": 70},
             ],
-            "dm": "Buongiorno Petra, molti condomini di Linz stanno valutando il proprio amministratore dopo i rendiconti delle spese di quest'anno. Noi pubblichiamo ogni costo, voce per voce. Vale la pena fare un confronto?",
+            "dm": "Gli inquilini di questo indirizzo recensiscono riparazioni lente. Rispondiamo entro 24 ore con una rete fissa di tecnici. Vi mando il piano di consegna per l'assemblea?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno gli amministratori oltre al passaparola?",
-                    "a": "I nuovi incarichi arrivano solo dal passaparola. I proprietari non sanno cosa fai meglio degli altri. Il marketing passa sempre in secondo piano."
+                    "q": "Quali segnali di intento trova Grovio per gli amministratori?",
+                    "a": "Recensioni su un edificio che dicono che l'amministrazione non risponde. Un nuovo edificio in consegna senza gestore nominato. Lo stesso indirizzo che ripubblica gli affitti."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Gli agenti possono scrivere di normative?",
@@ -476,30 +422,30 @@ export const industries = {
         },
         "car-dealerships": {
             "name": "Concessionarie auto",
-            "short": "Flotte, permute e assistenza",
+            "short": "Aziende che assumono con auto aziendale",
             "metaTitle": "Vendite e marketing con l'AI per concessionarie auto",
-            "metaDescription": "Gli agenti AI di Grovio conquistano clienti business e flotte per le concessionarie, e mantengono visibili il tuo stock e le offerte di assistenza.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per i concessionari — annunci con auto aziendale, ditte di assistenza o delivery in nuovi distretti, scuole guida con una nuova sede — e scrive il contatto.",
             "title": "Vendi flotte, non solo auto.",
-            "pitch": "Gli agenti di Grovio raggiungono le aziende che hanno bisogno di auto aziendali e servizi per flotte, e mantengono visibili online il tuo stock, le offerte e l'assistenza.",
+            "pitch": "Grovio osserva bacheche e aperture: dieci o più annunci con auto aziendale, una ditta di assistenza o delivery che si espande, una scuola guida che apre una sede. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "Le vendite di flotte dipendono da pochi contatti",
-                "I clienti dell'assistenza passano alle officine indipendenti",
-                "Stock e offerte cambiano più in fretta del tuo sito"
+                "Le aziende assumono personale esterno con auto aziendale e nessuno quota la flotta",
+                "Assistenza domiciliare e delivery si espandono distretto per distretto senza un dealer",
+                "Le scuole guida aprono sedi e comprano altrove",
             ],
             "agents": [
-                "Raggiunge fleet manager e titolari d'azienda",
+                "Trova aziende che assumono con auto aziendale da annunci pubblici, poi scrive una DM flotta",
                 "Scrive pagine offerta e guide all'assistenza",
-                "Monta brevi video delle nuove auto in stock"
+                "Monta brevi video delle nuove auto in stock",
             ],
             "useCases": [
                 {
-                    "title": "Chiudi contratti per flotte e aziende",
+                    "title": "Chiudi flotte da segnali di assunzione",
                     "points": [
-                        "Trova fleet manager e aziende in crescita",
-                        "Analizza dimensioni delle flotte e tempi di rinnovo",
-                        "Scrive un DM personalizzato per ciascuno"
+                        "Monitora bacheche per auto aziendale e nuove sedi",
+                        "Segnala 10+ annunci con auto, delivery in espansione e nuove scuole guida",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM per flotte pronti"
+                    "output": "5 DM flotta pronte"
                 },
                 {
                     "title": "Trasforma le offerte in traffico",
@@ -521,28 +467,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Aziende con 10–200 dipendenti",
-                    "fit": 88
-                },
-                {
-                    "name": "Aziende di consegne e servizi",
-                    "fit": 84
-                },
-                {
-                    "name": "Decisori sul leasing",
-                    "fit": 75
-                }
+                {"name": "Aziende che assumono con auto aziendale", "fit": 88},
+                {"name": "Ditte di assistenza e delivery in espansione", "fit": 84},
+                {"name": "Scuole guida che aprono una nuova sede", "fit": 75},
             ],
-            "dm": "Buongiorno Stefan, quest'anno il Suo team a Salisburgo è cresciuto fino a 40 persone. Gestiamo le auto aziendali dall'ordine all'assistenza, con un unico referente. Posso inviarLe le nostre condizioni per le flotte?",
+            "dm": "State assumendo 12 tecnici sul campo, tutti con auto aziendale. Possiamo consegnare 12 furgoni identici con assistenza in un contratto. Vi mando un preventivo flotta?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno le concessionarie su flotte e officina?",
-                    "a": "Le vendite di flotte dipendono da pochi contatti. I clienti dell'assistenza passano alle officine indipendenti. Stock e offerte cambiano più in fretta del tuo sito."
+                    "q": "Quali segnali di intento trova Grovio per i concessionari?",
+                    "a": "Annunci di lavoro con auto aziendale, soprattutto dieci o più insieme. Una ditta di assistenza o delivery che si espande in nuovi distretti. Una scuola guida che apre una nuova sede."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Funziona con il mio CRM?",
@@ -552,30 +489,30 @@ export const industries = {
         },
         "law-firms": {
             "name": "Studi legali",
-            "short": "Clienti aziendali e thought leadership",
+            "short": "Aziende con deposito, assunzione o primo job locale",
             "metaTitle": "Marketing e business development con l'AI per studi legali",
-            "metaDescription": "Gli agenti AI di Grovio aiutano gli studi legali a raggiungere le aziende che hanno bisogno delle loro aree di competenza, e a pubblicare approfondimenti che creano fiducia.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per gli studi — deposito marchio UE senza rappresentante, ruolo avvocato interno aperto da 60+ giorni, azienda estera con i primi job locali — e scrive un contatto misurato.",
             "title": "Business development, fatto come si deve.",
-            "pitch": "Gli agenti di Grovio raggiungono le aziende che hanno bisogno delle tue aree di competenza, con messaggi misurati e professionali, e pubblicano approfondimenti che dimostrano la tua esperienza.",
+            "pitch": "Grovio osserva registri e annunci: un deposito marchio UE senza rappresentante, un ruolo avvocato interno aperto da 60+ giorni, un'azienda estera che pubblica i primi job locali. Ogni segnale diventa uno smart hook formale che approvi prima dell'invio.",
             "pains": [
-                "I partner non hanno tempo per il business development",
-                "Le competenze restano nascoste nei fascicoli",
-                "Ogni messaggio deve essere misurato e professionale"
+                "I depositi di marchio UE arrivano senza rappresentante",
+                "I ruoli avvocato interno restano aperti per mesi",
+                "Le aziende estere pubblicano i primi job locali senza consulenza locale",
             ],
             "agents": [
-                "Raggiunge general counsel e founder, con formalità e attenzione",
+                "Trova aziende da depositi e assunzioni pubbliche, poi scrive una DM formale che approvi una per una",
                 "Trasforma le tue competenze in articoli e newsletter",
-                "Trova le ricerche che i tuoi clienti fanno davvero"
+                "Trova le ricerche che i tuoi clienti fanno davvero",
             ],
             "useCases": [
                 {
-                    "title": "Conquista clienti aziendali, con attenzione",
+                    "title": "Vinci clienti corporate da depositi pubblici",
                     "points": [
-                        "Trova general counsel e founder nelle tue aree di competenza",
-                        "Analizza operazioni, assunzioni e novità normative",
-                        "Scrive DM formali che approvi uno per uno"
+                        "Monitora depositi EUIPO, job counsel e primi annunci locali",
+                        "Segnala marchi senza rappresentante, ruoli aperti da 60+ giorni e imprese estere che assumono in loco",
+                        "Scrive uno smart hook formale da ogni segnale"
                     ],
-                    "output": "5 DM formali pronti"
+                    "output": "5 DM formali pronte"
                 },
                 {
                     "title": "Trasforma le competenze in autorevolezza",
@@ -597,28 +534,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Scale-up in espansione nell'UE",
-                    "fit": 87
-                },
-                {
-                    "name": "Aziende senza ufficio legale interno",
-                    "fit": 83
-                },
-                {
-                    "name": "Founder che preparano un round di finanziamento",
-                    "fit": 79
-                }
+                {"name": "Aziende con deposito marchio UE senza rappresentante", "fit": 87},
+                {"name": "Aziende con ruolo avvocato interno ancora aperto", "fit": 83},
+                {"name": "Imprese estere con i primi job locali", "fit": 79},
             ],
-            "dm": "Gentile Sig.ra Weber, congratulazioni per il Suo round Series A. In questa fase molti founder rivedono i contratti di lavoro e le cessioni di proprietà intellettuale. Le sarebbe utile una breve chiamata sugli aspetti che di solito richiedono attenzione?",
+            "dm": "Il vostro deposito di marchio UE non ha un rappresentante. La finestra di opposizione si apre tra tre mesi. Lo monitoriamo per voi?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno gli studi nel trasformare competenze in nuovi clienti?",
-                    "a": "I partner non hanno tempo per il business development. Le competenze restano nascoste nei fascicoli. Ogni messaggio deve essere misurato e professionale."
+                    "q": "Quali segnali di intento trova Grovio per gli studi?",
+                    "a": "Un deposito di marchio UE senza rappresentante. Un ruolo avvocato interno aperto da 60 giorni o più. Un'azienda estera che pubblica i primi annunci locali. Prima di inviare, verifica le regole deontologiche sui contatti diretti nella tua giurisdizione."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Posso controllare tono e formulazioni?",
@@ -627,31 +555,31 @@ export const industries = {
             ]
         },
         "self-employed": {
-            "name": "Liberi professionisti e piccole imprese",
-            "short": "Un team vendite e marketing tutto per te",
-            "metaTitle": "Vendite e marketing con l'AI per liberi professionisti e piccole imprese",
-            "metaDescription": "Grovio offre a liberi professionisti e piccole imprese un team vendite e marketing: lead, DM e contenuti, approvati da te.",
+            "name": "Piccole imprese",
+            "short": "Clienti B2B con un ruolo che non riescono a coprire",
+            "metaTitle": "Vendite e marketing con l'AI per piccole imprese",
+            "metaDescription": "Grovio trova segnali pubblici di intento per le piccole imprese — un ruolo da freelance ripubblicato da 60+ giorni, un'azienda che chiede raccomandazioni, un sito con form rotto — e scrive il contatto.",
             "title": "Un team vendite e marketing tutto per te.",
-            "pitch": "Tu fai il lavoro. Gli agenti di Grovio trovano i clienti, scrivono i DM e portano avanti i tuoi contenuti, e tu approvi tutto in pochi minuti al giorno.",
+            "pitch": "Grovio osserva i dati pubblici: lo stesso ruolo da freelance ripubblicato da 60+ giorni, un'azienda che chiede raccomandazioni nei gruppi locali, un sito prospect senza booking mobile o con form rotto. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "Vendere toglie tempo al lavoro pagato",
-                "Il marketing si fa solo quando il lavoro scarseggia",
-                "Agenzie e grandi strumenti costano troppo"
+                "Lo stesso ruolo di designer o contabile resta aperto per mesi",
+                "Le aziende chiedono raccomandazioni nei gruppi locali e tu non lo vedi",
+                "I siti prospect hanno un form di contatto rotto",
             ],
             "agents": [
-                "Trova clienti e scrive DM",
+                "Trova clienti B2B da ruoli aperti, richieste locali e form rotti, poi scrive una DM",
                 "Scrive post e articoli con la tua voce",
-                "Si parte con un agente e se ne aggiungono altri quando conviene"
+                "Si parte con un agente e se ne aggiungono altri quando conviene",
             ],
             "useCases": [
                 {
-                    "title": "Trova i tuoi prossimi clienti",
+                    "title": "Trova clienti da ruoli scoperti",
                     "points": [
-                        "Trova clienti in linea con ciò che offri",
-                        "Analizza ciascuno prima di contattarlo",
-                        "Scrive DM da sottoporre alla tua approvazione"
+                        "Monitora annunci, gruppi locali e siti prospect",
+                        "Segnala ruoli aperti da 60+ giorni, richieste pubbliche e form di contatto rotti",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM per clienti pronti"
+                    "output": "5 DM clienti pronte"
                 },
                 {
                     "title": "Fatti vedere senza perderci ore",
@@ -673,28 +601,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Piccole imprese nella tua città",
-                    "fit": 88
-                },
-                {
-                    "name": "Agenzie che esternalizzano la tua competenza",
-                    "fit": 82
-                },
-                {
-                    "name": "Realtà simili ai tuoi ex clienti",
-                    "fit": 76
-                }
+                {"name": "Aziende che ripubblicano un ruolo da freelance", "fit": 88},
+                {"name": "Titolari che chiedono raccomandazioni in zona", "fit": 82},
+                {"name": "Siti con form di contatto rotto", "fit": 76},
             ],
-            "dm": "Buongiorno Clara, mi è piaciuto molto il rebranding che avete lanciato il mese scorso. Sono un copywriter freelance e scrivo testi per siti web con studi di design a Vienna. Le sarebbe utile avere qualcuno a disposizione per i lanci?",
+            "dm": "Il vostro ruolo da designer è aperto da settembre. Posso coprirlo con un retainer mensile da settimana prossima. Vi mando tre sample del vostro settore?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno liberi professionisti e PMI tra vendite e lavoro cliente?",
-                    "a": "Vendere toglie tempo al lavoro pagato. Il marketing si fa solo quando il lavoro scarseggia. Agenzie e grandi strumenti costano troppo."
+                    "q": "Quali segnali di intento trova Grovio per le piccole imprese?",
+                    "a": "Lo stesso ruolo da freelance ripubblicato da 60 giorni o più. Un'azienda che chiede raccomandazioni nei gruppi LinkedIn locali. Un sito prospect senza booking mobile o con form di contatto rotto."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Posso iniziare con un solo agente?",
@@ -704,30 +623,30 @@ export const industries = {
         },
         "tradespeople": {
             "name": "Artigiani",
-            "short": "Commesse aziendali e lavoro costante",
+            "short": "Amministratori, hotel, sviluppatori",
             "metaTitle": "Vendite e marketing con l'AI per artigiani",
-            "metaDescription": "Gli agenti AI di Grovio conquistano commesse aziendali e contratti di manutenzione per gli artigiani, e mantengono visibili online le tue recensioni e i tuoi lavori.",
+            "metaDescription": "Grovio trova segnali pubblici di intento per gli artigiani — un permesso di ristrutturazione nel distretto, un bando nel tuo mestiere, un hotel che chiude per lavori — e scrive il contatto.",
             "title": "Lavoro costante, tutto l'anno.",
-            "pitch": "Gli agenti di Grovio raggiungono amministratori immobiliari, imprese edili e aziende che cercano artigiani affidabili, e mettono in mostra online i tuoi lavori finiti.",
+            "pitch": "Grovio osserva permessi, bandi e avvisi hotel: un permesso di ristrutturazione nel tuo distretto, un bando pubblico nel tuo mestiere, un hotel che annuncia una chiusura stagionale per lavori. Ogni segnale diventa uno smart hook che approvi prima dell'invio.",
             "pains": [
-                "Il lavoro arriva a ondate",
-                "I clienti aziendali sono difficili da raggiungere",
-                "I tuoi lavori migliori non finiscono mai online"
+                "I permessi di ristrutturazione passano nel distretto e il lavoro lo prende un'altra ditta",
+                "I bandi nel tuo mestiere chiudono prima che tu li veda",
+                "Gli hotel annunciano una chiusura stagionale per lavori senza un tuo preventivo",
             ],
             "agents": [
-                "Raggiunge amministratori immobiliari e imprese",
+                "Trova amministratori, hotel e sviluppatori da permessi e bandi, poi scrive una DM personale",
                 "Trasforma le foto dei lavori in post e video brevi",
-                "Scrive pagine di servizio che si posizionano a livello locale"
+                "Scrive pagine di servizio che si posizionano a livello locale",
             ],
             "useCases": [
                 {
-                    "title": "Ottieni commesse aziendali costanti",
+                    "title": "Prendi lavori commerciali da permessi e bandi",
                     "points": [
-                        "Trova amministratori immobiliari e imprese della zona",
-                        "Analizza stabili e progetti in programma",
-                        "Scrive un DM personalizzato per ciascuno"
+                        "Monitora permessi di ristrutturazione, portali di gara e avvisi hotel",
+                        "Segnala permessi approvati, bandi aperti e chiusure stagionali per lavori",
+                        "Scrive uno smart hook da ogni segnale"
                     ],
-                    "output": "5 DM per clienti aziendali pronti"
+                    "output": "5 DM commerciali pronte"
                 },
                 {
                     "title": "Trasforma i lavori finiti in referenze",
@@ -749,28 +668,19 @@ export const industries = {
                 }
             ],
             "icp": [
-                {
-                    "name": "Amministratori immobiliari nella tua regione",
-                    "fit": 89
-                },
-                {
-                    "name": "Imprese generali",
-                    "fit": 83
-                },
-                {
-                    "name": "Hotel e ristoranti che necessitano di manutenzione",
-                    "fit": 77
-                }
+                {"name": "Amministratori con un permesso di ristrutturazione", "fit": 89},
+                {"name": "Bandi pubblici nel tuo mestiere", "fit": 83},
+                {"name": "Hotel che chiudono per ristrutturazione stagionale", "fit": 77},
             ],
-            "dm": "Buongiorno Martin, ho visto che gestisce 12 stabili a Innsbruck. Siamo una ditta di impianti elettrici della zona e offriamo contratti di manutenzione con intervento entro 24 ore. Posso inviarLe le nostre condizioni?",
+            "dm": "Ho visto il permesso di ristrutturazione per quell'indirizzo. Facciamo l'impianto elettrico su progetti simili nel distretto e abbiamo squadre libere nel Q1. Vi mando la disponibilità?",
             "faq": [
                 {
-                    "q": "Quali sfide hanno gli artigiani nel trovare lavori commerciali stabili?",
-                    "a": "Il lavoro arriva a ondate. I clienti aziendali sono difficili da raggiungere. I tuoi lavori migliori non finiscono mai online."
+                    "q": "Quali segnali di intento trova Grovio per gli artigiani?",
+                    "a": "Un permesso di ristrutturazione approvato nel tuo distretto. Un bando pubblico su un portale di gara nel tuo mestiere. Un hotel che annuncia una chiusura stagionale per ristrutturazione."
                 },
                 {
                     "q": "Come passo dal mio sito a meeting prenotati con Grovio?",
-                    "a": "Incolli il link del sito e Grovio legge le pagine per capire chi compra da te. Ricevi una campagna ICP con segmenti di acquirenti ordinati per aderenza. Approvi ogni lead e ogni DM prima che parta qualsiasi messaggio. Le risposte interessate arrivano nel CRM e nel calendario."
+                    "a": "Incolla il sito e Grovio lo legge per capire a chi vendi. Controlla anche i dati aziendali pubblici in cerca di segnali di intento d'acquisto e da ciascuno scrive uno smart hook. Approvi ogni lead e ogni DM prima dell'invio. Le risposte positive arrivano nel CRM e in calendario."
                 },
                 {
                     "q": "Non sono sui social. È un problema?",

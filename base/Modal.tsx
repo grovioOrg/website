@@ -111,14 +111,36 @@ const Modal = ({
         if (!open)
             return
 
-        const original = document.body.style.overflow
+        const html = document.documentElement
+        const body = document.body
         const previous = document.activeElement as HTMLElement | null
-        document.body.style.overflow = "hidden"
-        modalRef.current?.focus()
+        const scrollbar = Math.max(0, window.innerWidth - html.clientWidth)
+
+        const restore = {
+            htmlOverflow: html.style.overflow,
+            bodyOverflow: body.style.overflow,
+            htmlPadding: html.style.paddingRight,
+            bodyPadding: body.style.paddingRight,
+        }
+
+        html.style.overflow = "hidden"
+        body.style.overflow = "hidden"
+        if (scrollbar > 0) {
+            const pad = `${scrollbar}px`
+            html.style.paddingRight = pad
+            body.style.paddingRight = pad
+            html.style.setProperty("--scroll-lock-pad", pad)
+        }
+
+        modalRef.current?.focus({ preventScroll: true })
 
         return () => {
-            document.body.style.overflow = original
-            previous?.focus?.()
+            html.style.overflow = restore.htmlOverflow
+            body.style.overflow = restore.bodyOverflow
+            html.style.paddingRight = restore.htmlPadding
+            body.style.paddingRight = restore.bodyPadding
+            html.style.removeProperty("--scroll-lock-pad")
+            previous?.focus?.({ preventScroll: true })
         }
     }, [open])
 

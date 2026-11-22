@@ -1,6 +1,6 @@
 export const home = {
     "meta": {
-        "title": "Grovio: KI-Fachkräfte für Vertrieb und Marketing",
+        "title": "Grovio",
         "description": "Geben Sie Ihre Website ein, und Grovio erstellt Ihre ICP-Kampagne, findet die besten Leads und setzt KI-Fachkräfte für Vertrieb und Marketing ein. Sie geben frei, was rausgeht. Für die EU gebaut und DSGVO-konform."
     },
     "hero": {

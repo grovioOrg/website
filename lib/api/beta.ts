@@ -1,16 +1,15 @@
 "use server"
 
 // #region imports
-import { _BETA_URL } from "@/constants"
-
 import {
-    _POST,
-    IResponse
-} from "@/lib/api/utils"
+    isMailConfigured,
+    sendBetaRegistrationEmail,
+} from "@/lib/mail"
+
+import type { IResponse } from "@/lib/api/utils"
 
 import {
     IBetaRegistration,
-    serializeBeta
 } from "@/lib/types"
 // #endregion
 
@@ -21,9 +20,9 @@ export interface IBetaReceipt {
 export const registerBeta = async (
     beta: IBetaRegistration
 ): Promise<IResponse<IBetaReceipt>> => {
-    if (!_BETA_URL) {
+    if (!isMailConfigured()) {
         console.error(
-            "Beta registration is not configured: set NEXT_PUBLIC_API_CORE_BASE_URL."
+            "Beta registration is not configured: set GMAIL_USER and GMAIL_APP_PASSWORD."
         )
 
         return {
@@ -32,22 +31,18 @@ export const registerBeta = async (
         }
     }
 
-    const response = await _POST<unknown>(
-        _BETA_URL,
-        undefined,
-        {
-            body: JSON.stringify(serializeBeta(beta)),
-        }
-    )
-
-    if (response.success || response.status === 409)
+    try {
+        await sendBetaRegistrationEmail(beta)
         return {
             success: true,
-            data: { duplicate: response.status === 409 },
+            data: { duplicate: false },
         }
-
-    return {
-        success: false,
-        error: response.error,
+    }
+    catch (error) {
+        console.error("Beta registration email failed:", error)
+        return {
+            success: false,
+            error: "Failed to send registration email.",
+        }
     }
 }

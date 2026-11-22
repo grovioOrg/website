@@ -7,7 +7,7 @@ export const beta = {
     fields: {
         name: "Name",
         namePlaceholder: "Ada Lovelace",
-        email: "Work email",
+        email: "Email",
         emailPlaceholder: "ada@company.com",
         company: "Company",
         companyPlaceholder: "Acme Inc.",
@@ -30,16 +30,15 @@ export const beta = {
     close: "Close",
     success: {
         title: "You're on the list.",
-        body: "Thanks for applying. We'll review your application and reach out at your work email as beta spots open.",
+        body: "Thanks for applying. We'll review your application and reach out at your email as beta spots open.",
         duplicateTitle: "You're already on the list.",
-        duplicateBody: "We already have your application. We'll be in touch at your work email as beta spots open.",
+        duplicateBody: "We already have your application. We'll be in touch at your email as beta spots open.",
         done: "Back to the site",
     },
     errors: {
         name: "Tell us your name",
-        emailRequired: "Work email is required",
+        emailRequired: "Email is required",
         emailFormat: "Enter a valid email address",
-        workEmail: "Please use your work email",
         company: "Company name is required",
         websiteRequired: "Website is required",
         websiteFormat: "Enter a valid website, like acme.com",

@@ -17,19 +17,19 @@ export const deAt: IDictionary = {
             ...de.industries.list,
             restaurants: {
                 ...de.industries.list.restaurants,
-                dm: "Hallo Julia, Ihr Team ist gerade ins Büro in der Mariahilfer Straße gezogen – willkommen in der Nachbarschaft! Unser Extrazimmer bietet Platz für 24 Personen, ideal für Mittag- und Abendessen im Team. Darf ich Ihnen unsere Menüs schicken?",
+                dm: "Die Location für die Weihnachtsfeier Ihres Teams in der Mariahilfer Straße ist heuer geschlossen. Wir setzen 60 Personen privat und haben noch Dezember-Termine. Soll ich die Speisekarte schicken?",
             },
             "real-estate": {
                 ...de.industries.list["real-estate"],
-                dm: "Hallo Andreas, die Mieten für 2-Zimmer-Wohnungen in der Leopoldstadt sind heuer um 6 % gestiegen. Falls Sie überlegen, Ihre Wohnungen zu verkaufen oder neu zu vermieten, zeige ich Ihnen gern, was vergleichbare Wohnungen erzielt haben. Interesse?",
+                dm: "Ihre Wohnung in der Leopoldstadt ist seit zwei Monaten inseriert, mit zwei Preisnachlässen. Wir haben heuer vier vergleichbare Einheiten in der Nähe verkauft. Soll ich die Vergleichspreise schicken?",
             },
             "property-management": {
                 ...de.industries.list["property-management"],
-                dm: "Hallo Petra, viele Eigentümergemeinschaften in Linz prüfen nach den heurigen Betriebskostenabrechnungen ihre Hausverwaltung. Wir legen jede Kostenposition einzeln offen. Lohnt sich ein Vergleich?",
+                dm: "Mieter in Linz bewerten an dieser Adresse immer wieder langsame Reparaturen. Wir antworten innerhalb von 24 Stunden mit festem Techniker-Netz. Soll ich den Übergabeplan für die Eigentümerversammlung schicken?",
             },
             "car-dealerships": {
                 ...de.industries.list["car-dealerships"],
-                dm: "Hallo Stefan, Ihr Team in Salzburg ist heuer auf 40 Personen gewachsen. Wir betreuen Firmenautos von der Bestellung bis zum Service, mit einem fixen Ansprechpartner. Darf ich Ihnen unsere Flottenkonditionen schicken?",
+                dm: "Sie stellen in Salzburg 12 Außendienst-Techniker ein, alle mit Firmenwagen. Wir liefern 12 baugleiche Transporter mit Service in einem Vertrag. Soll ich ein Flottenangebot schicken?",
             },
         },
     },

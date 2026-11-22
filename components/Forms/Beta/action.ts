@@ -7,7 +7,7 @@ import {
 } from "@/lib/common"
 
 import { registerBeta } from "@/lib/api"
-import { _BETA_URL } from "@/constants"
+import { isMailConfigured } from "@/lib/mail"
 
 import {
     DEFAULT_LOCALE,
@@ -68,6 +68,6 @@ export const betaAction = async (
     return {
         success: false,
         data,
-        message: _BETA_URL ? t.errors.generic : t.errors.unavailable,
+        message: isMailConfigured() ? t.errors.generic : t.errors.unavailable,
     }
 }

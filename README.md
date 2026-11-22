@@ -43,7 +43,10 @@ Indicative beta prices live in `data/pricing.ts`.
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `NEXT_PUBLIC_API_CORE_BASE_URL` | Yes | Base URL of the core API |
+| `GMAIL_USER` | Yes (beta) | Gmail address used to send (`vshon447@gmail.com`) |
+| `GMAIL_APP_PASSWORD` | Yes (beta) | Google app password (16 characters). Not the Google account password. |
+| `SMTP_FROM` | No | From address; defaults to `GMAIL_USER`. Must match that Gmail account. |
+| `BETA_NOTIFY_EMAIL` | No | Inbox for applications; defaults to `vshon447@gmail.com` |
 | `NEXT_PUBLIC_APP_URL` | No | Public site URL, used for canonical and `hreflang` links |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | No | Shows a contact link in the footer |
 | `NEXT_PUBLIC_PRIVACY_URL` | No | Links the privacy policy from the beta consent checkbox and the footer. Without it, no privacy link is rendered. |
@@ -51,13 +54,13 @@ Indicative beta prices live in `data/pricing.ts`.
 
 ## Beta registration backend
 
-The "Join the Beta" modal submits through a server action (`components/Forms/Beta/action.ts` → `lib/api/beta.ts`). There is no backend in this repo.
+The "Join the Beta" modal submits through a server action (`components/Forms/Beta/action.ts` → `lib/api/beta.ts`), which emails the application via Nodemailer to `BETA_NOTIFY_EMAIL` (default `vshon447@gmail.com`).
 
-If the base URL is missing, the form shows an error and logs a warning on the server. It never reports a fake success.
+The same flow is exposed as `POST /api/beta`. Without SMTP credentials the form shows an error and never reports a fake success.
 
 ### Endpoint contract
 
-`POST {NEXT_PUBLIC_API_CORE_BASE_URL}/api/v1/beta_registration`
+`POST /api/beta`
 
 ```json
 {
@@ -75,11 +78,10 @@ If the base URL is missing, the form shows an error and logs a warning on the se
 
 - `company_size`: one of `1-10`, `11-50`, `51-200`, `201-1000`, `1000+`
 - `primary_interest`: one of `sales`, `marketing`, `both`, `exploring`. Pricing and agent buttons preselect it.
-- `consent`: always `true`. The applicant must tick "I agree that Grovio may store these details to contact me about the beta. You can ask us to delete them at any time." (or its translation). The checkbox is validated on the client and again in the server action, so nothing is sent without it.
+- `consent`: always `true`. The applicant must tick the consent checkbox; it is validated on the client and again in the server action.
 - `language`: the site locale the applicant used, one of `en`, `de`, `de-at`, `it`, `fr`, `hu`.
-- `2xx` means registered.
-- `409` means the email is already registered. The modal shows a friendly "you're already on the list" state.
-- Any other status shows the error state, using the response's `error`, `message` or `detail` field when one is present.
+- `201` means the registration email was sent.
+- Any other status shows the error state, using the response's `error` field when present.
 
 ## Notes
 

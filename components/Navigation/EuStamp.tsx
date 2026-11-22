@@ -157,10 +157,11 @@ export const EuStamp = () => {
             onBlur={() => setFocused(false)}
             data-compact={!expanded}
             className={cn(
-                "fixed bottom-5 right-5 z-40 flex items-center rounded-full p-1.5",
+                "fixed bottom-5 z-40 flex items-center rounded-full p-1.5",
+                "right-[calc(1.25rem+var(--scroll-lock-pad,0px))]",
                 "bg-white shadow-card ring-1 ring-ink/8",
                 "outline-none focus-visible:ring-2 focus-visible:ring-ink",
-                "max-mobile:bottom-3 max-mobile:right-3",
+                "max-mobile:bottom-3 max-mobile:right-[calc(0.75rem+var(--scroll-lock-pad,0px))]",
                 hidden && "pointer-events-none"
             )}
         >

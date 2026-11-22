@@ -1,45 +1,45 @@
 export const industries = {
     page: {
-        icp: "A sample ICP campaign",
-        dm: "A sample DM",
-        dmNote: "Written from your DM setup. You approve before it sends.",
+        icp: "Who we sell to",
+        dm: "A sample smart hook",
+        dmNote: "Written from a public buying-intent signal. You approve before it sends.",
         faq: "Questions",
         others: "Other industries",
         ctaTitle: "Grovio for {industry}",
-        ctaBody: "Paste your website and we'll show you the ICP campaign we'd build.",
+        ctaBody: "Paste your website and we'll show you the buying-intent signals we'd act on.",
         segment: "Segment",
         fit: "Fit",
         useCases: "What your agents do",
-        useCasesBody: "Three jobs your Grovio agents take on, step by step. You approve what goes out.",
+        useCasesBody: "Sales starts from public buying-intent signals. Marketing keeps you visible. You approve what goes out.",
         toolsTitle: "Works with the tools you already use",
     },
     list: {
         hotels: {
             name: "Hotels",
-            short: "Fill rooms with direct bookings and groups",
+            short: "Event planners, sports clubs, tour operators",
             metaTitle: "AI sales and marketing for hotels",
-            metaDescription: "Grovio's AI agents win corporate and group bookings, keep your content calendar full and answer guests, so your hotel relies less on booking portals.",
+            metaDescription: "Grovio finds public buying-intent signals for hotels — sold-out congress blocks, training camps with no venue, tour catalogues with no partner hotel — and drafts the outreach. You approve every DM.",
             title: "More direct bookings. Fewer portal fees.",
-            pitch: "Grovio's agents reach the companies, event planners and travel managers who book rooms in bulk, and keep your hotel visible with content that ranks.",
+            pitch: "Grovio watches public business data for buying-intent signals: a congress whose hotel block is sold out, a sports club planning a camp with no venue, a coach tour routing through your region with no partner hotel. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "Booking portals take a cut of every room",
-                "Corporate and group sales depend on one busy person",
-                "Your website and socials go quiet in the off-season",
+                "Sold-out congress blocks nearby never reach your sales desk",
+                "Sports clubs announce camps without naming a hotel",
+                "Tour operators pass through your region with no partner listed",
             ],
             agents: [
-                "Reaches travel managers and event planners with personal DMs",
+                "Finds event planners, sports clubs and tour operators from public signals, then drafts a personal DM",
                 "Writes seasonal guides and posts that bring guests to your site",
                 "Answers guests and books rooms through your tools",
             ],
             useCases: [
                 {
-                    title: "Win group and corporate bookings",
+                    title: "Act on group-booking signals",
                     points: [
-                        "Finds event agencies, planners and travel managers near you",
-                        "Researches upcoming offsites, conferences and weddings",
-                        "Drafts a personal DM for each",
+                        "Watches congress calendars, club sites and tour catalogues",
+                        "Flags sold-out hotel blocks, camps with no venue and routes with no partner hotel",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 group-booking DMs ready",
+                    output: "5 group-booking DMs ready"
                 },
                 {
                     title: "Keep guests coming back to your site",
@@ -61,14 +61,17 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Event agencies within 200 km", fit: 91 },
-                { name: "Corporate travel managers", fit: 85 },
-                { name: "Wedding planners", fit: 78 },
+                {"name": "Event planners with a sold-out hotel block", "fit": 91},
+                {"name": "Sports clubs planning a training camp", "fit": 85},
+                {"name": "Coach tour operators routing through the region", "fit": 78},
             ],
-            dm: "Hi Marco, saw your team is planning the spring offsite season. We host groups of 20–80 with meeting rooms and a lake view, 40 minutes from Vienna. Worth a look at our group rates?",
+            dm: "The spring congress hotel block shows sold out. We have 40 rooms 20 minutes from the venue — want me to hold them for your attendees?",
             faq: [
-                { q: "What challenges do hotel teams face with direct and group bookings?", a: "Booking portals take a cut of every room. Corporate and group sales depend on one busy person. Your website and socials go quiet in the off-season." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for hotels?",
+                    a: "Sold-out official hotel blocks on nearby congresses and trade fairs. Sports clubs announcing a training camp without a venue. Coach tour catalogues that route through your region with no partner hotel listed."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Can Grovio talk to guests?", a: "The Concierge agent for hotels and restaurants is coming soon. Today, Grovio's sales and marketing agents help you win groups and direct bookings." },
                 { q: "Is guest and prospect data handled under GDPR?", a: "Yes. Grovio is built for the EU and GDPR compliant." },
@@ -76,30 +79,30 @@ export const industries = {
         },
         restaurants: {
             name: "Restaurants",
-            short: "Private dining, events and regulars",
+            short: "Companies, productions, conference organisers",
             metaTitle: "AI sales and marketing for restaurants",
-            metaDescription: "Grovio's AI agents fill private dining and events, keep your socials fresh and, soon, answer guests and take bookings.",
+            metaDescription: "Grovio finds public buying-intent signals for restaurants — a Christmas venue that closed, a film permit on your street, a conference with no in-house catering — and drafts the outreach.",
             title: "Full tables on a Tuesday, too.",
-            pitch: "Grovio's agents reach the offices and planners who book private dining, and keep your menu, events and story in front of locals.",
+            pitch: "Grovio watches public data for buying-intent signals: a company's Christmas venue that just closed, a film permit issued in your district, a conference next door with no in-house catering. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "Weeknights and private rooms sit empty",
-                "Nobody has time to post every week",
-                "Event enquiries arrive in five different inboxes",
+                "The venue a company used last year has closed, and nobody tells you",
+                "Productions film on your street and eat elsewhere",
+                "Nearby conferences have no in-house catering",
             ],
             agents: [
-                "Reaches office managers and event planners nearby",
+                "Finds companies, productions and conference organisers from public signals, then drafts a personal invite",
                 "Writes posts about new menus and events in your voice",
                 "Answers guests and books tables through your tools",
             ],
             useCases: [
                 {
-                    title: "Fill private dining and events",
+                    title: "Fill private dining from public signals",
                     points: [
-                        "Finds offices and event planners nearby",
-                        "Spots team events, launches and celebrations",
-                        "Drafts a personal invite DM for each",
+                        "Watches closures, filming notices and conference programmes",
+                        "Flags closed party venues, on-set crews and events with no catering",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 event DMs ready",
+                    output: "5 event DMs ready"
                 },
                 {
                     title: "Stay in front of locals",
@@ -121,44 +124,47 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Offices within 3 km", fit: 90 },
-                { name: "Event and party planners", fit: 82 },
-                { name: "Local business clubs", fit: 74 },
+                {"name": "Companies whose party venue just closed", "fit": 90},
+                {"name": "Productions filming in the district", "fit": 82},
+                {"name": "Conference organisers with no in-house catering", "fit": 74},
             ],
-            dm: "Hi Julia, your team just moved into the Mariahilfer Straße office, so welcome to the neighbourhood. Our private room seats 24 for team lunches and dinners. Shall I send our set menus?",
+            dm: "Your team's Christmas party venue closed this year. We seat 60 privately and still have December dates. Want me to send the menu?",
             faq: [
-                { q: "What challenges do restaurants face filling weeknights and private events?", a: "Weeknights and private rooms sit empty. Nobody has time to post every week. Event enquiries arrive in five different inboxes." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for restaurants?",
+                    a: "A company's past Christmas party venue marked closed. Film permits issued in your district. Conferences at a nearby venue with no in-house catering."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Do you take reservations for us?", a: "Bell, our Concierge agent, will book tables through MCP-enabled reservation tools. It's coming soon; join the waitlist." },
             ],
         },
         ecommerce: {
             name: "E-commerce",
-            short: "Wholesale partners, creators and content",
+            short: "Stockists whose shelves just opened up",
             metaTitle: "AI sales and marketing for e-commerce brands",
-            metaDescription: "Grovio's AI agents find wholesale partners and creators, and keep your product content and SEO moving.",
+            metaDescription: "Grovio finds public buying-intent signals for e-commerce brands — a competitor that stopped wholesale, a retailer out of stock for weeks, a concept store buying its first range — and drafts the outreach.",
             title: "Grow beyond paid ads.",
-            pitch: "Grovio's agents find the shops, wholesalers and creators who should carry your products, and build the search traffic that doesn't stop when ad spend does.",
+            pitch: "Grovio watches public data for stockist signals: a competitor brand that stopped wholesale, a retailer out of stock in your category for three weeks, a concept store opening and buying its first range. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "Ad costs rise every quarter",
-                "Wholesale and partnership outreach never gets done",
-                "Product pages don't rank",
+                "A competitor stops wholesale and their stockists have an empty shelf",
+                "Retailers sit out of stock in your category for weeks",
+                "New concept stores buy their first range without you",
             ],
             agents: [
-                "Finds and reaches stockists, wholesalers and creators",
+                "Finds stockists from public signals — empty shelves, openings, brands leaving wholesale — then drafts a pitch",
                 "Finds the keywords your product pages should win",
                 "Writes guides, product stories and short videos",
             ],
             useCases: [
                 {
-                    title: "Land stockists and creators",
+                    title: "Land stockists from empty-shelf signals",
                     points: [
-                        "Finds shops, wholesalers and creators that fit your brand",
-                        "Researches what they sell and who they reach",
-                        "Drafts a tailored pitch for each",
+                        "Watches brand announcements, stockist pages and shop stock",
+                        "Flags brands leaving wholesale, 3+ week stock-outs and stores buying a first range",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 partner DMs ready",
+                    output: "5 partner DMs ready"
                 },
                 {
                     title: "Win the searches that sell",
@@ -180,44 +186,47 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Independent concept stores", fit: 89 },
-                { name: "Niche creators, 10k–100k followers", fit: 83 },
-                { name: "Regional wholesalers", fit: 76 },
+                {"name": "Stockists of a brand that stopped wholesale", "fit": 89},
+                {"name": "Retailers out of stock in your category", "fit": 83},
+                {"name": "Concept stores buying their first range", "fit": 76},
             ],
-            dm: "Hi Sophie, your store's edit of sustainable homeware is spot on. Our linen range sells through in 6 weeks at similar shops in Munich. Can I send a sample box?",
+            dm: "That brand stopped wholesale — your shop still lists six of their products. Ours sit at the same price point. Want a sample box before the shelf goes empty?",
             faq: [
-                { q: "What challenges do e-commerce brands face as ad costs rise?", a: "Ad costs rise every quarter. Wholesale and partnership outreach never gets done. Product pages don't rank." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for e-commerce brands?",
+                    a: "A competitor brand that stops wholesale, leaving stockists with an empty shelf. A retailer out of stock in your category for three or more weeks. A concept store announcing an opening and buying its first range."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Does it work for small catalogues?", a: "Yes. The ICP campaign is built from your website, whatever its size." },
             ],
         },
         retail: {
             name: "Retail",
-            short: "B2B accounts, partnerships and local reach",
+            short: "Clubs, events, new businesses",
             metaTitle: "AI sales and marketing for retail",
-            metaDescription: "Grovio's AI agents win B2B accounts and local partnerships for retailers, and keep your content working between campaigns.",
+            metaDescription: "Grovio finds public buying-intent signals for retailers — a club promoted to a higher league, a race selling participant packs, a hotel or restaurant opening that needs fit-out — and drafts the outreach.",
             title: "Win the accounts your shop floor can't.",
-            pitch: "Grovio's agents reach the businesses, schools and offices that buy in volume, and keep your store visible online between seasons.",
+            pitch: "Grovio watches public data for bulk-buy signals: a club promoted to a higher league, a local race or festival selling participant packs, a hotel or restaurant opening nearby that needs fit-out. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "Corporate and bulk orders are left to chance",
-                "Local partnerships take time nobody has",
-                "Seasonal campaigns start too late",
+                "Clubs get promoted and order kits from whoever calls first",
+                "Races and festivals sell participant packs without you",
+                "New hotels and restaurants fit out without a local supplier",
             ],
             agents: [
-                "Reaches procurement and office managers for bulk orders",
+                "Finds clubs, events and new businesses from public signals, then drafts a personal DM",
                 "Plans seasonal content ahead of time",
                 "Creates visuals for every campaign",
             ],
             useCases: [
                 {
-                    title: "Open B2B and bulk accounts",
+                    title: "Open B2B orders from public signals",
                     points: [
-                        "Finds offices and procurement teams nearby",
-                        "Researches gifting seasons and bulk needs",
-                        "Drafts a personal DM for each",
+                        "Watches league tables, event registrations and opening notices",
+                        "Flags promotions, participant packs and nearby fit-outs",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 B2B DMs ready",
+                    output: "5 B2B DMs ready"
                 },
                 {
                     title: "Plan every season early",
@@ -239,44 +248,47 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Offices ordering gifts and supplies", fit: 87 },
-                { name: "Schools and associations", fit: 80 },
-                { name: "Local event organisers", fit: 72 },
+                {"name": "Clubs promoted to a higher league", "fit": 87},
+                {"name": "Local races and festivals", "fit": 80},
+                {"name": "Hotels and restaurants opening nearby", "fit": 72},
             ],
-            dm: "Hi Thomas, with year-end gifting coming up, many teams in Graz order through us for 20+ people. We handle wrapping and delivery. Want our corporate catalogue?",
+            dm: "Congrats on promotion to the higher league. New league usually means new kits — we deliver in 3 weeks. Want a mock-up with your crest?",
             faq: [
-                { q: "What challenges do retailers face growing B2B and local accounts?", a: "Corporate and bulk orders are left to chance. Local partnerships take time nobody has. Seasonal campaigns start too late." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for retailers?",
+                    a: "A club promoted to a higher league that needs new kits. A local race or festival that has registered its date and started selling participant packs. A hotel or restaurant opening nearby that needs fit-out supplies."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Can I run local and online campaigns?", a: "Yes. Each Sales Agent runs as many campaigns as you need, each with its own ICP, across up to 5 industries and 3,000 leads a month." },
             ],
         },
         "real-estate": {
             name: "Real estate agents",
-            short: "Sellers, landlords and investor leads",
+            short: "Owners and developers with stalled listings",
             metaTitle: "AI sales and marketing for real estate agents",
-            metaDescription: "Grovio's AI agents find seller and landlord leads, follow up on enquiries and keep your listings and market updates visible.",
+            metaDescription: "Grovio finds public buying-intent signals for estate agents — listings live 45+ days with price drops, completed units still marked available, rentals re-posted every few weeks — and drafts the outreach.",
             title: "More listings, without more cold calls.",
-            pitch: "Grovio's agents find owners, landlords and investors in your area, follow up on every enquiry and publish the market updates that make you the local name.",
+            pitch: "Grovio watches listing portals for stall signals: a private listing live 45+ days with two price drops, a developer's units still marked available six months after completion, the same rental re-posted every few weeks. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "Listings are the bottleneck, not buyers",
-                "Enquiries go cold while you're at viewings",
-                "Market updates are always next week",
+                "Listings sit live for weeks with price drops, and the owner is ready to switch",
+                "Completed developments still show units available",
+                "The same rental is re-posted every few weeks",
             ],
             agents: [
-                "Reaches landlords and investors with personal DMs",
+                "Finds owners and developers from stalled listings and vacant units, then drafts a personal DM",
                 "Writes local market updates in your voice",
                 "Creates listing visuals and short property videos",
             ],
             useCases: [
                 {
-                    title: "Reach sellers, landlords and investors",
+                    title: "Reach owners when a listing stalls",
                     points: [
-                        "Finds owners and investors in your area",
-                        "Researches portfolios and recent activity",
-                        "Drafts a personal DM for each",
+                        "Watches listing portals for age, price drops and re-posts",
+                        "Flags 45-day listings, unfinished sales after completion and repeating rentals",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 owner DMs ready",
+                    output: "5 owner DMs ready"
                 },
                 {
                     title: "Be the local market expert",
@@ -298,44 +310,47 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Private landlords, 3+ units", fit: 88 },
-                { name: "Small property investors", fit: 81 },
-                { name: "Developers of small projects", fit: 73 },
+                {"name": "Owners with listings live 45+ days", "fit": 88},
+                {"name": "Developers with unsold completed units", "fit": 81},
+                {"name": "Landlords re-posting the same rental", "fit": 73},
             ],
-            dm: "Hi Andreas, rents for 2-room flats in Leopoldstadt rose 6% this year. If you're thinking about selling or re-letting your units, I can share what similar flats achieved. Interested?",
+            dm: "Your flat has been listed two months with two price drops. We sold four similar units nearby this year. Want the comparable prices?",
             faq: [
-                { q: "What challenges do estate agents face when listings are the bottleneck?", a: "Listings are the bottleneck, not buyers. Enquiries go cold while you're at viewings. Market updates are always next week." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for estate agents?",
+                    a: "Private listings live 45 days or more with two or more price drops. A developer's units still marked available six months after completion. The same rental flat re-posted every few weeks."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Is outreach to owners allowed?", a: "Grovio is GDPR compliant: every contact needs a lawful basis and opt-outs are honoured right away." },
             ],
         },
         "property-management": {
             name: "Property management",
-            short: "Win new buildings and owners",
+            short: "Owner associations and developers at handover",
             metaTitle: "AI sales and marketing for property managers",
-            metaDescription: "Grovio's AI agents find owners and associations looking for a better property manager, and keep your firm visible.",
+            metaDescription: "Grovio finds public buying-intent signals for property managers — reviews that say management doesn't answer, a new build near handover with no named manager, rental ads re-posted at the same address — and drafts the outreach.",
             title: "Win the next building before your competitor does.",
-            pitch: "Grovio's agents find owners and owner associations who need a better manager, and keep your firm top of mind with useful content.",
+            pitch: "Grovio watches public data for switch-intent: reviews that say management doesn't answer, a new build near handover with no named manager, the same address re-posting rental ads. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "New mandates come only from referrals",
-                "Owners don't know what you do better",
-                "Marketing is an afterthought",
+                "Tenants review slow repairs, and owners start looking for a new manager",
+                "New builds near handover have no named manager",
+                "The same address keeps re-posting rental ads",
             ],
             agents: [
-                "Reaches owners and owner associations",
+                "Finds owner associations and developers from public switch-intent, then drafts a formal DM",
                 "Writes guides on costs, regulations and maintenance",
                 "Keeps your website and profiles up to date",
             ],
             useCases: [
                 {
-                    title: "Win new buildings and owners",
+                    title: "Win buildings from switch-intent signals",
                     points: [
-                        "Finds owners and owner associations nearby",
-                        "Researches buildings and current managers",
-                        "Drafts a formal, personal DM for each",
+                        "Watches reviews, permit completions and rental re-posts",
+                        "Flags slow-repair reviews, unnamed managers at handover and repeating vacancies",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 owner DMs ready",
+                    output: "5 owner DMs ready"
                 },
                 {
                     title: "Answer owners before they ask",
@@ -357,44 +372,47 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Owner associations, 10–60 units", fit: 86 },
-                { name: "Private owners of rental buildings", fit: 82 },
-                { name: "Family offices with real estate", fit: 70 },
+                {"name": "Owner associations with slow-repair reviews", "fit": 86},
+                {"name": "Developers at handover with no named manager", "fit": 82},
+                {"name": "Owners re-posting vacant rentals", "fit": 70},
             ],
-            dm: "Hi Petra, many owner associations in Linz are reviewing their manager after this year's service-charge statements. We publish every cost, line by line. Worth comparing?",
+            dm: "Tenants at this address keep reviewing slow repairs. We answer within 24 hours with a fixed technician network. Want our handover plan for the owners' meeting?",
             faq: [
-                { q: "What challenges do property managers face growing beyond referrals?", a: "New mandates come only from referrals. Owners don't know what you do better. Marketing is an afterthought." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for property managers?",
+                    a: "Reviews on a building that mention management doesn't answer. A new build near handover with no named manager. The same address re-posting rental ads."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Can the agents write about regulations?", a: "Quill writes in your voice from your input and briefs. You review every piece before it's published." },
             ],
         },
         "car-dealerships": {
             name: "Car dealerships",
-            short: "Fleet deals, trade-ins and service",
+            short: "Companies hiring with a company car",
             metaTitle: "AI sales and marketing for car dealerships",
-            metaDescription: "Grovio's AI agents win fleet and business customers for dealerships, and keep your stock and service offers visible.",
+            metaDescription: "Grovio finds public buying-intent signals for dealerships — job ads that include a company car, a home-care or delivery firm expanding into new districts, a driving school opening a branch — and drafts the outreach.",
             title: "Sell fleets, not just cars.",
-            pitch: "Grovio's agents reach the businesses that need company cars and fleet service, and keep your stock, offers and service visible online.",
+            pitch: "Grovio watches job boards and openings for fleet signals: ten or more ads saying company car included, a home-care or delivery firm expanding into new districts, a driving school opening a branch. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "Fleet sales depend on a few contacts",
-                "Service customers drift to independents",
-                "Stock and offers change faster than your website",
+                "Companies hire field staff with a company car, and nobody quotes the fleet",
+                "Home-care and delivery firms expand district by district without a dealer",
+                "Driving schools open branches and buy cars elsewhere",
             ],
             agents: [
-                "Reaches fleet managers and business owners",
+                "Finds companies hiring with a company car from public job ads, then drafts a fleet DM",
                 "Writes offer pages and service guides",
                 "Cuts short videos of new stock",
             ],
             useCases: [
                 {
-                    title: "Close fleet and business deals",
+                    title: "Close fleets from hiring signals",
                     points: [
-                        "Finds fleet managers and growing companies",
-                        "Researches fleet size and renewal timing",
-                        "Drafts a personal DM for each",
+                        "Watches job boards for company-car lines and new branches",
+                        "Flags 10+ ads with a car, expanding delivery firms and new driving schools",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 fleet DMs ready",
+                    output: "5 fleet DMs ready"
                 },
                 {
                     title: "Turn offers into traffic",
@@ -416,44 +434,47 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Companies with 10–200 staff", fit: 88 },
-                { name: "Delivery and service businesses", fit: 84 },
-                { name: "Leasing decision makers", fit: 75 },
+                {"name": "Companies hiring with a company car", "fit": 88},
+                {"name": "Home-care and delivery firms expanding", "fit": 84},
+                {"name": "Driving schools opening a new branch", "fit": 75},
             ],
-            dm: "Hi Stefan, your team in Salzburg grew to 40 this year. We handle company cars from order to service, with one contact. Shall I send our fleet terms?",
+            dm: "You're hiring 12 field technicians, all with a company car. We can deliver 12 identical vans with service in one contract. Want a fleet quote?",
             faq: [
-                { q: "What challenges do dealerships face winning fleet and service business?", a: "Fleet sales depend on a few contacts. Service customers drift to independents. Stock and offers change faster than your website." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for dealerships?",
+                    a: "Job ads that say company car included, especially ten or more at once. A home-care or delivery firm expanding into new districts. A driving school opening a new branch."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Does it work with my CRM?", a: "Positive replies sync to your CRM so your sales team can take over." },
             ],
         },
         "law-firms": {
             name: "Law firms",
-            short: "Corporate clients and thought leadership",
+            short: "Businesses with a filing, a hire or a first local job",
             metaTitle: "AI marketing and business development for law firms",
-            metaDescription: "Grovio's AI agents help law firms reach the companies that need their practice areas, and publish the insights that build trust.",
+            metaDescription: "Grovio finds public buying-intent signals for law firms — an EU trademark filing with no representative, an in-house counsel role open 60+ days, a foreign company posting its first local jobs — and drafts measured outreach.",
             title: "Business development, done properly.",
-            pitch: "Grovio's agents reach the companies that need your practice areas, with measured, professional messages, and publish insights that show your expertise.",
+            pitch: "Grovio watches public registers and job ads for legal-need signals: an EU trademark filing with no representative, an in-house counsel role open 60+ days, a foreign company posting its first local jobs. Each signal becomes a formal smart hook you approve before it sends.",
             pains: [
-                "Partners have no time for business development",
-                "Expertise stays hidden in case files",
-                "Every message must be measured and professional",
+                "EU trademark filings go in with no representative listed",
+                "In-house counsel roles stay open for months",
+                "Foreign companies post their first local jobs without local counsel",
             ],
             agents: [
-                "Reaches general counsels and founders, formally and carefully",
+                "Finds businesses from public filings and hires, then drafts a formal DM you approve one by one",
                 "Turns your expertise into articles and newsletters",
                 "Finds the searches your clients actually make",
             ],
             useCases: [
                 {
-                    title: "Win corporate clients, carefully",
+                    title: "Win corporate clients from public filings",
                     points: [
-                        "Finds general counsels and founders in your practice areas",
-                        "Researches deals, hires and regulatory news",
-                        "Drafts formal DMs you approve one by one",
+                        "Watches EUIPO filings, counsel jobs and first local job ads",
+                        "Flags marks with no representative, roles open 60+ days and foreign firms hiring locally",
+                        "Drafts a formal smart hook from each signal"
                     ],
-                    output: "5 formal DMs ready",
+                    output: "5 formal DMs ready"
                 },
                 {
                     title: "Turn expertise into authority",
@@ -475,44 +496,47 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Scale-ups expanding into the EU", fit: 87 },
-                { name: "Companies without in-house counsel", fit: 83 },
-                { name: "Founders preparing a funding round", fit: 79 },
+                {"name": "Businesses filing an EU trademark with no representative", "fit": 87},
+                {"name": "Companies whose in-house counsel role stays open", "fit": 83},
+                {"name": "Foreign firms posting their first local jobs", "fit": 79},
             ],
-            dm: "Dear Ms Weber, congratulations on your Series A. Many founders at this stage review their employment contracts and IP assignments. Would a short call about what usually needs attention be useful?",
+            dm: "Your EU trademark filing has no representative listed. Opposition windows open in three months. Want us to watch it for you?",
             faq: [
-                { q: "What challenges do law firms face turning expertise into new clients?", a: "Partners have no time for business development. Expertise stays hidden in case files. Every message must be measured and professional." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for law firms?",
+                    a: "An EU trademark filing with no representative listed. An in-house counsel job open 60 days or more. A foreign company posting its first local job ads. Check bar rules on direct outreach in your jurisdiction before you send."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Can I control tone and wording?", a: "Yes. Set tone, formality and words to avoid in plain language. You approve every message." },
             ],
         },
         "self-employed": {
-            name: "Self-employed & small businesses",
-            short: "A sales and marketing team for one",
-            metaTitle: "AI sales and marketing for the self-employed and small businesses",
-            metaDescription: "Grovio gives self-employed people and small businesses a sales and marketing team: leads, DMs and content, approved by you.",
+            name: "Small businesses",
+            short: "B2B clients with a role they cannot fill",
+            metaTitle: "AI sales and marketing for small businesses",
+            metaDescription: "Grovio finds public buying-intent signals for small businesses — a freelance-able role re-posted for 60+ days, a business asking for recommendations, a site with a broken contact form — and drafts the outreach.",
             title: "A sales and marketing team for one.",
-            pitch: "You do the work. Grovio's agents find the clients, write the DMs and keep your content going, and you approve everything in minutes a day.",
+            pitch: "Grovio watches public data for client signals: the same freelance-able role re-posted for 60+ days, a business asking for recommendations in local groups, a prospect's site with no mobile booking or a broken contact form. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "Selling takes time away from paid work",
-                "Marketing happens only when work dries up",
-                "Agencies and big tools cost too much",
+                "The same designer or bookkeeper role stays open for months",
+                "Businesses ask for recommendations in local groups, and you never see it",
+                "Prospect sites have a broken contact form",
             ],
             agents: [
-                "Finds clients and drafts DMs",
+                "Finds B2B clients from open roles, local asks and broken forms, then drafts a DM",
                 "Writes posts and articles in your voice",
                 "Starts with one agent, adds more when it pays off",
             ],
             useCases: [
                 {
-                    title: "Find your next clients",
+                    title: "Find clients from unfilled roles",
                     points: [
-                        "Finds clients who match what you offer",
-                        "Researches each one before reaching out",
-                        "Drafts DMs for your approval",
+                        "Watches job ads, local groups and prospect sites",
+                        "Flags roles open 60+ days, public asks and broken contact forms",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 client DMs ready",
+                    output: "5 client DMs ready"
                 },
                 {
                     title: "Show up without the hours",
@@ -534,44 +558,47 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Small businesses in your city", fit: 88 },
-                { name: "Agencies that outsource your skill", fit: 82 },
-                { name: "Past clients' peers", fit: 76 },
+                {"name": "Businesses re-posting a freelance-able role", "fit": 88},
+                {"name": "Owners asking for recommendations locally", "fit": 82},
+                {"name": "Sites with a broken contact form", "fit": 76},
             ],
-            dm: "Hi Clara, I loved the rebrand you launched last month. I'm a freelance copywriter working with design studios in Vienna on website copy. Would it help to have someone on call for launches?",
+            dm: "Your designer role has been open since September. I can cover it on a monthly retainer starting next week. Want three samples from your sector?",
             faq: [
-                { q: "What challenges do freelancers and small businesses face balancing sales with client work?", a: "Selling takes time away from paid work. Marketing happens only when work dries up. Agencies and big tools cost too much." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for small businesses?",
+                    a: "The same freelance-able role re-posted for 60 days or more. A business asking for recommendations in local LinkedIn groups. A prospect's site with no mobile booking or a broken contact form."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "Can I start with just one agent?", a: "Yes. Hire one Sales Agent or the Writer and add more when it pays off." },
             ],
         },
         tradespeople: {
             name: "Tradespeople",
-            short: "Commercial jobs and steady work",
+            short: "Property managers, hotels, developers",
             metaTitle: "AI sales and marketing for tradespeople",
-            metaDescription: "Grovio's AI agents win commercial jobs and maintenance contracts for tradespeople, and keep your reviews and work visible online.",
+            metaDescription: "Grovio finds public buying-intent signals for trades — a renovation permit in your district, a public tender in your trade, a hotel announcing a seasonal closure for works — and drafts the outreach.",
             title: "Steady work, all year round.",
-            pitch: "Grovio's agents reach property managers, builders and businesses who need reliable trades, and show off your finished work online.",
+            pitch: "Grovio watches permits, tenders and hotel notices: a renovation permit approved in your district, a public tender in your trade, a hotel announcing a seasonal closure for renovation. Each signal becomes a smart hook you approve before it sends.",
             pains: [
-                "Work comes in waves",
-                "Commercial clients are hard to reach",
-                "Your best work never makes it online",
+                "Renovation permits go through in your district, and another firm gets the job",
+                "Public tenders in your trade close before you see them",
+                "Hotels announce a seasonal closure for works without a quote from you",
             ],
             agents: [
-                "Reaches property managers and contractors",
+                "Finds property managers, hotels and developers from permits and tenders, then drafts a personal DM",
                 "Turns job photos into posts and short videos",
                 "Writes service pages that rank locally",
             ],
             useCases: [
                 {
-                    title: "Land steady commercial jobs",
+                    title: "Land commercial jobs from permits and tenders",
                     points: [
-                        "Finds property managers and contractors nearby",
-                        "Researches buildings and upcoming projects",
-                        "Drafts a personal DM for each",
+                        "Watches renovation permits, procurement portals and hotel notices",
+                        "Flags approved permits, open tenders and seasonal closures for works",
+                        "Drafts a smart hook from each signal"
                     ],
-                    output: "5 commercial DMs ready",
+                    output: "5 commercial DMs ready"
                 },
                 {
                     title: "Turn finished jobs into proof",
@@ -593,14 +620,17 @@ export const industries = {
                 },
             ],
             icp: [
-                { name: "Property managers in your region", fit: 89 },
-                { name: "General contractors", fit: 83 },
-                { name: "Hotels and restaurants needing maintenance", fit: 77 },
+                {"name": "Property managers with a renovation permit", "fit": 89},
+                {"name": "Public tenders in your trade", "fit": 83},
+                {"name": "Hotels closing for seasonal renovation", "fit": 77},
             ],
-            dm: "Hi Martin, I saw you manage 12 buildings in Innsbruck. We're a local electrical firm offering maintenance contracts with a 24-hour call-out. Can I send our terms?",
+            dm: "Saw the renovation permit for that address. We do electrical for similar projects in the district and have Q1 crews free. Want availability?",
             faq: [
-                { q: "What challenges do trades businesses face finding steady commercial work?", a: "Work comes in waves. Commercial clients are hard to reach. Your best work never makes it online." },
-                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website link and Grovio reads your site to learn who buys from you. You get an ICP campaign with buyer segments ranked by fit. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
+                {
+                    q: "What buying-intent signals does Grovio find for tradespeople?",
+                    a: "A renovation permit approved in your district. A public tender on a procurement portal in your trade. A hotel announcing a seasonal closure for renovation."
+                },
+                { q: "How does Grovio take me from my website to booked meetings?", a: "Paste your website and Grovio reads it to learn who you sell to. It also watches public business data for buying-intent signals, then writes a smart hook from each one. You approve every lead and DM before anything is sent. Warm replies land in your CRM and calendar." },
 
                 { q: "I'm not on social media. Does that matter?", a: "No. Your Sales Agent works from your website and public information. Content is optional." },
             ],

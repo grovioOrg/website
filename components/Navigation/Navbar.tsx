@@ -58,12 +58,12 @@ export const Navbar = ({
                     <Dropdown
                         label={t.common.nav.agents}
                         columns={agents}
-                        panelClassName="w-[640px]"
+                        panelClassName="w-[680px]"
                     />
                     <Dropdown
                         label={t.common.nav.industries}
                         columns={industries}
-                        panelClassName="w-[600px]"
+                        panelClassName="w-[500px]"
                     />
                     {links.map(({ name, url }) => (
                         <a

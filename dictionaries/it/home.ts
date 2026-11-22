@@ -1,6 +1,6 @@
 export const home = {
     "meta": {
-        "title": "Grovio: assumi collaboratori AI per vendite e marketing",
+        "title": "Grovio",
         "description": "Inserisci il tuo sito web: Grovio crea la tua campagna ICP, trova i lead migliori e mette al lavoro collaboratori AI per vendite e marketing. Tu approvi ciò che viene pubblicato. Pensato per l'UE e conforme al GDPR."
     },
     "hero": {

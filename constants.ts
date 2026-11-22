@@ -20,6 +20,5 @@ export const _ENTERPRISE_EMAIL = _CONTACT_EMAIL ?? _INVESTOR_EMAIL
 
 export const _OPUS_CO_URL = "https://opusco.dev/"
 
-export const _BETA_URL = _BASE_URL
-    ? `${_BASE_URL}/api/v1/beta_registration`
-    : undefined
+/** Local Next.js beta registration endpoint (nodemailer). */
+export const _BETA_URL = `${_ORIGIN_URL}/api/beta`

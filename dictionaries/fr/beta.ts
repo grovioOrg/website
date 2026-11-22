@@ -7,7 +7,7 @@ export const beta = {
     "fields": {
         "name": "Nom",
         "namePlaceholder": "Ada Lovelace",
-        "email": "E-mail professionnel",
+        "email": "E-mail",
         "emailPlaceholder": "ada@company.com",
         "company": "Entreprise",
         "companyPlaceholder": "Acme Inc.",
@@ -42,16 +42,15 @@ export const beta = {
     "close": "Fermer",
     "success": {
         "title": "Vous êtes sur la liste.",
-        "body": "Merci pour votre candidature. Nous allons l'examiner et vous contacterons à votre adresse professionnelle dès que des places se libèrent.",
+        "body": "Merci pour votre candidature. Nous allons l'examiner et vous contacterons par e-mail dès que des places se libèrent.",
         "duplicateTitle": "Vous êtes déjà sur la liste.",
-        "duplicateBody": "Nous avons déjà reçu votre candidature. Nous vous contacterons à votre adresse professionnelle dès que des places se libèrent.",
+        "duplicateBody": "Nous avons déjà reçu votre candidature. Nous vous contacterons par e-mail dès que des places se libèrent.",
         "done": "Retour au site"
     },
     "errors": {
         "name": "Veuillez indiquer votre nom",
-        "emailRequired": "L'e-mail professionnel est obligatoire",
+        "emailRequired": "L'e-mail est obligatoire",
         "emailFormat": "Veuillez saisir une adresse e-mail valide",
-        "workEmail": "Veuillez utiliser votre e-mail professionnel",
         "company": "Le nom de l'entreprise est obligatoire",
         "websiteRequired": "Le site web est obligatoire",
         "websiteFormat": "Veuillez saisir un site web valide, par exemple acme.com",
