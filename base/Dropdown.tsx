@@ -229,7 +229,7 @@ const Dropdown = ({
                                             {item.icon && (
                                                 <span className={cn(
                                                     "shrink-0 text-grey-300",
-                                                    item.description && "mt-0.5"
+                                                    item.description ? "mt-0.5" : undefined
                                                 )}>
                                                     {item.icon}
                                                 </span>

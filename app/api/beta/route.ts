@@ -6,8 +6,6 @@ import {
     sendBetaRegistrationEmail,
 } from "@/lib/mail"
 
-export const runtime = "nodejs"
-
 export async function POST(request: Request) {
     if (!isMailConfigured()) {
         return NextResponse.json(
